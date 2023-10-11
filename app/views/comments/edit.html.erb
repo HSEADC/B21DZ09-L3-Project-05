@@ -1,0 +1,10 @@
+<h1>Редактирование комментария</h1>
+
+<%= render "form", post: @post, comment: @comment %>
+
+<br>
+
+<div>
+  <%= link_to "Показать коментарий", @comment %> |
+  <%= link_to "Обратно ко всем комментариям", comments_path %>
+</div>

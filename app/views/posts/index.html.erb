@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Посты</h1>
+
+<%= link_to "Новый пост", new_post_path %>
+
+<div id="posts">
+  <% @posts.each do |post| %>
+    <%= link_to post, class: 'postCard' do %>
+      <%= render post %>
+    <% end %>
+  <% end %>
+</div>
+
+

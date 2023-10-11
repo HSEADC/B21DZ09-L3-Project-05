@@ -1,0 +1,11 @@
+<div id="<%= dom_id comment %>">
+  <p>
+    <%= comment.body %>
+  </p>
+
+  <%= link_to "Редактировать комментарий", edit_post_comment_path(post, comment) %> |
+  <%= button_to "Удалить комментарий", [post, comment], method: :delete %>
+
+    <%#= comment.post_id %>
+
+</div>
