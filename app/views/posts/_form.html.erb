@@ -12,12 +12,12 @@
   <% end %>
 
   <div>
-    <%= form.label :title, style: "display: block" %>
+    <%= form.label :"Заголовок", style: "display: block" %>
     <%= form.text_field :title %>
   </div>
 
   <div>
-    <%= form.label :description, style: "display: block" %>
+    <%= form.label :"Текст публикации", style: "display: block" %>
     <%= form.text_area :description %>
   </div>
 
@@ -26,6 +26,6 @@
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit :"Опубликовать"%>
   </div>
 <% end %>
