@@ -1,0 +1,9 @@
+.postCard {
+    display: block;
+    margin: 20px;
+    padding: 20px;
+    /* width: 60%; */
+    border: 1px solid lightgray;
+    text-decoration: none;
+    color: black;
+}

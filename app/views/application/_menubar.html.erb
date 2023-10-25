@@ -1,0 +1,30 @@
+<nav>
+    <div>
+        <%= link_to "Главная", root_url, class: 'navSection' %>
+
+        <% if user_signed_in? %>
+        <%= link_to "Посты", admin_posts_url, class: 'navSection' %>
+        <%= link_to "Категории", admin_categories_url, class: 'navSection' %>
+        
+            <% Category.all.each do |category| %>
+                <%= link_to category.name, admin_category_url(category), class: 'navSection' %>
+            <% end %>
+
+            <%#= link_to "Идеи", welcome_ideas_url, class: 'navSection' %>
+            <%#= link_to "Туториалы", welcome_tutorials_url, class: 'navSection' %>
+            <%#= link_to "Форум", welcome_forum_url, class: 'navSection' %>
+            <%= link_to "Комментарии", admin_comments_url, class: 'navSection' %>
+            <%= link_to "Подписки", admin_subscriptions_url, class: 'navSection' %>
+        <% end %>
+    </div>
+
+    <div>
+        <% if user_signed_in? %>
+            <%#= link_to current_user.email, edit_user_registration_path %>
+            <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+        <%# else %>
+            <%#= link_to "Log in", new_user_session_path %>
+            <%#= link_to "Register", new_user_registration_path %>
+        <% end %>
+    </div>
+</nav>

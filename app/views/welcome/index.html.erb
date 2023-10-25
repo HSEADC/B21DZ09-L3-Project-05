@@ -1,0 +1,8 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Привет!</h1>
+<p>Рады видеть тебя на нашем медиа-сервисе</p>
+
+<%= turbo_frame_tag dom_id(@subscription) do %>
+    <%= render 'subscriptions/form', subscription: @subscription %>
+<% end %>

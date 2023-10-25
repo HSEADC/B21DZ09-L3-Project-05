@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Подписки</h1>
+
+<div id="subscriptions">
+  <% @subscriptions.each do |subscription| %>
+    <%= render subscription %>
+    <p>
+      <%= link_to "Показать эту подписку", [:admin, subscription] %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Новая подписка", new_admin_subscription_path %>

@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @category %>
+
+<div>
+  <%= link_to "Изменить эту категорию", edit_admin_category_path(@category) %> |
+  <%= link_to "Обратно ко всем категориям", admin_categories_path %>
+
+  <%= button_to "Удалить категорию", [:admin, @category], method: :delete %>
+</div>
+
+<div id="posts">
+  <% @category.posts.each do |category_post| %>
+    <%= link_to [:admin, category_post], class: 'postCard' do %>
+        <%= render category_post %>
+    <% end %>
+  <% end %>
+</div>
+
+
+
+

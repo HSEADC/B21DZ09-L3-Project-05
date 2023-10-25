@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Категории</h1>
+
+<%= link_to "Создать новую категорию", new_admin_category_path %>
+
+<div id="categories">
+  <% @categories.each do |category| %>
+    <%= link_to [:admin, category], class: 'categoryCard' do %>
+      <%= render category %>
+    <% end %>
+  <% end %>
+</div>
+

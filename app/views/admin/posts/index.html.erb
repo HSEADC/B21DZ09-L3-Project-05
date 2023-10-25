@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Посты</h1>
+
+<%# if can? :create, Post %>
+  <%= link_to "Новый пост", new_admin_post_path %>
+<%# end %>
+
+<div id="posts">
+  <% @posts.each do |post| %>
+    <%= link_to [:admin, post], class: 'postCard' do %>
+      <%= render post %>
+      <%#= render post ВОТ ТУТ ДОБАВЛЯТЬ ПАРШЛ, КОПИЯ ИЗ... %>
+    <% end %>
+  <% end %>
+</div>
+
+
