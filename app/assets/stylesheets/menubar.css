@@ -4,6 +4,12 @@
     margin: 30px 0;
 }
 
+.headerLogo {
+    font-size: 18px;
+    font-weight: 800;
+    color: rgb(11, 20, 77);
+}
+
 .navSections {
     display: flex;
     gap: 40px;

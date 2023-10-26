@@ -1,9 +1,10 @@
 .commentCard {
     display: block;
-    margin: 20px;
+    margin: 20px 0;
     padding: 0 20px;
     width: 50%;
     min-width: 600px;
+    background-color: white;
     border: 1px solid lightgray;
     text-decoration: none;
     /* color: black; */

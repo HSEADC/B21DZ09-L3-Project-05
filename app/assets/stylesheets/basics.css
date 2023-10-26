@@ -1,6 +1,11 @@
+html {
+    background-color: rgb(252, 252, 252);
+}
+
 body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    width: calc(100% - 270px);
+    font-family: 'Inter', sans-serif;
+    width: calc(100% - 600px);
+    min-width: 690px;
     margin: auto;
 }
 
