@@ -1,5 +1,4 @@
 class Admin::SubscriptionsController < ApplicationController
-  load_and_authorize_resource
   before_action :set_subscription, only: %i[ show edit update destroy ]
 
   # GET /subscriptions or /subscriptions.json
@@ -26,7 +25,7 @@ class Admin::SubscriptionsController < ApplicationController
 
     respond_to do |format|
       if @subscription.save
-        format.html { redirect_to admin_subscription_url(@subscription), notice: "Subscription was successfully created." }
+        format.html { redirect_to admin_subscription_url(@subscription), notice: "Подписка успешно создана" }
         format.json { render :show, status: :created, location: @subscription }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -39,7 +38,7 @@ class Admin::SubscriptionsController < ApplicationController
   def update
     respond_to do |format|
       if @subscription.update(subscription_params)
-        format.html { redirect_to admin_subscription_url(@subscription), notice: "Subscription was successfully updated." }
+        format.html { redirect_to admin_subscription_url(@subscription), notice: "Подписка успешно изменена" }
         format.json { render :show, status: :ok, location: @subscription }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -53,7 +52,7 @@ class Admin::SubscriptionsController < ApplicationController
     @subscription.destroy
 
     respond_to do |format|
-      format.html { redirect_to admin_subscriptions_url, notice: "Subscription was successfully destroyed." }
+      format.html { redirect_to admin_subscriptions_url, notice: "Подписка успешно удалена" }
       format.json { head :no_content }
     end
   end

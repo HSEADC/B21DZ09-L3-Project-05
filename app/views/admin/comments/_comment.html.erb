@@ -1,15 +1,16 @@
 <div id="<%= dom_id comment %>">
-  <%= comment.user.email %>
-
+  <p>
+    <%= comment.user.email %>
+  </p>
+  
   <p>
     <%= comment.body %>
   </p>
 
   <% if can? :manage, comment %>
-    <%= link_to "Редактировать комментарий", edit_admin_post_comment_path(post, comment) %> |
-    <%= button_to "Удалить комментарий", [:admin, post, comment], method: :delete %>
+    <%= link_to "Редактировать комментарий", edit_admin_comment_path(comment) %>
+    <br>
+    <%= button_to "Удалить комментарий", [:admin, comment], method: :delete %>
   <% end %>
-
-    <%#= comment.post_id %>
 
 </div>

@@ -2,13 +2,16 @@
 
 <h1>Подписки</h1>
 
+<%= link_to "Новая подписка", new_admin_subscription_path %>
+
+<br>
+
 <div id="subscriptions">
   <% @subscriptions.each do |subscription| %>
     <%= render subscription %>
     <p>
       <%= link_to "Показать эту подписку", [:admin, subscription] %>
     </p>
+    <br>
   <% end %>
 </div>
-
-<%= link_to "Новая подписка", new_admin_subscription_path %>

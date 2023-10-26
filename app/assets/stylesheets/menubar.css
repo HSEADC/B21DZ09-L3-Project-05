@@ -1,0 +1,14 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.navSections {
+    display: flex;
+    gap: 40px;
+}
+
+.navSection {
+    color: rgb(11, 20, 77);
+}

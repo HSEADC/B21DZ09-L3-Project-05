@@ -3,7 +3,7 @@
 <%= render @post %>
 
 <div>
-  <%= link_to "Обратно ко всем постам", admin_posts_path %> |
+  <%= link_to "Обратно ко всем постам", :back %> |
 
   <% if can? :manage, @post %>
     <%= link_to "Редактировать пост", edit_admin_post_path(@post) %>
@@ -16,5 +16,17 @@
 <h3>Комментарии</h3>
 
 <%= link_to "Новый комментарий", new_admin_post_comment_path(@post) %>
-<%= render @post.comments, post: @post %>
+<br>
+<br>
+<%#= render @post.comments, post: @post %>
 
+<div id="comments">
+  <% @post.comments.each do |comment| %>
+    <div class="commentCard"%>
+      <%= render comment, post: @post %>
+        <p>
+          <%= link_to "Показать этот комментарий", [:admin, comment] %>
+        </p>
+    </div>
+  <% end %>
+</div>

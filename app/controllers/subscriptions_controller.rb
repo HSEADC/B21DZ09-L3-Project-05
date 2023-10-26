@@ -1,9 +1,7 @@
 class SubscriptionsController < ApplicationController  
-    # GET /subscriptions/1 or /subscriptions/1.json
     def show
     end
   
-    # POST /subscriptions or /subscriptions.json
     def create
       @subscription = Subscription.new(subscription_params)
   
@@ -17,11 +15,9 @@ class SubscriptionsController < ApplicationController
         end
       end
     end
- 
+  
     private
-      # Only allow a list of trusted parameters through.
-      def subscription_params
+        def subscription_params
         params.require(:subscription).permit(:email)
       end
   end
-  

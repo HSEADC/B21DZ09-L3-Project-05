@@ -1,9 +1,22 @@
 .postCard {
-    display: block;
-    margin: 20px;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    padding: 20px 30px;
     /* width: 60%; */
     border: 1px solid lightgray;
+    /* border-radius: 36px; */
     text-decoration: none;
     color: black;
+}
+
+.categoryChips {
+    display: inline-block;
+    margin: 10px 0 0 0;
+    padding: 5px 16px 7px 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    background-color: lightgray;
+
 }

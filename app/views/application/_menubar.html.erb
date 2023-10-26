@@ -1,5 +1,5 @@
-<nav>
-    <div>
+<nav class="header">
+    <div class="navSections">
         <%= link_to "Главная", root_url, class: 'navSection' %>
 
         <% if user_signed_in? %>
@@ -7,7 +7,7 @@
         <%= link_to "Категории", admin_categories_url, class: 'navSection' %>
         
             <% Category.all.each do |category| %>
-                <%= link_to category.name, admin_category_url(category), class: 'navSection' %>
+                <%#= link_to category.name, admin_category_url(category), class: 'navSection' %>
             <% end %>
 
             <%#= link_to "Идеи", welcome_ideas_url, class: 'navSection' %>
