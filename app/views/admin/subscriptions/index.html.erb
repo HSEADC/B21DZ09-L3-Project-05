@@ -8,10 +8,11 @@
 
 <div id="subscriptions">
   <% @subscriptions.each do |subscription| %>
-    <%= render subscription %>
-    <p>
-      <%= link_to "Показать эту подписку", [:admin, subscription] %>
-    </p>
-    <br>
+    <div class="subscriptionCard">
+      <%= render subscription %>
+      <p>
+        <%= link_to "Показать эту подписку", [:admin, subscription] %>
+      </p>
+    </div>
   <% end %>
 </div>

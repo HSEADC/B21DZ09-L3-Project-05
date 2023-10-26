@@ -4,7 +4,7 @@
 
 <div id="comments">
   <% @comments.each do |comment| %>
-    <div class="commentCard"%>
+    <div class="commentCard">
       <%= render comment, post: comment.post %>
         <p>
           <%= link_to "Показать этот комментарий", [:admin, comment] %>
