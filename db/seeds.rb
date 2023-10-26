@@ -19,17 +19,38 @@
   {
     title: 'Название поста 1',
     description: 'Описание Описание Описание ПОСТА 1111',
+    post_image: File.open(Rails.root.join('public', 'image_post', 'image_01.jpg')),
     category_id: 1
   },
   {
     title: 'Название поста 2',
     description: 'Описание Описание Описание ПОСТА 2222',
+    post_image: File.open(Rails.root.join('public', 'image_post', 'image_05.jpg')),
+    category_id: 1
+  },
+  {
+    title: 'Название поста-idea3',
+    description: 'Описание Описание Описание ПОСТА 2222',
+    post_image: File.open(Rails.root.join('public', 'image_post', 'image_10.jpg')),
     category_id: 1
   },
   {
     title: 'Название поста 3',
     description: 'Описание Описание Описание ПОСТА 3333',
+    post_image: File.open(Rails.root.join('public', 'image_post', 'image_09.jpg')),
     category_id: 2
+  },
+  {
+    title: 'post forum 1',
+    description: 'Описание Описание Описание ПОСТА 2222',
+    post_image: File.open(Rails.root.join('public', 'image_post', 'image_02.jpg')),
+    category_id: 3
+  },
+  {
+    title: 'post forum 1',
+    description: 'Описание Описание Описание ПОСТА 2222',
+    post_image: File.open(Rails.root.join('public', 'image_post', 'image_03.jpg')),
+    category_id: 3
   }
 ]
 
@@ -92,16 +113,10 @@ def create_sentence
   sentence = sentence_words.join(' ').capitalize + '.'
 end
 
-def upload_random_image
-  uploader = PostImageUploader.new(Post.new, :post_image)
-  uploader.cache!(File.open(Dir.glob(File.join(Rails.root, 'public/autoupload/posts', '*')).sample))
-  uploader
-end
-
 def create_posts(data)
   data.each do |posts_data|
     user = User.all.sample
-    post = Post.create(category_id: posts_data[:category_id], title: posts_data[:title], description: posts_data[:description], post_image: upload_random_image, user_id: user.id)
+    post = Post.create(category_id: posts_data[:category_id], title: posts_data[:title], description: posts_data[:description], post_image: posts_data[:post_image], user_id: user.id)
     puts "Post with id #{post.id} for categories with id #{post.category.id} just created"
   end
 end
