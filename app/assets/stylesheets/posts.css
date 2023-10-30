@@ -21,3 +21,11 @@
     background-color: lightgray;
 
 }
+
+.postDate {
+    font-family: monospace;
+    display: block;
+    width: 127px;
+    overflow: hidden;
+    white-space: nowrap;
+}

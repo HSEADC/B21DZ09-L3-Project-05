@@ -4,7 +4,7 @@ html {
 
 body {
     font-family: 'Inter', sans-serif;
-    width: calc(100% - 600px);
+    width: calc(100% - 500px);
     min-width: 690px;
     margin: auto;
 }
@@ -12,3 +12,9 @@ body {
 a {
     text-decoration: none;
 }
+
+textarea {
+    width: 500px;
+    height: 150px;
+}
+

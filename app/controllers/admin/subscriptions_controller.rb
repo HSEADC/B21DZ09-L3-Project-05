@@ -25,7 +25,7 @@ class Admin::SubscriptionsController < ApplicationController
 
     respond_to do |format|
       if @subscription.save
-        format.html { redirect_to admin_subscription_url(@subscription), notice: "Подписка успешно создана" }
+        format.html { redirect_to admin_subscription_url(@subscription), notice: "Добавлена новая подписка" }
         format.json { render :show, status: :created, location: @subscription }
       else
         format.html { render :new, status: :unprocessable_entity }
