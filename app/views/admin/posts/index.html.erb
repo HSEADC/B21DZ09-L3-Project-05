@@ -1,17 +1,21 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Посты</h1>
+<div class="contentPage">
 
-<%# if can? :create, Post %>
-  <%= link_to "Новый пост", new_admin_post_path %>
-<%# end %>
+  <h1>Посты</h1>
 
-<div id="posts">
-  <% @posts.each do |post| %>
-    <%= link_to [:admin, post], class: 'postCard' do %>
-      <%= render post %>
+  <%# if can? :create, Post %>
+    <%= link_to "Новый пост", new_admin_post_path %>
+  <%# end %>
+
+  <div id="posts">
+    <% @posts.each do |post| %>
+      <%= link_to [:admin, post], class: 'postCard' do %>
+        <%= render post %>
+      <% end %>
     <% end %>
-  <% end %>
+  </div>
+
 </div>
 
 

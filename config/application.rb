@@ -17,6 +17,7 @@ module SampleProject2023
     # in config/environments, which are processed later.
     #
     config.time_zone = "Moscow"
+    config.assets.enabled = true
     # config.eager_load_paths << Rails.root.join("extras")
   end
 end

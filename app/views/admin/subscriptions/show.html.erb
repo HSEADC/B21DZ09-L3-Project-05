@@ -1,10 +1,16 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @subscription %>
+<div class="contentPage">
 
-<div>
-  <%= link_to "Редактировать подписку", edit_admin_subscription_path(@subscription) %> |
-  <%= link_to "Обратно ко всем подпискам", admin_subscriptions_path %>
+  <%= render @subscription %>
 
-  <%= button_to "Удалить подписку", [:admin, @subscription], method: :delete %>
+  <div>
+    <%= link_to "Редактировать подписку", edit_admin_subscription_path(@subscription) %> |
+    <%= link_to "Обратно ко всем подпискам", admin_subscriptions_path %>
+
+    <%= button_to "Удалить подписку", [:admin, @subscription], method: :delete %>
+  </div>
+  
 </div>
+
+

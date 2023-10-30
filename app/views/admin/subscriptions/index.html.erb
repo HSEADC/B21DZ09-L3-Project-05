@@ -1,18 +1,23 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Подписки</h1>
+<div class="contentPage">
 
-<%= link_to "Новая подписка", new_admin_subscription_path %>
+  <h1>Подписки</h1>
 
-<br>
+  <%= link_to "Новая подписка", new_admin_subscription_path %>
 
-<div id="subscriptions">
-  <% @subscriptions.each do |subscription| %>
-    <div class="subscriptionCard">
-      <%= render subscription %>
-      <p>
-        <%= link_to "Показать эту подписку", [:admin, subscription] %>
-      </p>
-    </div>
-  <% end %>
+  <br>
+
+  <div id="subscriptions">
+    <% @subscriptions.each do |subscription| %>
+      <div class="subscriptionCard">
+        <%= render subscription %>
+        <p>
+          <%= link_to "Показать эту подписку", [:admin, subscription] %>
+        </p>
+      </div>
+    <% end %>
+  </div>
+  
 </div>
+

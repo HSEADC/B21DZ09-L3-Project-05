@@ -1,23 +1,27 @@
 <nav class="header">
-    <%= link_to "ЛУЧОК", root_url, class: 'headerLogo' %>
+    <div class="navLogoSections">
+    
+        <%= link_to "ЛУЧОК", root_url, class: 'navLogo' %>
+    
+        <div class="navSections">
+            <%#= link_to "Главная", root_url, class: 'navSection' %>
 
-    <div class="navSections">
-        <%#= link_to "Главная", root_url, class: 'navSection' %>
+            <% if user_signed_in? %>
+            <%= link_to "Посты", admin_posts_url, class: 'navSection' %>
+            <%= link_to "Категории", admin_categories_url, class: 'navSection' %>
+            
+                <% Category.all.each do |category| %>
+                    <%#= link_to category.name, admin_category_url(category), class: 'navSection' %>
+                <% end %>
 
-        <% if user_signed_in? %>
-        <%= link_to "Посты", admin_posts_url, class: 'navSection' %>
-        <%= link_to "Категории", admin_categories_url, class: 'navSection' %>
-        
-            <% Category.all.each do |category| %>
-                <%#= link_to category.name, admin_category_url(category), class: 'navSection' %>
+                <%#= link_to "Идеи", welcome_ideas_url, class: 'navSection' %>
+                <%#= link_to "Туториалы", welcome_tutorials_url, class: 'navSection' %>
+                <%#= link_to "Форум", welcome_forum_url, class: 'navSection' %>
+                <%= link_to "Комментарии", admin_comments_url, class: 'navSection' %>
+                <%= link_to "Подписки", admin_subscriptions_url, class: 'navSection' %>
             <% end %>
+        </div>
 
-            <%#= link_to "Идеи", welcome_ideas_url, class: 'navSection' %>
-            <%#= link_to "Туториалы", welcome_tutorials_url, class: 'navSection' %>
-            <%#= link_to "Форум", welcome_forum_url, class: 'navSection' %>
-            <%= link_to "Комментарии", admin_comments_url, class: 'navSection' %>
-            <%= link_to "Подписки", admin_subscriptions_url, class: 'navSection' %>
-        <% end %>
     </div>
 
     <div>

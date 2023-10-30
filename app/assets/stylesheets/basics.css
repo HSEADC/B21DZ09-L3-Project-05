@@ -1,10 +1,10 @@
 html {
-    background-color: rgb(252, 252, 252);
+    background-color: #F9F9F9;
 }
 
 body {
     font-family: 'Inter', sans-serif;
-    width: calc(100% - 500px);
+    width: calc(100% - 550px);
     min-width: 690px;
     margin: auto;
 }
@@ -16,5 +16,10 @@ a {
 textarea {
     width: 500px;
     height: 150px;
+}
+
+.contentPage {
+    width: calc(100% - 80px);
+    margin: auto;
 }
 

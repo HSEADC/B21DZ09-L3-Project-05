@@ -1,9 +1,15 @@
-<h1>Новая подписка</h1>
+<div class="contentPage">
 
-<%= render "form", subscription: @subscription %>
+  <h1>Новая подписка</h1>
 
-<br>
+  <%= render "form", subscription: @subscription %>
 
-<div>
-  <%= link_to "Обратно ко всем подпискам", admin_subscriptions_path %>
+  <br>
+
+  <div>
+    <%= link_to "Обратно ко всем подпискам", admin_subscriptions_path %>
+  </div>
+
 </div>
+
+

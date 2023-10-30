@@ -1,0 +1,140 @@
+.promoContent {
+    margin: 140px auto 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 716px;
+}
+
+.promoBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.promoLogo {
+    background-image: url("/assets/promo/Logo_promo.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    width: 716px;
+    height: 147px;
+}
+
+.promoTexts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.promoTexts h3 {
+    margin: 0;
+    width: 677px;
+    text-align: center;
+    font-size: 34px;
+    font-weight: 600;
+}
+
+.promoTexts p {
+    margin: 0;
+    width: 570px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 300;
+}
+
+.promoTexts a {
+    color: #5195D4;
+    text-decoration: underline;
+}
+
+.promoArrow {
+    background-image: url("/assets/promo/Arrow_promo.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    width: 40px;
+    height: 89px;
+
+    margin-top: 65px;
+    margin-bottom: 165px;
+
+    animation: down 1.5s infinite;
+}
+
+@keyframes down {
+    0% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translateY(15px);
+    }
+    40% {
+        transform: translate(0);
+    }
+  }
+
+.promoMail {
+    display: flex;
+    justify-content: center;
+
+    background-image: url("/assets/promo/Mail_promo.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: 95%;
+    background-position: center;
+
+    width: 716px;
+    height: 284px;
+
+    border-radius: 30px;
+    background-color: #E9E9E9;
+    box-shadow: 110px 134px 250px 0px rgba(0, 0, 0, 0.15);
+}
+
+.Subscription {
+    margin-top: 112px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.promoContent #subscription_email {
+    width: 532px;
+    height: 45px;
+    padding: 0px 15px;
+    align-items: center;
+
+    border-radius: 10px;
+    border: 0;
+    background-color: #DADADA;
+
+    color: #737373;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.promoContent .input:focus {
+    outline: none;
+}
+
+.mailButton {
+    display: flex;
+    width: 182px;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+    border: 0;
+    background-color: #5195D4;
+
+    color: #F9F9F9;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.32px;
+    text-transform: uppercase;
+}

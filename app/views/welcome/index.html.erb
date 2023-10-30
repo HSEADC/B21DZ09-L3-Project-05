@@ -1,8 +1,31 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Привет!</h1>
-<p>Рады видеть тебя на нашем медиа-сервисе</p>
+<%#= turbo_frame_tag dom_id(@subscription) do %>
+    <%#= render 'subscriptions/form', subscription: @subscription %>
+<%# end %>
 
-<%= turbo_frame_tag dom_id(@subscription) do %>
-    <%= render 'subscriptions/form', subscription: @subscription %>
-<% end %>
+<dev class="promoContent">
+
+    <section class="promoBlock">
+        <dev class="promoLogo"></dev>
+        <dev class="promoTexts">
+            <h3>Медиа-сервис про кастомизацию предметов одежды, обуви и&nbsp;аксессуаров</h3>
+            <p>Подробнее о&nbsp;сервисе, его создателях и&nbsp;запуске читайте на&nbsp;странице <a href="/about">&laquo;О&nbsp;проекте&raquo;</a></p>
+        </dev>
+    </section>
+
+    <div class="promoArrow"></div>
+
+    <section class="promoBlock">
+        <dev class="promoTexts">
+            <h3>Попробуй Лучок сразу, как только он&nbsp;заработает</h3>
+            <p>Просто оставь здесь свой e-mail, и&nbsp;мы&nbsp;пришлём тебе на&nbsp;почту уведомление о&nbsp;запуске сервиса</p>
+        </dev>
+        <dev class="promoMail">
+            <%= turbo_frame_tag dom_id(@subscription) do %>
+                <%= render 'subscriptions/form', subscription: @subscription %>
+            <% end %>
+        </dev>
+    </section>
+
+</dev>

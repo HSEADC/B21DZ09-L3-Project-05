@@ -1,10 +1,14 @@
-<h1>Редактирование поста</h1>
+<div class="contentPage">
 
-<%= render "form", post: @post %>
+  <h1>Редактирование поста</h1>
 
-<br>
+  <%= render "form", post: @post %>
 
-<div>
-  <%= link_to "Показать пост", [:admin, @post] %> |
-  <%= link_to "Обратно ко всем постам", admin_posts_path %>
+  <br>
+
+  <div>
+    <%= link_to "Показать пост", [:admin, @post] %> |
+    <%= link_to "Обратно ко всем постам", admin_posts_path %>
+  </div>
+
 </div>

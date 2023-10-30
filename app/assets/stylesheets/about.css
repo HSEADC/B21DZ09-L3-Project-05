@@ -1,0 +1,7 @@
+.aboutContent {
+    margin: 230px auto 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 716px;
+}

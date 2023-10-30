@@ -1,32 +1,36 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @post %>
+<div class="contentPage">
 
-<div>
-  <%= link_to "Обратно ко всем постам", :back %> |
+  <%= render @post %>
 
-  <% if can? :manage, @post %>
-    <%= link_to "Редактировать пост", edit_admin_post_path(@post) %>
-    <%= button_to "Удалить пост", [:admin, @post], method: :delete %>
-  <% end %>
-</div>
+  <div>
+    <%= link_to "Обратно ко всем постам", :back %> |
 
-<hr>
+    <% if can? :manage, @post %>
+      <%= link_to "Редактировать пост", edit_admin_post_path(@post) %>
+      <%= button_to "Удалить пост", [:admin, @post], method: :delete %>
+    <% end %>
+  </div>
 
-<h3>Комментарии</h3>
+  <hr>
 
-<%= link_to "Новый комментарий", new_admin_post_comment_path(@post) %>
-<br>
-<br>
-<%#= render @post.comments, post: @post %>
+  <h3>Комментарии</h3>
 
-<div id="comments">
-  <% @post.comments.each do |comment| %>
-    <div class="commentCard"%>
-      <%= render comment, post: @post %>
-        <p>
-          <%= link_to "Показать этот комментарий", [:admin, comment] %>
-        </p>
-    </div>
-  <% end %>
+  <%= link_to "Новый комментарий", new_admin_post_comment_path(@post) %>
+  <br>
+  <br>
+  <%#= render @post.comments, post: @post %>
+
+  <div id="comments">
+    <% @post.comments.each do |comment| %>
+      <div class="commentCard"%>
+        <%= render comment, post: @post %>
+          <p>
+            <%= link_to "Показать этот комментарий", [:admin, comment] %>
+          </p>
+      </div>
+    <% end %>
+  </div>
+  
 </div>

@@ -11,12 +11,10 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :email, style: "display: block" %>
-    <%= form.email_field :email %>
-  </div>
+  <div class="Subscription">
+    <%= form.label :email, style: "display: none" %>
+    <%= form.email_field :email, placeholder: "Твой e-mail" %>
 
-  <div>
-    <%= form.submit :"Подписаться" %>
+    <%= form.submit :"Отправить", class: "mailButton" %>
   </div>
 <% end %>
