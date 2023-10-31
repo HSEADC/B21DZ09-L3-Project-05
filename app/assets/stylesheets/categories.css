@@ -5,6 +5,7 @@
     /* width: 60%; */
     background-color: white;
     border: 1px solid lightgray;
+    border-radius: 18px;
     text-decoration: none;
     color: black;
 }

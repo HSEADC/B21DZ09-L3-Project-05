@@ -1,3 +1,43 @@
 .footer {
-    margin: 40px 0 50px;
+    display: flex;
+    /* width: 1084px; */
+    height: 130px;
+    margin-top: 80px;
+    padding: 0px 92px;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 20px 20px 0px 0px;
+    background: #E9E9E9;
+}
+
+.footerAbout {
+    color:#5195D4;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.footerAbout:hover {
+    text-decoration: underline;
+}
+
+.footerSections {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 112px;
+}
+
+.footerSection p {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.footerLogo {
+    background-image: url("/assets/promo/Logo_promo.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    height: 14px;
+    width: 68px;
 }

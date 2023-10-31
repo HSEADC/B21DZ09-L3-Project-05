@@ -1,4 +1,6 @@
 .header {
+    /* position: fixed; */
+    position: relative;
     display: flex;
     /* width: 1084px; */
     height: 100px;
@@ -9,7 +11,7 @@
 
     background-color: white;
     border-radius: 20px;
-    box-shadow: 110px 134px 250px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 110px 134px 250px 0px rgba(0, 0, 0, 0.1);
 
     z-index: 100;
 }
@@ -21,9 +23,42 @@
 }
 
 .navLogo {
-    font-size: 18px;
+    /* font-size: 18px;
     font-weight: 800;
-    color: rgb(11, 20, 77);
+    color: rgb(11, 20, 77); */
+    margin-bottom: 8px;
+
+    background-image: url("/assets/promo/IconLogo.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    width: 40px;
+    height: 40px;
+}
+
+.navSearch {
+    background-image: url("/assets/promo/IconSearch.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    width: 40px;
+    height: 40px;
+}
+
+.navUser {
+    background-image: url("/assets/promo/IconUser.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    width: 40px;
+    height: 40px;
+}
+
+.navSearchAvatar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
 }
 
 .navSections {
@@ -32,5 +67,10 @@
 }
 
 .navSection {
-    color: rgb(11, 20, 77);
+    font-size: 20px;
+    color: black;
+}
+
+.navSection:hover {
+    text-decoration: underline;
 }

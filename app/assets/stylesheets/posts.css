@@ -6,7 +6,7 @@
     /* width: 60%; */
     background-color: white;
     border: 1px solid lightgray;
-    /* border-radius: 36px; */
+    border-radius: 18px;
     text-decoration: none;
     color: black;
 }
@@ -14,7 +14,7 @@
 .categoryChips {
     display: inline-block;
     margin: 10px 0 0 0;
-    padding: 5px 16px 7px 16px;
+    padding: 7px 16px;
     justify-content: center;
     align-items: center;
     border-radius: 16px;

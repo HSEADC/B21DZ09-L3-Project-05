@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-@raw_text = 'Дизайнеры путешествуют. Как и все нормальные люди. Дизайнеры смотрят на мир не как нормальные люди. У дизайнеров  ̰п̰р̰Ofд̶е̰ф̰(ö̤)р̰мAц̰ия. Наш сервис помогает делиться интересными визуальными находками во время путешествий, создавая в процессе карту разных взглядов на мир — и мест, которые стоит посетить, чтобы взглянуть на них по-своему.'
+@raw_text = 'Кастомизация одежды — увлекательный способ сделать свои луки уникальнее. Кастом вещь может стать способом самовыражения, воплощением творческого потенциала, ценным подарком или элементом, объединяющим группу людей. ЛУЧОК поможет вам воплотить креативные идеи в жизнь. Делитесь своими кастм вещами на ЛУЧКЕ. Мне тут очень нравится.'
 @words = @raw_text.downcase.gsub(/[—.—,«»:()]/, '').gsub(/  /, ' ').split(' ')
 
 @categories_data = [
@@ -17,39 +17,39 @@
 
 @posts_data = [
   {
-    title: 'Название поста 1',
-    description: 'Описание Описание Описание ПОСТА 1111',
+    title: 'Первый опыт кастома',
+    description: 'Это было несколько лет назад, и вот где мы теперь...',
     post_image: File.open(Rails.root.join('public', 'image_post', 'image_01.jpg')),
     category_id: 1
   },
   {
-    title: 'Название поста 2',
-    description: 'Описание Описание Описание ПОСТА 2222',
-    post_image: File.open(Rails.root.join('public', 'image_post', 'image_05.jpg')),
+    title: 'В подарок другу',
+    description: 'Лучший подарок — тот, что сделан своими руками. Ну, и с Дэдпулом',
+    post_image: File.open(Rails.root.join('public', 'image_post', 'image_02.jpg')),
     category_id: 1
   },
   {
-    title: 'Название поста-idea3',
-    description: 'Описание Описание Описание ПОСТА 2222',
-    post_image: File.open(Rails.root.join('public', 'image_post', 'image_10.jpg')),
+    title: 'Многообразие кастома',
+    description: 'кастомизировать можно что угодно. буквально.',
+    post_image: File.open(Rails.root.join('public', 'image_post', 'image_03.jpg')),
     category_id: 1
   },
   {
-    title: 'Название поста 3',
-    description: 'Описание Описание Описание ПОСТА 3333',
-    post_image: File.open(Rails.root.join('public', 'image_post', 'image_09.jpg')),
+    title: 'Как расписать джинcовку',
+    description: 'Лучший вариант на осень, чтобы быть в тепле и на стиле',
+    post_image: File.open(Rails.root.join('public', 'image_post', 'image_04.jpg')),
     category_id: 2
   },
   {
-    title: 'post forum 1',
-    description: 'Описание Описание Описание ПОСТА 2222',
-    post_image: File.open(Rails.root.join('public', 'image_post', 'image_02.jpg')),
+    title: 'Как вышивать по шёлку?',
+    description: 'Это вообще возможно????',
+    post_image: File.open(Rails.root.join('public', 'image_post', 'image_05.jpg')),
     category_id: 3
   },
   {
-    title: 'post forum 1',
-    description: 'Описание Описание Описание ПОСТА 2222',
-    post_image: File.open(Rails.root.join('public', 'image_post', 'image_03.jpg')),
+    title: 'Грань между кастомом и созданием нового',
+    description: 'Философский разговор в стиле Канта',
+    post_image: File.open(Rails.root.join('public', 'image_post', 'image_06.jpg')),
     category_id: 3
   }
 ]
