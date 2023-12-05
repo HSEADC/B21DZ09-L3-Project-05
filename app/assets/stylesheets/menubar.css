@@ -1,17 +1,15 @@
 .header {
-    /* position: fixed; */
     position: relative;
     display: flex;
-    /* width: 1084px; */
-    height: 100px;
-    margin: 20px auto 0;
-    padding: 0px 40px 0px 40px;
+    top: 0;
+    width: -webkit-fill-available;
+    height: 60px;
+    padding: 0 26px;
     justify-content: space-between;
     align-items: center;
 
     background-color: white;
-    border-radius: 20px;
-    box-shadow: 110px 134px 250px 0px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid black;
 
     z-index: 100;
 }
@@ -23,17 +21,19 @@
 }
 
 .navLogo {
-    /* font-size: 18px;
-    font-weight: 800;
-    color: rgb(11, 20, 77); */
-    margin-bottom: 8px;
+    position: absolute;
+    left: calc(50% - 32px);
+    width: fit-content;
+    padding: 0 10px;
 
-    background-image: url("/assets/promo/IconLogo.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
+    color: #DBDBDB;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 44px;
+    text-transform: uppercase;
 
-    width: 40px;
-    height: 40px;
+    background-color: black;
 }
 
 .navSearch {
@@ -41,8 +41,8 @@
     background-repeat: no-repeat;
     background-size: contain;
 
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
 }
 
 .navUser {
@@ -58,17 +58,32 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
 }
 
 .navSections {
     display: flex;
-    gap: 40px;
+    gap: 20px;
 }
 
 .navSection {
-    font-size: 20px;
-    color: black;
+    width: fit-content;
+    padding: 0 12px;
+
+    color: #DBDBDB;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 41px; /* 256.25% */
+    text-transform: uppercase;
+
+    background-color: black;
+
+    &.newPost {
+        color: black;
+        border: 1px dashed black;
+        background-color: transparent;
+    }
 }
 
 .navSection:hover {

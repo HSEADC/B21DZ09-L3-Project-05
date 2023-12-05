@@ -11,8 +11,8 @@
 
 @categories_data = [
   {name: 'Идеи'},
-  {name: 'Туториалы'},
-  {name: 'Форум'}
+  {name: 'Туториалы'}
+  # {name: 'Форум'}
 ]
 
 @posts_data = [
@@ -23,8 +23,8 @@
     category_id: 1
   },
   {
-    title: 'В подарок другу',
-    description: 'Лучший подарок — тот, что сделан своими руками. Ну, и с Дэдпулом',
+    title: 'Кастом и апсайклинг',
+    description: 'Модняво и травматично (Ася нам жаль)',
     post_image: File.open(Rails.root.join('public', 'image_post', 'image_02.jpg')),
     category_id: 1
   },
@@ -41,16 +41,16 @@
     category_id: 2
   },
   {
-    title: 'Как вышивать по шёлку?',
-    description: 'Это вообще возможно????',
+    title: 'Как расписать кожу',
+    description: 'Это вообще возможно???? Да!!1!',
     post_image: File.open(Rails.root.join('public', 'image_post', 'image_05.jpg')),
-    category_id: 3
+    category_id: 2
   },
   {
     title: 'Грань между кастомом и созданием нового',
     description: 'Философский разговор в стиле Канта',
     post_image: File.open(Rails.root.join('public', 'image_post', 'image_06.jpg')),
-    category_id: 3
+    category_id: 1
   }
 ]
 
@@ -61,6 +61,7 @@ def seed
   create_categories(@categories_data)
   create_posts(@posts_data)
   create_comments(3..8)
+  create_comment_replies(100)
 end
 
 def reset_db
@@ -130,6 +131,15 @@ def create_comments(quantity)
       comment = Comment.create(post_id: post.id, body: create_sentence, user_id: user.id)
       puts "Comment with id #{comment.id} for post with id #{comment.post.id} just created"
     end
+  end
+end
+
+def create_comment_replies(quantity)
+  quantity.times do
+    user = User.all.sample
+    comment = Comment.all.sample
+    reply = comment.replies.create(post_id: comment.post_id, body: create_sentence, user_id: user.id)
+    puts "Reply with id #{reply.id} for comment with id #{comment.id} just created"
   end
 end
 

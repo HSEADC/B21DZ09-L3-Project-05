@@ -3,9 +3,7 @@ html {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    width: calc(100% - 550px);
-    min-width: 690px;
+    font-family: "Suisse Intl", "Inter", sans-serif;
     margin: auto;
 }
 
@@ -19,7 +17,8 @@ textarea {
 }
 
 .contentPage {
-    width: calc(100% - 80px);
-    margin: auto;
+    width: calc(100% - 590px);
+    min-width: 690px;
+    margin: 40px auto;
 }
 

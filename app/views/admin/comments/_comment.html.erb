@@ -13,4 +13,10 @@
     <%= button_to "Удалить комментарий", [:admin, comment], method: :delete %>
   <% end %>
 
+  <div class="commentReplies">
+    <% comment.replies.each do |reply| %>
+      <%= render reply, partial: "admin/comments/comment", comment: reply, post: post %>
+    <% end %>
+  </div>
+
 </div>

@@ -1,5 +1,9 @@
 class Post < ApplicationRecord
-    has_many :comments
+    validates :title, presence: true
+    validates :category, presence: true
+    validates :post_image, presence: true
+
+    has_many :comments, dependent: :destroy
     belongs_to :category
     belongs_to :user
     mount_uploader :post_image, PostImageUploader

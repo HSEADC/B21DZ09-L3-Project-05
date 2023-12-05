@@ -1,10 +1,7 @@
 <% if user_signed_in? %>
-    <nav class="header">    
-        <%= link_to "", root_url, class: 'navLogo' %>
+    <nav class="header">
         
         <div class="navSections">
-            <%#= link_to "Главная", root_url, class: 'navSection' %>
-
 
             <% if user_signed_in? %>
             <%= link_to "Посты", admin_posts_url, class: 'navSection' %>
@@ -19,21 +16,21 @@
             <% end %>
         </div>
 
-
+        <%= link_to "ÒÒ", root_url, class: 'navLogo' %>
 
         <div class="navSearchAvatar">
+
+            <%#= link_to "Новый пост", root_url, class: 'navSection newPost' %>
+
+            <%= link_to "", root_url, class: 'navSearch' %>
+            <%#= link_to "", root_url, class: 'navUser' %>
 
             <% if user_signed_in? %>
                 <%#= link_to current_user.email, edit_user_registration_path %>
                 <%= link_to "Выйти", destroy_user_session_path, method: :delete, class: 'navSection' %>
-            <%# else %>
-                <%#= link_to "Log in", new_user_session_path %>
+            <% else %>
+                <%#= link_to "Войти", new_user_session_path, class: 'navSection' %>
                 <%#= link_to "Register", new_user_registration_path %>
-            <% end %>
-
-            <% unless user_signed_in? %>
-                <%#= link_to "", root_url, class: 'navSearch' %>
-                <%#= link_to "", root_url, class: 'navUser' %>
             <% end %>
 
         </div>

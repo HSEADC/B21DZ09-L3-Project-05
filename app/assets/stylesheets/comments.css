@@ -5,8 +5,16 @@
     width: 50%;
     min-width: 600px;
     background-color: white;
-    border: 1px solid lightgray;
+    border: 1px solid black;
     border-radius: 18px;
     text-decoration: none;
     /* color: black; */
+}
+
+.commentReplies {
+    padding-left: 40px;
+}
+
+.commentReplies > div {
+    padding: 20px 0;
 }
