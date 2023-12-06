@@ -11,4 +11,10 @@ class Comment < ApplicationRecord
 
     # scope :out_of_print, -> { where(out_of_print: true) }
 
+        # def api_as_json
+    #     {
+    #         body: body
+    #     }
+    # end
+
 end

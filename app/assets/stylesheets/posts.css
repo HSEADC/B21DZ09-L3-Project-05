@@ -6,7 +6,6 @@
     /* width: 60%; */
     background-color: white;
     border: 1px solid black;
-    border-radius: 18px;
     text-decoration: none;
     color: black;
 }
@@ -15,7 +14,6 @@
     width: fit-content;
     margin: 10px 0 0 0;
     padding: 7px 16px;
-    border-radius: 16px;
     background-color: lightgrey;
 
 }

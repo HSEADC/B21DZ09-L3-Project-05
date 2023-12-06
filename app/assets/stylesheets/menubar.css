@@ -1,5 +1,5 @@
 .header {
-    position: relative;
+    position: fixed;
     display: flex;
     top: 0;
     width: -webkit-fill-available;

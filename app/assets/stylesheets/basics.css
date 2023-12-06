@@ -8,7 +8,12 @@ body {
 }
 
 a {
+    color: #7e7e7e;
     text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 textarea {
@@ -19,6 +24,6 @@ textarea {
 .contentPage {
     width: calc(100% - 590px);
     min-width: 690px;
-    margin: 40px auto;
+    margin: 110px auto;
 }
 
