@@ -29,7 +29,7 @@
                 <%#= link_to current_user.email, edit_user_registration_path %>
                 <%= link_to "Выйти", destroy_user_session_path, method: :delete, class: 'navSection' %>
             <% else %>
-                <%#= link_to "Войти", new_user_session_path, class: 'navSection' %>
+                <%= link_to "Войти", new_user_session_path, class: 'navSection' %>
                 <%#= link_to "Register", new_user_registration_path %>
             <% end %>
 
@@ -42,6 +42,14 @@
     <div class="promoHeader">
         <%= link_to "", root_url, class: 'navLogo' %>
         <%= link_to "О проекте", welcome_about_url, class: 'navSection' %>
+
+        <% if user_signed_in? %>
+                <%#= link_to current_user.email, edit_user_registration_path %>
+                <%= link_to "Выйти", destroy_user_session_path, method: :delete, class: 'navSection' %>
+            <% else %>
+                <%= link_to "Войти", new_user_session_path, class: 'navSection' %>
+                <%#= link_to "Register", new_user_registration_path %>
+            <% end %>
     </div>
 
 <% end %>

@@ -66,6 +66,6 @@ class Admin::PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:title, :description, :post_image, :category_id, :created_at).merge(user_id: current_user.id)
+      params.require(:post).permit(:title, :type, :description, :post_image, :category_id, :created_at).merge(user_id: current_user.id)
     end
 end

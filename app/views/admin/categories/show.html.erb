@@ -15,7 +15,7 @@
 
   <div>
     <%# if can? :create, Post %>
-    <%= link_to "Новый пост", new_admin_post_path %>
+      <%= link_to "Новый пост", new_admin_post_path %>
     <%# end %>
   </div>
 
@@ -23,10 +23,14 @@
 
   <div id="posts">
     <% @category.posts.each do |postcat| %>
-      <%= link_to [:admin, postcat], class: 'postCard' do %>
-          <%= render partial: 'admin/posts/postcat', locals: {post: postcat} %>
-      <% end %>
+      <%#= link_to [:admin, postcat], class: 'postCard' do %>
+          <%#= render partial: 'admin/posts/postcat', locals: {post: postcat} %>
+      <%# end %>
     <% end %>
+  </div>
+
+  <div id="posts">
+    <%= render @posts %>
   </div>
   
 </div>

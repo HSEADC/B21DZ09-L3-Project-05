@@ -20,37 +20,43 @@
     title: 'Первый опыт кастома',
     description: 'Это было несколько лет назад, и вот где мы теперь...',
     post_image: File.open(Rails.root.join('public', 'image_post', 'image_01.jpg')),
-    category_id: 1
+    category_id: 1,
+    type: 'IdeaPost'
   },
   {
     title: 'Кастом и апсайклинг',
     description: 'Модняво и травматично (Ася нам жаль)',
     post_image: File.open(Rails.root.join('public', 'image_post', 'image_02.jpg')),
-    category_id: 1
+    category_id: 1,
+    type: 'IdeaPost'
   },
   {
     title: 'Многообразие кастома',
     description: 'кастомизировать можно что угодно. буквально.',
     post_image: File.open(Rails.root.join('public', 'image_post', 'image_03.jpg')),
-    category_id: 1
+    category_id: 1,
+    type: 'IdeaPost'
   },
   {
     title: 'Как расписать джинcовку',
     description: 'Лучший вариант на осень, чтобы быть в тепле и на стиле',
     post_image: File.open(Rails.root.join('public', 'image_post', 'image_04.jpg')),
-    category_id: 2
+    category_id: 2,
+    type: 'TutorialPost'
   },
   {
     title: 'Как расписать кожу',
     description: 'Это вообще возможно???? Да!!1!',
     post_image: File.open(Rails.root.join('public', 'image_post', 'image_05.jpg')),
-    category_id: 2
+    category_id: 2,
+    type: 'TutorialPost'
   },
   {
     title: 'Грань между кастомом и созданием нового',
     description: 'Философский разговор в стиле Канта',
     post_image: File.open(Rails.root.join('public', 'image_post', 'image_06.jpg')),
-    category_id: 1
+    category_id: 1,
+    type: 'IdeaPost'
   }
 ]
 
@@ -117,15 +123,15 @@ end
 def create_posts(data)
   data.each do |posts_data|
     user = User.all.sample
-    post = Post.create(category_id: posts_data[:category_id], title: posts_data[:title], description: posts_data[:description], post_image: posts_data[:post_image], user_id: user.id)
-    puts "Post with id #{post.id} for categories with id #{post.category.id} just created"
+    post = Post.create(type: posts_data[:type], category_id: posts_data[:category_id], title: posts_data[:title], description: posts_data[:description], post_image: posts_data[:post_image], user_id: user.id)
+    puts "Post with id #{post.id} with type #{post.type} just created"
   end
 end
 
 def create_comments(quantity)
   posts = Post.all
 
-  Post.all.each do |post|
+  posts.each do |post|
     quantity.to_a.sample.times do
       user = User.all.sample
       comment = Comment.create(post_id: post.id, body: create_sentence, user_id: user.id)

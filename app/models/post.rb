@@ -1,5 +1,6 @@
 class Post < ApplicationRecord
     validates :title, presence: true
+    validates :type, presence: true
     validates :category, presence: true
     validates :post_image, presence: true
 

@@ -4,16 +4,12 @@
 
   <h1>Посты</h1>
 
-  <%# if can? :create, Post %>
+  <% if can? :create, Post %>
     <%= link_to "Новый пост", new_admin_post_path %>
-  <%# end %>
+  <% end %>
 
   <div id="posts">
-    <% @posts.each do |post| %>
-      <%= link_to [:admin, post], class: 'postCard' do %>
-        <%= render post %>
-      <% end %>
-    <% end %>
+    <%= render @posts %>
   </div>
 
 </div>

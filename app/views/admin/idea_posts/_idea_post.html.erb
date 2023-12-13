@@ -1,0 +1,33 @@
+<%= link_to admin_post_path(idea_post), class: 'postCard' do%>
+
+  <p class="typeChips">
+    <%= idea_post.type %>
+  </p>
+
+  <p class="categoryChips">
+    <%= idea_post.category.name %>
+  </p>
+
+  <p class="postDate">
+    <%= idea_post.created_at %>
+  </p>
+
+  <p>
+    <%= idea_post.user.email %>
+  </p>
+
+  <h2>
+    <%= idea_post.title%>
+  </h2>
+
+  <%= image_tag idea_post.post_image.url, width: 300 if idea_post.post_image.url %>
+
+  <p>
+    <%= idea_post.description %>
+  </p>
+
+  <p>
+    Комментариев: <%= idea_post.comments.count %>
+  </p>
+
+<% end %>

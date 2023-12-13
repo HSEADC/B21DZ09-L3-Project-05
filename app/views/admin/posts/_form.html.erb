@@ -1,4 +1,4 @@
-<%= form_with(model: [:admin, post]) do |form| %>
+<%= form_with(model: [:admin, post], url: admin_posts_path) do |form| %>
   <% if post.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(post.errors.count, "error") %>. Пост не может быть сохранён:</h2>
@@ -35,6 +35,11 @@
   <div>
     <%= form.label :"Категория" %>
     <%= form.select :category_id, options_for_select(Category.all.map { |category| [category.name, category.id]})%>
+  </div>
+
+  <div>
+    <%= form.label :"Тип" %>
+    <%= form.select :type, ["IdeaPost", "TutorialPost"]%>
   </div>
   
   <br>

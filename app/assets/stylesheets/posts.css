@@ -10,11 +10,24 @@
     color: black;
 }
 
+.postCard:hover {
+    text-decoration: none;
+}
+
+
 .categoryChips {
     width: fit-content;
     margin: 10px 0 0 0;
     padding: 7px 16px;
     background-color: lightgrey;
+
+}
+
+.categoryType {
+    width: fit-content;
+    margin: 10px 0 0 0;
+    padding: 7px 16px;
+    background-color: lightpink;
 
 }
 
