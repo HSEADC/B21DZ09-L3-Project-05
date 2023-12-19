@@ -17,7 +17,9 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :posts do
+      
       resources :comments
+
       collection do
         get "by_tag/:tag", to: "posts#by_tag", as: "tagged"
       end

@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="contentPage">
+
+  <h1>Комментарии</h1>
+
+  <div id="comments">
+    <% @comments.each do |comment| %>
+      <div class="commentCard">
+        <%= render comment, post: comment.post %>
+          <p>
+            <%#= link_to "Показать этот комментарий", [:admin, comment] %>
+          </p>
+      </div>
+    <% end %>
+  </div>
+
+</div>
