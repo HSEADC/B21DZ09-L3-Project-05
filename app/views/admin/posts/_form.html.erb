@@ -35,24 +35,29 @@
 
   <div>
     <%= form.label :"Загрузить изображение", style: "display: block" %>
-    <%= form.file_field :post_image%>
+    <%= form.file_field :post_image %>
   </div>
 
   <br>
 
   <div>
     <%= form.label :"Категория" %>
-    <%= form.select :category_id, options_for_select(Category.all.map { |category| [category.name, category.id]})%>
+    <%= form.select :category_id, options_for_select(Category.all.map { |category| [category.name, category.id]}) %>
   </div>
 
   <div>
     <%= form.label :"Тип" %>
-    <%= form.select :type, ["IdeaPost", "TutorialPost"]%>
+    <%= form.select :type, ["IdeaPost", "TutorialPost"] %>
+  </div>
+
+  <div>
+    <%= form.label :"Тэги", style: "display: block" %>
+    <%= form.text_field :tag_list, value: post.tag_list.join(", ") %>
   </div>
   
   <br>
 
   <div>
-    <%= form.submit :"Опубликовать"%>
+    <%= form.submit :"Опубликовать" %>
   </div>
 <% end %>

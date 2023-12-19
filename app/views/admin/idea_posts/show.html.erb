@@ -2,13 +2,7 @@
 
 <div class="contentPage">
 
-  <% if @post.type == "IdeaPost" %>
-    <%= render partial: "admin/posts/postideapage", locals: {post: @post} %>
-  <% elsif @post.type == "TutorialPost" %>
-    <%= render partial: "posts/posttutorialpage", locals: {post: @post} %>
-  <% end %>
-
-  <%#= render partial: "admin/posts/postpage", locals: {post: @post} %>
+  <%= render @post %>
 
   <div>
     <%= link_to "Обратно ко всем постам", :admin_posts %> |

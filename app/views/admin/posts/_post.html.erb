@@ -8,6 +8,13 @@
     <%#= post.category.name %>
   </p>
 
+  <div class="tagChipsRow">
+    <% post.tag_list.each do |tag| %>
+      <div class="tagChips">
+        <%= tag %>
+      </div>
+  </div>
+
   <p class="postDate">
     <%= post.created_at %>
   </p>

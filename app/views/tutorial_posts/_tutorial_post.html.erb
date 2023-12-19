@@ -1,4 +1,4 @@
-<%= link_to post_path(tutorial_post), class: 'postCard' do %>
+<div class="postCard">
 
   <p class="typeChips tutorial">
     <%= tutorial_post.type %>
@@ -9,6 +9,14 @@
   <%#= idea_post.category.name %>
   </p>
   -->
+
+  <div class="tagChipsRow">
+    <% tutorial_post.tag_list.each do |tag| %>
+      <div class="tagChips">
+        <%= tag %>
+      </div>
+    <% end %>
+  </div>
 
   <p class="postDate">
     <%= tutorial_post.created_at %>
@@ -36,4 +44,4 @@
     Комментариев: <%= tutorial_post.comments.count %>
   </p>
 
-<% end %>
+  </div>

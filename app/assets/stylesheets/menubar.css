@@ -37,6 +37,10 @@
     background-color: black;
 }
 
+.navLogo:hover {
+    text-decoration: underline;
+}
+
 .navSearch {
     background-image: url("/assets/promo/IconSearch.svg");
     background-repeat: no-repeat;

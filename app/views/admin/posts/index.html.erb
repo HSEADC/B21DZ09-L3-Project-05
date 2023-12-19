@@ -4,12 +4,30 @@
 
   <h1>Посты</h1>
 
+  <div class="tagChipsRow">
+    <% Post.tag_counts_on(:tags).each do |tag| %>
+      <%= link_to tagged_admin_posts_path(tag.name) do %>
+        <div class="tagChips">
+          <%= tag.name %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
   <% if can? :create, Post %>
     <%= link_to "Новый пост", new_admin_post_path %>
   <% end %>
 
   <div id="posts">
-    <%= render @posts %>
+    <%#= render @posts %>
+  </div>
+
+  <div id="posts">
+    <% @posts.each do |post| %>
+      <%= link_to admin_post_path(post) do %>
+        <%= render post %>
+      <% end %>
+    <% end %>
   </div>
 
 </div>

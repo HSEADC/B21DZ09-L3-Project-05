@@ -20,7 +20,6 @@
     margin: 10px 0 0 0;
     padding: 7px 16px;
     background-color: lightgrey;
-
 }
 
 .typeChips {
@@ -36,6 +35,24 @@
         background-color: lightblue;
     }
 
+}
+
+.tagChipsRow {
+    display: flex;
+    max-width: 60%;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.tagChips {
+    font-size: 14px;
+    width: fit-content;
+    margin: 10px 0 0 0;
+    padding: 6px 12px;
+    background-color: lightgrey;
+    border-radius: 12px;
 }
 
 .postDate {

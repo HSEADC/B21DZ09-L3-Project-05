@@ -9,6 +9,8 @@ class Post < ApplicationRecord
     belongs_to :user
     mount_uploader :post_image, PostImageUploader
 
+    acts_as_taggable_on :tags
+
     # def api_as_json
     #     {
     #         title: title,

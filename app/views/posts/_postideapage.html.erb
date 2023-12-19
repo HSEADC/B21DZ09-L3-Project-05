@@ -1,0 +1,43 @@
+<div class="postCard">
+
+    <p class="typeChips idea">
+        <%= post.type %>
+    </p>
+
+    <!--
+    <p class="categoryChips">
+        <%#= post.category.name %>
+    </p>
+    -->
+
+    <div class="tagChipsRow">
+        <% post.tag_list.each do |tag| %>
+            <div class="tagChips">
+                <%= tag %>
+            </div>
+        <% end %>
+    </div>
+
+    <p class="postDate">
+        <%= post.created_at %>
+    </p>
+
+    <p>
+        <%= post.user.email %>
+    </p>
+
+    <h2 style="font-size: 24px;">
+        <%= post.title%>
+    </h2>
+
+    <%= image_tag post.post_image.url, width: 300 if post.post_image.url %>
+
+    <p>
+        <%= post.description %>
+    </p>
+
+    <p>
+        Комментариев: <%= post.comments.count %>
+    </p>
+
+</div>

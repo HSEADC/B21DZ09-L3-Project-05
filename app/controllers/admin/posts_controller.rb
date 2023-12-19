@@ -7,6 +7,11 @@ class Admin::PostsController < ApplicationController
     @posts = Post.all
   end
 
+  def by_tag
+    @posts = Post.tagged_with(params[:tag])
+    render :index
+  end
+
   # GET /posts/1 or /posts/1.json
   def show
   end
@@ -84,14 +89,14 @@ class Admin::PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:title, :type, :description, :post_image, :contetn_link, :category_id, :created_at).merge(user_id: current_user.id)
+      params.require(:post).permit(:title, :type, :description, :post_image, :contetn_link, :tag_list, :category_id, :created_at).merge(user_id: current_user.id)
     end
 
     def idea_post_params
-      params.require(:idea_post).permit(:title, :type, :description, :post_image, :contetn_link, :category_id, :created_at).merge(user_id: current_user.id)
+      params.require(:idea_post).permit(:title, :type, :description, :post_image, :contetn_link, :tag_list, :category_id, :created_at).merge(user_id: current_user.id)
     end
 
     def tutorial_post_params
-      params.require(:tutorial_post).permit(:title, :type, :description, :post_image, :contetn_link, :category_id, :created_at).merge(user_id: current_user.id)
+      params.require(:tutorial_post).permit(:title, :type, :description, :post_image, :contetn_link, :tag_list, :category_id, :created_at).merge(user_id: current_user.id)
     end
 end
