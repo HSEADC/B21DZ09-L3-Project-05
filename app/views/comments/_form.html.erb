@@ -1,0 +1,27 @@
+<%= form_with(model: comment) do |form| %>
+  <% if comment.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(comment.errors.count, "error") %>. Комментарий не может быть сохранён:</h2>
+
+      <ul>
+        <% comment.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.hidden_field :post_type, value: post.class %>
+    <%= form.hidden_field :post_id, value: post.id %>
+  </div>
+
+  <div>
+    <%= form.label :"Комментарий", style: "display: block" %>
+    <%= form.text_area :body %>
+  </div>
+
+  <div>
+    <%= form.submit :"Отправить" %>
+  </div>
+<% end %>

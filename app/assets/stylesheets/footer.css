@@ -1,42 +1,211 @@
-.footer {
+.Footer {
     display: flex;
-    /* width: 1084px; */
-    height: 130px;
-    margin-top: 80px;
-    padding: 0px 92px;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
 
-    background: #E9E9E9;
+    background: var(--black);
 }
 
-.footerAbout {
-    color:#5195D4;
-    font-size: 16px;
-    font-weight: 500;
-}
-
-.footerAbout:hover {
-    text-decoration: underline;
-}
-
-.footerSections {
+.FooterTop {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 112px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
-.footerSection p {
-    font-size: 16px;
-    font-weight: 500;
+.FooterTopLogoText {
+    color: var(--white);
+    font-family: Suisse Intl;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 40px */
+    text-transform: uppercase;
+    margin: 0;
 }
 
-.footerLogo {
-    background-image: url("/assets/promo/Logo_promo.svg");
+.FooterTopLogoLine {
+    background-image: url("/assets/FooterTopLogoLine.svg");
     background-repeat: no-repeat;
     background-size: contain;
 
-    height: 14px;
-    width: 68px;
+    margin-top: -16px;
+    margin-left: 72px;
+
+    width: 144px;
+    height: 37px;
+    transform: rotate(2deg);
 }
+
+.FooterTopR {
+    color: var(--white);
+    font-family: Suisse Intl;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 54px;
+}
+
+.FooterInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-self: stretch;
+}
+
+.FooterInfoTeam {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.FooterInfoTeamTitle {
+    color: var(--white);
+    font-family: Suisse Intl;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    text-transform: uppercase;
+}
+
+.FooterInfoTeamStudents,
+.FooterInfoTeamProfs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.FooterInfoTeamPerson {
+    color: var(--white);
+    font-family: Suisse Intl;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 16px */
+    text-transform: uppercase;
+}
+
+.FooterInfoPages {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+
+    &.mobile {
+        display: none;
+    }
+}
+
+.FooterInfoPage {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+
+    font-family: Suisse Intl;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 20px */
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+.FooterInfoContacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.FooterInfoContactsText {
+    color: var(--white);
+    font-family: Suisse Intl;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 20px */
+    text-transform: uppercase;
+}
+
+.SocialNetworks {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.SocialNetwork {
+    width: 36px;
+    height: 36px;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &.VK {
+        background-image: url("/assets/VK.svg"); 
+    }
+
+    &.TG {
+        background-image: url("/assets/TG.svg"); 
+    }
+}
+
+@media only screen and (min-device-width: 768px) {
+    .Footer {
+        width: calc(100%-52px);
+        height: 376px;
+        padding: 47px 26px;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .FooterInfoContactsText {
+        max-width: 228px;
+    }
+}
+
+@media only screen and (max-device-width: 767px) {
+    .Footer {
+        width: calc(100%-52px);
+        padding: 47px 26px;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .FooterInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+    }
+
+    .FooterInfoPages {
+        display: none;
+    
+        &.mobile {
+            display: block;
+        }
+    }
+
+    .FooterInfoTeam {
+        margin: 10px 0 20px 0;
+    }
+
+    .FooterInfoContactsText {
+        max-width: 700px;
+    }
+
+    .SocialNetworks {
+        gap: 30px;
+    }
+
+    .SocialNetwork {
+        width: 44px;
+        height: 44px;
+    }
+}
+

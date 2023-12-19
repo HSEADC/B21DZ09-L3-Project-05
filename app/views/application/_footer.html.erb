@@ -1,8 +1,48 @@
-<div class="footer">
-    <%= link_to "О проекте", welcome_about_url, class: 'footerAbout' %>
-
-    <div class="footerSections">
-        <p class="footerSection">ADC HSE</p>
-        <div class="footerLogo"></div>
+<div class="Footer">
+    <div class="FooterTop">
+        <div class="FooterTopLogo">
+            <h4 class="FooterTopLogoText">L&Ograve;&Ograve;CHOK</h4>
+            <div class="FooterTopLogoLine"></div>
+        </div>
+        <sup class="FooterTopR">&reg;</sup>
     </div>
+
+    <div class="FooterInfo">
+        <div class="FooterInfoPages mobile">
+            <%= link_to "Идеи", welcome_ideas_url, class: "FooterInfoPage" %>
+            <%= link_to "Туториалы", welcome_ideas_url, class: "FooterInfoPage" %>
+            <%= link_to "О нас", welcome_about_url, class: "FooterInfoPage" %>
+        </div>
+
+        <div class="FooterInfoTeam">
+            <h6 class="FooterInfoTeamTitle">Команда</h6>
+            <div class="FooterInfoTeamStudents">
+                <p class="FooterInfoTeamPerson">Арсений Гулевич</p>
+                <p class="FooterInfoTeamPerson">Лена Донских</p>
+                <p class="FooterInfoTeamPerson">Ася Олейниченко</p>
+            </div>
+            <div class="FooterInfoTeamProfs">
+                <p class="FooterInfoTeamPerson">Захар День</p>
+                <p class="FooterInfoTeamPerson">Дмитрий Александров</p>
+                <p class="FooterInfoTeamPerson">Вадим Булгаков</p>
+            </div>
+        </div>
+
+        <div class="FooterInfoPages">
+            <%= link_to "Идеи", welcome_ideas_url, class: "FooterInfoPage" %>
+            <%= link_to "Туториалы", welcome_ideas_url, class: "FooterInfoPage" %>
+            <%= link_to "О нас", welcome_about_url, class: "FooterInfoPage" %>
+        </div>
+
+        <div class="FooterInfoContacts">
+        <p class="FooterInfoContactsText">(Контакты)</p>
+        <div class="SocialNetworks">
+            <a class="SocialNetwork VK" href="https://vk.com/" target="_blank"></a>
+            <a class="SocialNetwork TG" href="https://t.me/loochok_media" target="_blank"></a>
+        </div>
+        <p class="FooterInfoContactsText">Медиа сервис &Ograve;&nbsp;кастомизации вещей</p>
+        </div>
+    </div>
+
 </div>
+

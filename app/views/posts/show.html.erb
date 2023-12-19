@@ -1,0 +1,36 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="contentPage">
+
+  <%= render @post %>
+
+  <div>
+    <%= link_to "Обратно ко всем постам", :back %> |
+
+    <% if can? :manage, @post %>
+      <%= link_to "Редактировать пост", edit_post_path(@post) %>
+      <%= button_to "Удалить пост", post_path(@post), method: :delete %>
+    <% end %>
+  </div>
+
+  <hr>
+
+  <h3>Комментарии</h3>
+
+  <%= render "comments/form", post: @post, comment: Comment.new %>
+
+  <%#= link_to "Новый комментарий", new_post_comment_path(@post) %>
+  <br>
+  <br>
+  <%#= render @post.comments, post: @post %>
+
+  
+  <div id="comments">
+    <% @post.comments.each do |comment| %>
+      <div class="commentCard"%>
+        <%= render comment, post: @post %>
+      </div>
+    <% end %>
+  </div>
+  
+</div>

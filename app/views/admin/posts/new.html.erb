@@ -2,7 +2,9 @@
 
   <h1>Новый пост</h1>
 
-  <%= render "form", post: @post %>
+  <%= render "form", post: @post, url: admin_posts_path %>
+
+  <%#= render "form", post: @post %>
 
   <br>
 

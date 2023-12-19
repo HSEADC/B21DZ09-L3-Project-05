@@ -1,0 +1,22 @@
+<div id="<%= dom_id comment %>">
+  <p>
+    <%= comment.user.email %>
+  </p>
+  
+  <p>
+    <%= comment.body %>
+  </p>
+
+  <% if can? :manage, comment %>
+    <%#= link_to "Редактировать комментарий", edit_comment_path(comment) %>
+    <br>
+    <%#= button_to "Удалить комментарий", comment, method: :delete %>
+  <% end %>
+
+  <div class="commentReplies">
+    <% comment.replies.each do |reply| %>
+      <%= render reply, partial: "comments/comment", comment: reply, post: post %>
+    <% end %>
+  </div>
+
+</div>

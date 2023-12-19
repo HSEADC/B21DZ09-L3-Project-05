@@ -26,12 +26,13 @@
     width: fit-content;
     padding: 0 10px;
 
-    color: #DBDBDB;
+    font-family: Suisse Intl;
     font-size: 32px;
     font-style: normal;
     font-weight: 600;
     line-height: 44px;
     text-transform: uppercase;
+    color: var(--white);
 
     background-color: black;
 }
@@ -70,12 +71,13 @@
     width: fit-content;
     padding: 0 12px;
 
-    color: #DBDBDB;
+    font-family: Suisse Intl;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
     line-height: 41px; /* 256.25% */
     text-transform: uppercase;
+    color: var(--white);
 
     background-color: black;
 

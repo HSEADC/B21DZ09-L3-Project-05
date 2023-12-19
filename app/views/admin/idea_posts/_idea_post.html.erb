@@ -1,12 +1,14 @@
-<%= link_to admin_post_path(idea_post), class: 'postCard' do%>
+<%= link_to admin_post_path(idea_post), class: "postCard" do%>
 
-  <p class="typeChips">
+  <p class="typeChips idea">
     <%= idea_post.type %>
   </p>
 
+  <!--
   <p class="categoryChips">
-    <%= idea_post.category.name %>
+  <%#= idea_post.category.name %>
   </p>
+  -->
 
   <p class="postDate">
     <%= idea_post.created_at %>

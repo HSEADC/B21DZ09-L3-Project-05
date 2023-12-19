@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="contentPage">
+
+  <h1>Посты</h1>
+
+  <% if can? :create, Post %>
+    <%= link_to "Новый пост", new_post_path %>
+  <% end %>
+
+  <div id="posts">
+    <%= render @posts %>
+  </div>
+
+</div>
+
+

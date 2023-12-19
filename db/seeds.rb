@@ -134,7 +134,7 @@ def create_comments(quantity)
   posts.each do |post|
     quantity.to_a.sample.times do
       user = User.all.sample
-      comment = Comment.create(post_id: post.id, body: create_sentence, user_id: user.id)
+      comment = Comment.create(post_id: post.id, post_type: post.type, body: create_sentence, user_id: user.id)
       puts "Comment with id #{comment.id} for post with id #{comment.post.id} just created"
     end
   end

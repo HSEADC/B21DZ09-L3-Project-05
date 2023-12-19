@@ -23,11 +23,18 @@
 
 }
 
-.categoryType {
+.typeChips {
     width: fit-content;
     margin: 10px 0 0 0;
     padding: 7px 16px;
-    background-color: lightpink;
+
+    &.idea {
+        background-color: lightpink;
+    }
+
+    &.tutorial {
+        background-color: lightblue;
+    }
 
 }
 

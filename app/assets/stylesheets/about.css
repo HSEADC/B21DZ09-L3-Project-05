@@ -1,254 +1,3 @@
-.aboutContent {
-    margin: 62px auto 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.aboutBlock1 {
-    margin-bottom: 100px;
-    position: relative;
-    display: flex;
-    width: 1083px;
-    height: 774px;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 20px;
-}
-
-.aboutBlock1Texts {
-    display: flex;
-    width: 440px;
-    margin-top: 64px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-}
-
-.aboutContent h3 {
-    margin: 0;
-    font-size: 34px;
-    font-weight: 600;
-}
-
-.aboutBlock1Texts p {
-    margin: 0;
-    font-size: 20px;
-    font-weight: 300;
-    line-height: 1.5;
-}
-
-.aboutImg1,
-.aboutImg2,
-.aboutImg3,
-.aboutImg4,
-.aboutImg5,
-.aboutImg6,
-.aboutImg7 {
-    position: absolute;
-    background-repeat: no-repeat;
-    background-size: contain;
-
-    box-shadow: 110px 134px 250px 0px rgba(0, 0, 0, 0.1);
-}
-
-.aboutImg1 {
-    background-image: url("/assets/promo/about1.png");
-    top: 0;
-    left: 276px;
-    width: 256px;
-    height: 262px;
-    border-radius: 10px;
-}
-
-.aboutImg2 {
-    background-image: url("/assets/promo/about2.png");
-    top: 74px;
-    left: 92px;
-    width: 164px;
-    height: 219px;
-    border-radius: 4px;
-}
-
-.aboutImg3 {
-    background-image: url("/assets/promo/about3.png");
-    top: 313px;
-    left: 0px;
-    width: 256px;
-    height: 288px;
-    border-radius: 10px;
-}
-
-.aboutImg4 {
-    background-image: url("/assets/promo/about4.png");
-    top: 280px;
-    left: 276px;
-    width: 347px;
-    height: 407px;
-    border-radius: 3px;
-}
-
-.aboutImg5 {
-    background-image: url("/assets/promo/about5.png");
-    top: 363px;
-    left: 643px;
-    width: 164px;
-    height: 164px;
-    border-radius: 10px;
-}
-
-.aboutImg6 {
-    background-image: url("/assets/promo/about6.png");
-    top: 547px;
-    left: 643px;
-    width: 164px;
-    height: 227px;
-    border-radius: 5px;
-}
-
-.aboutImg7 {
-    background-image: url("/assets/promo/about7.png");
-    top: 363px;
-    left: 827px;
-    width: 256px;
-    height: 287px;
-    border-radius: 10px;
-}
-
-.aboutBlock2 {
-    margin-top: 40px;
-    margin-bottom: 100px;
-    width: 1085px;
-    display: inline-flex;
-    flex-direction: column;
-    /* align-items: center; */
-    gap: 40px;
-}
-
-.aboutNs {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 60px;
-}
-
-.aboutN {
-    display: flex;
-    /* width: 350px; */
-    align-items: flex-start;
-    gap: 10px;
-}
-
-.aboutNs p{
-    margin: 0;
-    font-size: 20px;
-    font-weight: 300;
-    /* line-height: 1.5; */
-    width: 270px;
-}
-
-.aboutNP1 {
-    background-image: url("/assets/promo/post1.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-
-    width: 667px;
-    height: 178px;
-    border-radius: 15px;
-
-    box-shadow: 0px 4px 21px 0px rgba(0, 0, 0, 0.1);
-}
-
-.aboutNP2 {
-    background-image: url("/assets/promo/post2.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-
-    width: 548px;
-    height: 470px;
-    border-radius: 15px;
-
-    box-shadow: 0px 4px 21px 0px rgba(0, 0, 0, 0.1);
-}
-
-.aboutNP3 {
-    background-image: url("/assets/promo/post3.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-
-    width: 358px;
-    height: 358px;
-    border-radius: 18px;
-
-    box-shadow: 0px 4px 21px 0px rgba(0, 0, 0, 0.1);
-}
-
-.about1 {
-    display: flex;
-    align-items: center;
-}
-
-.about23 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 80px;
-}
-
-.about2,
-.about3 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
-}
-
-.N1,
-.N2,
-.N3 {
-    background-repeat: no-repeat;
-    background-size: contain;
-
-    width: 40px;
-    height: 40px;
-}
-
-.N1 {
-    background-image: url("/assets/promo/n1.svg");
-}
-
-.N2 {
-    background-image: url("/assets/promo/n2.svg");
-}
-
-.N3 {
-    background-image: url("/assets/promo/n3.svg");
-}
-
-.aboutBlock3 {
-    margin-top: 100px;
-    margin-bottom: 190px;
-    display: flex;
-    width: 1085px;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.aboutBlock3Texts {
-    display: flex;
-    width: 440px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-}
-
-.aboutBlock3Texts p {
-    margin: 0;
-    font-size: 20px;
-    font-weight: 300;
-    /* line-height: 1.5; */
-}
-
 .aboutTeam {
     display: inline-flex;
     align-items: center;
@@ -325,44 +74,59 @@
     transform: translate(-50%, 100%);
 }
 
-.aboutBlock4 {
-    margin-top: 30px;
-    margin-bottom: 50px;
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 46px;
+
+.bodyAbout {
+    background: linear-gradient(180deg, #FFF 24.77%, #DBDBDB 91.11%);
 }
 
-.aboutBlock4Texts {
+.ContentScreen1 {
+    margin-top: 60px;
+    width: 100%;
+    height: 780px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+
+    overflow: hidden;
+}
+
+.ContentScreen2 {
+    width: 100%;
+    height: 50vw;
+}
+
+.GeometricBackground {
+    position: relative;
     display: flex;
-    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
     align-items: center;
-    gap: 20px;
-}
-
-.aboutBlock4 h3 {
     text-align: center;
-}
+  }
 
-.aboutBlock4 p {
-    margin: 0;
-    width: 440px;
-    text-align: center;
-    font-size: 20px;
-    font-weight: 300;
-}
+  .GeometricBackgroundImg {
+    margin-top: 28px;
+    width: 1220px;
+    height: 100%;
 
-.aboutBlock4Texts a {
-    color: #5195D4;
-    text-decoration: underline;
-}
+    background-image: url("/assets/GeometricBackgroundW1220.svg");
 
-.aboutYear {
-    background-image: url("/assets/promo/year.svg");
     background-repeat: no-repeat;
     background-size: contain;
+  }
 
-    width: 655px;
-    height: 257px;
-}
+  .LineHorizontal {
+    position: absolute;
+    top: 50%; 
+    width: 100vw;
+    height: 1px;
+    background: black;
+  }
+
+  .LineVertical {
+    position: absolute;
+    width: 384px;
+    height: 100%;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+  }

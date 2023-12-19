@@ -1,5 +1,4 @@
-class Admin::CategoriesController < ApplicationController
-  load_and_authorize_resource
+class Admin::CategoriesController < Admin::ApplicationController
   before_action :set_category, only: %i[ show edit update destroy ]
 
   # GET /categories or /categories.json

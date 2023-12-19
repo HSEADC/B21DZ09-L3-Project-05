@@ -7,12 +7,10 @@ class WelcomeController < ApplicationController
   end
 
   def ideas
-    @category = Category.find_by_name('Идеи')
+    # @posts = Post.find_by_type('IdeaPost')
   end
 
   def tutorials
   end
 
-  def forum
-  end
 end

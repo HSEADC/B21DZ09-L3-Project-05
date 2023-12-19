@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :posts
+
+  resources :comments, only: [:create]
+
   namespace :api do
     namespace :v1 do
       resources :posts do
@@ -9,7 +13,6 @@ Rails.application.routes.draw do
 
 
   namespace :admin do
-
     resources :posts do
       resources :comments
     end
@@ -30,7 +33,6 @@ Rails.application.routes.draw do
   get 'welcome/about'
   get 'welcome/ideas'
   get 'welcome/tutorials'
-  get 'welcome/forum'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

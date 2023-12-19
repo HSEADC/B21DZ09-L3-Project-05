@@ -1,7 +1,7 @@
 class Post < ApplicationRecord
     validates :title, presence: true
     validates :type, presence: true
-    validates :category, presence: true
+    # validates :category, presence: true
     validates :post_image, presence: true
 
     has_many :comments, dependent: :destroy

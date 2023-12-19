@@ -1,12 +1,14 @@
 <%= link_to admin_post_path(tutorial_post), class: 'postCard' do %>
 
-  <p class="typeChips">
+  <p class="typeChips tutorial">
     <%= tutorial_post.type %>
   </p>
 
+  <!--
   <p class="categoryChips">
-    <%= tutorial_post.category.name %>
+  <%#= idea_post.category.name %>
   </p>
+  -->
 
   <p class="postDate">
     <%= tutorial_post.created_at %>
@@ -24,6 +26,10 @@
 
   <p>
     <%= tutorial_post.description %>
+  </p>
+
+  <p>
+    <%= tutorial_post.content_link %>
   </p>
 
   <p>

@@ -8,17 +8,16 @@ class Ability
       can :manage, :all
     end
 
+    return unless user.present? 
 
-    # return unless user.present? 
+    can :read, Post
+    can :read, Comment
 
-    # can :read, Post
-    # can :read, Comment
+    can :create, Post
+    can :manage, Post, user_id: user.id
 
-    # can :create, Post
-    # can :manage, Post, user_id: user.id
-
-    # can :create, Comment
-    # can :manage, Comment, user_id: user.id
+    can :create, Comment
+    can :manage, Comment, user_id: user.id
 
     # Define abilities for the user here. For example:
     #

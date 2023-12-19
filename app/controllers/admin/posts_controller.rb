@@ -22,7 +22,16 @@ class Admin::PostsController < ApplicationController
 
   # POST /posts or /posts.json
   def create
-    @post = Post.new(post_params)
+    p = nil
+    if params[:post]
+      p = post_params
+    elsif params[:idea_post]
+      p = idea_post_params
+    elsif params[:tutorial_post]
+      p = tutorial_post_params
+    end
+
+    @post = Post.new(p)
 
     respond_to do |format|
       if @post.save
@@ -37,8 +46,17 @@ class Admin::PostsController < ApplicationController
 
   # PATCH/PUT /posts/1 or /posts/1.json
   def update
+    p = nil
+    if params[:post]
+      p = post_params
+    elsif params[:idea_post]
+      p = idea_post_params
+    elsif params[:tutorial_post]
+      p = tutorial_post_params
+    end
+
     respond_to do |format|
-      if @post.update(post_params)
+      if @post.update(p)
         format.html { redirect_to admin_post_url(@post), notice: "Пост успешно изменён" }
         format.json { render :show, status: :ok, location: @post }
       else
@@ -66,6 +84,14 @@ class Admin::PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:title, :type, :description, :post_image, :category_id, :created_at).merge(user_id: current_user.id)
+      params.require(:post).permit(:title, :type, :description, :post_image, :contetn_link, :category_id, :created_at).merge(user_id: current_user.id)
+    end
+
+    def idea_post_params
+      params.require(:idea_post).permit(:title, :type, :description, :post_image, :contetn_link, :category_id, :created_at).merge(user_id: current_user.id)
+    end
+
+    def tutorial_post_params
+      params.require(:tutorial_post).permit(:title, :type, :description, :post_image, :contetn_link, :category_id, :created_at).merge(user_id: current_user.id)
     end
 end

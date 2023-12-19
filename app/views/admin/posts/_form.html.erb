@@ -1,4 +1,7 @@
-<%= form_with(model: [:admin, post], url: admin_posts_path) do |form| %>
+<h2 style="font-size:32px; font-weight:900;"><%= post.class %></h2>
+
+<%= form_with(model: [:admin, post], url: url) do |form| %>
+<%#= form_with(model: [:admin, post], url: admin_posts_path) do |form| %>
   <% if post.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(post.errors.count, "error") %>. Пост не может быть сохранён:</h2>
@@ -21,6 +24,11 @@
   <div>
     <%= form.label :"Текст публикации", style: "display: block" %>
     <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.label :"Добавить ссылку", style: "display: block" %>
+    <%= form.text_field :content_link %>
   </div>
 
   <br>
