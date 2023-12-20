@@ -4,19 +4,33 @@ class Admin::CategoriesController < Admin::ApplicationController
   # GET /categories or /categories.json
   def index
     @categories = Category.all
+
+    # Meta
+    @title = "LÒÒCHOK | Категории"
+    # end
   end
 
   # GET /categories/1 or /categories/1.json
   def show
+    # Meta
+    @title = "LÒÒCHOK | #{@category.name}"
+    # end
   end
 
   # GET /categories/new
   def new
     @category = Category.new
+
+    # Meta
+    @title = "LÒÒCHOK | Новая категория"
+    # end
   end
 
   # GET /categories/1/edit
   def edit
+    # Meta
+    @title = "LÒÒCHOK | Редактирование категории #{@category.name}"
+    # end
   end
 
   # POST /categories or /categories.json

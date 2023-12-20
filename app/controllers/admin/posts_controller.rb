@@ -5,24 +5,42 @@ class Admin::PostsController < ApplicationController
   # GET /posts or /posts.json
   def index
     @posts = Post.all
+
+    # Meta
+    @title = "LÒÒCHOK | Все публикации"
+    # end
   end
 
   def by_tag
     @posts = Post.tagged_with(params[:tag])
     render :index
+
+    # Meta
+    @title = "LÒÒCHOK | #{params[:tag]}"
+    # end
   end
 
   # GET /posts/1 or /posts/1.json
   def show
+    # Meta
+    @title = "LÒÒCHOK | #{@post.title}"
+    # end
   end
 
   # GET /posts/new
   def new
     @post = Post.new
+
+    # Meta
+    @title = "LÒÒCHOK | Новая публикация"
+    # end
   end
 
   # GET /posts/1/edit
   def edit
+    # Meta
+    @title = "LÒÒCHOK | Редактирование публикации #{@post.title}"
+    # end
   end
 
   # POST /posts or /posts.json

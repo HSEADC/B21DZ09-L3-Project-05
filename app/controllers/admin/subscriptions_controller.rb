@@ -4,10 +4,17 @@ class Admin::SubscriptionsController < Admin::ApplicationController
   # GET /subscriptions or /subscriptions.json
   def index
     @subscriptions = Subscription.all
+
+    # Meta
+    @title = "LÒÒCHOK | Подписки"
+    # end
   end
 
   # GET /subscriptions/1 or /subscriptions/1.json
   def show
+    # Meta
+    @title = "LÒÒCHOK | Подписка #{@subscription.email}"
+    # end
   end
 
   # GET /subscriptions/new

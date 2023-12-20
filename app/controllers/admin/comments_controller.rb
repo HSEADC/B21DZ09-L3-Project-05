@@ -4,10 +4,17 @@ class Admin::CommentsController < Admin::ApplicationController
   # GET /comments or /comments.json
   def index
     @comments = Comment.all
+
+    # Meta
+    @title = "LÒÒCHOK | Комментарии"
+    # end
   end
 
   # GET /comments/1 or /comments/1.json
   def show
+    # Meta
+    @title = "LÒÒCHOK | Комментарий"
+    # end
   end
 
   # GET /comments/new

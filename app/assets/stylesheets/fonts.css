@@ -23,103 +23,103 @@
     font-family: "Suisse Intl";
     font-style: italic;
     font-weight: 700;
-    src: url("/assets/SuisseIntl-BoldItalic.otf") format("opentype");
+    src: url("SuisseIntl-BoldItalic.otf") format("opentype");
   }
 
   @font-face {
     font-family: "Suisse Intl";
     font-style: normal;
     font-weight: 600;
-    src: url("/assets/SuisseIntl-SemiBold.otf") format("opentype");
+    src: url("SuisseIntl-SemiBold.otf") format("opentype");
   }
 
   @font-face {
     font-family: "Suisse Intl";
     font-style: italic;
     font-weight: 600;
-    src: url("/assets/SuisseIntl-SemiBoldItalic.otf") format("opentype");
+    src: url("SuisseIntl-SemiBoldItalic.otf") format("opentype");
   }
 
   @font-face {
     font-family: "Suisse Intl";
     font-style: normal;
     font-weight: 500;
-    src: url("/assets/SuisseIntl-Medium.otf") format("opentype");
+    src: url("SuisseIntl-Medium.otf") format("opentype");
   }
 
   @font-face {
     font-family: "Suisse Intl";
     font-style: italic;
     font-weight: 500;
-    src: url("/assets/SuisseIntl-MediumItalic.otf") format("opentype");
+    src: url("SuisseIntl-MediumItalic.otf") format("opentype");
   }
 
   @font-face {
     font-family: "Suisse Intl";
     font-style: normal;
     font-weight: 450;
-    src: url("/assets/SuisseIntl-Book.otf") format("opentype");
+    src: url("SuisseIntl-Book.otf") format("opentype");
   }
 
   @font-face {
     font-family: "Suisse Intl";
     font-style: italic;
     font-weight: 450;
-    src: url("/assets/SuisseIntl-BookItalic.otf") format("opentype");
+    src: url("SuisseIntl-BookItalic.otf") format("opentype");
   }
 
   @font-face {
     font-family: "Suisse Intl";
     font-style: normal;
     font-weight: 400;
-    src: url("/assets/SuisseIntl-Regular.otf") format("opentype");
+    src: url("SuisseIntl-Regular.otf") format("opentype");
   }
 
   @font-face {
     font-family: "Suisse Intl";
     font-style: italic;
     font-weight: 400;
-    src: url("/assets/SuisseIntl-RegularItalic.otf") format("opentype");
+    src: url("SuisseIntl-RegularItalic.otf") format("opentype");
   }
 
   @font-face {
     font-family: "Suisse Intl";
     font-style: normal;
     font-weight: 300;
-    src: url("/assets/SuisseIntl-Light.otf") format("opentype");
+    src: url("SuisseIntl-Light.otf") format("opentype");
   }
 
   @font-face {
     font-family: "Suisse Intl";
     font-style: italic;
     font-weight: 300;
-    src: url("/assets/SuisseIntl-LightItalic.otf") format("opentype");
+    src: url("SuisseIntl-LightItalic.otf") format("opentype");
   }
 
   @font-face {
     font-family: "Suisse Intl";
     font-style: normal;
     font-weight: 275;
-    src: url("/assets/SuisseIntl-Thin.otf") format("opentype");
+    src: url("SuisseIntl-Thin.otf") format("opentype");
   }
 
   @font-face {
     font-family: "Suisse Intl";
     font-style: italic;
     font-weight: 275;
-    src: url("/assets/SuisseIntl-ThinItalic.otf") format("opentype");
+    src: url("SuisseIntl-ThinItalic.otf") format("opentype");
   }
 
   @font-face {
     font-family: "Suisse Intl";
     font-style: normal;
     font-weight: 250;
-    src: url("/assets/SuisseIntl-Ultralight.otf") format("opentype");
+    src: url("SuisseIntl-Ultralight.otf") format("opentype");
   }
 
   @font-face {
     font-family: "Suisse Intl";
     font-style: italic;
     font-weight: 250;
-    src: url("/assets/SuisseIntl-UltralightItalic.otf") format("opentype");
+    src: url("SuisseIntl-UltralightItalic.otf") format("opentype");
   }

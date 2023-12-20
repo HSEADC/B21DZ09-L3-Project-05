@@ -5,6 +5,10 @@ class PostsController < ApplicationController
   # GET /posts or /posts.json
   def index
     @posts = Post.all
+
+    # Meta
+    @title = "LÒÒCHOK | Все публикации"
+    # end
   end
 
   def by_tag
@@ -14,6 +18,9 @@ class PostsController < ApplicationController
 
   # GET /posts/1 or /posts/1.json
   def show
+    # Meta
+    @title = "LÒÒCHOK | #{@post.title}"
+    # end
   end
 
   # GET /posts/new

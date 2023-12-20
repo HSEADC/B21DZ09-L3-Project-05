@@ -1,5 +1,8 @@
 class SubscriptionsController < ApplicationController  
     def show
+      # Meta
+      @title = "LÒÒCHOK | Подписка"
+      # end
     end
   
     def create
