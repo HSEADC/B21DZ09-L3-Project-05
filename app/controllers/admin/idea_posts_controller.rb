@@ -1,10 +1,14 @@
-class IdeaPostsController < Admin::PostsController
-  load_and_authorize_resource
+class Admin::IdeaPostsController < Admin::ApplicationController
   before_action :set_post, only: %i[ show edit update destroy ]
 
   # GET /posts or /posts.json
   def index
-    @posts = Post.find_by_type('IdeaPost')
+    @posts = Post.where("type = 'IdeaPost'")
+  end
+
+  def by_tag
+    @posts = IdeaPost.tagged_with(params[:tag])
+    render :index
   end
 
   # GET /posts/1 or /posts/1.json
@@ -13,7 +17,7 @@ class IdeaPostsController < Admin::PostsController
 
   # GET /posts/new
   def new
-    @post = Post.new
+    @post = IdeaPost.new
   end
 
   # GET /posts/1/edit
@@ -22,11 +26,11 @@ class IdeaPostsController < Admin::PostsController
 
   # POST /posts or /posts.json
   def create
-    @post = Post.new(post_params)
+    @post = Post.new(idea_post_params)
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to admin_post_url(@post), notice: "Пост успешно создан" }
+        format.html { redirect_to admin_idea_post_url(@post), notice: "Пост успешно создан" }
         format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,8 +42,8 @@ class IdeaPostsController < Admin::PostsController
   # PATCH/PUT /posts/1 or /posts/1.json
   def update
     respond_to do |format|
-      if @post.update(post_params)
-        format.html { redirect_to admin_post_url(@post), notice: "Пост успешно изменён" }
+      if @post.update(idea_post_params)
+        format.html { redirect_to admin_idea_post_url(@post), notice: "Пост успешно изменён" }
         format.json { render :show, status: :ok, location: @post }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -53,7 +57,7 @@ class IdeaPostsController < Admin::PostsController
     @post.destroy
 
     respond_to do |format|
-      format.html { redirect_to admin_posts_url, notice: "Пост успешно удалён" }
+      format.html { redirect_to admin_idea_posts_url, notice: "Пост успешно удалён" }
       format.json { head :no_content }
     end
   end
@@ -65,7 +69,7 @@ class IdeaPostsController < Admin::PostsController
     end
 
     # Only allow a list of trusted parameters through.
-    def post_params
-      params.require(:post).permit(:title, :type, :description, :post_image, :category_id, :created_at).merge(user_id: current_user.id)
+    def idea_post_params
+      params.require(:idea_post).permit(:title, :type, :description, :post_image, :tag_list, :category_id).merge(user_id: current_user.id)
     end
 end

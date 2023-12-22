@@ -1,4 +1,4 @@
-<div class="postCard">
+<%= link_to [:admin, tutorial_post], class: 'postCard' do %>
 
   <p class="typeChips tutorial">
     <%= tutorial_post.type %>
@@ -44,4 +44,4 @@
     Комментариев: <%= tutorial_post.comments.count %>
   </p>
 
-  </div>
+  <% end %>

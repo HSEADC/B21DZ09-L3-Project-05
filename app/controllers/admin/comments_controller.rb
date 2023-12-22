@@ -76,8 +76,7 @@ class Admin::CommentsController < Admin::ApplicationController
       @comment = Comment.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
     def comment_params
-      params.require(:comment).permit(:body).merge(user_id: current_user.id)
+      params.require(:comment).permit(:body, :post_type, :post_id).merge(user_id: current_user.id)
     end
 end

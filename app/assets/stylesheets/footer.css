@@ -154,7 +154,7 @@
     }
 }
 
-@media only screen and (min-device-width: 768px) {
+@media only screen and (min-width: 768px) {
     .Footer {
         width: calc(100%-52px);
         height: 376px;
@@ -168,7 +168,7 @@
     }
 }
 
-@media only screen and (max-device-width: 767px) {
+@media only screen and (max-width: 767px) {
     .Footer {
         width: calc(100%-52px);
         padding: 47px 26px;

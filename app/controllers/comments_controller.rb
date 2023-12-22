@@ -1,15 +1,6 @@
 class CommentsController < ApplicationController
 
   def create
-    # commentable = nil
-    # commentable_id = comment_params[:commentable_id]
-    
-    # if comment_params[commentable_type] == "IdeaPost"
-    #   commentable = IdeaPost.find(commentable_id)
-    # elsif comment_params[commentable_type] == "TutorialPost"
-    #   commentable = TextPost.find(commentable_id)
-    # end
-    
     @comment = Comment.new(comment_params)
 
     respond_to do |format|

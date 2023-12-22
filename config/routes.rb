@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       get "by_tag/:tag", to: "posts#by_tag", as: "tagged"
     end
   end
+  
   resources :comments, only: [:create]
 
   namespace :api do
@@ -16,6 +17,14 @@ Rails.application.routes.draw do
 
 
   namespace :admin do
+    resources :idea_posts do
+      collection do
+        get "by_tag/:tag", to: "idea_posts#by_tag", as: "tagged"
+      end
+    end
+
+    resources :tutorial_posts
+
     resources :posts do
       
       resources :comments
@@ -23,6 +32,7 @@ Rails.application.routes.draw do
       collection do
         get "by_tag/:tag", to: "posts#by_tag", as: "tagged"
       end
+      
     end
 
     resources :categories

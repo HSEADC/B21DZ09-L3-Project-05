@@ -5,11 +5,11 @@
   <%= render @post %>
 
   <div>
-    <%= link_to "Обратно ко всем постам", :admin_posts %> |
+    <%= link_to "Обратно ко всем постам", admin_idea_posts_path %> |
 
     <% if can? :manage, @post %>
-      <%= link_to "Редактировать пост", edit_admin_post_path(@post) %>
-      <%= button_to "Удалить пост", admin_post_path(@post), method: :delete %>
+      <%= link_to "Редактировать пост", edit_admin_idea_post_path(@post) %>
+      <%= button_to "Удалить пост", admin_idea_post_path(@post), method: :delete %>
     <% end %>
   </div>
 
