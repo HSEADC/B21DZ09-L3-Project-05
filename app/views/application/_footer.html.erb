@@ -17,22 +17,30 @@
         <div class="FooterInfoTeam">
             <h6 class="FooterInfoTeamTitle">Команда</h6>
             <div class="FooterInfoTeamStudents">
-                <p class="FooterInfoTeamPerson">Арсений Гулевич</p>
-                <p class="FooterInfoTeamPerson">Лена Донских</p>
-                <p class="FooterInfoTeamPerson">Ася Олейниченко</p>
+                <a href="https://portfolio.hse.ru/Student/17677" target="_blank" class="FooterInfoTeamPerson">Арсений Гулевич</a>
+                <a href="https://portfolio.hse.ru/Student/12740" target="_blank" class="FooterInfoTeamPerson">Лена Донских</a>
+                <a href="https://portfolio.hse.ru/Student/17663" target="_blank" class="FooterInfoTeamPerson">Ася Олейниченко</a>
             </div>
             <div class="FooterInfoTeamProfs">
-                <p class="FooterInfoTeamPerson">Захар День</p>
-                <p class="FooterInfoTeamPerson">Дмитрий Александров</p>
-                <p class="FooterInfoTeamPerson">Вадим Булгаков</p>
+                <a href="https://design.hse.ru/team/4249" target="_blank" class="FooterInfoTeamPerson">Захар День</a>
+                <a href="https://www.hse.ru/org/persons/134073109" target="_blank" class="FooterInfoTeamPerson">Дмитрий Александров</a>
+                <a href="https://design.hse.ru/team/15113" target="_blank" class="FooterInfoTeamPerson">Вадим Булгаков</a>
             </div>
         </div>
 
-        <div class="FooterInfoPages">
-            <%= link_to "Идеи", welcome_ideas_url, class: "FooterInfoPage" %>
-            <%= link_to "Туториалы", welcome_ideas_url, class: "FooterInfoPage" %>
-            <%= link_to "О нас", welcome_about_url, class: "FooterInfoPage" %>
-        </div>
+        <% if user_signed_in? && current_user.admin %>
+            <div class="FooterInfoPages">
+                <%= link_to "Идеи", admin_idea_posts_url, class: "FooterInfoPage" %>
+                <%= link_to "Туториалы", admin_tutorial_posts_url, class: "FooterInfoPage" %>
+                <%= link_to "О нас", welcome_about_url, class: "FooterInfoPage" %>
+            </div>
+        <% else %>
+            <div class="FooterInfoPages">
+                <%= link_to "Идеи", welcome_ideas_url, class: "FooterInfoPage" %>
+                <%= link_to "Туториалы", welcome_ideas_url, class: "FooterInfoPage" %>
+                <%= link_to "О нас", welcome_about_url, class: "FooterInfoPage" %>
+            </div>
+        <% end %>
 
         <div class="FooterInfoContacts">
         <p class="FooterInfoContactsText">(Контакты)</p>

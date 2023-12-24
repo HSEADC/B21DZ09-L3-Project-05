@@ -35,10 +35,10 @@
     color: var(--white);
 
     background-color: black;
-}
 
-.navLogo:hover {
-    text-decoration: underline;
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .navSearch {
@@ -94,4 +94,32 @@
 
 .navSection:hover {
     text-decoration: underline;
+}
+
+@media only screen and (max-width: 1280px) {     
+    .navSection {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .header {
+        height: 50px;
+        padding: 0 16px;
+    }
+    
+    .navLogo {
+        left: calc(50% - 27px);
+        padding: 0px 8px;
+    
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 32px; /* 133.333% */
+    }
+
+    .navUser {
+        width: 32px;
+        height: 32px;
+    }
+    
 }

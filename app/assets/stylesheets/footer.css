@@ -5,6 +5,10 @@
     align-items: center;
 
     background: var(--black);
+
+    a:hover {
+        text-decoration: underline;
+    }
 }
 
 .FooterTop {

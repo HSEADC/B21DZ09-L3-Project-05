@@ -2,7 +2,7 @@
     background: linear-gradient(180deg, #FFF 24.77%, #DBDBDB 91.11%);
 }
 
-.ContentScreen1 {
+.FirstScreen {
     margin-top: 60px;
     width: 100%;
     height: 780px;
@@ -10,14 +10,11 @@
     border-bottom: 1px solid black;
 }
 
-.ContentScreen2 {
-    width: 100%;
-    height: 50vw;
-}
-
-.Content1 {
+.FirstScreenContent,
+.SubscriptionScreenContent {
     position: relative;
     display: flex;
+    flex-direction: column;
     width: 100%;
     height: 100%;
     justify-content: center;
@@ -87,44 +84,74 @@
     border-radius: 50%;
     background: black;
  
-    &.gbbp1 {
+    &.FSBP-1 {
         right: 427px;
         top: 13px;
     }
  
-    &.gbbp2 {
+    &.FSBP-2 {
         right: 0px;
         top: 68px;
     }
  
-    &.gbbp3 {
+    &.FSBP-3 {
         left: 427px;
         top: 13px;
     }
  
-    &.gbbp4 {
+    &.FSBP-4 {
         right: 1240px;
         top: calc(50% - 4px);
     }
  
-    &.gbbp5 {
+    &.FSBP-5 {
         left: 1240px;
         top: calc(50% - 4px);
     }
  
-    &.gbbp6 {
+    &.FSBP-6 {
         right: 427px;
         bottom: 13px;
     }
  
-    &.gbbp7 {
+    &.FSBP-7 {
         right: 0px;
         bottom: 68px;
     }
  
-    &.gbbp8 {
+    &.FSBP-8 {
         left: 427px;
         bottom: 13px;
+    }
+
+    &.SSBP-9 {
+        right: calc(33% + 2px);
+        top: -5px;
+    }
+
+    &.SSBP-10 {
+        left: calc(33% + 2px);
+        top: -5px;
+    }
+
+    &.SSBP-11 {
+        margin-left: 30px;
+        top: calc(50% - 34px);
+    }
+
+    &.SSBP-12 {
+        margin-right: 30px;
+        top: calc(50% - 34px);
+    }
+
+    &.SSBP-13 {
+        right: calc(33% + 2px);
+        bottom: -5px;
+    }
+
+    &.SSBP-14 {
+        left: calc(33% + 2px);
+        bottom: -5px;
     }
   }
  
@@ -145,18 +172,33 @@
  
   .LineHorizontal {
     position: absolute;
-    top: 50%; 
     width: 100vw;
     height: 1px;
     background: black;
+
+    &.FS {
+        top: 50%; 
+    }
+
+    &.SS {
+        top: calc(50% - 30px); 
+    }
   }
 
   .LinesVertical {
     position: absolute;
-    width: 426px;
     height: 100%;
     border-right: 1px solid black;
     border-left: 1px solid black;
+
+    &.FS {
+        width: 426px;
+    }
+
+    &.SS {
+        width: 33%;
+        z-index: 1;
+    }
   }
 
 
@@ -181,7 +223,7 @@
     line-height: 99px; /* 77.344% */
     text-transform: uppercase;
 
-    &.Part1 {
+    &.BL-1 {
         font-family: Suisse Intl for Logo;
         top: 284px;
         right: 2px;
@@ -189,7 +231,7 @@
         transform: rotate(-0.128deg);
     }
 
-    &.Part2 {
+    &.BL-2 {
         top: 410px;
         left: 174px;
         padding: 14px 10px 23px 10px;
@@ -211,7 +253,7 @@
     transform: rotate(3deg);
 }
 
-.ContentScreen1Text {
+.FirstScreenText {
     position: absolute;
     color: black;
     text-align: center;
@@ -241,7 +283,7 @@
     }
 }
 
-.ContentScreen1Img {
+.FirstScreenImg {
     position: absolute;
     background-repeat: no-repeat;
     background-size: contain;
@@ -249,7 +291,7 @@
     &.n1 {
         top: 96px;
         margin-right: 1110px;
-        background-image: url("/assets/main/ContentScreen1Img1.png");
+        background-image: url("/assets/main/FirstScreenImg1.png");
         width: 276px;
         height: 278px;
     }
@@ -257,7 +299,7 @@
     &.n2 {
         top: 10px;
         margin-left: 946px;
-        background-image: url("/assets/main/ContentScreen1Img2.png");
+        background-image: url("/assets/main/FirstScreenImg2.png");
         width: 206px;
         height: 266px;
     }
@@ -265,7 +307,7 @@
     &.n3 {
         top: 490px;
         margin-right: 844px;
-        background-image: url("/assets/main/ContentScreen1Img3.png");
+        background-image: url("/assets/main/FirstScreenImg3.png");
         width: 247px;
         height: 238px;
     }
@@ -273,7 +315,7 @@
     &.n4 {
         top: 498px;
         margin-left: 884px;
-        background-image: url("/assets/main/ContentScreen1Img4.png");
+        background-image: url("/assets/main/FirstScreenImg4.png");
         width: 232px;
         height: 233px;
     }
@@ -313,4 +355,503 @@
     top: auto;
     bottom: -5px;
     transform: translate(-50%, 100%);
+}
+
+/*  */
+
+.OurAdvantagesScreen {
+    position: relative;
+    width: 100%;
+    /* height: 50vw; */
+    /* border-top: 1px solid black; */
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.AboutSectionTitle {
+    width: fit-content;
+    text-align: center;
+    font-family: Suisse Intl;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 40px */
+    text-transform: uppercase;
+    color: var(--white);
+    padding: 17px 20px;
+    background-color: black;
+
+    z-index: 3;
+
+    &.OA-1 {
+        margin-top: 50px;
+        margin-right: 190px;
+    }
+
+    &.OA-2 {
+        margin-top: 0px;
+        margin-left: 130px;
+    }
+
+    &.WAWA-1 {
+        margin-top: 50px;
+    }
+}
+
+.Lines3 {
+    margin-top: -20px;
+    margin-bottom: 12px;
+
+    background-image: url("/assets/main/3Lines.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    width: 810px;
+    height: 246px;
+
+    z-index: 2;
+}
+
+.OurAdvantagesTextBlocks {
+    margin-bottom: 46px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 94px;
+
+    z-index: 4;
+}
+
+.OurAdvantagesTextBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.OurAdvantagesTextTitle {
+    font-family: Suisse Intl;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.72px;
+    text-transform: uppercase;
+    color: black;
+}
+
+.OurAdvantagesText {
+    width: 354px;
+    font-family: Suisse Intl;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 350;
+    line-height: normal;
+    letter-spacing: -0.72px;
+    color: black;
+}
+
+.OurAdvantagesBackground {
+    position: absolute;
+    margin-top: -20px;
+    width: 1647px;
+    height: 740px;
+
+    background-image: url("/assets/main/OurAdvantagesBack.png");
+
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    z-index: 1;
+}
+
+
+/*  */
+/*  */
+
+
+.WhatAreWeAboutScreen {
+    width: 100%;
+    height: 1230px;
+    /* border-top: 1px solid black; */
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.WhatAreWeAboutScreenContent {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    overflow: hidden;
+}
+
+.WAWALine {
+    position: absolute;
+    background-image: url("/assets/main/WAWALine.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    width: 489px;
+    height: 101px;
+
+    &.L-1 {
+        top: 200px;
+        margin-left: 26px;
+        transform: rotate(10.7deg);   
+    }
+
+    &.L-2 {
+        top: 618px;
+        margin-left: 18px;
+        transform: rotate(-63deg);  
+    }
+}
+
+.WAWADash {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &.D-1 {
+        background-image: url("/assets/main/Dash1.png");
+        top: 254px;
+        margin-right: 930px;
+        width: 376px;
+        height: 66px;
+    }
+
+    &.D-2 {
+        background-image: url("/assets/main/Dash2.png");
+        top: 352px;
+        margin-left: 584px;
+        width: 269px;
+        height: 177px;
+    }
+
+    &.D-3 {
+        background-image: url("/assets/main/Dash3.png");
+        top: 760px;
+        margin-left: 152px;
+        width: 152px;
+        height: 112px;
+    }
+}
+
+.WAWA3DItem {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &.I-1 {
+        background-image: url("/assets/main/3DItem1.png");
+        top: 144px;
+        margin-left: 990px;
+        width: 110px;
+        height: 87px;
+        transform: rotate(17.6deg);
+    }
+
+    &.I-2 {
+        background-image: url("/assets/main/3DItem2.png");
+        top: 884px;
+        margin-right: 780px;
+        width: 108px;
+        height: 106px;
+        transform: rotate(-10.4deg);
+    }
+}
+
+.WAWAPostCard {
+    position: absolute;
+    background-image: url("/assets/main/WAWAPostCard.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    top: 302px;
+    margin-right: 696px;
+
+    width: 375px;
+    height: 497px;
+    transform: rotate(-7.2deg);
+}
+
+.WAWAMaterial {
+    position: absolute;
+    background-image: url("/assets/main/WAWAMaterial.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    top: 610px;
+    margin-left: 1030px;
+
+    width: 596px;
+    height: 447px;
+    transform: rotate(11.4deg);
+}
+
+.WAWAAppIcon {
+    position: absolute;
+    background-image: url("/assets/main/AppIcon.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    top: 900px;
+    margin-left: 220px;
+
+    width: 200px;
+    height: 200px;
+    transform: rotate(6.3deg);
+}
+
+.WAWABlock {
+    position: absolute;
+
+    &.Block-1 {
+        top: 168px;
+        margin-right: 880px;
+        display: inline-flex;
+        align-items: center;
+        gap: 22px;
+    }
+
+    &.Block-2 {
+        top: 408px;
+        margin-left: 860px;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    &.Block-3 {
+        top: 850px;
+        margin-right: 230px;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 16px;
+    }
+}
+
+.WAWABlockNumder {
+    text-align: center;
+    font-family: Suisse Intl;
+    font-size: 82px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 82px;
+    text-transform: uppercase;
+    color: black;
+}
+
+.WAWABlockText {
+    font-family: Suisse Intl;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.75px;
+    text-transform: uppercase;
+    color: black;
+
+    &.Number-1,
+    &.Number-2 {
+        width: 330px;
+    }
+
+    &.Number-2 {
+        margin-left: 34px;
+    }
+
+    &.Number-3 {
+        width: 234px;
+    }
+}
+
+.WAWATag {
+    position: absolute;
+    width: fit-content;
+    padding: 8px 12px;
+    border-radius: 20px;
+
+    font-family: Suisse Intl;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    &.grey {
+        border: 1px dashed #938F8F;
+        color: #938F8F;
+        top: 622px;
+        margin-left: 458px;
+        transform: rotate(-32deg);
+    }
+
+    &.black {
+        background-color: black;
+        color: var(--white);
+        top: 552px;
+        margin-left: 410px;
+        transform: rotate(9deg);
+    }
+}
+
+
+/*  */
+/*  */
+
+
+.SubscriptionScreen {
+    width: 100%;
+    /* height: 50vw; */
+    /* border-top: 1px solid black; */
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.SubscriptionBlock {
+    margin-top: 210px;
+    /* margin-bottom: 210px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+    z-index: 4;
+}
+
+.SubscriptionBlockTitles {
+    position: relative;
+    margin-left: 40px;
+}
+
+.SubscriptionBlockTitle {
+    width: fit-content;
+    padding: 17px 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+
+    text-align: center;
+    font-family: Suisse Intl;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 96px */
+    text-transform: uppercase;
+    color: var(--white);
+
+    &.SST-1 {
+        transform: rotate(-0.4deg);
+    }
+
+    &.SST-2 {
+        margin-top: -18px;
+        margin-left: 96px;
+        transform: rotate(1.2deg);
+    }
+}
+
+.SubscriptionBlockTitlesZigzag {
+    position: absolute;
+    background-image: url("/assets/FooterTopLogoLine.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    top: 104px;
+    left: 268px;
+
+    width: 152px;
+    height: 41px;
+    transform: rotate(2deg);
+}
+
+.SubscriptionBlockText {
+    width: 490px;
+    text-align: center;
+    font-family: Suisse Intl;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 28px */
+    text-transform: uppercase;
+    color: black;
+}
+
+.SubscriptionArea {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.SubscriptionField {
+    display: flex;
+    width: 420px;
+    padding: 13px 10px;
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid black;
+    background-color: white;
+
+    color: black;
+    font-family: Suisse Intl;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    outline: none;
+
+    &::placeholder {
+        color: #B2B2B2;
+    }
+}
+
+.SubscriptionButton {
+    height: 51px;
+    padding: 0px 22px;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border: none;
+    border-radius: 0;
+
+    font-family: Suisse Intl;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 29px; /* 181.25% */
+    text-transform: uppercase;
+    color: var(--white);
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.SubscriptionDash {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    width: 684px;
+    height: 204px;
+
+    background-image: url("/assets/main/Dash4.png");
+
+    background-repeat: no-repeat;
+    background-size: contain;
 }

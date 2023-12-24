@@ -1,29 +1,127 @@
-<%#= turbo_frame_tag dom_id(@subscription) do %>
-    <%#= render 'subscriptions/form', subscription: @subscription %>
-<%# end %>
+<div class="bodyAbout">
+    <div class="FirstScreen">
+        <div class="FirstScreenContent">
+            <div class="BlackPoint FSBP-1"></div>
+            <div class="BlackPoint FSBP-2"></div>
+            <div class="BlackPoint FSBP-3"></div>
+            <div class="BlackPoint FSBP-4"></div>
+            <div class="BlackPoint FSBP-5"></div>
+            <div class="BlackPoint FSBP-6"></div>
+            <div class="BlackPoint FSBP-7"></div>
+            <div class="BlackPoint FSBP-8"></div>
+            <div class="IconScissors"></div>
+            <div class="Circle c1"></div>
+            <div class="Circle c2"></div>
+            <div class="LineHorizontal FS"></div>
+            <div class="LinesVertical FS"></div>
 
-<dev class="promoContent">
+            <div class="BigLogoFrame">
+                <h1 class="BigLogo BL-1">L&Ograve;&Ograve;CHOK</h1>
+                <h1 class="BigLogo BL-2">МЕДИА</h1>
+                <div class="BigLogoZigZag"></div>
+            </div>
 
-    <section class="promoBlock">
-        <dev class="promoLogo"></dev>
-        <dev class="promoTexts">
-            <h3>Медиа-сервис про кастомизацию предметов одежды, обуви и&nbsp;аксессуаров</h3>
-            <p>Делись идеями, знаниями, вдохновением и&nbsp;будь самым стильным&nbsp;&mdash; вместе с&nbsp;Лучком!</p>
-        </dev>
-    </section>
+            <h4 class="FirstScreenText new">Новая</h4>
+            <h4 class="FirstScreenText platform">платформа</h4>
+            <h4 class="FirstScreenText for">для</h4>
+            <h4 class="FirstScreenText customers">кастомеров</h4>
 
-    <div class="promoArrow"></div>
+            <div data-hint="кредитсы кастомера" class="FirstScreenImg n1 hint-bottom"></div>
+            <div data-hint="кредитсы кастомера2" class="FirstScreenImg n2 hint-bottom"></div>
+            <div data-hint="кредитсы кастомера3" class="FirstScreenImg n3 hint-bottom"></div>
+            <div data-hint="кредитсы кастомера4" class="FirstScreenImg n4 hint-bottom"></div>
+        </div>
+    </div>
 
-    <section class="promoBlock">
-        <dev class="promoTexts">
-            <h3>Попробуй Лучок сразу, как только он&nbsp;заработает</h3>
-            <p>Просто оставь здесь свой e-mail, и&nbsp;мы&nbsp;пришлём тебе на&nbsp;почту уведомление о&nbsp;запуске сервиса</p>
-        </dev>
-        <dev class="promoMail">
-            <%= turbo_frame_tag dom_id(@subscription) do %>
-                <%= render 'subscriptions/form', subscription: @subscription %>
-            <% end %>
-        </dev>
-    </section>
+    <div class="OurAdvantagesScreen">
+        <div class="OurAdvantagesBackground"></div>
+        <h2 class="AboutSectionTitle OA-1">Наши</h2>
+        <h2 class="AboutSectionTitle OA-2">преимущества</h2>
+        <div class="Lines3"></div>
 
-</dev>
+        <div class="OurAdvantagesTextBlocks">
+            <div class="OurAdvantagesTextBlock">
+                <h6 class="OurAdvantagesTextTitle">Совместное творчество</h6>
+                <p class="OurAdvantagesText">Обмен вдохновением и&nbsp;опытом в&nbsp;сообществе кастомеров&nbsp;&mdash; показывай, учись и&nbsp;учи других</p>
+            </div>
+            <div class="OurAdvantagesTextBlock">
+                <h6 class="OurAdvantagesTextTitle">Продвижение кастомеров</h6>
+                <p class="OurAdvantagesText">Публикуйся у&nbsp;нас и&nbsp;продвигай свои собственные блоги. Пусть мир узнает о&nbsp;твоём творчестве!</p>
+            </div>
+            <div class="OurAdvantagesTextBlock">
+                <h6 class="OurAdvantagesTextTitle">Осознанный стиль</h6>
+                <p class="OurAdvantagesText">Апсайклинг и&nbsp;слоу фэшн&nbsp;&mdash; важные части нашей кастом философии: индивидуально, уникально, осознанно</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="WhatAreWeAboutScreen">
+        <div class="WhatAreWeAboutScreenContent">
+            <h2 class="AboutSectionTitle WAWA-1">О чём мы?</h2>
+
+            <div class="WAWALine L-1"></div>
+            <div class="WAWALine L-2"></div>
+            <div class="WAWADash D-1"></div>
+            <div class="WAWADash D-2"></div>
+            <div class="WAWADash D-3"></div>
+            <div class="WAWA3DItem I-1"></div>
+            <div class="WAWA3DItem I-2"></div>
+            <div class="WAWAPostCard"></div>
+            <div class="WAWAMaterial"></div>
+            <div class="WAWAAppIcon"></div>
+            <div class="WAWATag black">одежда</div>
+            <div class="WAWATag grey">роспись</div>
+
+            <div class="WAWABlock Block-1">
+                <h6 class="WAWABlockNumder">①<h6>
+                <h5 class="WAWABlockText Number-1">Делись своими идеями кастома и&nbsp;продвигай себя</h5>
+            </div>
+
+            <div class="WAWABlock Block-2">
+                <h6 class="WAWABlockNumder">②<h6>
+                <h5 class="WAWABlockText Number-2">Учись по&nbsp;туториалам и&nbsp;обучай других</h5>
+            </div>
+
+            <div class="WAWABlock Block-3">
+                <h6 class="WAWABlockNumder">③<h6>
+                <h5 class="WAWABlockText Number-3">С&nbsp;нашим приложением</h5>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="SubscriptionScreen">
+        <div class="SubscriptionScreenContent">
+            <div class="LinesVertical SS"></div>
+            <div class="LineHorizontal SS"></div>
+            <div class="BlackPoint SSBP-9"></div>
+            <div class="BlackPoint SSBP-10"></div>
+            <div class="BlackPoint SSBP-11"></div>
+            <div class="BlackPoint SSBP-12"></div>
+            <div class="BlackPoint SSBP-13"></div>
+            <div class="BlackPoint SSBP-14"></div>
+
+            <div class="SubscriptionBlock">
+                <div class="SubscriptionBlockTitles">
+                    <h2 class="SubscriptionBlockTitle SST-1">Не&nbsp;пропусти</h2>
+                    <h2 class="SubscriptionBlockTitle SST-2">запуск!</h2>
+                    <div class="SubscriptionBlockTitlesZigzag"></div>
+                </div>
+
+                <p class="SubscriptionBlockText">Просто оставь здесь свой e-mail, и&nbsp;мы&nbsp;пришлём тебе на&nbsp;почту уведомление о&nbsp;запуске сервиса</p>
+            
+                <div>
+                    <%= turbo_frame_tag dom_id(@subscription) do %>
+                            <%= render 'subscriptions/form', subscription: @subscription %>
+                    <% end %>
+                </div>
+            </div>
+
+            <div class="SubscriptionDash"></div>
+        </div>
+    </div>
+
+</div>
+
+
