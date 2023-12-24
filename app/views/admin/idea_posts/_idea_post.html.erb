@@ -1,43 +1,28 @@
-<%= link_to [:admin, idea_post], class: 'postCard' do %>
+<div class="IdeaPostCardContent">
 
-  <p class="typeChips idea">
-    <%= idea_post.type %>
-  </p>
-
-  <!--
-  <p class="categoryChips">
-    <%#= idea_post.category.name %>
-  </p>
-  -->
-
-  <div class="tagChipsRow">
-    <% idea_post.tag_list.each do |tag| %>
-        <div class="tagChips">
-            <%= tag %>
-        </div>
-    <% end %>
+  <div class="IdeaPostCardImg">
+    <%= image_tag idea_post.post_image.url %>
   </div>
 
-  <p class="postDate">
-    <%= idea_post.created_at %>
-  </p>
+  <div class="IdeaPostCardInfo">
+    <div class="IdeaPostCardInfoTop">
+      <div class="IdeaCardInfoUser">
+        <div class="IdeaCardInfoUserAvatar"></div>
+        <div class="IdeaCardInfoUserNames">
+          <p class="IdeaCardInfoUserName UN"><%= idea_post.user.email.split("@")[0] %></p>
+          <p class="IdeaCardInfoUserName NN">@<%= idea_post.user.email.split("@")[0] %></p>
+        </div>
+      </div>
+      <div class="IdeaPostCardLike"></div>
+    </div>
 
-  <p>
-    <%= idea_post.user.email %>
-  </p>
+    <div class="IdeaPostCardInfoBottom">
+      <% idea_post.tag_list.each do |tag| %>
+          <div class="PostCardTagChip">
+              <%= tag %>
+          </div>
+      <% end %>
+    </div>
+  </div>
 
-  <h2>
-    <%= idea_post.title%>
-  </h2>
-
-  <%= image_tag idea_post.post_image.url, width: 300 if idea_post.post_image.url %>
-
-  <p>
-    <%= idea_post.description %>
-  </p>
-
-  <p>
-    Комментариев: <%= idea_post.comments.count %>
-  </p>
-
-<% end %>
+</div>

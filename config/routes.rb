@@ -23,7 +23,11 @@ Rails.application.routes.draw do
       end
     end
 
-    resources :tutorial_posts
+    resources :tutorial_posts do
+      collection do
+        get "by_tag/:tag", to: "tutorial_posts#by_tag", as: "tagged"
+      end
+    end
 
     resources :posts do
       

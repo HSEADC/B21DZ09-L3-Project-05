@@ -1,0 +1,37 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="contentPage">
+
+  <%= render @post %>
+
+  <div>
+    <%= link_to "Обратно ко всем постам", admin_tutorial_posts_path %> |
+
+    <% if can? :manage, @post %>
+      <%= link_to "Редактировать пост", edit_admin_tutorial_post_path(@post) %>
+      <%= button_to "Удалить пост", admin_tutorial_post_path(@post), method: :delete %>
+    <% end %>
+  </div>
+
+  <hr>
+
+  <h3>Комментарии</h3>
+
+  <%= link_to "Новый комментарий", new_admin_post_comment_path(@post) %>
+  <br>
+  <br>
+  <%#= render @post.comments, post: @post %>
+
+  
+  <div id="comments">
+    <% @post.comments.each do |comment| %>
+      <div class="commentCard"%>
+        <%= render comment, post: @post %>
+          <p>
+            <%#= link_to "Показать этот комментарий", [:admin, comment] %>
+          </p>
+      </div>
+    <% end %>
+  </div>
+  
+</div>

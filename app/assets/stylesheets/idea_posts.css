@@ -1,0 +1,262 @@
+.IdeaPostsPage,
+.TutorialPostsPage {
+    margin-top: 60px;
+    width: 100%;
+}
+
+.IdeaPostsPageContent {
+    /* margin-top: 60px; */
+}
+
+.IdeaPostsCards {
+    display: flex;
+    margin: 50px auto;
+    width: calc(100% - 52px);
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 20px 22px;
+    flex-wrap: wrap;
+}
+
+.Banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    width: 100vw;
+    height: 290px;
+    
+    background-image: url("/assets/banners/Banner1.png");
+    /* background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.00) 100%), #E6E6E6; */
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.BannerTitle {
+    position: absolute;
+    width: fit-content;
+    padding: 17px 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+
+    font-family: Suisse Intl;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 96px */
+    text-transform: uppercase;
+    color: var(--white);
+
+    &.IP-1 {
+        margin-top: 56px;
+        margin-right: 500px;
+        transform: rotate(-0.1deg);
+    }
+
+    &.IP-2 {
+        margin-top: 86px;
+        margin-left: 320px;
+        transform: rotate(-2.3deg);
+    }
+}
+
+.BannerZigZag {
+    position: absolute;
+    background-image: url("/assets/FooterTopLogoLine.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &.IdeaPosts {
+        margin-top: 112px;
+        margin-right: 188px;
+
+        width: 143px;
+        height: 36px;
+        transform: rotate(-87deg);
+    }
+}
+
+.IdeaPostCard {
+    display: flex;
+    /* width: 20,6875rem; */
+    width: calc(25% - 17px);
+}
+
+.IdeaPostCardContent {
+    width: 100%;
+    /* height: 100%; */
+
+    display: flex;
+    padding: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+
+    border-radius: 28px;
+    background: var(--white2);
+    box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.08);
+}
+
+.IdeaPostCardImg {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    /* background-color: var(--white2); */
+    
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+}
+
+.IdeaPostCardInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.IdeaPostCardInfoTop {
+    display: flex;
+    padding: 0px 10px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+
+.IdeaCardInfoUser {
+    display: flex;
+    padding-left: 4px;
+    align-items: center;
+    gap: 12px;
+}
+
+.IdeaCardInfoUserAvatar {
+    background-image: url("/assets/promo/IconUser.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    width: 40px;
+    height: 40px;
+}
+
+.IdeaCardInfoUserNames {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+.IdeaCardInfoUserName {
+    font-family: Suisse Intl;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    &.UN {
+        color: black;
+    }
+
+    &.NN {
+        color: #938F8F;
+    }
+}
+
+.IdeaPostCardLike {
+    background-image: url("/assets/icons/IconHeart.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    width: 36px;
+    height: 36px;
+}
+
+.IdeaPostCardInfoBottom {
+    display: flex;
+    padding: 12px 14px;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 8px;
+    align-self: stretch;
+    flex-wrap: wrap;
+}
+
+.PostCardTagChip {
+    display: flex;
+    padding: 8px 12px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background: var(--black-gradient);
+
+    font-family: Suisse Intl;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: normal;
+    color: var(--white);
+}
+
+
+@media only screen and (max-width: 1023px) {
+    .IdeaPostsPage,
+    .TutorialPostsPage {
+        margin-top: 50px;
+    }
+    .Banner {
+        height: 192px;
+    }
+
+    .BannerTitle {
+        padding: 7px 8px;
+        font-size: 38px;
+    
+        &.IP-1 {
+            margin-top: 68px;
+            margin-right: 187px;
+        }
+    
+        &.IP-2 {
+            margin-top: 84px;
+            margin-left: 141px;
+        }
+    }
+
+    .BannerZigZag {
+        &.IdeaPosts {
+            margin-top: 86px;
+            margin-right: 60px;
+    
+            width: 57px;
+            height: 14px;
+            transform: rotate(-87deg);
+        }
+    }
+}
+
+@media only screen and (min-width: 1281px) and (max-width: 1440px) {
+    .IdeaPostCard {
+        width: calc(33.3% - 15px);
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1280px) {
+    .IdeaPostCard {
+        width: calc(50% - 11px);
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .IdeaPostCard {
+        width: 100%;
+    }
+}
+

@@ -13,11 +13,13 @@
  *= require basics
  *= require fonts
  *= require vars
+ *= require login
  *= require menubar
  *= require footer
  *= require about
  *= require subscriptions
  *= require posts
+ *= require idea_posts
  *= require comments
  *= require categories
  */

@@ -1,13 +1,36 @@
-<h1>Idea Posts</h1>
-<div class="tagChipsRow">
-    <% IdeaPost.tag_counts_on(:tags).each do |tag| %>
-      <%= link_to tagged_admin_posts_path(tag.name) do %>
-        <div class="tagChips">
-          <%= tag.name %>
-        </div>
+<div class="IdeaPostsPage">
+
+  <div class="Banner IdeaPosts">
+    <h1 class="BannerTitle IP-1">Идеи</h1>
+    <h1 class="BannerTitle IP-2">кастома</h1>
+    <div class="BannerZigZag IdeaPosts"></div>
+  </div>
+
+  <div class="tagChipsRow">
+      <% IdeaPost.tag_counts_on(:tags).each do |tag| %>
+        <%= link_to tagged_admin_idea_posts_path(tag.name) do %>
+          <div class="tagChips">
+            <%= tag.name %>
+          </div>
+        <% end %>
+      <% end %>
+  </div>
+
+  <%= link_to tagged_admin_idea_posts_path("одежда") do %>
+    <div class="tagChips">одежда</div>
+  <% end %>
+
+  <br>
+  <br>
+  
+  <div class="IdeaPostsCards">
+    <% @posts.each do |post| %>
+      <%= link_to admin_idea_post_path(post), class: "IdeaPostCard" do %>
+        <%= render post %>
       <% end %>
     <% end %>
   </div>
-<br>
-<br>
-<%= render @posts %>
+
+
+
+</div>
