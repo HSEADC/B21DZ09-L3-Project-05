@@ -1,2 +1,71 @@
-<h1>Tutorial Posts</h1>
-<%= render @posts %>
+<div class="TutorialPostsPage">
+
+  <div class="Banner IdeaPosts">
+    <h1 class="BannerTitle IP-1">Идеи</h1>
+    <h1 class="BannerTitle IP-2">кастома</h1>
+    <div class="BannerZigZag IdeaPosts"></div>
+  </div>
+
+  <div class="TagBlock">
+    <div class="TagSections">
+        <div class="TagSection Items">
+          <p class="TagSectionTitle">Предметы</p>
+          <div class="IconArrowDown Items"></div>
+        </div>
+
+        <div class="TagSection Tech">
+          <p class="TagSectionTitle">Техники</p>
+          <div class="IconArrowDown Tech"></div>
+        </div>
+
+        <div class="TagSection Mat">
+          <p class="TagSectionTitle">Материалы</p>
+          <div class="IconArrowDown Mat"></div>
+        </div>
+    </div>
+
+    <div class="TagLists">
+      <div class="TagList Items">
+            <%= link_to tagged_admin_idea_posts_path("одежда") do %>
+              <div class="TagSectionTagChip">одежда</div>
+            <% end %>
+            <%= link_to tagged_admin_idea_posts_path("обувь") do %>
+              <div class="TagSectionTagChip">обувь</div>
+            <% end %>
+            <%= link_to tagged_admin_idea_posts_path("аксессуары") do %>
+              <div class="TagSectionTagChip">одежда</div>
+            <% end %>
+      </div>
+
+      <div class="TagList Tech">
+        <%= link_to tagged_admin_idea_posts_path("роспись") do %>
+          <div class="TagSectionTagChip">роспись</div>
+        <% end %>
+        <%= link_to tagged_admin_idea_posts_path("шитьё") do %>
+          <div class="TagSectionTagChip">шитьё</div>
+        <% end %>
+        <%= link_to tagged_admin_idea_posts_path("апсайклинг") do %>
+          <div class="TagSectionTagChip">апсайклинг</div>
+        <% end %>
+        <%= link_to tagged_admin_idea_posts_path("вязание") do %>
+          <div class="TagSectionTagChip">вязание</div>
+        <% end %>
+      </div>
+
+      <div class="TagList Mat">
+        <%= link_to tagged_admin_idea_posts_path("краски") do %>
+          <div class="TagSectionTagChip">краски</div>
+        <% end %>
+        <%= link_to tagged_admin_idea_posts_path("кожа") do %>
+          <div class="TagSectionTagChip">кожа</div>
+        <% end %>
+        <%= link_to tagged_admin_idea_posts_path("бисер") do %>
+          <div class="TagSectionTagChip">бисер</div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  
+  <%= render @posts %>
+
+</div>

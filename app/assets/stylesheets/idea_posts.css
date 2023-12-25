@@ -1,21 +1,11 @@
 .IdeaPostsPage,
 .TutorialPostsPage {
     margin-top: 60px;
-    width: 100%;
-}
-
-.IdeaPostsPageContent {
-    /* margin-top: 60px; */
-}
-
-.IdeaPostsCards {
+    margin-bottom: 160px;
     display: flex;
-    margin: 50px auto;
-    width: calc(100% - 52px);
-    align-items: flex-start;
-    align-content: flex-start;
-    gap: 20px 22px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 .Banner {
@@ -76,6 +66,112 @@
         height: 36px;
         transform: rotate(-87deg);
     }
+}
+
+.TagBlock {
+    position: relative;
+    margin: 30px auto;
+}
+
+.TagSections {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.TagSection {
+    display: flex;
+    width: 280px;
+    height: 58px;
+    padding: 0px 14px;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px dashed black;
+    border-bottom: 1px dashed black;
+    background-color: white;
+
+    &.Items {
+        border-left: 1px dashed black;
+        border-right: 1px dashed black;
+    }
+
+    &.Mat {
+        border-left: 1px dashed black;
+        border-right: 1px dashed black;
+    }
+}
+
+.TagList {
+    position: absolute;
+    display: none;
+
+    border-right: 1px dashed black;
+    border-bottom: 1px dashed black;
+    border-left: 1px dashed black;
+    background-color: white;
+
+    z-index: 20;
+    
+    &.Items {
+        left: 0px;
+    }
+
+    &.Tech {
+        left: 309px;
+    }
+
+    &.Mat {
+        left: 618px;
+    }
+
+    &.show {
+        display: flex;
+        margin-top: -2px;
+        width: 280px;
+        padding: 10px 14px 20px 14px;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: 6px;
+        flex-wrap: wrap;
+    }
+}
+
+.TagSectionTitle {
+    font-family: Suisse Intl;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    color: black;
+}
+
+.IconArrowDown {
+    display: flex;
+    width: 28px;
+    height: 28px;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("/assets/icons/ArrowDown.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* transition: all 0.3s linear; */
+
+    &.CD {
+        transform: scale(1, -1);
+    }
+}
+
+.IdeaPostsCards {
+    display: flex;
+    /* margin: 50px auto; */
+    width: calc(100% - 52px);
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 20px 22px;
+    flex-wrap: wrap;
 }
 
 .IdeaPostCard {
@@ -189,7 +285,8 @@
     flex-wrap: wrap;
 }
 
-.PostCardTagChip {
+.PostCardTagChip,
+.TagSectionTagChip {
     display: flex;
     padding: 8px 12px;
     justify-content: center;
@@ -259,4 +356,5 @@
         width: 100%;
     }
 }
+
 
