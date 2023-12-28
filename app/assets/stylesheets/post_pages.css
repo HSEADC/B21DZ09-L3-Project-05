@@ -5,6 +5,7 @@
     flex-direction: column;
     align-items: center;
     width: calc(100% - 52px);
+    max-width: 1868px;
 
     &.Gride {
         display: grid;
@@ -423,6 +424,10 @@
     &.Fixed {
         position: fixed;
     }
+
+    &.Mob {
+        display: none;
+    }
 }
 
 .PostPageButtonIcon {
@@ -437,5 +442,191 @@
 
     &.Edit {
         background-image: url("/assets/icons/IconEdit.svg");
+    }
+}
+
+@media only screen and (min-width:1921px) {
+    .IdeaPostPageImg {
+        grid-column: 5 / 14;
+    }
+    
+    .IdeaPostPageInfo {
+        grid-column: 14 / 21;
+    }
+}
+
+@media only screen and (min-width: 1441px) and (max-width: 1920px) {
+    .IdeaPostPageImg {
+        grid-column: 3 / 14;
+    }
+    
+    .IdeaPostPageInfo {
+        grid-column: 14 / 23;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .PostPageButton {
+        &.Edit {
+            position: absolute;
+        }
+
+        &.Desk {
+            display: none;
+        }
+
+        &.Mob {
+            display: inline-flex;
+            height: 40px;
+        }
+    }
+
+    .TutorialPostPageContent {
+        gap: 26px;
+    }
+
+    .IdeaPostCard,
+    .TutorialPostCard {
+        &.PP-3 {
+            display: none;
+        }
+    }
+
+    .IdeaPostPageTitle {
+        font-size: 20px;
+    }
+    
+    .IdeaPostPageInfoUserName {
+        &.UN {
+            font-size: 20px;
+        }
+    }
+
+    .IdeaPostPageInfoUserAvatar {
+        width: 46px;
+        height: 46px;
+    }
+
+    .PostPageAbout {
+        &.Idea {
+            gap: 16px;
+        }
+    }
+
+    .IdeaPostPageInfoTop {
+        gap: 14px;
+    }
+
+    .IdeaPostPageInfoUser {
+        gap: 12px;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+    .IdeaPostPageImg {
+        grid-column: 2 / 14;
+    }
+    
+    .IdeaPostPageInfo {
+        grid-column: 14 / 24;
+    }
+
+    .TutorialPostPageContent {
+        /* margin-bottom: 60px; */
+        grid-column: 6 / 20;
+    }
+
+    .TutorialPostPageComments {
+        grid-column: 6 / 20;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .TutorialPostCard {
+        &.PP-2 {
+            display: none;
+        }
+    }
+
+    .PostPageButton {
+        &.Edit {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .IdeaPostPageImg {
+        grid-column: 1 / 14;
+    }
+    
+    .IdeaPostPageInfo {
+        grid-column: 14 / 25;
+    }
+    .TutorialPostPageContent {
+        /* margin-bottom: 40px; */
+        grid-column: 5 / 21;
+    }
+
+    .TutorialPostPageComments {
+        grid-column: 5 / 21;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .IdeaPostPage,
+    .TutorialPostPage {
+    margin: 40px auto 70px;
+    width: calc(100% - 32px);
+
+    &.Gride {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* column-gap: 20px; */
+        width: 100%;
+        margin: 16px auto;
+        /* background-color: aqua; */
+        }
+    }
+
+    .PostPageButton {
+        &.Back {
+            display: none;
+        }
+    }
+
+    .IdeaPostPageImg {
+        grid-column: 1 / 3;
+    }
+    
+    .IdeaPostPageInfo {
+        margin-top: 26px;
+        grid-column: 1 / 3;
+    }
+
+    .IdeaPostPageCommentBlock {
+        min-height: auto;
+        overflow-y: visible; 
+        flex: 0 0 0;
+    }
+
+    .TutorialPostPageContent {
+        margin-top: 26px;
+        /* margin-bottom: 40px; */
+        grid-column: 1 / 3;
+    }
+
+    .TutorialPostPageComments {
+        grid-column: 1 / 3;
+    }
+
+    .IdeaPostPageSeeAlso {
+        display: none;
+    }
+
+    .PostPageButton {
+        &.Back {
+            position: absolute;
+        }
     }
 }

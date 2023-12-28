@@ -121,3 +121,18 @@
 .PostCommentReplies > div {
     /* padding: 16px 0; */
 }
+
+@media only screen and (max-width: 1280px) {
+    .PostCommentUserName {
+        font-size: 20px;
+    }
+
+    .PostCommentUserAvatar {
+        width: 46px;
+        height: 46px;
+    }
+
+    .PostComment {
+        gap: 12px;
+    }
+}
