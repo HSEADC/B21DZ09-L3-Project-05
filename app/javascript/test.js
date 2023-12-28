@@ -57,12 +57,45 @@ function tagsVisibility() {
     })
 }
 
-function menubarVisibility() {
-    const button = document.querySelector('.testItemButton')
-    const menu = document.querySelector('.testItem')
+function createNewPostVisibility() {
+    const button = document.querySelector('.navSection.newPost')
+    const menu = document.querySelector('.NavCreateNewPostList')
   
     button.addEventListener('click', () => {
         menu.classList.toggle('show')
+    })
+
+    document.addEventListener( 'click', (e) => {
+        const target = e.target
+
+        const menuA = target == menu || menu.contains(target)
+        const buttonA = target == button
+        const menuShow = menu.classList.contains('show')
+
+        if ( !menuA && !buttonA && menuShow )  {
+            menu.classList.remove('show')
+        }
+    })
+}
+
+function mobileMenuVisibility() {
+    const button = document.querySelector('.NavSectionMenuMob')
+    const menu = document.querySelector('.MobileMenu')
+  
+    button.addEventListener('click', () => {
+        menu.classList.toggle('show')
+    })
+
+    document.addEventListener( 'click', (e) => {
+        const target = e.target
+
+        const menuA = target == menu || menu.contains(target)
+        const buttonA = target == button
+        const menuShow = menu.classList.contains('show')
+
+        if ( !menuA && !buttonA && menuShow )  {
+            menu.classList.remove('show')
+        }
     })
 }
 
@@ -70,5 +103,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.body.classList.contains('posts_page')) {
         tagsVisibility()
     }
-    menubarVisibility()
+    createNewPostVisibility()
+    mobileMenuVisibility()
   })

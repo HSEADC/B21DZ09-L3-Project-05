@@ -1,51 +1,83 @@
 <% if user_signed_in? && current_user.admin %>
+
+    <div class="NavCreateNewPostList">
+        <%= link_to "+Новая идея", new_admin_idea_post_path, class: "navSection createNewPost" %>
+        <%= link_to "+Новый туториал", new_admin_idea_post_path, class: "navSection createNewPost" %>   
+    </div>
+
     <nav class="header">
+        <div class="NavSectionMenuMob"></div>
         
-        <div class="navSections">
-            <%= link_to "Главная", root_url, class: 'navSection' %>
-            <%= link_to "Все посты", admin_posts_url, class: 'navSection' %>
-            <%= link_to "Идеи", admin_idea_posts_url, class: 'navSection' %>
-            <%= link_to "Туториалы", admin_tutorial_posts_url, class: 'navSection' %>
-            <%= link_to "Комментарии", admin_comments_url, class: 'navSection' %>
-            <%= link_to "Подписки", admin_subscriptions_url, class: 'navSection' %>  
+        <div class="navSections Desk">
+            <%= link_to "Главная", root_url, class: "navSection" %>
+            <%= link_to "Все посты", admin_posts_url, class: "navSection" %>
+            <%= link_to "Идеи", admin_idea_posts_url, class: "navSection" %>
+            <%= link_to "Туториалы", admin_tutorial_posts_url, class: "navSection" %>
+            <%= link_to "Комментарии", admin_comments_url, class: "navSection" %>
+            <%= link_to "Подписки", admin_subscriptions_url, class: "navSection" %>  
         </div>
 
-        <%#= link_to "ÒÒ", root_url, class: 'navLogo' %>
+        <%#= link_to "ÒÒ", root_url, class: "navLogo" %>
 
         <div class="navSearchAvatar">
-            <%#= link_to "Новый пост", root_url, class: 'navSection newPost' %>
+            <div class="navSection newPost">Новый пост</div>
 
-            <%#= link_to "", root_url, class: 'navSearch' %>
-            <%#= link_to "", root_url, class: 'navUser' %>
-            <%= link_to current_user.email, edit_user_registration_path %>
+            <%#= link_to "", root_url, class: "navSearch" %>
+            <%#= link_to "", root_url, class: "navUser" %>
+            <%= link_to "", edit_user_registration_path, class: "AvatarAdmin" %>
 
-            <%= link_to "Выйти", destroy_user_session_path, method: :delete, class: 'navSection' %>
+            <%#= link_to "Выйти", destroy_user_session_path, method: :delete, class: "navSection" %>
         </div>
     </nav>
+
+    <div class="MobileMenu">
+        <div class="MobileMenuPages">
+            <%= link_to "Главная", root_url, class: "MobileMenuSection" %>
+            <%= link_to "Все посты", admin_posts_url, class: "MobileMenuSection" %>
+            <%= link_to "Идеи", admin_idea_posts_url, class: "MobileMenuSection" %>
+            <%= link_to "Туториалы", admin_tutorial_posts_url, class: "MobileMenuSection" %>
+            <%= link_to "Комментарии", admin_comments_url, class: "MobileMenuSection" %>
+            <%= link_to "Подписки", admin_subscriptions_url, class: "MobileMenuSection" %> 
+        </div>
+        <div class="MobileMenuCreate">
+            <%= link_to "+Новая идея", new_admin_idea_post_path, class: "MobileMenuSection" %>
+            <%= link_to "+Новый туториал", new_admin_idea_post_path, class: "MobileMenuSection" %>  
+        </div>
+    </div>
 <% end %>
+
 
 
 <% if user_signed_in? && !current_user.admin%>
     <nav class="header">
-        
-        <div class="navSections">
-            <%= link_to "Все посты", posts_url, class: 'navSection' %>
-            <%= link_to "Идеи", welcome_ideas_url, class: 'navSection' %>
-            <%= link_to "Туториалы", welcome_tutorials_url, class: 'navSection' %>  
+        <div class="NavSectionMenuMob"></div>
+
+        <div class="navSections Desk">
+            <%= link_to "Все посты", posts_url, class: "navSection" %>
+            <%= link_to "Идеи", welcome_ideas_url, class: "navSection" %>
+            <%= link_to "Туториалы", welcome_tutorials_url, class: "navSection" %>  
         </div>
 
-        <%= link_to "ÒÒ", root_url, class: 'navLogo' %>
+        <%= link_to "ÒÒ", root_url, class: "navLogo" %>
 
         <div class="navSearchAvatar">
-            <%= link_to "Новый пост", root_url, class: 'navSection newPost' %>
+            <%#= link_to "Новый пост", root_url, class: "navSection newPost" %>
 
-            <%= link_to "", root_url, class: 'navSearch' %>
-            <%= link_to "", edit_user_registration_path, class: 'navUser' %>
+            <%= link_to "", root_url, class: "navSearch" %>
+            <%= link_to "", edit_user_registration_path, class: "navUser" %>
             <%#= link_to current_user.email, edit_user_registration_path %>
 
-            <%#= link_to "Выйти", destroy_user_session_path, method: :delete, class: 'navSection' %>
+            <%#= link_to "Выйти", destroy_user_session_path, method: :delete, class: "navSection" %>
         </div>
     </nav>
+
+    <div class="MobileMenu">
+        <div class="MobileMenuPages">
+            <%= link_to "Идеи", welcome_ideas_url, class: "MobileMenuSection" %>
+            <%= link_to "Туториалы", welcome_tutorials_url, class: "MobileMenuSection" %> 
+            <%= link_to "О нас", welcome_about_url, class: "MobileMenuSection" %>
+        </div>
+    </div>
 <% end %>
 
 
@@ -53,20 +85,28 @@
     <nav class="header">
             
         <div class="navSections">
-            <%= link_to "Все посты", posts_url, class: 'navSection' %>
-            <%= link_to "Идеи", welcome_ideas_url, class: 'navSection' %>
-            <%= link_to "Туториалы", welcome_tutorials_url, class: 'navSection' %> 
+            <%= link_to "Все посты", posts_url, class: "navSection" %>
+            <%= link_to "Идеи", welcome_ideas_url, class: "navSection" %>
+            <%= link_to "Туториалы", welcome_tutorials_url, class: "navSection" %> 
         </div>
 
-        <%= link_to "ÒÒ", root_url, class: 'navLogo' %>
+        <%= link_to "ÒÒ", root_url, class: "navLogo" %>
 
         <div class="navSearchAvatar">
-            <%= link_to "", root_url, class: 'navSearch' %>
-            <%#= link_to "", root_url, class: 'navUser' %>
+            <%= link_to "", root_url, class: "navSearch" %>
+            <%#= link_to "", root_url, class: "navUser" %>
 
-            <%= link_to "Войти", new_user_session_path, class: 'navSection' %>
-            <%= link_to "Регистрация", new_user_registration_path, class: 'navSection'  %>
+            <%= link_to "Войти", new_user_session_path, class: "navSection" %>
+            <%= link_to "Регистрация", new_user_registration_path, class: "navSection"  %>
         </div>
     </nav>
+
+    <div class="MobileMenu">
+        <div class="MobileMenuPages">
+            <%= link_to "Идеи", welcome_ideas_url, class: "MobileMenuSection" %>
+            <%= link_to "Туториалы", welcome_tutorials_url, class: "MobileMenuSection" %> 
+            <%= link_to "О нас", welcome_about_url, class: "MobileMenuSection" %>
+        </div>
+    </div>
 
 <% end %>
