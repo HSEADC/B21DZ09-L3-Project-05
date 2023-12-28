@@ -1,37 +1,24 @@
 <p style="color: green"><%= notice %></p>
 
-<div class="contentPage">
+<div class="IdeaPostPage">
 
-  <%= render @post %>
+  <%= link_to :admin_idea_posts, class:"IdeaPostPageButton Back" do %>
+    <div class="IdeaPostPageButtonIcon Back"></div>
+    <p class="IdeaPostPageButtonText">Назад</p>
+  <% end %>
 
-  <div>
-    <%= link_to "Обратно ко всем постам", admin_idea_posts_path %> |
-
-    <% if can? :manage, @post %>
-      <%= link_to "Редактировать пост", edit_admin_idea_post_path(@post) %>
-      <%= button_to "Удалить пост", admin_idea_post_path(@post), method: :delete %>
+  <% if can? :manage, @post %>
+    <%= link_to edit_admin_idea_post_path(@post) do %>
+        <div class="IdeaPostPageButton Edit">
+            <div class="IdeaPostPageButtonIcon Edit"></div>
+            <p class="IdeaPostPageButtonText">Редактировать</p>
+        </div>
     <% end %>
-  </div>
+    <%#= button_to "Удалить пост", admin_post_path(@post), method: :delete %>
+  <% end %>
 
-  <hr>
+  <%#= render @post %>
 
-  <h3>Комментарии</h3>
-
-  <%= link_to "Новый комментарий", new_admin_post_comment_path(@post) %>
-  <br>
-  <br>
-  <%#= render @post.comments, post: @post %>
-
-  
-  <div id="comments">
-    <% @post.comments.each do |comment| %>
-      <div class="commentCard"%>
-        <%= render comment, post: @post %>
-          <p>
-            <%#= link_to "Показать этот комментарий", [:admin, comment] %>
-          </p>
-      </div>
-    <% end %>
-  </div>
+  <%= render partial: "admin/idea_posts/idea_post_page", locals: {post: @post} %>
   
 </div>

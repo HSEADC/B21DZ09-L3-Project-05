@@ -13,6 +13,9 @@ class Admin::IdeaPostsController < Admin::ApplicationController
 
   # GET /posts/1 or /posts/1.json
   def show
+    @recom_post1 = Post.find_by(id: "13")
+    @recom_post2 = Post.find_by(id: "16")
+    @recom_post3 = Post.find_by(id: "11")
   end
 
   # GET /posts/new

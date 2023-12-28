@@ -29,16 +29,16 @@
     font-family: Suisse Intl;
     font-size: 32px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 44px;
     text-transform: uppercase;
-    color: var(--white);
+    color: var(--lightgray);
 
     background-color: black;
 
-    &:hover {
+    /* &:hover {
         text-decoration: underline;
-    }
+    } */
 }
 
 .navSearch {
@@ -78,10 +78,10 @@
     font-family: Suisse Intl;
     font-size: 16px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 41px; /* 256.25% */
     text-transform: uppercase;
-    color: var(--white);
+    color: var(--lightgray);
 
     background-color: black;
 

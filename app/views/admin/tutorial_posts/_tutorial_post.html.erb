@@ -1,47 +1,18 @@
-<%= link_to [:admin, tutorial_post], class: 'postCard' do %>
+<div class="TutorialPostCardContent">
 
-  <p class="typeChips tutorial">
-    <%= tutorial_post.type %>
-  </p>
-
-  <!--
-  <p class="categoryChips">
-    <%#= tutorial_post.category.name %>
-  </p>
-  -->
-
-  <div class="tagChipsRow">
-    <% tutorial_post.tag_list.each do |tag| %>
-      <div class="tagChips">
-        <%= tag %>
-      </div>
-    <% end %>
+  <div class="TutorialPostCardImg">
+    <%= image_tag tutorial_post.post_image.url %>
   </div>
 
-  <p class="postDate">
-    <%= tutorial_post.created_at %>
-  </p>
+  <div class="TutorialPostCardInfo">
+    <div class="TutorialPostCardTagsRow">
+      <% tutorial_post.tag_list.each do |tag| %>
+          <div class="PostCardTagChip">
+              <%= tag %>
+          </div>
+      <% end %>
+    </div>
+    <h2 class="TutorialPostCardTitle"><%= tutorial_post.title%></h2>
+  </div>
 
-  <p>
-    <%= tutorial_post.user.email %>
-  </p>
-
-  <h2>
-    <%= tutorial_post.title%>
-  </h2>
-
-  <%= image_tag tutorial_post.post_image.url, width: 300 if tutorial_post.post_image.url %>
-
-  <p>
-    <%= tutorial_post.description %>
-  </p>
-
-  <p>
-    <%= tutorial_post.content_link %>
-  </p>
-
-  <p>
-    Комментариев: <%= tutorial_post.comments.count %>
-  </p>
-
-  <% end %>
+</div>

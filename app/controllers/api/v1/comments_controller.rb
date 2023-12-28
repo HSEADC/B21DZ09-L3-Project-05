@@ -11,3 +11,4 @@ class Api::V1::CommentsController < Api::V1::ApplicationController
     @comment = Comment.find(params[:id])
   end
 
+end

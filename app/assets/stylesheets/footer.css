@@ -1,14 +1,11 @@
 .Footer {
+    width: calc(100%-52px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 
     background: var(--black);
-
-    a:hover {
-        text-decoration: underline;
-    }
 }
 
 .FooterTop {
@@ -19,14 +16,18 @@
 }
 
 .FooterTopLogoText {
-    color: var(--white);
+    color: var(--lightgray);
     font-family: Suisse Intl;
     font-size: 40px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 100%; /* 40px */
     text-transform: uppercase;
     margin: 0;
+
+    a:hover {
+        text-decoration: none;
+    }
 }
 
 .FooterTopLogoLine {
@@ -43,7 +44,7 @@
 }
 
 .FooterTopR {
-    color: var(--white);
+    color: var(--lightgray);
     font-family: Suisse Intl;
     font-size: 64px;
     font-style: normal;
@@ -56,6 +57,10 @@
     justify-content: space-between;
     align-items: flex-end;
     align-self: stretch;
+
+    a:hover {
+        text-decoration: underline;
+    }
 }
 
 .FooterInfoTeam {
@@ -66,11 +71,11 @@
 }
 
 .FooterInfoTeamTitle {
-    color: var(--white);
+    color: var(--lightgray);
     font-family: Suisse Intl;
     font-size: 20px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 100%;
     text-transform: uppercase;
 }
@@ -84,11 +89,11 @@
 }
 
 .FooterInfoTeamPerson {
-    color: var(--white);
+    color: var(--lightgray);
     font-family: Suisse Intl;
     font-size: 16px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 100%; /* 16px */
     text-transform: uppercase;
 }
@@ -113,10 +118,10 @@
     font-family: Suisse Intl;
     font-size: 20px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 100%; /* 20px */
     text-transform: uppercase;
-    color: var(--white);
+    color: var(--lightgray);
 }
 
 .FooterInfoContacts {
@@ -127,11 +132,11 @@
 }
 
 .FooterInfoContactsText {
-    color: var(--white);
+    color: var(--lightgray);
     font-family: Suisse Intl;
     font-size: 20px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 100%; /* 20px */
     text-transform: uppercase;
 }

@@ -214,12 +214,12 @@
 
     background-color: black;
 
-    color: var(--white);
+    color: var(--lightgray);
     text-align: center;
     font-family: Suisse Intl;
     font-size: 128px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 99px; /* 77.344% */
     text-transform: uppercase;
 
@@ -378,10 +378,10 @@
     font-family: Suisse Intl;
     font-size: 40px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 100%; /* 40px */
     text-transform: uppercase;
-    color: var(--white);
+    color: var(--lightgray);
     padding: 17px 20px;
     background-color: black;
 
@@ -690,7 +690,7 @@
     font-weight: 400;
     line-height: normal;
 
-    &.grey {
+    &.gray {
         border: 1px dashed #938F8F;
         color: #938F8F;
         top: 622px;
@@ -700,7 +700,7 @@
 
     &.black {
         background-color: black;
-        color: var(--white);
+        color: var(--lightgray);
         top: 552px;
         margin-left: 410px;
         transform: rotate(9deg);
@@ -750,10 +750,10 @@
     font-family: Suisse Intl;
     font-size: 96px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 100%; /* 96px */
     text-transform: uppercase;
-    color: var(--white);
+    color: var(--lightgray);
 
     &.SST-1 {
         transform: rotate(-0.4deg);
@@ -834,10 +834,10 @@
     font-family: Suisse Intl;
     font-size: 16px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 29px; /* 181.25% */
     text-transform: uppercase;
-    color: var(--white);
+    color: var(--lightgray);
 
     &:hover {
         cursor: pointer;

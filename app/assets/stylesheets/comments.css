@@ -11,9 +11,80 @@
 }
 
 .commentReplies {
-    padding-left: 40px;
+    display: flex;
 }
 
 .commentReplies > div {
     padding: 20px 0;
+}
+
+.PostComment {
+    /* max-width: 464px; */
+    display: flex;
+    align-items: flex-start;
+    gap: 19px;
+    margin-bottom: 16px;
+}
+
+.PostCommentUserAvatar {
+    background-image: url("/assets/promo/IconUser.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    width: 68px;
+    height: 68px;
+}
+
+.PostCommentTexts {
+    padding-top: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+}
+
+.PostCommentInfo {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.PostCommentUserName {
+    font-family: Suisse Intl;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: black;
+}
+
+.PostCommentDate {
+    font-family: Suisse Intl;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #5F5F5F;
+}
+
+.PostCommentBody {
+    max-width: 376px;;
+    font-family: Suisse Intl;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: black;
+}
+
+.PostCommentReplies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 19px; */
+    padding-left: 40px;
+}
+
+.PostCommentReplies > div {
+    /* padding: 16px 0; */
 }

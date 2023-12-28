@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   resources :posts do
     collection do
       get "by_tag/:tag", to: "posts#by_tag", as: "tagged"
@@ -9,9 +10,8 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :posts do
-        resources :comments
-      end
+      resources :comments
+      resources :posts
     end
   end
 
@@ -39,7 +39,6 @@ Rails.application.routes.draw do
       
     end
 
-    resources :categories
     resources :comments
     resources :subscriptions
 

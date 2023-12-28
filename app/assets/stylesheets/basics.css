@@ -52,6 +52,7 @@ html {
 body {
     font-family: "Suisse Intl", "Inter", sans-serif;
     /* margin: 70px auto 0; */
+	background: linear-gradient(180deg, #FFF 24.77%, #DBDBDB 91.11%);
 }
 
 a {

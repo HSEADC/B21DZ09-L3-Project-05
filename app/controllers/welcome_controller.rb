@@ -1,13 +1,13 @@
 class WelcomeController < ApplicationController
   def index
-    @subscription = Subscription.new
-
     # Meta
     @title = "LÒÒCHOK — Медиа о кастоме"
     # end
   end
 
   def about
+    @subscription = Subscription.new
+
     # Meta
     @title = "LÒÒCHOK | О нас"
     # end
