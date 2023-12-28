@@ -7,7 +7,7 @@
     <div class="IdeaPostPageInfo">
 
         <div class="IdeaPostPageInfoTop">
-            <div class="IdeaPostPageAbout">
+            <div class="PostPageAbout Idea">
                 <div class="PostPageTagsRow">
                     <% post.tag_list.each do |tag| %>
                         <%= link_to tagged_admin_idea_posts_path(tag), class:"PostPageTagChip" do %>
@@ -47,7 +47,6 @@
                     <% end %>
                 </div>
             </div>
-     
         </div>
 
     </div>

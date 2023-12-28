@@ -6,22 +6,23 @@
 
     <div class="PostCommentTexts">
       <div class="PostCommentInfo">
-        <p class="PostCommentUserName"><%= comment.user.email %></p>
-        <p class="PostCommentDate">
+        <p class="PostCommentUserName"><%= comment.user.email.split("@")[0] %></p>
+        <!--- <p class="PostCommentDate">
             <%#= comment.created_at %>
             сегодня в&nbsp;10:05
-        </p>
+        </p> --->
+        <% if can? :manage, comment %>
+          <div class="PostCommentIcons">
+            <%= link_to "", edit_admin_comment_path(comment), class:"PostCommentIcon Edit" %>
+            <%= link_to "", [:admin, comment], method: :delete, class:"PostCommentIcon Trash" %>
+          </div>
+        <% end %>
       </div>
       <p class="PostCommentBody"><%= comment.body %></p>
     </div>
 
-    <%# if can? :manage, comment %>
-      <%#= link_to "Редактировать комментарий", edit_admin_comment_path(comment) %>
-      <br>
-      <%#= button_to "Удалить комментарий", [:admin, comment], method: :delete %>
-    <%# end %>
-
   </div>
+
 
   <div class="PostCommentReplies">
     <% comment.replies.each do |reply| %>

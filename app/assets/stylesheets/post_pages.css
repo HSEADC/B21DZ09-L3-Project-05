@@ -1,12 +1,11 @@
-.IdeaPostPage {
-    margin: 60px auto 160px;
+.IdeaPostPage,
+.TutorialPostPage {
+    margin: 40px auto 160px;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: calc(100% - 52px);
-}
 
-.IdeaPostPage {
     &.Gride {
         display: grid;
         grid-template-columns: repeat(24, 1fr);
@@ -15,6 +14,39 @@
         margin: 48px auto;
         /* background-color: aqua; */
     }
+}
+
+.TutorialPostPageContent {
+    margin-bottom: 72px;
+    grid-column: 7 / 19;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.TutorialPostPageImg {
+    position: relative;
+    width: 100%;
+    padding-top: 55%;
+    /* background-color: var(--white); */
+    
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 28px;
+    }
+}
+
+.TutorialPostPageComments {
+    grid-column: 7 / 19;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .IdeaPostPageImg {
@@ -52,11 +84,18 @@
     align-self: stretch;
 }
 
-.IdeaPostPageAbout {
+.PostPageAbout {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 22px;
+
+    &.Idea {
+        gap: 22px;
+    }
+
+    &.Tutorial {
+        gap: 24px;
+    }
 }
 
 .PostPageTagsRow {
@@ -98,17 +137,18 @@
 
 .IdeaPostPageInfoUserName {
     font-family: Suisse Intl;
-    font-size: 24px;
     font-style: normal;
     line-height: normal;
     color: black;
 
 
     &.UN {
+        font-size: 24px;
         font-weight: 500;
     }
 
     &.NN {
+        font-size: 16px;
         font-weight: 400;
     }
 }
@@ -129,6 +169,19 @@
     color: black;
 }
 
+.TutorialPostPageTitle {
+    padding: 0 10px;
+    font-family: Suisse Intl;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 69px; /* 164.286% */
+    text-transform: uppercase;
+    color: var(--lightgray);
+
+    background-color: black;
+}
+
 .IdeaPostPageDescription {
     font-family: Suisse Intl;
     font-size: 18px;
@@ -138,16 +191,123 @@
     color: black;
 }
 
-.IdeaPostPageInfoBottom {
+.TutorialPostPageTitleDescription {
     display: flex;
-    height: 296px;
-    margin-bottom: 20px;
+    width: 100%;
     flex-direction: column;
-    justify-content: space-between;
     align-items: flex-start;
+    gap: 32px;
 }
 
-.IdeaPostPageCommentTitle {
+.TutorialPostPageDescription {
+    display: flex;
+    width: calc(100% - 48px);
+    padding: 20px 24px;
+    align-items: flex-start;
+
+    flex: 1 0 0;
+
+    border-radius: 28px;
+    border: 1px dashed black;
+    background: white;
+
+    font-family: Suisse Intl;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 22.4px */
+    color: black;
+}
+
+.TutorialPostPageTexts {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.TutorialPostPageSubtitle {
+    font-family: Suisse Intl;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color: black;
+}
+
+.TutorialPostPageContacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.TutorialPostPageContactsTitle {
+    margin-top: 10px;
+    /* margin-bottom: 10px; */
+
+    font-family: Suisse Intl;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    color: black;
+}
+
+.TutorialPostPageText,
+.TutorialPostPageContactsDescription {
+    font-family: Suisse Intl;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 25.2px */
+    color: black;
+}
+
+.TutorialPostPageContactsAuthor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+
+.TutorialPostPageAuthorLinks {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 22px;
+}
+
+.AuthorLink {
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &.VK {
+        background-image: url("/assets/VK-Black.svg");
+    }
+
+    &.TG {
+        background-image: url("/assets/TG-Black.svg");
+    }
+}
+
+.IdeaPostPageInfoBottom {
+    display: flex;
+    /* height: 296px; */
+    margin-top: 36px;
+    /* margin-bottom: 12px; */
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: flex-start;
+    flex: 1 0 0;
+}
+
+.IdeaPostPageCommentTitle,
+.TutorialPostPageCommentTitle {
     display: flex;
     width: 100%;
     padding-bottom: 8px;
@@ -164,11 +324,31 @@
 }
 
 .IdeaPostPageCommentBlock {
-    height: 265px;
+    min-height: 160px;
     margin-top: 20px;
     display: flex;
     flex-direction: column;
-    overflow: scroll;
+    overflow-y: scroll; 
+    flex: 1 0 0;
+
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 10px;
+        border-radius: 5px;
+        background-color: #DFDFDF;
+      }
+      
+    &::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background-color: #BBB;;
+        box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+    }
+}
+
+.TutorialPostPageCommentBlock {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .IdeaPostPageSeeAlso {
@@ -176,17 +356,17 @@
     display: inline-flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 40px;
+    gap: 10px;
 }
 
 .IdeaPostPageSeeAlsoTitle {
     display: flex;
-    padding: 26px 0px;
+    padding: 7px 0px;
     justify-content: space-between;
     align-items: center;
     align-self: stretch;
 
-    border-bottom: 1px solid #938F8F;
+    /* border-bottom: 1px solid #938F8F; */
 
     text-align: center;
     font-family: Suisse Intl;
@@ -200,16 +380,17 @@
 
 .IdeaPostPageSeeAlsoCards {
     display: flex;
-    /* margin: 50px auto; */
-    width: calc(100% - 52px);
+    flex-direction: row;
+    width: 100%;
     max-width: 1868px;
     align-items: flex-start;
     align-content: flex-start;
-    gap: 20px 22px;
-    flex-wrap: wrap;
+    gap: 20px 20px;
+    /* overflow: scroll; */
+    /* flex-wrap: wrap; */
 }
 
-.IdeaPostPageButton {
+.PostPageButton {
     position: absolute;
     margin-top: 48px;
     display: inline-flex;
@@ -227,6 +408,8 @@
     text-transform: uppercase;
     color: var(--lightgray);
 
+    z-index: 10;
+
     &.Back {
         left: 26px;
         padding: 0px 8px 0px 4px;
@@ -236,13 +419,13 @@
         right: 26px;
         padding: 0px 8px;
     }
+
+    &.Fixed {
+        position: fixed;
+    }
 }
 
-.IdeaPostPageButtonText {
-    
-}
-
-.IdeaPostPageButtonIcon {
+.PostPageButtonIcon {
     width: 28px;
     height: 28px;
     background-repeat: no-repeat;

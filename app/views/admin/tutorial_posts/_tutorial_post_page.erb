@@ -1,0 +1,81 @@
+<div class="TutorialPostPageContent">
+
+    <div class="PostPageAbout Tutorial">
+        <div class="PostPageTagsRow">
+            <% post.tag_list.each do |tag| %>
+                <%= link_to tagged_admin_idea_posts_path(tag), class:"PostPageTagChip" do %>
+                    <%= tag %>
+                <% end %>
+            <% end %>
+        </div>
+
+        <p class="PostPageDate">
+            <%#= post.created_at %>
+            сегодня в&nbsp;10:05
+        </p>
+
+        <div class="IdeaPostPageInfoUser">
+            <div class="IdeaPostPageInfoUserAvatar"></div>
+                <div class="IdeaPostPageInfoUserNames">
+                <p class="IdeaPostPageInfoUserName UN"><%= post.user.email.split("@")[0] %></p>
+                <p class="IdeaPostPageInfoUserName NN">@<%= post.user.email.split("@")[0] %></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="TutorialPostPageTitleDescription">
+        <h3 class="TutorialPostPageTitle"><%= post.title%></h3>
+        <p class="TutorialPostPageDescription"><%= post.description %></p>
+    </div>
+
+    <div class="TutorialPostPageImg">
+        <%= image_tag post.post_image.url %>
+    </div>
+    
+    <!--- --->
+
+    <div class="TutorialPostPageTexts">
+        <h4 class="TutorialPostPageSubtitle">Подготовка материалов</h4>
+        <p class="TutorialPostPageText">
+        Снимите все украшения с кед и расшнуруйте их. Расшнуруйте обувь, если на ваших кедах есть шнурки. Краска обычно плохо держится на шнурках, поэтому любое окрашивание впоследствии приведет к ее отслоению.
+        Если кеды сделаны из мягкой ткани, перед окрашиванием набейте их бумагой, чтобы сохранить форму. Вы рискуете испортить рисунок, если выбранные вами кеды быстро теряют форму. 
+        Приклейте малярный скотч к подошве обуви, чтобы защитить ее от краски. Пятна краски через некоторое время начнут отслаиваться, и вам будет неловко носить такую обувь. Как вариант, для этой цели можно использовать маскировочную ленту.</p>
+    </div>
+
+    <div class="TutorialPostPageImg">
+        <img src="/fake_content/image_13.jpg" alt="кастом" />
+    </div>
+
+    <div class="TutorialPostPageTexts">
+        <h4 class="TutorialPostPageSubtitle">Техника росписи</h4>
+        <p class="TutorialPostPageText">
+        Разукрасьте кеды в соответствии с вашей кастом-задумкой. Хотя вам наверняка захочется сделать все очень быстро, медленное и последовательное нанесение краски позволит получить гораздо лучший результат. Если вы забыли, каким цветом нужно покрасить определенный участок, обратитесь к окончательному варианту вашего эскиза на бумаге.
+        Используйте кисточки разной формы и размеров. Для тонких линий возьмите тонкую кисточку. Чтобы закрасить обширную область, используйте толстую кисточку или спонж.
+        Чтобы создать узор в горошек, окунайте кончик ватной палочки прямо в краску и ставьте точки на обуви.</p>
+    </div>
+
+    <div class="TutorialPostPageImg">
+        <img src="/fake_content/image_12.jpg" alt="кастом" />
+    </div>
+
+    <!--- --->
+
+    <div class="TutorialPostPageContacts">
+        <h6 class="TutorialPostPageContactsTitle">Контакты автора</h6>
+        <p class="TutorialPostPageContactsDescription">Можете посмотреть больше моих работ по ссылкам: портфолио на бехансе и блог в телеге. Подписывайтесь, ставьте лайки и давайте кастомить вместе! :) А ещё мой мерч доступен для заказа</p>
+        <div class="TutorialPostPageContactsAuthor">
+            <div class="IdeaPostPageInfoUser">
+                <div class="IdeaPostPageInfoUserAvatar"></div>
+                    <div class="IdeaPostPageInfoUserNames">
+                    <p class="IdeaPostPageInfoUserName UN"><%= post.user.email.split("@")[0] %></p>
+                    <p class="IdeaPostPageInfoUserName NN">@<%= post.user.email.split("@")[0] %></p>
+                </div>
+            </div>
+            <div class="TutorialPostPageAuthorLinks">
+                <a class="AuthorLink VK" href="https://vk.com/" target="_blank"></a>
+                <a class="AuthorLink TG" href="https://t.me/loochok_media" target="_blank"></a>
+            </div>
+        </div>
+    </div>
+
+</div>

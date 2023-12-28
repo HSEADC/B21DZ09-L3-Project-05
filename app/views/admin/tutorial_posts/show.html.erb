@@ -1,37 +1,56 @@
 <p style="color: green"><%= notice %></p>
 
-<div class="contentPage">
+<div class="TutorialPostPage">
 
-  <%= render @post %>
+  <%= link_to :admin_tutorial_posts, class:"PostPageButton Back Fixed" do %>
+    <div class="PostPageButtonIcon Back"></div>
+    Назад
+  <% end %>
 
-  <div>
-    <%= link_to "Обратно ко всем постам", admin_tutorial_posts_path %> |
-
-    <% if can? :manage, @post %>
-      <%= link_to "Редактировать пост", edit_admin_tutorial_post_path(@post) %>
-      <%= button_to "Удалить пост", admin_tutorial_post_path(@post), method: :delete %>
+  <% if can? :manage, @post %>
+    <%= link_to edit_admin_tutorial_post_path(@post) do %>
+        <div class="PostPageButton Edit Fixed">
+            <div class="PostPageButtonIcon Edit"></div>
+            Редактировать
+        </div>
     <% end %>
+    <%#= button_to "Удалить пост", admin_post_path(@post), method: :delete %>
+  <% end %>
+
+  <div class="TutorialPostPage Gride">
+
+    <%#= render @post %>
+
+    <%= render partial: "admin/tutorial_posts/tutorial_post_page", locals: {post: @post} %>
+
+    <div class="TutorialPostPageComments">
+      <p class="TutorialPostPageCommentTitle">Комментарии</p>
+      <div class="TutorialPostPageCommentBlock">
+        <div id="comments">
+          <% @post.comments.each do |comment| %>
+            <div class="TutorialPagePostComment">
+              <%= render comment, post: @post %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
   </div>
 
-  <hr>
-
-  <h3>Комментарии</h3>
-
-  <%= link_to "Новый комментарий", new_admin_post_comment_path(@post) %>
-  <br>
-  <br>
-  <%#= render @post.comments, post: @post %>
-
-  
-  <div id="comments">
-    <% @post.comments.each do |comment| %>
-      <div class="commentCard"%>
-        <%= render comment, post: @post %>
-          <p>
-            <%#= link_to "Показать этот комментарий", [:admin, comment] %>
-          </p>
-      </div>
-    <% end %>
+  <div class="IdeaPostPageSeeAlso">
+    <div class="IdeaPostPageSeeAlsoTitle">Смотрите также:</div>
+    <div class="IdeaPostPageSeeAlsoCards">
+        <%= link_to admin_tutorial_post_path(22), class: "TutorialPostCard" do %>
+            <%= render @recom_post1 %>
+        <% end %>
+        <%= link_to admin_tutorial_post_path(24), class: "TutorialPostCard" do %>
+            <%= render @recom_post2 %>
+        <% end %>
+        <%= link_to admin_tutorial_post_path(23), class: "TutorialPostCard" do %>
+            <%= render @recom_post3 %>
+        <% end %>
+    </div>
   </div>
   
 </div>

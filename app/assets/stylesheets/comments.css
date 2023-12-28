@@ -33,6 +33,8 @@
 
     width: 68px;
     height: 68px;
+
+    flex: 0 0 auto;
 }
 
 .PostCommentTexts {
@@ -67,10 +69,40 @@
     color: #5F5F5F;
 }
 
+.PostCommentIcons {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    opacity: 0.1;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.PostCommentIcon {
+    width: 28px;
+    height: 28px;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    flex: 0 0 auto;
+
+    &.Edit {
+        background-image: url("/assets/icons/IconEditBlack.svg");
+    }
+
+    &.Trash {
+        background-image: url("/assets/icons/IconTrash.svg");
+    }
+}
+
 .PostCommentBody {
-    max-width: 376px;;
+    width: fit-content;
+    /* max-width: 376px; */
     font-family: Suisse Intl;
-    font-size: 24px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -83,6 +115,7 @@
     align-items: center;
     /* gap: 19px; */
     padding-left: 40px;
+    /* margin-bottom: 20px; */
 }
 
 .PostCommentReplies > div {

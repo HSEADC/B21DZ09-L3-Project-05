@@ -2,16 +2,16 @@
 
 <div class="IdeaPostPage">
 
-  <%= link_to :admin_idea_posts, class:"IdeaPostPageButton Back" do %>
-    <div class="IdeaPostPageButtonIcon Back"></div>
-    <p class="IdeaPostPageButtonText">Назад</p>
+  <%= link_to :admin_idea_posts, class:"PostPageButton Back Fixed" do %>
+    <div class="PostPageButtonIcon Back"></div>
+    Назад
   <% end %>
 
   <% if can? :manage, @post %>
     <%= link_to edit_admin_idea_post_path(@post) do %>
-        <div class="IdeaPostPageButton Edit">
-            <div class="IdeaPostPageButtonIcon Edit"></div>
-            <p class="IdeaPostPageButtonText">Редактировать</p>
+        <div class="PostPageButton Edit">
+            <div class="PostPageButtonIcon Edit"></div>
+            Редактировать
         </div>
     <% end %>
     <%#= button_to "Удалить пост", admin_post_path(@post), method: :delete %>

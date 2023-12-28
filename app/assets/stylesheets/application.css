@@ -20,8 +20,8 @@
  *= require profile
  *= require subscriptions
  *= require posts
- *= require idea_posts
- *= require idea_post_page
+ *= require post_cards
+ *= require post_pages
  *= require comments
  *= require categories
  */
