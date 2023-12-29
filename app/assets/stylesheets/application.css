@@ -16,8 +16,10 @@
  *= require login
  *= require menubar
  *= require footer
+ *= require main
  *= require about
  *= require profile
+ *= require create_post
  *= require subscriptions
  *= require posts
  *= require post_cards

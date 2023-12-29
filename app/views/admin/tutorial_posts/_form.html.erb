@@ -11,53 +11,67 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :"Заголовок", style: "display: block" %>
-    <%= form.text_field :title %>
+  <div class="IdeaFormPage Gride">
+
+  <div class="LeftContent">
+    <div class="BlockContent Img">
+      <%= form.label :"Загрузить изображение", class:"TitleNewContent Img" %>
+      <%= form.file_field :post_image, class:"FieldImg" %>
+    </div>
+
+    <!--- <div class="WrapperFakeImg">
+      <div class="FieldImg Fake"></div>
+      <div class="FieldImg Fake"></div>
+      <div class="FieldImg Fake"></div>
+    </div> --->
   </div>
 
-  <br>
+  <div class="RightContent">
+  <div class="TopContent">
 
-  <div>
-    <%= form.label :"Текст публикации", style: "display: block" %>
-    <%= form.text_area :description %>
+    <div class="BlockContent Title">
+      <%= form.label :"Название проекта", class:"TitleNewContent" %>
+      <%= form.text_field :title, placeholder:"Кастом", class:"FieldContent Title" %>
+    </div>
+
+    <div class="BlockContent Tags">
+      <%= form.label :"Тэги", class:"TitleNewContent" %>
+      <%= form.text_field :tag_list, value: tutorial_post.tag_list.join(", "), class:"FieldContent Tags"  %>
+    </div>
+    </div>
+
+    <div class="BottomContent">
+    <div class="BlockContent Description">
+      <%= form.label :"Описание проекта", class:"TitleNewContent" %>
+      <%= form.text_area :description, placeholder:"Расскажите про ваш кастом", class:"FieldContent Description" %>
+    </div>
+
+    <!--- <div>
+      <%#= form.label :"Добавить ссылку", style: "display: block" %>
+      <%#= form.text_field :content_link %>
+    </div> --->
+
+    <div>
+      <div>
+        <%= form.label :"Категория" %>
+        <%= form.select :category_id, options_for_select(Category.all.map { |category| [category.name, category.id]})%>
+      </div>
+
+      <div>
+        <%= form.label :"Тип" %>
+        <%= form.select :type, [["Пост-идея", "IdeaPost"], ["Туториал", "TutorialPost"]] %>
+        <%#= form.select :type, ["IdeaPost", "TutorialPost"]%>
+      </div>
+    </div>
+
+    <div class="FormButtons">
+    <%= form.submit :"Опубликовать", class:"FormButton Post" %>
+
+    <div class="FormButton Back">
+      <%= link_to "Отменить", :back %>
+    </div>
+    </div>
   </div>
-
-  <br>
-
-  <div>
-    <%= form.label :"Добавить ссылку", style: "display: block" %>
-    <%= form.text_field :content_link %>
   </div>
-
-  <br>
-
-  <div>
-    <%= form.label :"Загрузить изображение", style: "display: block" %>
-    <%= form.file_field :post_image%>
-  </div>
-
-  <br>
-
-  <div>
-    <%= form.label :"Категория" %>
-    <%= form.select :category_id, options_for_select(Category.all.map { |category| [category.name, category.id]})%>
-  </div>
-
-  <div>
-    <%= form.label :"Тип" %>
-    <%= form.select :type, [["Пост-идея", "IdeaPost"], ["Туториал", "TutorialPost"]] %>
-    <%#= form.select :type, ["IdeaPost", "TutorialPost"]%>
-  </div>
-
-  <div>
-    <%= form.label :"Тэги", style: "display: block" %>
-    <%= form.text_field :tag_list, value: tutorial_post.tag_list.join(", ") %>
-  </div>
-  
-  <br>
-
-  <div>
-    <%= form.submit :"Опубликовать"%>
   </div>
 <% end %>

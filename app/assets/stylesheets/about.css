@@ -164,7 +164,7 @@
     height: 41px;
     transform: rotate(-33deg);
  
-    background-image: url("/assets/main/Scissors.svg");
+    background-image: url("/assets/about/Scissors.svg");
  
     background-repeat: no-repeat;
     background-size: contain;
@@ -291,7 +291,7 @@
     &.n1 {
         top: 96px;
         margin-right: 1110px;
-        background-image: url("/assets/main/FirstScreenImg1.png");
+        background-image: url("/assets/about/FirstScreenImg1.png");
         width: 276px;
         height: 278px;
     }
@@ -299,7 +299,7 @@
     &.n2 {
         top: 10px;
         margin-left: 946px;
-        background-image: url("/assets/main/FirstScreenImg2.png");
+        background-image: url("/assets/about/FirstScreenImg2.png");
         width: 206px;
         height: 266px;
     }
@@ -307,7 +307,7 @@
     &.n3 {
         top: 490px;
         margin-right: 844px;
-        background-image: url("/assets/main/FirstScreenImg3.png");
+        background-image: url("/assets/about/FirstScreenImg3.png");
         width: 247px;
         height: 238px;
     }
@@ -315,7 +315,7 @@
     &.n4 {
         top: 498px;
         margin-left: 884px;
-        background-image: url("/assets/main/FirstScreenImg4.png");
+        background-image: url("/assets/about/FirstScreenImg4.png");
         width: 232px;
         height: 233px;
     }
@@ -406,7 +406,7 @@
     margin-top: -20px;
     margin-bottom: 12px;
 
-    background-image: url("/assets/main/3Lines.svg");
+    background-image: url("/assets/about/3Lines.svg");
     background-repeat: no-repeat;
     background-size: contain;
 
@@ -461,7 +461,7 @@
     width: 1647px;
     height: 740px;
 
-    background-image: url("/assets/main/OurAdvantagesBack.png");
+    background-image: url("/assets/about/OurAdvantagesBack.png");
 
     background-repeat: no-repeat;
     background-size: contain;
@@ -497,7 +497,7 @@
 
 .WAWALine {
     position: absolute;
-    background-image: url("/assets/main/WAWALine.svg");
+    background-image: url("/assets/about/WAWALine.svg");
     background-repeat: no-repeat;
     background-size: contain;
 
@@ -523,7 +523,7 @@
     background-size: contain;
 
     &.D-1 {
-        background-image: url("/assets/main/Dash1.png");
+        background-image: url("/assets/about/Dash1.png");
         top: 254px;
         margin-right: 930px;
         width: 376px;
@@ -531,7 +531,7 @@
     }
 
     &.D-2 {
-        background-image: url("/assets/main/Dash2.png");
+        background-image: url("/assets/about/Dash2.png");
         top: 352px;
         margin-left: 584px;
         width: 269px;
@@ -539,7 +539,7 @@
     }
 
     &.D-3 {
-        background-image: url("/assets/main/Dash3.png");
+        background-image: url("/assets/about/Dash3.png");
         top: 760px;
         margin-left: 152px;
         width: 152px;
@@ -553,7 +553,7 @@
     background-size: contain;
 
     &.I-1 {
-        background-image: url("/assets/main/3DItem1.png");
+        background-image: url("/assets/about/3DItem1.png");
         top: 144px;
         margin-left: 990px;
         width: 110px;
@@ -562,7 +562,7 @@
     }
 
     &.I-2 {
-        background-image: url("/assets/main/3DItem2.png");
+        background-image: url("/assets/about/3DItem2.png");
         top: 884px;
         margin-right: 780px;
         width: 108px;
@@ -573,7 +573,7 @@
 
 .WAWAPostCard {
     position: absolute;
-    background-image: url("/assets/main/WAWAPostCard.png");
+    background-image: url("/assets/about/WAWAPostCard.png");
     background-repeat: no-repeat;
     background-size: contain;
 
@@ -587,7 +587,7 @@
 
 .WAWAMaterial {
     position: absolute;
-    background-image: url("/assets/main/WAWAMaterial.png");
+    background-image: url("/assets/about/WAWAMaterial.png");
     background-repeat: no-repeat;
     background-size: contain;
 
@@ -601,7 +601,7 @@
 
 .WAWAAppIcon {
     position: absolute;
-    background-image: url("/assets/main/AppIcon.png");
+    background-image: url("/assets/about/AppIcon.png");
     background-repeat: no-repeat;
     background-size: contain;
 
@@ -850,7 +850,7 @@
     width: 684px;
     height: 204px;
 
-    background-image: url("/assets/main/Dash4.png");
+    background-image: url("/assets/about/Dash4.png");
 
     background-repeat: no-repeat;
     background-size: contain;
