@@ -112,6 +112,6 @@ document.addEventListener('DOMContentLoaded', () => {
         tagsVisibility()
         addLike()
     }
-    createNewPostVisibility()
     mobileMenuVisibility()
+    createNewPostVisibility()
   })
