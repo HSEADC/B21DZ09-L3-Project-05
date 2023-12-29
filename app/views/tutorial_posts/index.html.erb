@@ -1,0 +1,81 @@
+<div class="TutorialPostsPage">
+
+  <div class="Banner TutorialPosts">
+    <h1 class="BannerTitle TP">Туториалы</h1>
+    <div class="BannerZigZag TutorialPosts"></div>
+  </div>
+
+  <div class="TagBlock">
+    <div class="TagSections">
+        <div class="TagSection Items">
+          <p class="TagSectionTitle">Предметы</p>
+          <div class="IconArrowDown Items"></div>
+        </div>
+
+        <div class="TagSection Tech">
+          <p class="TagSectionTitle">Техники</p>
+          <div class="IconArrowDown Tech"></div>
+        </div>
+
+        <div class="TagSection Mat">
+          <p class="TagSectionTitle">Материалы</p>
+          <div class="IconArrowDown Mat"></div>
+        </div>
+    </div>
+
+    <div class="TagLists">
+      <div class="TagList Items">
+            <%= link_to tagged_tutorial_posts_path("одежда"), class:"TagListTag" do %>
+              одежда
+            <% end %>
+            <%= link_to tagged_tutorial_posts_path("обувь"), class:"TagListTag" do %>
+              обувь
+            <% end %>
+            <%= link_to tagged_tutorial_posts_path("аксессуары"), class:"TagListTag" do %>
+              аксессуары
+            <% end %>
+      </div>
+
+      <div class="TagList Tech">
+        <%= link_to tagged_tutorial_posts_path("роспись"), class:"TagListTag" do %>
+          роспись
+        <% end %>
+        <%= link_to tagged_tutorial_posts_path("шитьё"), class:"TagListTag" do %>
+          шитьё
+        <% end %>
+        <%= link_to tagged_tutorial_posts_path("апсайклинг"), class:"TagListTag" do %>
+          апсайклинг
+        <% end %>
+        <%= link_to tagged_tutorial_posts_path("вязание"), class:"TagListTag" do %>
+          вязание
+        <% end %>
+      </div>
+
+      <div class="TagList Mat">
+        <%= link_to tagged_tutorial_posts_path("краски"), class:"TagListTag" do %>
+          краски
+        <% end %>
+        <%= link_to tagged_tutorial_posts_path("кожа"), class:"TagListTag" do %>
+          кожа
+        <% end %>
+        <%= link_to tagged_tutorial_posts_path("бисер"), class:"TagListTag" do %>
+          бисер
+        <% end %>
+      </div>
+    </div>
+    <!--- <%#= link_to tutorial_posts_path do %>
+      <p class="TagSectionReset">Сбросить всё</p>
+    <%# end %> --->
+  </div>
+  
+  <%#= render @posts %>
+
+  <div class="TutorialPostsCards">
+    <% @posts.each do |post| %>
+      <%= link_to tutorial_post_path(post), class: "TutorialPostCard" do %>
+        <%= render post %>
+      <% end %>
+    <% end %>
+  </div>
+
+</div>

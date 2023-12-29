@@ -57,6 +57,14 @@ function tagsVisibility() {
     })
 }
 
+function addLike() {
+    const like = document.querySelector('.IdeaPostCardLike')
+  
+    like.addEventListener('click', () => {
+        menu.classList.toggle('active')
+    })
+}
+
 function createNewPostVisibility() {
     const button = document.querySelector('.navSection.newPost')
     const menu = document.querySelector('.NavCreateNewPostList')
@@ -102,6 +110,7 @@ function mobileMenuVisibility() {
 document.addEventListener('DOMContentLoaded', () => {
     if (document.body.classList.contains('posts_page')) {
         tagsVisibility()
+        addLike()
     }
     createNewPostVisibility()
     mobileMenuVisibility()

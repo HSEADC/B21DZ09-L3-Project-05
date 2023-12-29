@@ -1,0 +1,69 @@
+<div class="IdeaPostPage Gride">
+
+    <div class="IdeaPostPageImg">
+        <%= image_tag post.post_image.url %>
+    </div>
+
+    <div class="IdeaPostPageInfo">
+
+        <div class="IdeaPostPageInfoTop">
+            <div class="PostPageAbout Idea">
+                <div class="PostPageTagsRow">
+                    <% post.tag_list.each do |tag| %>
+                        <%= link_to tagged_idea_posts_path(tag), class:"PostPageTagChip" do %>
+                            <%= tag %>
+                        <% end %>
+                    <% end %>
+                </div>
+                
+                <p class="PostPageDate">
+                    <%#= post.created_at %>
+                    сегодня в&nbsp;10:05
+                </p>
+
+                <div class="IdeaPostPageInfoUser">
+                    <div class="IdeaPostPageInfoUserAvatar"></div>
+                        <div class="IdeaPostPageInfoUserNames">
+                        <p class="IdeaPostPageInfoUserName UN"><%= post.user.email.split("@")[0] %></p>
+                        <p class="IdeaPostPageInfoUserName NN">@<%= post.user.email.split("@")[0] %></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="IdeaPostPageTitleDescription">
+                <h3 class="IdeaPostPageTitle"><%= post.title%></h3>
+                <p class="IdeaPostPageDescription"><%= post.description %></p>
+            </div>
+        </div>
+
+        <div class="IdeaPostPageInfoBottom">
+            <p class="IdeaPostPageCommentTitle">Комментарии</p>
+            <div class="IdeaPostPageCommentBlock">
+                <div id="comments">
+                    <% @post.comments.each do |comment| %>
+                        <div class="IdeaPagePostComment">
+                            <%= render comment, post: @post %>
+                        </div>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="IdeaPostPageSeeAlso">
+    <div class="IdeaPostPageSeeAlsoTitle">Смотрите также:</div>
+    <div class="IdeaPostPageSeeAlsoCards">
+        <%= link_to idea_post_path(13), class: "IdeaPostCard PP-1" do %>
+            <%= render @recom_post1 %>
+        <% end %>
+        <%= link_to idea_post_path(16), class: "IdeaPostCard PP-2" do %>
+            <%= render @recom_post2 %>
+        <% end %>
+        <%= link_to idea_post_path(11), class: "IdeaPostCard PP-3" do %>
+            <%= render @recom_post3 %>
+        <% end %>
+    </div>
+</div>

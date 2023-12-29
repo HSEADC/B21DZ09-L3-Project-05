@@ -1,0 +1,32 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="IdeaPostPage">
+
+  <%= link_to :idea_posts do %>
+    <div class="PostPageButton Desk Back Fixed">
+      <div class="PostPageButtonIcon Back"></div>
+      Назад
+    </div>
+    <div class="PostPageButton Mob Back Fixed">
+      <div class="PostPageButtonIcon Back"></div>
+    </div>
+  <% end %>
+
+  <% if can? :manage, @post %>
+    <%= link_to edit_idea_post_path(@post) do %>
+        <div class="PostPageButton Desk Edit">
+            <div class="PostPageButtonIcon Edit"></div>
+            Редактировать
+        </div>
+        <div class="PostPageButton Mob Edit">
+            <div class="PostPageButtonIcon Edit"></div>
+        </div>
+    <% end %>
+    <%#= button_to "Удалить пост", post_path(@post), method: :delete %>
+  <% end %>
+
+  <%#= render @post %>
+
+  <%= render partial: "idea_posts/idea_post_page", locals: {post: @post} %>
+  
+</div>

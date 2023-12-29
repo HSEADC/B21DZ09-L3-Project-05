@@ -1,0 +1,56 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="TutorialPostPage">
+
+  <%= link_to :tutorial_posts, class:"PostPageButton Back Fixed" do %>
+    <div class="PostPageButtonIcon Back"></div>
+    Назад
+  <% end %>
+
+  <% if can? :manage, @post %>
+    <%= link_to edit_tutorial_post_path(@post) do %>
+        <div class="PostPageButton Edit Fixed">
+            <div class="PostPageButtonIcon Edit"></div>
+            Редактировать
+        </div>
+    <% end %>
+    <%#= button_to "Удалить пост", post_path(@post), method: :delete %>
+  <% end %>
+
+  <div class="TutorialPostPage Gride">
+
+    <%#= render @post %>
+
+    <%= render partial: "tutorial_posts/tutorial_post_page", locals: {post: @post} %>
+
+    <div class="TutorialPostPageComments">
+      <p class="TutorialPostPageCommentTitle">Комментарии</p>
+      <div class="TutorialPostPageCommentBlock">
+        <div id="comments">
+          <% @post.comments.each do |comment| %>
+            <div class="TutorialPagePostComment">
+              <%= render comment, post: @post %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="IdeaPostPageSeeAlso">
+    <div class="IdeaPostPageSeeAlsoTitle">Смотрите также:</div>
+    <div class="IdeaPostPageSeeAlsoCards">
+        <%= link_to tutorial_post_path(22), class: "TutorialPostCard PP-1" do %>
+            <%= render @recom_post1 %>
+        <% end %>
+        <%= link_to tutorial_post_path(24), class: "TutorialPostCard PP-2" do %>
+            <%= render @recom_post2 %>
+        <% end %>
+        <%= link_to tutorial_post_path(23), class: "TutorialPostCard PP-3" do %>
+            <%= render @recom_post3 %>
+        <% end %>
+    </div>
+  </div>
+  
+</div>

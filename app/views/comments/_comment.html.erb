@@ -1,19 +1,30 @@
 <div id="<%= dom_id comment %>">
-  <p>
-    <%= comment.user.email %>
-  </p>
-  
-  <p>
-    <%= comment.body %>
-  </p>
 
-  <% if can? :manage, comment %>
-    <%#= link_to "Редактировать комментарий", edit_comment_path(comment) %>
-    <br>
-    <%#= button_to "Удалить комментарий", comment, method: :delete %>
-  <% end %>
+  <div class="PostComment">
 
-  <div class="commentReplies">
+    <div class="PostCommentUserAvatar"></div>
+
+    <div class="PostCommentTexts">
+      <div class="PostCommentInfo">
+        <p class="PostCommentUserName"><%= comment.user.email.split("@")[0] %></p>
+        <!--- <p class="PostCommentDate">
+            <%#= comment.created_at %>
+            сегодня в&nbsp;10:05
+        </p> --->
+        <% if can? :manage, comment %>
+          <div class="PostCommentIcons">
+            <%= link_to "", edit_comment_path(comment), class:"PostCommentIcon Edit" %>
+            <%= link_to "", comment, method: :delete, class:"PostCommentIcon Trash" %>
+          </div>
+        <% end %>
+      </div>
+      <p class="PostCommentBody"><%= comment.body %></p>
+    </div>
+
+  </div>
+
+
+  <div class="PostCommentReplies">
     <% comment.replies.each do |reply| %>
       <%= render reply, partial: "comments/comment", comment: reply, post: post %>
     <% end %>

@@ -388,6 +388,10 @@
 
     width: 36px;
     height: 36px;
+
+    &.active {
+        background-image: url("/assets/icons/IconHeartActive.svg");
+    }
 }
 
 .IdeaPostCardInfoBottom {
