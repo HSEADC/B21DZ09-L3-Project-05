@@ -219,15 +219,15 @@
     font-family: Suisse Intl;
     font-size: 128px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 99px; /* 77.344% */
     text-transform: uppercase;
 
     &.BL-1 {
-        font-family: Suisse Intl for Logo;
+        /* font-family: Suisse Intl for Logo; */
         top: 284px;
         right: 2px;
-        padding: 38px 10px 0px 10px;
+        padding: 23px 10px 10px 10px;
         transform: rotate(-0.128deg);
     }
 

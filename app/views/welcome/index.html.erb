@@ -1,3 +1,61 @@
+<div class="MainPage">
+    <div class="MainPage Gride">
+        <div class="MainPageSlider">
+            <div class="MainPageSliderRails">
+                <div class="MainPageSlide N-1">
+                    <h6 class="MainPageSliderText">твой взгляд на стиль</h6>
+                </div>
+                <!--- <div class="MainPageSlide N-2">
+                    <h6 class="MainPageSliderText">твоё место для кастома</h6>
+                </div> --->
+            </div>
+        </div>
 
+        <%= link_to "", welcome_about_url, class: "MainPageLOOK" %>
+
+        <a href="/tutorial_posts/1" class="MainPageSelection Yellow">
+            <h6 class="MainPageSelectionText">Выбор редакции</h6>
+        </a>
+        <a href="/idea_posts/by_tag/апсайклинг" class="MainPageSelection Gray">
+            <h6 class="MainPageSelectionText">ЭКО</h6>
+        </a>
+        <a href="/idea_posts/2" class="MainPageSelection Orange">
+            <h6 class="MainPageSelectionText">Первый кастом</h6>
+        </a>
+        <a href="/tutorial_posts/22" class="MainPageSelection DarkGray">
+            <h6 class="MainPageSelectionText">Для профи</h6>
+        </a>
+
+    </div>
+
+    <h3 class="MainPageTitle">Лучшее за&nbsp;месяц</h3>
+
+    <div class="MainPage Gride">
+        <%= link_to idea_post_path(3), class: "MainIdeaPostCard N-1" do %>
+            <%= render @recom_post5 %>
+        <% end %>
+        <%= link_to idea_post_path(4), class: "MainIdeaPostCard N-2" do %>
+            <%= render @recom_post4 %>
+        <% end %>
+        <%= link_to idea_post_path(5), class: "MainIdeaPostCard N-3" do %>
+            <%= render @recom_post6 %>
+        <% end %>
+        <%= link_to idea_post_path(11), class: "MainIdeaPostCard N-4" do %>
+            <%= render @recom_post7 %>
+        <% end %>
+        <%= link_to tutorial_post_path(22), class: "MainTutorialPostCard N-1" do %>
+            <%= render @recom_post8 %>
+        <% end %>
+        <%= link_to tutorial_post_path(26), class: "MainTutorialPostCard N-2" do %>
+            <%= render @recom_post9 %>
+        <% end %>
+        <%= link_to tutorial_post_path(25), class: "MainTutorialPostCard N-3" do %>
+            <%= render @recom_post10 %>
+        <% end %>
+    </div>
+
+
+
+</div>
 
 

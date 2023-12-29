@@ -1,0 +1,175 @@
+.MainPage {
+    margin: 60px auto 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - 350px);
+    max-width: 1868px;
+
+    &.Gride {
+        display: grid;
+        grid-template-columns: repeat(24, 1fr);
+        column-gap: 20px;
+        width: 100%;
+        margin: 20px auto 0;
+        /* background-color: aqua; */
+    }
+}
+
+.MainPageSlider {
+    grid-column: 1 / 17;
+    height: 100%;
+    border-radius: 42px;
+
+    overflow-x: auto;
+}
+
+.MainPageSliderText {
+    margin-top: 44px;
+    margin-left: 44px;
+    font-family: Suisse Intl;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%; /* 52.8px */
+    color: white;
+}
+
+.MainPageSliderRails {
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.MainPageSlide {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+
+    &.N-1 {
+        background-image: url("/assets/main/Gal2.jpg");
+    }
+
+    &.N-2 {
+        background-image: url("/assets/main/Gal2.jpg");
+    }
+}
+
+.MainPageLOOK {
+    grid-column: 17 / 25;
+    padding-top: 100%;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+    background-image: url("/assets/main/MainLOOK.jpg");
+    border-radius: 42px;
+}
+
+.MainPageSelectionText {
+    position: absolute;
+    left: 24px;
+    bottom: 24px;
+    max-width: 274px;
+    font-family: Suisse Intl;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.24px;
+    text-transform: uppercase;
+    color: black;
+}
+
+.MainPageSelection {
+    margin-top: 20px;
+    position: relative;
+    padding-top: 100%;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+    
+    &.Yellow {
+        grid-column: 1 / 7;
+        background-image: url("/assets/main/MainSelectionYellow.png");
+    }
+
+    &.Gray {
+        grid-column: 7 / 13;
+        background-image: url("/assets/main/MainSelectionGray.png");
+    }
+
+    &.Orange {
+        grid-column: 13 / 19;
+        background-image: url("/assets/main/MainSelectionOrange.png");
+    }
+
+    &.DarkGray {
+        grid-column: 19 / 25;
+        background-image: url("/assets/main/MainSelectionDarkGray.png");
+    }
+
+    
+}
+
+.MainPageTitle {
+    margin-top: 46px;
+    margin-bottom: 26px;
+    width: fit-content;
+    padding: 17px 20px;
+    background: black;
+
+    text-align: center;
+    font-family: Suisse Intl;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 40px */
+    text-transform: uppercase;
+    color: var(--lightgray);
+}
+
+.MainIdeaPostCard {
+    /* margin-top: 20px; */
+    display: flex;
+
+    &.N-1 {
+        grid-column: 19 / 25;
+    }
+
+    &.N-1 {
+        grid-column: 1 / 7;
+    }
+
+    &.N-2 {
+        grid-column: 7 / 13;
+    }
+
+    &.N-3 {
+        grid-column: 13 / 19;
+    }
+
+    &.N-4 {
+        grid-column: 19 / 25;
+    }
+}
+
+.MainTutorialPostCard {
+    margin-top: 20px;
+    display: flex;
+
+    &.N-1 {
+        grid-column: 1 / 9;
+    }
+
+    &.N-2 {
+        grid-column: 9 / 17;
+    }
+
+    &.N-3 {
+        grid-column: 17 / 25;
+    }
+}

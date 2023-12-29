@@ -4,11 +4,19 @@ class Admin::TutorialPostsController < Admin::ApplicationController
   # GET /posts or /posts.json
   def index
     @posts = Post.where("type = 'TutorialPost'")
+
+    # Meta
+    @title = "LÒÒCHOK | Туториалы"
+    # end
   end
 
   def by_tag
     @posts = TutorialPost.tagged_with(params[:tag])
     render :index
+
+    # Meta
+    @title = "LÒÒCHOK | Фильтры"
+    # end
   end
 
   # GET /posts/1 or /posts/1.json
@@ -21,10 +29,17 @@ class Admin::TutorialPostsController < Admin::ApplicationController
   # GET /posts/new
   def new
     @post = TutorialPost.new
+
+    # Meta
+    @title = "LÒÒCHOK | Новый туториал"
+    # end
   end
 
   # GET /posts/1/edit
   def edit
+    # Meta
+    @title = "LÒÒCHOK | Редактирование туториала"
+    # end
   end
 
   # POST /posts or /posts.json

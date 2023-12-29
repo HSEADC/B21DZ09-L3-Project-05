@@ -4,11 +4,19 @@ class Admin::IdeaPostsController < Admin::ApplicationController
   # GET /posts or /posts.json
   def index
     @posts = Post.where("type = 'IdeaPost'")
+
+    # Meta
+    @title = "LÒÒCHOK | Идеи кастома"
+    # end
   end
 
   def by_tag
     @posts = IdeaPost.tagged_with(params[:tag])
     render :index
+
+    # Meta
+    @title = "LÒÒCHOK | Фильтры"
+    # end
   end
 
   # GET /posts/1 or /posts/1.json
@@ -21,10 +29,17 @@ class Admin::IdeaPostsController < Admin::ApplicationController
   # GET /posts/new
   def new
     @post = IdeaPost.new
+
+    # Meta
+    @title = "LÒÒCHOK | Новая идея"
+    # end
   end
 
   # GET /posts/1/edit
   def edit
+    # Meta
+    @title = "LÒÒCHOK | Редактирование идеи"
+    # end
   end
 
   # POST /posts or /posts.json
