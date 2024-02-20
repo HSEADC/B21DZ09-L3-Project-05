@@ -70,6 +70,7 @@ GEM
       activerecord (>= 6.0, < 7.1)
     addressable (2.8.5)
       public_suffix (>= 2.0.2, < 6.0)
+    babosa (2.0.0)
     bcrypt (3.1.19)
     bindex (0.8.1)
     bootsnap (1.16.0)
@@ -106,6 +107,8 @@ GEM
       warden (~> 1.2.3)
     erubi (1.12.0)
     ffi (1.16.3)
+    friendly_id (5.4.2)
+      activerecord (>= 4.0.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.1)
@@ -256,12 +259,14 @@ PLATFORMS
 
 DEPENDENCIES
   acts-as-taggable-on (~> 9.0)
+  babosa
   bootsnap
   cancancan
   capybara
   carrierwave
   debug
   devise
+  friendly_id (~> 5.4.0)
   importmap-rails
   jbuilder
   meta-tags

@@ -71,7 +71,8 @@
   
   <div class="IdeaPostsCards">
     <% @posts.each do |post| %>
-      <%= link_to admin_idea_post_path(post), class: "IdeaPostCard" do %>
+      <%#= idea_post_url(post.title.parameterize) %>
+      <%= link_to idea_post_path(post), class: "IdeaPostCard" do %>
         <%= render post %>
       <% end %>
     <% end %>

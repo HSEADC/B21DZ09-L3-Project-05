@@ -1,4 +1,7 @@
 class Post < ApplicationRecord
+    extend FriendlyId
+    friendly_id :title, use: :slugged
+
     validates :title, presence: true
     validates :type, presence: true
     # validates :category, presence: true
@@ -19,4 +22,9 @@ class Post < ApplicationRecord
     #         post_image: post_image
     #     }
     # end
+
+    # def to_param
+    #     "#{title.parameterize}"
+    # end
+
 end
