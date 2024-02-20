@@ -25,5 +25,6 @@
  *= require post_cards
  *= require post_pages
  *= require comments
+ *= require support
  *= require categories
  */

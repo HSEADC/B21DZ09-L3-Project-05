@@ -19,7 +19,7 @@ class Admin::CommentsController < Admin::ApplicationController
 
   # GET /comments/new
   def new
-    @post = Post.find(params[:post_id])
+    @post = Post.friendly.find(params[:post_id])
     @comment = Comment.new
   end
 

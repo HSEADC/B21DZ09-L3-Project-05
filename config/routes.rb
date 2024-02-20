@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  post 'support/request_support'
 
   resources :posts do
     collection do
@@ -64,8 +65,7 @@ Rails.application.routes.draw do
 
   get 'welcome/index'
   get 'welcome/about'
-  get 'welcome/ideas'
-  get 'welcome/tutorials'
+  get 'welcome/support'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
