@@ -1,7 +1,7 @@
 <div class="IdeaPostPage Gride">
 
     <div class="IdeaPostPageImg">
-        <%= image_tag post.post_image.url %>
+        <%= image_tag post.post_image.url if post.post_image.url %>
     </div>
 
     <div class="IdeaPostPageInfo">

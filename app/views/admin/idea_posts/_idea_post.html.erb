@@ -1,7 +1,7 @@
 <div class="IdeaPostCardContent">
 
   <div class="IdeaPostCardImg">
-    <%= image_tag idea_post.post_image.url %>
+    <%= image_tag idea_post.post_image.url if idea_post.post_image.url %>
   </div>
 
   <div class="IdeaPostCardInfo">
