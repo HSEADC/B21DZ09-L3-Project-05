@@ -27,4 +27,9 @@
  *= require comments
  *= require support
  *= require categories
+
+ *= require atoms
+ *= require molecules
+ *= require organisms
+ *= require super_organisms
  */
