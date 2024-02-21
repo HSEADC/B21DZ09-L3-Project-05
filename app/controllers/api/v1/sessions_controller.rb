@@ -4,15 +4,14 @@ class Api::V1::SessionsController < Devise::SessionsController
     skip_before_action :verify_authenticity_token, only: [:create, :destroy]
     skip_before_action :verify_signed_out_user, only: [:destroy]
 
-
-    # sign in
     def create
       if @user.valid_password?(sign_in_params[:password])
         sign_in "user", @user
+
         render json: {
           messages: "Signed In Successfully",
           is_success: true,
-          data: {user: @user}
+          jwt: encrypt_payload
         }, status: :ok
       else
         render json: {
@@ -24,8 +23,7 @@ class Api::V1::SessionsController < Devise::SessionsController
     end
 
     def destroy
-        jti = request.headers["Authorization"]
-        user = User.find_by_jti(jti)
+        user = User.find_by_jti(decrypt_payload[0]['jti'])
 
         if user && user.update_column(:jti, SecureRandom.uuid)
             render json: {
@@ -60,4 +58,15 @@ class Api::V1::SessionsController < Devise::SessionsController
         }, status: :failure
       end
     end
+
+    def encrypt_payload
+        payload = @user.as_json(only: [:email, :jti])
+        token = JWT.encode(payload, Rails.application.credentials.devise_jwt_secret_key!, 'HS256')
+    end
+  
+    def decrypt_payload
+        jwt = request.headers["Authorization"]
+        token = JWT.decode(jwt, Rails.application.credentials.devise_jwt_secret_key!, true, { algorithm: 'HS256' })
+    end
+
   end

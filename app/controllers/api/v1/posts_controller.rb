@@ -14,10 +14,8 @@ class Api::V1::PostsController < Api::V1::ApplicationController
   end
 
   def create
-    jti = request.headers["Authorization"]
-
-    @user = User.find_by_jti(jti)
-    @post = @user.posts.new(sti_post_params)
+    user = User.find_by_jti(decrypt_payload[0]['jti'])
+    @post = user.posts.new(sti_post_params)
 
     if @post.save
       render json: @post.as_json
