@@ -11,4 +11,22 @@ class Api::V1::CommentsController < Api::V1::ApplicationController
     @comment = Comment.find(params[:id])
   end
 
+  def create
+    @user = User.find_by_jti(decrypt_payload[0]['jti'])
+    @comment = @user.comments.new(comment_params)
+
+    if @comment.save
+      render json: @comment.as_json
+    else
+      render json: @comment.errors, status: :unprocessable_entity
+    end
+
+  end
+
+  private
+    def comment_params
+      params.require(:comment).permit(:body, :post_id)
+    end
+  end
+
 end
