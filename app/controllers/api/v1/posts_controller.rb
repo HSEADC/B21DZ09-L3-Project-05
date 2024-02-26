@@ -11,6 +11,7 @@ class Api::V1::PostsController < Api::V1::ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    # @post = Post.friendly.find(params[:id]) - что с френдли айди на этом этапе?
   end
 
   def create
@@ -22,9 +23,20 @@ class Api::V1::PostsController < Api::V1::ApplicationController
     else
       render json: @post.errors, status: :unprocessable_entity
     end
-
   end
 
+  # def update
+  #   if @post.update(sti_post_params)
+  #     format.json { render :show, status: :ok, location: @post }
+  #   else
+  #     format.json { render json: @post.errors, status: :unprocessable_entity }
+  #   end
+  # end
+
+  # def destroy
+  #   @post.destroy
+  #   format.json { head :no_content }
+  # end
 
   private
     def sti_post_params
