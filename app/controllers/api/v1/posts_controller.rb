@@ -10,8 +10,9 @@ class Api::V1::PostsController < Api::V1::ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
-    # @post = Post.friendly.find(params[:id]) - что с френдли айди на этом этапе?
+    # @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id]) 
+    # - что с френдли айди на этом этапе?
   end
 
   def create
