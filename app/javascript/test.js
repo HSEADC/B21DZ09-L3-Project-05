@@ -87,7 +87,7 @@ function createNewPostVisibility() {
 }
 
 function mobileMenuVisibility() {
-    const button = document.querySelector('.NavSectionMenuMob')
+    const button = document.querySelector('.Q_Icon.MenuMob')
     const menu = document.querySelector('.MobileMenu')
   
     button.addEventListener('click', () => {

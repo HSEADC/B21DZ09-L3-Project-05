@@ -1,36 +1,36 @@
-.header {
+.O_Header {
     position: fixed;
     display: flex;
     top: 0;
     width: -webkit-fill-available;
-    height: 60px;
+    height: 70px;
     padding: 0 26px;
     justify-content: space-between;
     align-items: center;
 
-    background-color: white;
+    background-color: black;
     border-bottom: 1px solid black;
 
     z-index: 100;
+
+    .C_HeaderSections {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
 }
 
-.navLogoSections {
-    display: flex;
-    align-items: center;
-    gap: 54px;
-}
-
-.navLogo {
+.A_Logo {
     position: absolute;
-    left: calc(50% - 32px);
+    left: calc(50% - 40px);
     width: fit-content;
-    padding: 0 10px;
+    padding: 4px 10px 0;
 
     font-family: Suisse Intl;
-    font-size: 32px;
+    font-size: 38px;
     font-style: normal;
     font-weight: 500;
-    line-height: 44px;
+    /* line-height: 44px; */
     text-transform: uppercase;
     color: var(--lightgray);
 
@@ -41,17 +41,40 @@
     } */
 }
 
-.navSearch {
-    background-image: url("/assets/promo/IconSearch.svg");
+.Q_Icon {
     background-repeat: no-repeat;
     background-size: contain;
 
-    width: 32px;
-    height: 32px;
+    &.s32 {
+        width: 32px;
+        height: 32px;
+    }
+
+    &.s20 {
+        width: 20px;
+        height: 20px;
+    }
+
+    &.Search {
+        background-image: url("/assets/icons/IconSearch.svg");
+    }
+
+    &.CreatePost {
+        background-image: url("/assets/icons/IconCreatePostYellow.svg");
+    }
+
+    &.MenuMob {
+        display: none;
+        background-image: url("/assets/icons/IconMenuMob.svg");
+    
+        &:hover {
+            cursor: pointer;
+        }
+    }
 }
 
 .navUser {
-    background-image: url("/assets/promo/IconUser.svg");
+    background-image: url("/assets/icons/IconUser.svg");
     background-repeat: no-repeat;
     background-size: contain;
 
@@ -59,44 +82,32 @@
     height: 40px;
 }
 
-.navSearchAvatar {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 20px;
-}
-
-.navSections {
-    display: flex;
-    gap: 20px;
-}
-
-.navSection {
-    width: fit-content;
-    padding: 0 12px;
+.A_NavigationButton {
+    padding: 8px 18px;
 
     font-family: Suisse Intl;
-    font-size: 16px;
+    font-size: 13px;
     font-style: normal;
     font-weight: 500;
-    line-height: 41px; /* 256.25% */
+    line-height: 140%;
     text-transform: uppercase;
     color: var(--lightgray);
 
     background-color: black;
 
     &:hover {
-        text-decoration: underline;
+        color: var(--yellow);
     }
 
-    &.newPost {
-        color: black;
-        border: 1px dashed black;
-        background-color: white;
+    &.NewPost {
+        display: flex;
+        gap: 8px;
+        padding: 8px 18px 8px 12px;
+        color: var(--lightgray);
+        background-color: black;
 
         &:hover {
-            text-decoration: none;
-            cursor: pointer;
+            color: var(--yellow);
         }
     }
 
@@ -109,21 +120,6 @@
         &:hover {
             background-color: var(--yellow);
         }
-    }
-}
-
-.NavSectionMenuMob {
-    display: none;
-    width: 44px;
-    height: 44px;
-
-    background-repeat: no-repeat;
-    background-size: contain;
-
-    background-image: url("/assets/icons/IconMenuMob.svg");
-
-    &:hover {
-        cursor: pointer;
     }
 }
 
@@ -146,7 +142,7 @@
 
 .MobileMenu {
     position: fixed;
-    top: 60px;
+    top: 70px;
     left: 0px;
     display: none;
     width: 330px;
@@ -215,30 +211,37 @@
     height: 40px;
 }
 
-@media only screen and (max-width: 1280px) {     
-    .navSection {
-        display: none;
-    }
-
-    .NavSectionMenuMob {
-        display: block; 
-    }
-}
-
 @media only screen and (max-width: 767px) {
-    .header {
-        height: 50px;
+    .O_Header {
+        height: 48px;
         padding: 0 16px;
     }
-    
-    .navLogo {
-        left: calc(50% - 27px);
-        padding: 0px 8px;
-    
-        font-size: 24px;
-        font-weight: 500;
-        line-height: 32px; /* 133.333% */
+
+    .A_NavigationButton {
+        display: none;
+
+        &.SignIn {
+            display: block;
+        }
+
+        &.NewPost {
+            display: none;
+        }
     }
+
+    .Q_Icon {
+        &.MenuMob {
+            display: block; 
+        }
+    }
+
+    .NavDesk {
+        display: none;
+    }
+    
+    /* .A_Logo {
+        padding: 5px 10px 0;
+    } */
 
     .navUser {
         width: 32px;
@@ -246,7 +249,7 @@
     }
 
     .MobileMenu {
-        top: 50px;
+        top: 48px;
     }
 
     .AvatarAdmin {

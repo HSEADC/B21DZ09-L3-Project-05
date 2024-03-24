@@ -1,32 +1,32 @@
 <% if user_signed_in? && current_user.admin %>
 
     <div class="NavCreateNewPostList">
-        <%= link_to "+Новая идея", new_admin_idea_post_path, class: "navSection createNewPost" %>
-        <%= link_to "+Новый туториал", new_admin_tutorial_post_path, class: "navSection createNewPost" %>   
+        <%= link_to "+Новая идея", new_admin_idea_post_path, class: "A_NavigationButton createNewPost" %>
+        <%= link_to "+Новый туториал", new_admin_tutorial_post_path, class: "A_NavigationButton createNewPost" %>   
     </div>
 
-    <nav class="header">
-        <div class="NavSectionMenuMob"></div>
+    <nav class="O_Header">
+        <div class="Q_Icon s32 MenuMob"></div>
         
-        <div class="navSections Desk">
-            <%= link_to "Главная", root_url, class: "navSection" %>
-            <%#= link_to "Все посты", admin_posts_url, class: "navSection" %>
-            <%= link_to "Идеи", admin_idea_posts_url, class: "navSection" %>
-            <%= link_to "Туториалы", admin_tutorial_posts_url, class: "navSection" %>
-            <%= link_to "Комментарии", admin_comments_url, class: "navSection" %>
-            <%= link_to "Подписки", admin_subscriptions_url, class: "navSection" %>  
+        <div class="C_HeaderSections Desk">
+            <%= link_to "Главная", root_url, class: "A_NavigationButton" %>
+            <%#= link_to "Все посты", admin_posts_url, class: "A_NavigationButton" %>
+            <%= link_to "Идеи", admin_idea_posts_url, class: "A_NavigationButton" %>
+            <%= link_to "Туториалы", admin_tutorial_posts_url, class: "A_NavigationButton" %>
+            <%= link_to "Комментарии", admin_comments_url, class: "A_NavigationButton" %>
+            <%= link_to "Подписки", admin_subscriptions_url, class: "A_NavigationButton" %>  
         </div>
 
-        <%#= link_to "ÒÒ", root_url, class: "navLogo" %>
+        <%#= link_to "ÒÒ", root_url, class: "A_Logo" %>
 
-        <div class="navSearchAvatar">
-            <div class="navSection newPost">Новый пост</div>
+        <div class="C_HeaderSections">
+            <div class="A_NavigationButton NewPost"><div class="Q_Icon s20 CreatePost"></div>Новый пост</div>
 
-            <%#= link_to "", root_url, class: "navSearch" %>
+            <%= link_to "", root_url, class: "Q_Icon s32 Search NavDesk" %>
             <%#= link_to "", root_url, class: "navUser" %>
             <%= link_to "", edit_user_registration_path, class: "AvatarAdmin" %>
 
-            <%#= link_to "Выйти", destroy_user_session_path, method: :delete, class: "navSection" %>
+            <%#= link_to "Выйти", destroy_user_session_path, method: :delete, class: "A_NavigationButton" %>
         </div>
     </nav>
 
@@ -49,25 +49,25 @@
 
 
 <% if user_signed_in? && !current_user.admin%>
-    <nav class="header">
-        <div class="NavSectionMenuMob"></div>
+    <nav class="O_Header">
+        <div class="Q_Icon s32 MenuMob"></div>
 
-        <div class="navSections Desk">
-            <%#= link_to "Все посты", posts_url, class: "navSection" %>
-            <%= link_to "Идеи", idea_posts_url, class: "navSection" %>
-            <%= link_to "Туториалы", tutorial_posts_url, class: "navSection" %>  
+        <div class="C_HeaderSections Desk">
+            <%= link_to "Идеи", idea_posts_url, class: "A_NavigationButton" %>
+            <%= link_to "Туториалы", tutorial_posts_url, class: "A_NavigationButton" %>
+            <%= link_to "О нас", welcome_about_url, class: "A_NavigationButton" %>
         </div>
 
-        <%= link_to "ÒÒ", root_url, class: "navLogo" %>
+        <%= link_to "ÒÒ", root_url, class: "A_Logo" %>
 
-        <div class="navSearchAvatar">
-            <%#= link_to "Новый пост", root_url, class: "navSection newPost" %>
+        <div class="C_HeaderSections">
+            <%#= link_to "Новый пост", root_url, class: "A_NavigationButton NewPost" %>
 
-            <%= link_to "", root_url, class: "navSearch" %>
+            <%= link_to "", root_url, class: "Q_Icon s32 Search NavDesk" %>
             <%= link_to "", edit_user_registration_path, class: "navUser" %>
             <%#= link_to current_user.email, edit_user_registration_path %>
 
-            <%#= link_to "Выйти", destroy_user_session_path, method: :delete, class: "navSection" %>
+            <%#= link_to "Выйти", destroy_user_session_path, method: :delete, class: "A_NavigationButton" %>
         </div>
     </nav>
 
@@ -82,23 +82,23 @@
 
 
 <% unless user_signed_in? %>
-    <nav class="header">
-        <div class="NavSectionMenuMob"></div>
+    <nav class="O_Header">
+        <div class="Q_Icon s32 MenuMob"></div>
             
-        <div class="navSections">
-            <%#= link_to "Все посты", posts_url, class: "navSection" %>
-            <%= link_to "Идеи", idea_posts_url, class: "navSection" %>
-            <%= link_to "Туториалы", tutorial_posts_url, class: "navSection" %> 
+        <div class="C_HeaderSections Desk">
+            <%= link_to "Идеи", idea_posts_url, class: "A_NavigationButton" %>
+            <%= link_to "Туториалы", tutorial_posts_url, class: "A_NavigationButton" %> 
+            <%= link_to "О нас", welcome_about_url, class: "A_NavigationButton" %>
         </div>
 
-        <%= link_to "ÒÒ", root_url, class: "navLogo" %>
+        <%= link_to "ÒÒ", root_url, class: "A_Logo" %>
 
-        <div class="navSearchAvatar">
-            <%= link_to "", root_url, class: "navSearch" %>
+        <div class="C_HeaderSections">
+            <%= link_to "", root_url, class: "Q_Icon s32 Search NavDesk" %>
             <%#= link_to "", root_url, class: "navUser" %>
 
-            <%= link_to "Войти", new_user_session_path, class: "navSection" %>
-            <%#= link_to "Регистрация", new_user_registration_path, class: "navSection"  %>
+            <%= link_to "Войти", new_user_session_path, class: "A_NavigationButton SignIn" %>
+            <%#= link_to "Регистрация", new_user_registration_path, class: "A_NavigationButton"  %>
         </div>
     </nav>
 

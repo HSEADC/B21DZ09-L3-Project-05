@@ -1,6 +1,6 @@
 .IdeaPostsPage,
 .TutorialPostsPage {
-    margin-top: 60px;
+    margin-top: 70px;
     margin-bottom: 160px;
     display: flex;
     flex-direction: column;
@@ -508,7 +508,7 @@
     
     .IdeaPostsPage,
     .TutorialPostsPage {
-        margin-top: 50px;
+        margin-top: 48px;
     }
 
     .IdeaPostCard {
