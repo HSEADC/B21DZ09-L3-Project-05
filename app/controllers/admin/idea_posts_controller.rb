@@ -15,7 +15,7 @@ class Admin::IdeaPostsController < Admin::ApplicationController
     render :index
 
     # Meta
-    @title = "LÒÒCHOK | Фильтры"
+    @title = "LÒÒCHOK | #{params[:tag]}"
     # end
   end
 
@@ -24,6 +24,10 @@ class Admin::IdeaPostsController < Admin::ApplicationController
     @recom_post1 = Post.find_by(id: "13")
     @recom_post2 = Post.find_by(id: "16")
     @recom_post3 = Post.find_by(id: "11")
+
+    # Meta
+    @title = "LÒÒCHOK | #{@post.title}"
+    # end
   end
 
   # GET /posts/new

@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
   def index
     # Meta
-    @title = "LÒÒCHOK — Медиа о кастоме"
+    @title = "LÒÒCHOK | Медиа о кастоме"
     # end
 
     @recom_post4 = Post.find_by(id: "4")
@@ -20,19 +20,4 @@ class WelcomeController < ApplicationController
     @title = "LÒÒCHOK | О нас"
     # end
   end
-
-  def ideas
-    # @posts = Post.find_by_type('IdeaPost')
-
-    # Meta
-    @title = "LÒÒCHOK | Идеи кастома"
-    # end
-  end
-
-  def tutorials
-    # Meta
-    @title = "LÒÒCHOK | Туториалы"
-    # end
-  end
-
 end

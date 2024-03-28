@@ -4,11 +4,19 @@ class TutorialPostsController < ApplicationController
   # GET /posts or /posts.json
   def index
     @posts = Post.where("type = 'TutorialPost'")
+
+    # Meta
+    @title = "LÒÒCHOK | Туториалы"
+    # end
   end
 
   def by_tag
     @posts = TutorialPost.tagged_with(params[:tag])
     render :index
+
+    # Meta
+    @title = "LÒÒCHOK | #{params[:tag]}"
+    # end
   end
 
   # GET /posts/1 or /posts/1.json
@@ -16,15 +24,26 @@ class TutorialPostsController < ApplicationController
     @recom_post1 = Post.find_by(id: "22")
     @recom_post2 = Post.find_by(id: "24")
     @recom_post3 = Post.find_by(id: "23")
+
+    # Meta
+    @title = "LÒÒCHOK | #{@post.title}"
+    # end
   end
 
   # GET /posts/new
   def new
     @post = TutorialPost.new
+
+    # Meta
+    @title = "LÒÒCHOK | Новый туториал"
+    # end
   end
 
   # GET /posts/1/edit
   def edit
+    # Meta
+    @title = "LÒÒCHOK | Редактирование туториала"
+    # end
   end
 
   # POST /posts or /posts.json
