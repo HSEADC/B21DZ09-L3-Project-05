@@ -8,19 +8,20 @@
     width: 100%;
 }
 
-.Banner {
+.M_Banner {
     position: relative;
     display: flex;
     justify-content: center;
     /* align-items: center; */
     width: 100vw;
-    height: 324px;
+    height: 290px;
     
     background-image: url("/assets/banners/Banner1.png");
     /* background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.00) 100%), #E6E6E6; */
     
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 
     &.IdeaPosts {
         background-image: url("/assets/banners/BannerIP.png");
@@ -31,7 +32,7 @@
     }
 }
 
-.BannerTitle {
+.A_BannerTitle {
     position: absolute;
     width: fit-content;
     padding: 17px 20px;
@@ -48,41 +49,41 @@
     color: var(--lightgray);
 
     &.IP-1 {
-        margin-top: 83px;
+        margin-top: 63px;
         margin-right: 510px;
         transform: rotate(-0.1deg);
     }
 
     &.IP-2 {
-        margin-top: 113px;
+        margin-top: 93px;
         margin-left: 310px;
         transform: rotate(-2.3deg);
     }
 
     &.TP {
-        margin-top: 103px;
+        margin-top: 80px;
         margin-right: 8px;
         transform: rotate(-3.5deg);
     }
 }
 
-.BannerZigZag {
+.Q_BannerZigZag {
     position: absolute;
-    background-image: url("/assets/FooterTopLogoLine.svg");
+    background-image: url("/assets/LogoZigzag.svg");
     background-repeat: no-repeat;
     background-size: contain;
 
     &.IdeaPosts {
-        margin-top: 133px;
+        margin-top: 110px;
         margin-right: 198px;
 
         width: 160px;
-        height: 36px;
+        height: 39px;
         transform: rotate(-87deg);
     }
 
     &.TutorialPosts {
-        margin-top: 183px;
+        margin-top: 160px;
         margin-left: 410px;
 
         width: 262px;
@@ -235,7 +236,7 @@
     flex-wrap: wrap;
 }
 
-.IdeaPostCard {
+.IdeaCard {
     display: flex;
     /* width: 20,6875rem; */
     width: calc(25% - 15px);
@@ -246,7 +247,7 @@
     width: calc(33.3% - 13px);
 }
 
-.IdeaPostCardContent {
+.IdeaCardContent {
     width: 100%;
     /* height: 100%; */
 
@@ -276,7 +277,7 @@
     box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.08);
 }
 
-.IdeaPostCardImg {
+.IdeaCardImg {
     position: relative;
     width: 100%;
     padding-top: 100%;
@@ -310,7 +311,7 @@
     }
 }
 
-.IdeaPostCardInfo {
+.IdeaCardInfo {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -334,7 +335,7 @@
     color: var(--black);
 }
 
-.IdeaPostCardInfoTop {
+.IdeaCardInfoTop {
     display: flex;
     padding: 0px 10px;
     justify-content: space-between;
@@ -350,7 +351,7 @@
 }
 
 .IdeaCardInfoUserAvatar {
-    background-image: url("/assets/promo/IconUser.svg");
+    background-image: url("/assets/icons/IconUser.svg");
     background-repeat: no-repeat;
     background-size: contain;
 
@@ -381,8 +382,8 @@
     }
 }
 
-.IdeaPostCardLike {
-    background-image: url("/assets/icons/IconHeart.svg");
+.IdeaCardLike {
+    background-image: url("/assets/icons/IconLike.svg");
     background-repeat: no-repeat;
     background-size: contain;
 
@@ -390,11 +391,11 @@
     height: 36px;
 
     &.active {
-        background-image: url("/assets/icons/IconHeartActive.svg");
+        background-image: url("/assets/icons/IconLikeActive.svg");
     }
 }
 
-.IdeaPostCardInfoBottom {
+.IdeaCardInfoBottom {
     display: flex;
     padding: 12px 14px;
     align-items: flex-start;
@@ -430,12 +431,12 @@
 
 
 @media only screen and (max-width: 1023px) {
-    .Banner {
+    .M_Banner {
         margin-bottom: 36px;
         height: 192px;
     }
 
-    .BannerTitle {
+    .A_BannerTitle {
         padding: 7px 8px;
         font-size: 38px;
     
@@ -457,7 +458,7 @@
         }
     }
 
-    .BannerZigZag {
+    .Q_BannerZigZag {
         &.IdeaPosts {
             margin-top: 81px;
             margin-right: 60px;
@@ -481,7 +482,7 @@
 }
 
 @media only screen and (min-width: 1281px) and (max-width: 1440px) {
-    .IdeaPostCard {
+    .IdeaCard {
         width: calc(33.3% - 13px);
     }
 
@@ -491,7 +492,7 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1280px) {
-    .IdeaPostCard {
+    .IdeaCard {
         width: calc(50% - 10px);
     }
 
@@ -511,7 +512,7 @@
         margin-top: 48px;
     }
 
-    .IdeaPostCard {
+    .IdeaCard {
         width: 100%;
     }
 

@@ -1,4 +1,4 @@
-.Footer {
+.O_Footer {
     width: calc(100%-52px);
     display: flex;
     flex-direction: column;
@@ -6,16 +6,27 @@
     align-items: center;
 
     background: var(--black);
+
+    .W_FooterInfo {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        align-self: stretch;
+    
+        a:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
-.FooterTop {
+.W_FooterTop {
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: flex-start;
 }
 
-.FooterTopLogoText {
+.A_FooterLogoText {
     color: var(--lightgray);
     font-family: Suisse Intl;
     font-size: 40px;
@@ -30,8 +41,8 @@
     }
 }
 
-.FooterTopLogoLine {
-    background-image: url("/assets/FooterTopLogoLine.svg");
+.Q_FooterLogoLine {
+    background-image: url("/assets/LogoZigzag.svg");
     background-repeat: no-repeat;
     background-size: contain;
 
@@ -43,7 +54,7 @@
     transform: rotate(2deg);
 }
 
-.FooterTopR {
+.Q_FooterTopR {
     color: var(--lightgray);
     font-family: Suisse Intl;
     font-size: 64px;
@@ -52,57 +63,36 @@
     line-height: 54px;
 }
 
-.FooterInfo {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    align-self: stretch;
-
-    a:hover {
-        text-decoration: underline;
-    }
-}
-
-.FooterInfoTeam {
+.W_FooterInfoTeam {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 24px;
 }
 
-.FooterInfoTeamTitle {
-    color: var(--lightgray);
-    font-family: Suisse Intl;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 100%;
-    text-transform: uppercase;
-}
-
-.FooterInfoTeamStudents,
-.FooterInfoTeamProfs {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-}
-
-.FooterInfoTeamPerson {
+.A_FooterInfoText {
     color: var(--lightgray);
     font-family: Suisse Intl;
     font-size: 16px;
     font-style: normal;
-    font-weight: 500;
-    line-height: 100%; /* 16px */
+    font-weight: 450;
+    line-height: 124%;
     text-transform: uppercase;
 }
 
-.FooterInfoPages {
+.C_FooterInfoTeamStudents,
+.C_FooterInfoTeamProfs {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
+}
+
+.C_FooterInfoPages {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
 
     &.mobile {
         display: none;
@@ -124,30 +114,20 @@
     color: var(--lightgray);
 }
 
-.FooterInfoContacts {
+.W_FooterInfoContacts {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
 }
 
-.FooterInfoContactsText {
-    color: var(--lightgray);
-    font-family: Suisse Intl;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 120%;
-    text-transform: uppercase;
-}
-
-.SocialNetworks {
+.C_SocialNetworks {
     display: flex;
     align-items: flex-start;
     gap: 14px;
 }
 
-.SocialNetwork {
+.Q_SocialNetwork {
     width: 36px;
     height: 36px;
 
@@ -164,55 +144,67 @@
 }
 
 @media only screen and (min-width: 768px) {
-    .Footer {
+    .O_Footer {
         width: calc(100%-52px);
-        height: 376px;
+        height: 356px;
         padding: 47px 26px;
     }
 }
 
 @media only screen and (max-width: 1023px) {
-    .FooterInfoContactsText {
-        max-width: 228px;
+    .A_FooterInfoText {
+        &.Contacts {
+            max-width: 232px;
+        }
     }
 }
 
 @media only screen and (max-width: 767px) {
-    .Footer {
+    .O_Footer {
         width: calc(100%-52px);
-        padding: 47px 26px;
+        height: 700px;
+        padding: 36px 26px;
         align-items: flex-start;
-        gap: 10px;
-    }
+        /* gap: 10px; */
 
-    .FooterInfo {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 22px;
-    }
-
-    .FooterInfoPages {
-        display: none;
-    
-        &.mobile {
-            display: block;
+        .W_FooterInfo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 32px;
         }
     }
 
-    .FooterInfoTeam {
-        margin: 10px 0 20px 0;
+    .C_FooterInfoPages {
+        display: none;
+    
+        &.mobile {
+            display: flex;
+            gap: 20px;
+        }
     }
 
-    .FooterInfoContactsText {
-        max-width: 700px;
+    .W_FooterInfoTeam {
+        /* margin: 10px 0 20px 0; */
+        gap: 20px;
     }
 
-    .SocialNetworks {
+    .A_FooterInfoText {
+        &.Contacts {
+            max-width: 700px;
+        }
+
+        &.About {
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .C_SocialNetworks {
         gap: 30px;
     }
 
-    .SocialNetwork {
+    .Q_SocialNetwork {
         width: 44px;
         height: 44px;
     }

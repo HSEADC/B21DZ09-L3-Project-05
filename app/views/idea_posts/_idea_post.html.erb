@@ -1,11 +1,11 @@
-<div class="IdeaPostCardContent">
+<div class="IdeaCardContent">
 
-  <div class="IdeaPostCardImg">
+  <div class="IdeaCardImg">
     <%= image_tag idea_post.post_image.url if idea_post.post_image.url %>
   </div>
 
-  <div class="IdeaPostCardInfo">
-    <div class="IdeaPostCardInfoTop">
+  <div class="IdeaCardInfo">
+    <div class="IdeaCardInfoTop">
       <div class="IdeaCardInfoUser">
         <div class="IdeaCardInfoUserAvatar"></div>
         <div class="IdeaCardInfoUserNames">
@@ -13,10 +13,10 @@
           <p class="IdeaCardInfoUserName NN">@<%= idea_post.user.email.split("@")[0] %></p>
         </div>
       </div>
-      <div class="IdeaPostCardLike"></div>
+      <div class="IdeaCardLike"></div>
     </div>
 
-    <div class="IdeaPostCardInfoBottom">
+    <div class="IdeaCardInfoBottom">
       <% idea_post.tag_list.each do |tag| %>
           <div class="PostCardTagChip">
               <%= tag %>

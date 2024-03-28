@@ -1,57 +1,56 @@
-<div class="Footer">
-    <div class="FooterTop">
-        <div class="FooterTopLogo">
-            <%= link_to "LÒÒCHOK", root_url, class: "FooterTopLogoText" %>
-            <div class="FooterTopLogoLine"></div>
+<div class="O_Footer">
+    <div class="W_FooterTop">
+        <div class="W_FooterTopLogo">
+            <%= link_to "LÒÒCHOK", root_url, class: "A_FooterLogoText" %>
+            <div class="Q_FooterLogoLine"></div>
         </div>
-        <sup class="FooterTopR">&reg;</sup>
+        <sup class="Q_FooterTopR">&reg;</sup>
     </div>
 
-    <div class="FooterInfo">
-        <div class="FooterInfoPages mobile">
-            <%= link_to "Идеи", idea_posts_url, class: "FooterInfoPage" %>
-            <%= link_to "Туториалы", tutorial_posts_url, class: "FooterInfoPage" %>
-            <%= link_to "О нас", welcome_about_url, class: "FooterInfoPage" %>
+    <div class="W_FooterInfo">
+        <div class="C_FooterInfoPages mobile">
+            <%= link_to "Идеи", idea_posts_url, class: "A_FooterInfoText" %>
+            <%= link_to "Туториалы", tutorial_posts_url, class: "A_FooterInfoText" %>
+            <%= link_to "О нас", welcome_about_url, class: "A_FooterInfoText" %>
         </div>
 
-        <div class="FooterInfoTeam">
-            <h6 class="FooterInfoTeamTitle">(Команда)</h6>
-            <div class="FooterInfoTeamStudents">
-                <a href="https://portfolio.hse.ru/Student/17677" target="_blank" class="FooterInfoTeamPerson">Арсений Гулевич</a>
-                <a href="https://portfolio.hse.ru/Student/12740" target="_blank" class="FooterInfoTeamPerson">Лена Донских</a>
-                <a href="https://portfolio.hse.ru/Student/17663" target="_blank" class="FooterInfoTeamPerson">Ася Олейниченко</a>
+        <div class="W_FooterInfoTeam">
+            <h6 class="A_FooterInfoText">(Команда)</h6>
+            <div class="C_FooterInfoTeamStudents">
+                <a href="https://portfolio.hse.ru/Student/17677" target="_blank" class="A_FooterInfoText">Арсений Гулевич</a>
+                <a href="https://portfolio.hse.ru/Student/12740" target="_blank" class="A_FooterInfoText">Лена Донских</a>
+                <a href="https://portfolio.hse.ru/Student/17663" target="_blank" class="A_FooterInfoText">Ася Олейниченко</a>
             </div>
-            <div class="FooterInfoTeamProfs">
-                <a href="https://design.hse.ru/team/4249" target="_blank" class="FooterInfoTeamPerson">Захар День</a>
-                <a href="https://www.hse.ru/org/persons/134073109" target="_blank" class="FooterInfoTeamPerson">Дмитрий Александров</a>
-                <a href="https://design.hse.ru/team/15113" target="_blank" class="FooterInfoTeamPerson">Вадим Булгаков</a>
+            <div class="C_FooterInfoTeamProfs">
+                <a href="https://design.hse.ru/team/4249" target="_blank" class="A_FooterInfoText">Захар День</a>
+                <a href="https://www.hse.ru/org/persons/134073109" target="_blank" class="A_FooterInfoText">Дмитрий Александров</a>
+                <a href="https://design.hse.ru/team/15113" target="_blank" class="A_FooterInfoText">Вадим Булгаков</a>
             </div>
         </div>
 
         <% if user_signed_in? && current_user.admin %>
-            <div class="FooterInfoPages">
-                <%= link_to "Идеи", admin_idea_posts_url, class: "FooterInfoPage" %>
-                <%= link_to "Туториалы", admin_tutorial_posts_url, class: "FooterInfoPage" %>
-                <%= link_to "О нас", welcome_about_url, class: "FooterInfoPage" %>
+            <div class="C_FooterInfoPages">
+                <%= link_to "Идеи", admin_idea_posts_url, class: "A_FooterInfoText" %>
+                <%= link_to "Туториалы", admin_tutorial_posts_url, class: "A_FooterInfoText" %>
+                <%= link_to "О нас", welcome_about_url, class: "A_FooterInfoText" %>
             </div>
         <% else %>
-            <div class="FooterInfoPages">
-                <%= link_to "Идеи", idea_posts_url, class: "FooterInfoPage" %>
-                <%= link_to "Туториалы", tutorial_posts_url, class: "FooterInfoPage" %>
-                <%= link_to "О нас", welcome_about_url, class: "FooterInfoPage" %>
+            <div class="C_FooterInfoPages">
+                <%= link_to "Идеи", idea_posts_url, class: "A_FooterInfoText" %>
+                <%= link_to "Туториалы", tutorial_posts_url, class: "A_FooterInfoText" %>
+                <%= link_to "О нас", welcome_about_url, class: "A_FooterInfoText" %>
             </div>
         <% end %>
 
-        <div class="FooterInfoContacts">
-        <p class="FooterInfoContactsText">(Контакты)</p>
-        <div class="SocialNetworks">
-            <a class="SocialNetwork VK" href="https://vk.com/lchok" target="_blank"></a>
-            <a class="SocialNetwork TG" href="https://t.me/loochok_media" target="_blank"></a>
+        <div class="W_FooterInfoContacts">
+        <p class="A_FooterInfoText">(Контакты)</p>
+        <div class="C_SocialNetworks">
+            <a class="Q_SocialNetwork VK" href="https://vk.com/lchok" target="_blank"></a>
+            <a class="Q_SocialNetwork TG" href="https://t.me/loochok_media" target="_blank"></a>
         </div>
-        <%= link_to "Обратиться в поддержку", welcome_support_url, class: "FooterInfoContactsText" %>
-        <p class="FooterInfoContactsText">Медиа сервис &Ograve;&nbsp;кастомизации вещей</p>
+        <%= link_to "Обратиться в поддержку", welcome_support_url, class: "A_FooterInfoText Contacts" %>
+        <p class="A_FooterInfoText Contacts About">Медиа сервис &Ograve; кастомизации вещей</p>
         </div>
     </div>
 
 </div>
-

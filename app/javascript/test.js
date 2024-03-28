@@ -58,7 +58,7 @@ function tagsVisibility() {
 }
 
 function addLike() {
-    const like = document.querySelector('.IdeaPostCardLike')
+    const like = document.querySelector('.IdeaCardLike')
   
     like.addEventListener('click', () => {
         menu.classList.toggle('active')

@@ -1,7 +1,7 @@
 class SupportMailer < ApplicationMailer
 
     def user_support_request_email
-        attachments.inline['FooterTopLogoLine.svg'] = File.read('app/assets/images/FooterTopLogoLine.svg')
+        attachments.inline['LogoZigzag.svg'] = File.read('app/assets/images/LogoZigzag.svg')
 
         email = params[:support][:email]
         mail(to: email, subject: "Ваше обращение отправлено в поддержку")
