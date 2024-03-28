@@ -485,7 +485,6 @@
         gap: 26px;
     }
 
-    .IdeaCard,
     .TutorialPostCard {
         &.PP-3 {
             display: none;

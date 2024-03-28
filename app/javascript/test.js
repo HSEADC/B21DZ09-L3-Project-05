@@ -58,7 +58,7 @@ function tagsVisibility() {
 }
 
 function addLike() {
-    const like = document.querySelector('.IdeaCardLike')
+    const like = document.querySelector('.Q_Icon.Like')
   
     like.addEventListener('click', () => {
         menu.classList.toggle('active')
@@ -66,7 +66,7 @@ function addLike() {
 }
 
 function createNewPostVisibility() {
-    const button = document.querySelector('.navSection.newPost')
+    const button = document.querySelector('.A_NavigationButton.NewPost')
     const menu = document.querySelector('.NavCreateNewPostList')
   
     button.addEventListener('click', () => {
@@ -88,7 +88,7 @@ function createNewPostVisibility() {
 
 function mobileMenuVisibility() {
     const button = document.querySelector('.Q_Icon.MenuMob')
-    const menu = document.querySelector('.MobileMenu')
+    const menu = document.querySelector('.M_MobileMenu')
   
     button.addEventListener('click', () => {
         menu.classList.toggle('show')
@@ -108,10 +108,15 @@ function mobileMenuVisibility() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    if (document.body.classList.contains('posts_page')) {
+    if (document.body.classList.contains('tutorials_page')) {
         tagsVisibility()
         addLike()
     }
+
+    if (document.body.classList.contains('ideas_page')) {
+        addLike()
+    }
+
     mobileMenuVisibility()
     createNewPostVisibility()
   })

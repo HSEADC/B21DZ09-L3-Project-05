@@ -1,0 +1,14 @@
+.S_IdeaCardsPage {
+    margin-top: 70px;
+    margin-bottom: 82px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+    .S_IdeaCardsPage {
+        margin-top: 48px;
+    }
+}

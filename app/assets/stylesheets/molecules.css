@@ -1,0 +1,75 @@
+.M_Banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    width: 100vw;
+    height: 290px;
+    
+    background-image: url("/assets/banners/Banner1.png");
+    /* background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.00) 100%), #E6E6E6; */
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &.IdeaPosts {
+        background-image: url("/assets/banners/BannerIP.png");
+    }
+
+    &.TutorialPosts {
+        background-image: url("/assets/banners/BannerTP.png");
+    }
+}
+
+.M_IdeasPageFilters {
+    width: calc(100% - 52px);
+    display: flex;
+    flex-direction: column;
+    margin: 26px auto 52px;
+    align-items: center;
+    gap: 18px;
+}
+
+.M_UserInfo {
+    display: flex;
+    /* padding-left: 4px; */
+    align-items: center;
+    gap: 8px;
+}
+
+.M_MobileMenu {
+    position: fixed;
+    top: 70px;
+    left: 0px;
+    display: none;
+    width: 330px;
+    /* padding: 4px 0px; */
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+
+    background-color: var(--black);
+
+    z-index: 200;
+
+    &.show {
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .M_Banner {
+        height: 192px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .M_IdeasPageFilters {
+        width: calc(100% - 32px);
+    }
+    
+    .M_MobileMenu {
+        top: 48px;
+    }
+}

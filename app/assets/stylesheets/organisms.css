@@ -1,0 +1,117 @@
+.O_Header {
+    position: fixed;
+    display: flex;
+    top: 0;
+    width: -webkit-fill-available;
+    height: 70px;
+    padding: 0 26px;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: black;
+    border-bottom: 1px solid black;
+
+    z-index: 100;
+
+    .C_HeaderSections {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+.O_Footer {
+    width: calc(100%-52px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    background: var(--black);
+
+    .W_FooterInfo {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        align-self: stretch;
+    
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.O_IdeaCard {
+    display: flex;
+    /* width: 20,6875rem; */
+    width: calc(25% - 15px);
+
+    .W_IdeaCardContent {
+        width: 100%;
+        /* height: 100%; */
+    
+        display: flex;
+        padding: 8px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    
+        border-radius: 28px;
+        background: var(--white);
+        box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.08);
+    }
+}
+
+@media only screen and (min-width: 1281px) and (max-width: 1440px) {
+    .O_IdeaCard {
+        width: calc(33.3% - 13px);
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .O_IdeaCard {
+        &.PP-3 {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1280px) {
+    .O_IdeaCard {
+        width: calc(50% - 10px);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .O_Footer {
+        width: calc(100%-52px);
+        height: 356px;
+        padding: 47px 26px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .O_Header {
+        height: 48px;
+        padding: 0 16px;
+    }
+
+    .O_Footer {
+        width: calc(100%-52px);
+        height: 700px;
+        padding: 36px 26px;
+        align-items: flex-start;
+        /* gap: 10px; */
+
+        .W_FooterInfo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 32px;
+        }
+    }
+
+    .O_IdeaCard {
+        width: 100%;
+    }
+}

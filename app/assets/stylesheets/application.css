@@ -28,6 +28,7 @@
  *= require support
  *= require categories
 
+ *= require quarks
  *= require atoms
  *= require molecules
  *= require organisms

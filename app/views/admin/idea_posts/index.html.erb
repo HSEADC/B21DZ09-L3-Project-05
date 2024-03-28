@@ -1,4 +1,4 @@
-<div class="IdeaPostsPage">
+<div class="S_IdeaCardsPage">
 
   <div class="M_Banner IdeaPosts">
     <h1 class="A_BannerTitle IP-1">Идеи</h1>
@@ -6,73 +6,39 @@
     <div class="Q_BannerZigZag IdeaPosts"></div>
   </div>
 
-  <div class="TagBlock">
-    <div class="TagSections">
-        <div class="TagSection Items">
-          <p class="TagSectionTitle">Предметы</p>
-          <div class="IconArrowDown Items"></div>
-        </div>
+  <div class="M_IdeasPageFilters">
+    <h6 class="A_FiltersSubtitle">Можете выбрать категорию</h6>
 
-        <div class="TagSection Tech">
-          <p class="TagSectionTitle">Техники</p>
-          <div class="IconArrowDown Tech"></div>
-        </div>
-
-        <div class="TagSection Mat">
-          <p class="TagSectionTitle">Материалы</p>
-          <div class="IconArrowDown Mat"></div>
-        </div>
-    </div>
-
-    <div class="TagLists">
-      <div class="TagList Items">
-            <%= link_to tagged_admin_idea_posts_path("одежда"), class:"TagListTag" do %>
-              одежда
-            <% end %>
-            <%= link_to tagged_admin_idea_posts_path("обувь"), class:"TagListTag" do %>
-              обувь
-            <% end %>
-            <%= link_to tagged_admin_idea_posts_path("аксессуары"), class:"TagListTag" do %>
-              аксессуары
-            <% end %>
-      </div>
-
-      <div class="TagList Tech">
-        <%= link_to tagged_admin_idea_posts_path("роспись"), class:"TagListTag" do %>
-          роспись
+    <section class="W_FiltersScroll">
+      <div class="C_Filters">
+        <%= link_to admin_idea_posts_path, class:"A_Tag IdeasFilter Active" do %>
+          всё
         <% end %>
-        <%= link_to tagged_admin_idea_posts_path("шитьё"), class:"TagListTag" do %>
-          шитьё
+
+        <%= link_to tagged_admin_idea_posts_path("одежда"), class:"A_Tag IdeasFilter" do %>
+          одежда
         <% end %>
-        <%= link_to tagged_admin_idea_posts_path("апсайклинг"), class:"TagListTag" do %>
-          апсайклинг
+
+        <%= link_to tagged_admin_idea_posts_path("обувь"), class:"A_Tag IdeasFilter" do %>
+          обувь
         <% end %>
-        <%= link_to tagged_admin_idea_posts_path("вязание"), class:"TagListTag" do %>
-          вязание
+
+        <%= link_to tagged_admin_idea_posts_path("аксессуары"), class:"A_Tag IdeasFilter" do %>
+          аксессуары
+        <% end %>
+
+        <%= link_to tagged_admin_idea_posts_path("другое"), class:"A_Tag IdeasFilter" do %>
+          другое
         <% end %>
       </div>
-
-      <div class="TagList Mat">
-        <%= link_to tagged_admin_idea_posts_path("краски"), class:"TagListTag" do %>
-          краски
-        <% end %>
-        <%= link_to tagged_admin_idea_posts_path("кожа"), class:"TagListTag" do %>
-          кожа
-        <% end %>
-        <%= link_to tagged_admin_idea_posts_path("бисер"), class:"TagListTag" do %>
-          бисер
-        <% end %>
-      </div>
-    </div>
-    <!--- <%#= link_to admin_idea_posts_path do %>
-      <p class="TagSectionReset">Сбросить всё</p>
-    <%# end %> --->
+    </section>
   </div>
   
-  <div class="IdeaPostsCards">
+  
+  <div class="C_IdeaCards">
     <% @posts.each do |post| %>
       <%#= idea_post_url(post.title.parameterize) %>
-      <%= link_to idea_post_path(post), class: "IdeaCard" do %>
+      <%= link_to idea_post_path(post), class: "O_IdeaCard" do %>
         <%= render post %>
       <% end %>
     <% end %>
