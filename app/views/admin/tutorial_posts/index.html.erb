@@ -1,4 +1,4 @@
-<div class="TutorialPostsPage">
+<div class="S_TutorialCardsPage">
 
   <div class="M_Banner TutorialPosts">
     <h1 class="A_BannerTitle TP">Туториалы</h1>
@@ -89,9 +89,9 @@
   
   <%#= render @posts %>
 
-  <div class="TutorialPostsCards">
+  <div class="C_TutorialCards">
     <% @posts.each do |post| %>
-      <%= link_to admin_tutorial_post_path(post), class: "TutorialPostCard" do %>
+      <%= link_to admin_tutorial_post_path(post), class: "O_TutorialCard" do %>
         <%= render post %>
       <% end %>
     <% end %>

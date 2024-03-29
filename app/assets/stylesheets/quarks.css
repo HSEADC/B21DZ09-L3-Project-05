@@ -1,10 +1,21 @@
 .Q_Icon {
     background-repeat: no-repeat;
     background-size: contain;
+    cursor: pointer;
 
+    &.s42 {
+        width: 42px;
+        height: 42px;
+    }
+    
     &.s38 {
         width: 38px;
         height: 38px;
+    }
+
+    &.s36 {
+        width: 36px;
+        height: 36px;
     }
 
     &.s32 {
@@ -22,6 +33,11 @@
         height: 20px;
     }
 
+    &.s16 {
+        width: 16px;
+        height: 16px;
+    }
+
     &.Search {
         background-image: url("/assets/icons/IconSearch.svg");
     }
@@ -30,8 +46,20 @@
         background-image: url("/assets/icons/IconCross.svg");
     }
 
+    &.Back {
+        background-image: url("/assets/icons/IconBack.svg");
+    }
+
+    &.Options {
+        background-image: url("/assets/icons/IconOptions.svg");
+    }
+
     &.CreatePost {
         background-image: url("/assets/icons/IconCreatePostYellow.svg");
+    }
+
+    &.Edit {
+        background-image: url("/assets/icons/IconEdit.svg");
     }
 
     &.MenuMob {
@@ -75,6 +103,13 @@
 
     width: 32px;
     height: 32px;
+
+    flex: 0 0 auto;
+
+    &.s46 {
+        width: 46px;
+        height: 46px;
+    }
 }
 
 .Q_BannerZigZag {
@@ -142,6 +177,58 @@
     }
 }
 
+.Q_TutorialCardImg {
+    position: relative;
+    width: 100%;
+    padding-top: 59.7%;
+    /* background-color: var(--white); */
+    
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+}
+
+.Q_IdeaPageImg {
+    position: relative;
+    grid-column: 3 / 14;
+    padding-top: 100%;
+    /* background-color: var(--white); */
+    
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 28px;
+    }
+}
+
+@media only screen and (min-width: 1921px) {
+    .Q_IdeaPageImg {
+        grid-column: 5 / 14;
+    }
+}
+
+@media only screen and (min-width: 1441px) and (max-width: 1920px) {
+    .Q_IdeaPageImg {
+        grid-column: 3 / 14;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+    .Q_IdeaPageImg {
+        grid-column: 2 / 14;
+    }
+}
+
 @media only screen and (max-width: 1023px) {
     .Q_BannerZigZag {
         &.IdeaPosts {
@@ -162,6 +249,12 @@
     }
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .Q_IdeaPageImg {
+        grid-column: 1 / 13;
+    }
+}
+
 @media only screen and (max-width: 767px) {
     .Q_Icon {
         &.MenuMob {
@@ -172,5 +265,10 @@
     .Q_SocialNetwork {
         width: 44px;
         height: 44px;
+    }
+
+    .Q_IdeaPageImg {
+        width: 100%;
+        height: auto;
     }
 }

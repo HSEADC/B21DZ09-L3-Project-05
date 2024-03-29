@@ -1,6 +1,6 @@
 <% if user_signed_in? && current_user.admin %>
 
-    <div class="NavCreateNewPostList">
+    <div class="M_NavCreateNewPosts">
         <%= link_to "+Новая идея", new_admin_idea_post_path, class: "A_NavigationButton createNewPost" %>
         <%= link_to "+Новый туториал", new_admin_tutorial_post_path, class: "A_NavigationButton createNewPost" %>   
     </div>

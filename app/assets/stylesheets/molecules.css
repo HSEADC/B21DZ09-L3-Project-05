@@ -98,6 +98,13 @@
     }
 }
 
+.M_TutorialCardTitleLike {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+
 .M_FilterSelect {
     /* width: 30%;
     max-width: 328px; */
@@ -161,6 +168,83 @@
         align-items: flex-start;
         gap: 0px;
     }
+}
+
+.M_IdeaPageIntoTexts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 8px;
+    gap: 12px;
+}
+
+.M_CommentsBlock {
+    width: 100%;
+    min-height: 160px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll; 
+    flex: 1 0 0;
+
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 8px;
+        border-radius: 5px;
+        background-color: #ececec;
+      }
+      
+    &::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background-color: #BBB;;
+        box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+    }
+}
+
+.M_PostCommentReplies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 19px; */
+    padding-left: 40px;
+    /* margin-bottom: 20px; */
+}
+
+.M_PostCommentReplies > div {
+    /* padding: 16px 0; */
+}
+
+.M_NavCreateNewPosts,
+.M_PostOptions {
+    display: none;
+    position: fixed;
+    right: 86px;
+    top: 70px;
+    background-color: white;
+    border: 1px dashed black;
+    z-index: 200;
+
+    &.show {
+        display: flex;
+        width: 190px;
+        flex-direction: column;
+        lign-items: flex-start;
+    }
+}
+
+.M_PostOptions {
+    position: absolute;
+    margin-top: 98px;
+    right: 150px;
+
+    &.show {
+        width: 150px;
+    }
+
+    /* a {
+        width: auto;
+        height: auto;
+    } */
 }
 
 .M_MobileMenu {

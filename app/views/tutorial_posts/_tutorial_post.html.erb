@@ -1,10 +1,15 @@
-<div class="TutorialPostCardContent">
+<div class="W_TutorialCardContent">
 
-  <div class="TutorialPostCardImg">
+  <div class="Q_TutorialCardImg">
     <%= image_tag tutorial_post.post_image.url %>
   </div>
 
-  <div class="TutorialPostCardInfo">
+  <div class="W_TutorialCardInfo">
+    <div class="M_TutorialCardTitleLike">
+      <h2 class="A_TutorialCardTitle"><%= tutorial_post.title%></h2>
+      <div class="Q_Icon s42 Like"></div>
+    </div>
+
     <div class="TutorialPostCardTagsRow">
       <% tutorial_post.tag_list.each do |tag| %>
           <div class="A_Tag Card">
@@ -12,7 +17,6 @@
           </div>
       <% end %>
     </div>
-    <h2 class="TutorialPostCardTitle"><%= tutorial_post.title%></h2>
   </div>
 
 </div>

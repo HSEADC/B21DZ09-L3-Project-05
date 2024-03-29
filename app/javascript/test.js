@@ -56,9 +56,30 @@ function addLike() {
     })
 }
 
+function postOptionVisibility() {
+    const button = document.querySelector('.Q_Icon.Options')
+    const menu = document.querySelector('.M_PostOptions')
+  
+    button.addEventListener('click', () => {
+        menu.classList.toggle('show')
+    })
+
+    document.addEventListener( 'click', (e) => {
+        const target = e.target
+
+        const menuA = target == menu || menu.contains(target)
+        const buttonA = target == button
+        const menuShow = menu.classList.contains('show')
+
+        if ( !menuA && !buttonA && menuShow )  {
+            menu.classList.remove('show')
+        }
+    })
+}
+
 function createNewPostVisibility() {
     const button = document.querySelector('.A_NavigationButton.NewPost')
-    const menu = document.querySelector('.NavCreateNewPostList')
+    const menu = document.querySelector('.M_NavCreateNewPosts')
   
     button.addEventListener('click', () => {
         menu.classList.toggle('show')
@@ -101,10 +122,15 @@ function mobileMenuVisibility() {
 document.addEventListener('DOMContentLoaded', () => {
     if (document.body.classList.contains('tutorials_page')) {
         tagsVisibility()
+        addLike()
     }
 
     if (document.body.classList.contains('ideas_page')) {
         addLike()
+    }
+
+    if (document.body.classList.contains('post_page')) {
+        postOptionVisibility()
     }
 
     mobileMenuVisibility()

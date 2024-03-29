@@ -59,6 +59,53 @@
             background-color: var(--yellow);
         }
     }
+
+    &.PostOption {
+        /* width: calc(100% - 36px); */
+        color: black;
+        background-color: white;
+
+        &:hover {
+            background-color: var(--lightgray2);
+        }
+    }
+
+    &.Page {
+        position: absolute;
+        margin-top: 48px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        background-color: rgba(255, 255, 255, 0);
+        color: black;
+
+        z-index: 2;
+
+        &.Back {
+            left: 26px;
+            padding: 8px 18px 8px 12px;
+            gap: 8px;
+        }
+
+        &.Edit {
+            /* right: 26px; */
+            width: 100%;
+            margin-top: 0;
+            /* padding: 0px 8px; */
+            background-color: white;
+
+            z-index: 0;
+        }
+
+        &.Mob {
+            display: none;
+        }
+
+        &.Fixed {
+            position: fixed;
+        }
+    }
 }
 
 .A_Tag {
@@ -197,6 +244,19 @@
     color: var(--gray2);
 }
 
+.A_TutorialCardTitle {
+    max-width: calc(100% - 52px);
+    min-height: 44px;
+    padding: 10px 0;
+
+    font-family: Suisse Intl;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 550;
+    /* line-height: 90%; */
+    color: var(--black);
+}
+
 .A_FilterSelectText {
     font-family: Suisse Intl;
     font-size: 16px;
@@ -239,6 +299,63 @@
 
     &.NN {
         color: var(--gray2);
+    }
+}
+
+.A_PostDate {
+    font-family: Suisse Intl;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 450;
+    /* line-height: 124%; */
+    text-transform: uppercase;
+    color: var(--gray2);
+}
+
+.A_IdeaPageInfoTitle,
+.A_PageCommentsTitle {
+    font-family: Suisse Intl;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: black;
+}
+
+.A_PageCommentsTitle {
+    margin-top: 14px;
+    padding: 10px 0 10px 8px;
+}
+
+.A_IdeaPageInfoDescription {
+    font-family: Suisse Intl;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    color: black;
+}
+
+.A_PostCommentBody {
+    width: fit-content;
+    /* max-width: 410px; */
+    font-family: Suisse Intl;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--gray2);
+}
+
+@media only screen and (max-width: 1280px) {
+    .A_NavigationButton {
+        &.Back {
+            display: none;
+        }
+
+        &.Edit {
+            display: none;
+        }
     }
 }
 

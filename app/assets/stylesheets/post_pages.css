@@ -1,4 +1,3 @@
-.IdeaPostPage,
 .TutorialPostPage {
     margin: 40px auto 160px;
     display: flex;
@@ -50,41 +49,6 @@
     align-items: flex-start;
 }
 
-.IdeaPostPageImg {
-    position: relative;
-    grid-column: 3 / 14;
-    padding-top: 100%;
-    /* background-color: var(--white); */
-    
-    img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 28px;
-    }
-}
-
-.IdeaPostPageInfo {
-    grid-column: 14 / 23;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex: 1 0 0;
-    align-self: stretch;
-}
-
-.IdeaPostPageInfoTop {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
-    align-self: stretch;
-}
-
 .PostPageAbout {
     display: flex;
     flex-direction: column;
@@ -103,15 +67,6 @@
     display: flex;
     align-items: flex-start;
     gap: 8px;
-}
-
-.PostPageDate {
-    font-family: Suisse Intl;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    color: #5F5F5F;
 }
 
 .IdeaPostPageInfoUser {
@@ -154,22 +109,6 @@
     }
 }
 
-.IdeaPostPageTitleDescription {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 14px;
-}
-
-.IdeaPostPageTitle {
-    font-family: Suisse Intl;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    color: black;
-}
-
 .TutorialPostPageTitle {
     padding: 0 10px;
     font-family: Suisse Intl;
@@ -181,15 +120,6 @@
     color: var(--lightgray);
 
     background-color: black;
-}
-
-.IdeaPostPageDescription {
-    font-family: Suisse Intl;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%; /* 25.2px */
-    color: black;
 }
 
 .TutorialPostPageTitleDescription {
@@ -296,18 +226,6 @@
     }
 }
 
-.IdeaPostPageInfoBottom {
-    display: flex;
-    /* height: 296px; */
-    margin-top: 36px;
-    /* margin-bottom: 12px; */
-    flex-direction: column;
-    /* justify-content: space-between; */
-    align-items: flex-start;
-    flex: 1 0 0;
-}
-
-.IdeaPostPageCommentTitle,
 .TutorialPostPageCommentTitle {
     display: flex;
     width: 100%;
@@ -322,28 +240,6 @@
     line-height: normal;
     text-transform: uppercase;
     color: black;
-}
-
-.IdeaPostPageCommentBlock {
-    min-height: 160px;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    overflow-y: scroll; 
-    flex: 1 0 0;
-
-    &::-webkit-scrollbar {
-        -webkit-appearance: none;
-        width: 10px;
-        border-radius: 5px;
-        background-color: #DFDFDF;
-      }
-      
-    &::-webkit-scrollbar-thumb {
-        border-radius: 5px;
-        background-color: #BBB;;
-        box-shadow: 0 0 1px rgba(255, 255, 255, .5);
-    }
 }
 
 .TutorialPostPageCommentBlock {
@@ -391,80 +287,6 @@
     /* flex-wrap: wrap; */
 }
 
-.PostPageButton {
-    position: absolute;
-    margin-top: 48px;
-    display: inline-flex;
-    height: 40px;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
-    background-color: var(--black);
-
-    font-family: Suisse Intl;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 110%; /* 17.6px */
-    text-transform: uppercase;
-    color: var(--lightgray);
-
-    z-index: 10;
-
-    &.Back {
-        left: 26px;
-        padding: 0px 8px 0px 4px;
-    }
-
-    &.Edit {
-        right: 26px;
-        padding: 0px 8px;
-    }
-
-    &.Fixed {
-        position: fixed;
-    }
-
-    &.Mob {
-        display: none;
-    }
-}
-
-.PostPageButtonIcon {
-    width: 28px;
-    height: 28px;
-    background-repeat: no-repeat;
-    background-size: contain;
-
-    &.Back {
-        background-image: url("/assets/icons/IconArrowLeft.svg");
-    }
-
-    &.Edit {
-        background-image: url("/assets/icons/IconEdit.svg");
-    }
-}
-
-@media only screen and (min-width:1921px) {
-    .IdeaPostPageImg {
-        grid-column: 5 / 14;
-    }
-    
-    .IdeaPostPageInfo {
-        grid-column: 14 / 21;
-    }
-}
-
-@media only screen and (min-width: 1441px) and (max-width: 1920px) {
-    .IdeaPostPageImg {
-        grid-column: 3 / 14;
-    }
-    
-    .IdeaPostPageInfo {
-        grid-column: 14 / 23;
-    }
-}
-
 @media only screen and (max-width: 1280px) {
     .PostPageButton {
         &.Edit {
@@ -484,16 +306,6 @@
     .TutorialPostPageContent {
         gap: 26px;
     }
-
-    .TutorialPostCard {
-        &.PP-3 {
-            display: none;
-        }
-    }
-
-    .IdeaPostPageTitle {
-        font-size: 20px;
-    }
     
     .IdeaPostPageInfoUserName {
         &.UN {
@@ -512,24 +324,12 @@
         }
     }
 
-    .IdeaPostPageInfoTop {
-        gap: 14px;
-    }
-
     .IdeaPostPageInfoUser {
         gap: 12px;
     }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1280px) {
-    .IdeaPostPageImg {
-        grid-column: 2 / 14;
-    }
-    
-    .IdeaPostPageInfo {
-        grid-column: 14 / 24;
-    }
-
     .TutorialPostPageContent {
         /* margin-bottom: 60px; */
         grid-column: 6 / 20;
@@ -541,12 +341,6 @@
 }
 
 @media only screen and (max-width: 1023px) {
-    .TutorialPostCard {
-        &.PP-2 {
-            display: none;
-        }
-    }
-
     .PostPageButton {
         &.Edit {
             display: none;
@@ -555,13 +349,6 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    .IdeaPostPageImg {
-        grid-column: 1 / 14;
-    }
-    
-    .IdeaPostPageInfo {
-        grid-column: 14 / 25;
-    }
     .TutorialPostPageContent {
         /* margin-bottom: 40px; */
         grid-column: 5 / 21;
@@ -573,7 +360,7 @@
 }
 
 @media only screen and (max-width: 767px) {
-    .IdeaPostPage,
+
     .TutorialPostPage {
     margin: 40px auto 70px;
     width: calc(100% - 32px);
@@ -594,16 +381,7 @@
         }
     }
 
-    .IdeaPostPageImg {
-        grid-column: 1 / 3;
-    }
-    
-    .IdeaPostPageInfo {
-        margin-top: 26px;
-        grid-column: 1 / 3;
-    }
-
-    .IdeaPostPageCommentBlock {
+    .M_CommentsBlock {
         min-height: auto;
         overflow-y: visible; 
         flex: 0 0 0;

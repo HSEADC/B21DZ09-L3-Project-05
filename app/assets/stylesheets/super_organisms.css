@@ -1,4 +1,5 @@
-.S_IdeaCardsPage {
+.S_IdeaCardsPage,
+.S_TutorialCardsPage {
     margin-top: 70px;
     margin-bottom: 82px;
     display: flex;
@@ -6,7 +7,8 @@
     align-items: center;
     width: 100%;
 
-    .C_IdeaCards {
+    .C_IdeaCards,
+    .C_TutorialCards {
     display: flex;
     /* margin: 50px auto; */
     width: calc(100% - 52px);
@@ -18,12 +20,47 @@
     }
 }
 
+.S_IdeaPage {
+    margin: 40px auto 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - 52px);
+    max-width: 1868px;
+
+    &.Gride {
+        display: grid;
+        grid-template-columns: repeat(24, 1fr);
+        column-gap: 20px;
+        width: 100%;
+        margin: 52px auto;
+        /* background-color: aqua; */
+    }
+}
+
 @media only screen and (max-width: 767px) {
-    .S_IdeaCardsPage {
+    .S_IdeaCardsPage,
+    .S_TutorialCardsPage {
         margin-top: 48px;
 
-        .C_IdeaCards {
+        .C_IdeaCards,
+        .C_TutorialCards {
             width: calc(100% - 32px);
+        }
+    }
+
+    .S_IdeaPage{
+    margin: 40px auto 70px;
+    width: calc(100% - 32px);
+
+    &.Gride {
+        display: flex;
+        flex-direction: column;
+        /* grid-template-columns: repeat(2, 1fr); */
+        /* column-gap: 20px; */
+        width: 100%;
+        margin: 26px auto;
+        /* background-color: aqua; */
         }
     }
 }

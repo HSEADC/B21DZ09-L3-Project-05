@@ -1,25 +1,25 @@
 <p style="color: green"><%= notice %></p>
 
-<div class="IdeaPostPage">
+<div class="S_IdeaPage">
 
   <%= link_to :admin_idea_posts do %>
-    <div class="PostPageButton Desk Back Fixed">
-      <div class="PostPageButtonIcon Back"></div>
+    <div class="A_NavigationButton Page">
+      <div class="Q_Icon s16 Back"></div>
       Назад
     </div>
-    <div class="PostPageButton Mob Back Fixed">
-      <div class="PostPageButtonIcon Back"></div>
+    <div class="A_NavigationButton Page Mob Back Fixed">
+      <div class="Q_Icon s16 Back"></div>
     </div>
   <% end %>
 
   <% if can? :manage, @post %>
     <%= link_to edit_admin_idea_post_path(@post) do %>
-        <div class="PostPageButton Desk Edit">
-            <div class="PostPageButtonIcon Edit"></div>
+        <div class="A_NavigationButton Page Desk Edit">
+            <div class="Q_Icon Edit"></div>
             Редактировать
         </div>
-        <div class="PostPageButton Mob Edit">
-            <div class="PostPageButtonIcon Edit"></div>
+        <div class="A_NavigationButton Page Mob Edit">
+            <div class="Q_Icon Edit"></div>
         </div>
     <% end %>
     <%#= button_to "Удалить пост", admin_post_path(@post), method: :delete %>

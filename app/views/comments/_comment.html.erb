@@ -1,14 +1,13 @@
 <div id="<%= dom_id comment %>">
 
-  <div class="PostComment">
+  <div class="M_PostComment">
 
-    <div class="PostCommentUserAvatar"></div>
+    <div class="Q_Avatar s46"></div>
 
-    <div class="PostCommentTexts">
+    <div class="A_PostCommentTexts">
       <div class="PostCommentInfo">
-        <p class="PostCommentUserName"><%= comment.user.email.split("@")[0] %></p>
-        <!--- <p class="PostCommentDate">
-            <%#= comment.created_at %>
+        <p class="A_UserInfoName UN"><%= post.user.email.split("@")[0] %></p>        <!--- <p class="A_PostCommentDate">
+        <%#= comment.created_at %>
             сегодня в&nbsp;10:05
         </p> --->
         <% if can? :manage, comment %>
@@ -18,13 +17,13 @@
           </div>
         <% end %>
       </div>
-      <p class="PostCommentBody"><%= comment.body %></p>
+      <p class="A_PostCommentBody"><%= comment.body %></p>
     </div>
 
   </div>
 
 
-  <div class="PostCommentReplies">
+  <div class="M_PostCommentReplies">
     <% comment.replies.each do |reply| %>
       <%= render reply, partial: "comments/comment", comment: reply, post: post %>
     <% end %>
