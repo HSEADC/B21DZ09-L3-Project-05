@@ -145,8 +145,16 @@
     }
 
     .O_TutorialsPageFilters {
+        width: calc(100% - 32px);
         .C_TutorialsFilters {
             flex-direction: column;
+            margin: 0 auto;
+
+            .W_TutorialsFilter {
+                width: 100%;
+                max-width: 460px;
+                margin: 0 auto;
+            }
         }
     }
 }

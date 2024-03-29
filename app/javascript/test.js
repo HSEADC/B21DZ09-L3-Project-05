@@ -40,7 +40,7 @@ function tagsVisibility() {
         const MtagButton = target == buttonMat
         const MtagListShow = tagListMat.classList.contains('show')
 
-        if ( ( !ItagList && !ItagButton && ItagListShow && Iarrow ) || ( !TtagList && !TtagButton && TtagListShow && Tarrow) || ( !MtagList && !MtagButton && MtagListShow && Marrow) )  {
+        if ( ( !ItagList && !ItagButton && ItagListShow ) || ( !TtagList && !TtagButton && TtagListShow ) || ( !MtagList && !MtagButton && MtagListShow ) )  {
             tagListItems.classList.remove('show')
             tagListTech.classList.remove('show')
             tagListMat.classList.remove('show')
