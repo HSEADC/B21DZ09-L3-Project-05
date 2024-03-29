@@ -197,6 +197,35 @@
     color: var(--gray2);
 }
 
+.A_FilterSelectText {
+    font-family: Suisse Intl;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    color: var(--gray2);
+}
+
+.A_SelectDropdownItem {
+    display: flex;
+    width: calc(100% - 24px);
+    height: 36px;
+    padding: 0 12px;
+    background-color: white;
+    align-items: center;
+
+    font-family: Suisse Intl;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    color: var(--black2);
+
+    &:hover {
+        background-color: var(--lightgray2);
+    }
+}
+
 .A_UserInfoName {
     font-family: Suisse Intl;
     font-size: 14px;

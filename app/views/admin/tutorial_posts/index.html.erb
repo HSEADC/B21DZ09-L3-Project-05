@@ -5,67 +5,86 @@
     <div class="Q_BannerZigZag TutorialPosts"></div>
   </div>
 
-  <div class="TagBlock">
-    <div class="TagSections">
-        <div class="TagSection Items">
-          <p class="TagSectionTitle">Предметы</p>
-          <div class="IconArrowDown Items"></div>
+  <div class="O_TutorialsPageFilters">
+    <h6 class="A_FiltersSubtitle">Выберите, что будем искать</h6>
+
+    <div class="C_TutorialsFilters">
+
+      <div class="W_TutorialsFilter">
+        <div class="M_FilterSelect Items">
+          <div class="W_FilterSelectTagsText">
+            <div class="A_Tag Card">Всё</div>
+            <p class="A_FilterSelectText">Предметы</p>
+          </div>
+          <div class="Q_Icon s26 Cross Items"></div>
         </div>
 
-        <div class="TagSection Tech">
-          <p class="TagSectionTitle">Техники</p>
-          <div class="IconArrowDown Tech"></div>
+        <div class="M_FilterSelectDropdown Items">
+          <%= link_to tagged_admin_tutorial_posts_path("одежда"), class:"A_SelectDropdownItem" do %>
+            Одежда
+          <% end %>
+          <%= link_to tagged_admin_tutorial_posts_path("обувь"), class:"A_SelectDropdownItem" do %>
+            Обувь
+          <% end %>
+          <%= link_to tagged_admin_tutorial_posts_path("аксессуары"), class:"A_SelectDropdownItem" do %>
+            Аксессуары
+          <% end %>
+          <%= link_to tagged_admin_tutorial_posts_path("другое"), class:"A_SelectDropdownItem" do %>
+            Другое
+          <% end %>
+        </div>
+      </div>
+
+      <div class="W_TutorialsFilter">
+        <div class="M_FilterSelect Tech">
+          <div class="W_FilterSelectTagsText">
+            <div class="A_Tag Card">Всё</div>
+            <p class="A_FilterSelectText">Техники</p>
+          </div>
+          <div class="Q_Icon s26 Cross Tech"></div>
         </div>
 
-        <div class="TagSection Mat">
-          <p class="TagSectionTitle">Материалы</p>
-          <div class="IconArrowDown Mat"></div>
+        <div class="M_FilterSelectDropdown Tech">
+          <%= link_to tagged_admin_tutorial_posts_path("роспись"), class:"A_SelectDropdownItem" do %>
+            Роспись
+          <% end %>
+          <%= link_to tagged_admin_tutorial_posts_path("шитьё"), class:"A_SelectDropdownItem" do %>
+            Шитьё
+          <% end %>
+          <%= link_to tagged_admin_tutorial_posts_path("апсайклинг"), class:"A_SelectDropdownItem" do %>
+            Апсайклинг
+          <% end %>
+          <%= link_to tagged_admin_tutorial_posts_path("вязание"), class:"A_SelectDropdownItem" do %>
+            Вязание
+          <% end %>
         </div>
+      </div>
+
+      <div class="W_TutorialsFilter">
+        <div class="M_FilterSelect Mat">
+          <div class="W_FilterSelectTagsText">
+            <div class="A_Tag Card">Всё</div>
+            <p class="A_FilterSelectText">Материалы</p>
+          </div>
+          <div class="Q_Icon s26 Cross Mat"></div>
+        </div>
+
+        <div class="M_FilterSelectDropdown Mat">
+          <%= link_to tagged_admin_tutorial_posts_path("краски"), class:"A_SelectDropdownItem" do %>
+            Краски
+          <% end %>
+          <%= link_to tagged_admin_tutorial_posts_path("кожа"), class:"A_SelectDropdownItem" do %>
+            Кожа
+          <% end %>
+          <%= link_to tagged_admin_tutorial_posts_path("текстиль"), class:"A_SelectDropdownItem" do %>
+            Текстиль
+          <% end %>
+          <%= link_to tagged_admin_tutorial_posts_path("бисер"), class:"A_SelectDropdownItem" do %>
+            Бисер
+          <% end %>
+        </div>
+      </div>
     </div>
-
-    <div class="TagLists">
-      <div class="TagList Items">
-            <%= link_to tagged_admin_tutorial_posts_path("одежда"), class:"TagListTag" do %>
-              одежда
-            <% end %>
-            <%= link_to tagged_admin_tutorial_posts_path("обувь"), class:"TagListTag" do %>
-              обувь
-            <% end %>
-            <%= link_to tagged_admin_tutorial_posts_path("аксессуары"), class:"TagListTag" do %>
-              аксессуары
-            <% end %>
-      </div>
-
-      <div class="TagList Tech">
-        <%= link_to tagged_admin_tutorial_posts_path("роспись"), class:"TagListTag" do %>
-          роспись
-        <% end %>
-        <%= link_to tagged_admin_tutorial_posts_path("шитьё"), class:"TagListTag" do %>
-          шитьё
-        <% end %>
-        <%= link_to tagged_admin_tutorial_posts_path("апсайклинг"), class:"TagListTag" do %>
-          апсайклинг
-        <% end %>
-        <%= link_to tagged_admin_tutorial_posts_path("вязание"), class:"TagListTag" do %>
-          вязание
-        <% end %>
-      </div>
-
-      <div class="TagList Mat">
-        <%= link_to tagged_admin_tutorial_posts_path("краски"), class:"TagListTag" do %>
-          краски
-        <% end %>
-        <%= link_to tagged_admin_tutorial_posts_path("кожа"), class:"TagListTag" do %>
-          кожа
-        <% end %>
-        <%= link_to tagged_admin_tutorial_posts_path("бисер"), class:"TagListTag" do %>
-          бисер
-        <% end %>
-      </div>
-    </div>
-    <!--- <%#= link_to admin_tutorial_posts_path do %>
-      <p class="TagSectionReset">Сбросить всё</p>
-    <%# end %> --->
   </div>
   
   <%#= render @posts %>

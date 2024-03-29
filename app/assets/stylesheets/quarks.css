@@ -12,6 +12,11 @@
         height: 32px;
     }
 
+    &.s26 {
+        width: 26px;
+        height: 26px;
+    }
+
     &.s20 {
         width: 20px;
         height: 20px;
@@ -19,6 +24,10 @@
 
     &.Search {
         background-image: url("/assets/icons/IconSearch.svg");
+    }
+
+    &.Cross {
+        background-image: url("/assets/icons/IconCross.svg");
     }
 
     &.CreatePost {
