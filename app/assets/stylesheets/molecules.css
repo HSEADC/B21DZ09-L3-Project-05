@@ -22,6 +22,63 @@
     }
 }
 
+.M_FooterTop {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.M_FooterInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-self: stretch;
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .C_FooterInfoPages {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    
+        &.mobile {
+            display: none;
+        }
+    }
+
+    .W_FooterInfoTeam {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+
+        .C_FooterInfoTeamStudents,
+        .C_FooterInfoTeamProfs {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+        }
+    }
+    
+    .W_FooterInfoContacts {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+
+        .C_SocialNetworks {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+    }
+}
+
 .M_IdeasPageFilters {
     width: calc(100% - 52px);
     display: flex;
@@ -29,6 +86,16 @@
     margin: 26px auto 52px;
     align-items: center;
     gap: 18px;
+
+    .W_FiltersScroll {
+        .C_Filters {
+        display: flex;
+        align-content: center;
+        gap: 12px;
+        /* align-self: stretch;
+        flex-wrap: wrap; */
+        }
+    }
 }
 
 .M_UserInfo {
@@ -36,6 +103,13 @@
     /* padding-left: 4px; */
     align-items: center;
     gap: 8px;
+
+    .C_UserInfoNames {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0px;
+    }
 }
 
 .M_MobileMenu {
@@ -56,6 +130,14 @@
     &.show {
         display: flex;
     }
+
+    .C_MobileMenuPages,
+    .C_MobileMenuCreate {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-self: stretch;
+    }
 }
 
 @media only screen and (max-width: 1023px) {
@@ -65,10 +147,50 @@
 }
 
 @media only screen and (max-width: 767px) {
+    .M_FooterInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+
+        .C_FooterInfoPages {
+            display: none;
+        
+            &.mobile {
+                display: flex;
+                gap: 20px;
+            }
+        }
+    
+        .W_FooterInfoTeam {
+            /* margin: 10px 0 20px 0; */
+            gap: 20px;
+        }
+        
+        .W_FooterInfoContacts {
+            .C_SocialNetworks {
+                gap: 30px;
+            }
+        }
+    }
+
     .M_IdeasPageFilters {
         width: calc(100% - 32px);
-    }
+
+        .W_FiltersScroll {
+            display: flex;
+            width: 100%;
+            overflow-x: hidden;
     
+            .C_Filters {
+                margin: 0 auto;
+                display: flex;
+                align-content: center;
+                overflow-x: scroll;
+            }
+        }
+    }
+
     .M_MobileMenu {
         top: 48px;
     }

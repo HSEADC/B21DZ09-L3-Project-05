@@ -24,14 +24,6 @@
     }
 }
 
-.C_MobileMenuPages,
-.C_MobileMenuCreate {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    align-self: stretch;
-}
-
 .AvatarAdmin {
     background-image: url("/assets/icons/IconAvatarAdmin.svg");
     background-repeat: no-repeat;

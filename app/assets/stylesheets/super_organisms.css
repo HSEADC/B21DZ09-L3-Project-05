@@ -5,10 +5,25 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+
+    .C_IdeaCards {
+    display: flex;
+    /* margin: 50px auto; */
+    width: calc(100% - 52px);
+    max-width: 1868px;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 20px 20px;
+    flex-wrap: wrap;
+    }
 }
 
 @media only screen and (max-width: 767px) {
     .S_IdeaCardsPage {
         margin-top: 48px;
+
+        .C_IdeaCards {
+            width: calc(100% - 32px);
+        }
     }
 }

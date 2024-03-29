@@ -15,7 +15,6 @@
  *= require vars
  *= require login
  *= require menubar
- *= require footer
  *= require main
  *= require about
  *= require profile
