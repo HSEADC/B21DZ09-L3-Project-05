@@ -25,6 +25,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 8px;
 
     font-family: Suisse Intl;
     font-size: 16px;
@@ -35,6 +36,8 @@
     color: var(--lightgray);
 
     background-color: black;
+
+    cursor: pointer;
 
     &:hover {
         color: var(--yellow);
@@ -83,6 +86,15 @@
 
     &.Show {
         display: none;
+    }
+
+    &.Setting {
+        height: 36px;
+        padding: 0 14px 0 12px;
+        font-size: 13px;
+        position: absolute;
+        top: 106px;
+        right: 26px;
     }
 }
 

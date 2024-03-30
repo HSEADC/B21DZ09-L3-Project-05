@@ -72,6 +72,14 @@
     justify-content: space-between;
     align-items: flex-start;
     flex-shrink: 0;
+
+    input {
+        width: 400px;
+    }
+
+    textarea {
+        width: 638px;
+    }
 }
 
 .LeftContent {

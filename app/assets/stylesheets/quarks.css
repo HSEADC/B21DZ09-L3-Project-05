@@ -50,6 +50,10 @@
         background-image: url("/assets/icons/IconBack.svg");
     }
 
+    &.Setting {
+        background-image: url("/assets/icons/IconSetting.svg");
+    }
+
     &.Options {
         background-image: url("/assets/icons/IconOptions.svg");
     }

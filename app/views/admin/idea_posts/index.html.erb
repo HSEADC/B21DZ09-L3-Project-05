@@ -38,7 +38,7 @@
   <div class="C_IdeaCards">
     <% @posts.each do |post| %>
       <%#= idea_post_url(post.title.parameterize) %>
-      <%= link_to idea_post_path(post), class: "O_IdeaCard" do %>
+      <%= link_to admin_idea_post_path(post), class: "O_IdeaCard" do %>
         <%= render post %>
       <% end %>
     <% end %>
