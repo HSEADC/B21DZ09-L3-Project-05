@@ -101,6 +101,10 @@
         &.Black {
             background-image: url("/assets/TG-Black.svg"); 
         }
+
+        &.Black2 {
+            background-image: url("/assets/TG-Black2.svg"); 
+        }
     }
 }
 
@@ -257,6 +261,16 @@
 
     width: 40px;
     height: 40px;
+}
+
+.Q_ProfilePageCardImg {
+    background-image: url("/assets/profile/AvatarPhoto.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 35px;
+
+    width: 201px;
+    height: 201px;
 }
 
 @media only screen and (min-width: 1921px) {

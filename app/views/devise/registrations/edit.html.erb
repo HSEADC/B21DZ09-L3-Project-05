@@ -1,70 +1,181 @@
-<div class="ProfilePage">
+<div class="S_ProfilePage">
 
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+  <div class="W_ProfilePageTop">
+    <div class="O_ProfilePageCard">
+      <div class="M_ProfilePageCardLeft">
+        <div class="Q_ProfilePageCardImg"></div>
+        <div class="A_ProfilePageNickName">@chiveskella</div>
+      </div>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+      <div class="M_ProfilePageCardRight">
+        <div class="C_UserProfileFullName">
+          <p class="A_UserProfileName">Николай</p>
+          <p class="A_UserProfileName">Вознесенский</p>
+        </div>
 
-  <div class="UserEditEmail">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        <p class="A_UserProfileBio">Люблю переделывать винтажные вещи</p>
+
+        <p class="A_UserProfileContacts">Контакты</p>
+
+        <div class="C_SocialNetworks">
+          <a class="Q_SocialNetwork VK Black" href="https://vk.com/lchok" target="_blank"></a>
+          <a class="Q_SocialNetwork TG Black2" href="https://t.me/loochok_media" target="_blank"></a>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
+  <div class="W_ProfilePageFilters">
+    <div class="C_ProfileFilters">
+      <div class="A_Button Filter Light">Туториалы</div>
+      <div class="A_Button Filter">Идеи</div>
+      <div class="A_Button Filter Light">Инфо</div>
+    </div>
+    <div class="O_TutorialsPageFilters">
+    <h6 class="A_FiltersSubtitle">Выберите, что будем искать</h6>
 
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
+    <div class="C_TutorialsFilters">
+
+      <div class="W_TutorialsFilter">
+        <div class="M_FilterSelect Items">
+          <div class="W_FilterSelectTagsText">
+            <div class="A_Tag Card">Всё</div>
+            <p class="A_FilterSelectText">Предметы</p>
+          </div>
+          <div class="Q_Icon s26 Cross Items"></div>
+        </div>
+
+        <div class="M_FilterSelectDropdown Items">
+          <%= link_to tagged_admin_tutorial_posts_path("одежда"), class:"A_SelectDropdownItem" do %>
+            Одежда
+          <% end %>
+          <%= link_to tagged_admin_tutorial_posts_path("обувь"), class:"A_SelectDropdownItem" do %>
+            Обувь
+          <% end %>
+          <%= link_to tagged_admin_tutorial_posts_path("аксессуары"), class:"A_SelectDropdownItem" do %>
+            Аксессуары
+          <% end %>
+          <%= link_to tagged_admin_tutorial_posts_path("другое"), class:"A_SelectDropdownItem" do %>
+            Другое
+          <% end %>
+        </div>
+      </div>
+
+      <div class="W_TutorialsFilter">
+        <div class="M_FilterSelect Tech">
+          <div class="W_FilterSelectTagsText">
+            <div class="A_Tag Card">Всё</div>
+            <p class="A_FilterSelectText">Техники</p>
+          </div>
+          <div class="Q_Icon s26 Cross Tech"></div>
+        </div>
+
+        <div class="M_FilterSelectDropdown Tech">
+          <%= link_to tagged_admin_tutorial_posts_path("роспись"), class:"A_SelectDropdownItem" do %>
+            Роспись
+          <% end %>
+          <%= link_to tagged_admin_tutorial_posts_path("шитьё"), class:"A_SelectDropdownItem" do %>
+            Шитьё
+          <% end %>
+          <%= link_to tagged_admin_tutorial_posts_path("апсайклинг"), class:"A_SelectDropdownItem" do %>
+            Апсайклинг
+          <% end %>
+          <%= link_to tagged_admin_tutorial_posts_path("вязание"), class:"A_SelectDropdownItem" do %>
+            Вязание
+          <% end %>
+        </div>
+      </div>
+
+      <div class="W_TutorialsFilter">
+        <div class="M_FilterSelect Mat">
+          <div class="W_FilterSelectTagsText">
+            <div class="A_Tag Card">Всё</div>
+            <p class="A_FilterSelectText">Материалы</p>
+          </div>
+          <div class="Q_Icon s26 Cross Mat"></div>
+        </div>
+
+        <div class="M_FilterSelectDropdown Mat">
+          <%= link_to tagged_admin_tutorial_posts_path("краски"), class:"A_SelectDropdownItem" do %>
+            Краски
+          <% end %>
+          <%= link_to tagged_admin_tutorial_posts_path("кожа"), class:"A_SelectDropdownItem" do %>
+            Кожа
+          <% end %>
+          <%= link_to tagged_admin_tutorial_posts_path("текстиль"), class:"A_SelectDropdownItem" do %>
+            Текстиль
+          <% end %>
+          <%= link_to tagged_admin_tutorial_posts_path("бисер"), class:"A_SelectDropdownItem" do %>
+            Бисер
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+
+  <div class="O_ProfilePageModal">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+
+      <div class="UserEditEmail">
+        <%= f.label :email %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
+
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+      <% end %>
+
+      <div class="field">
+        <%= f.label :password %> <i>(leave blank if you don't want to change it)</i>
+        <%= f.password_field :password, autocomplete: "new-password" %>
+        <% if @minimum_password_length %>
+          <em><%= @minimum_password_length %> characters minimum</em>
+        <% end %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i>
+        <%= f.password_field :current_password, autocomplete: "current-password" %>
+      </div>
+
+      <%= f.fields_for :profile do |profile_f| %>
+        <div>
+          <%#= profile_f.label :"Аватарка", style: "display: block" %>
+          <%#= profile_f.file_field :user_image%>
+        </div>
+
+        <div>
+          <%= profile_f.label :"@ пользователя", style: "display: block" %>
+          <%= profile_f.text_field :username %>
+        </div>
+
+        <div>
+          <%= profile_f.label :"Расскажите о себе", style: "display: block" %>
+          <%= profile_f.text_area :about %>
+        </div>
+      <% end %>
+
+      <div class="actions">
+        <%= f.submit "Update" %>
+      </div>
     <% end %>
+
+    <h3>Cancel my account</h3>
+
+    <div>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete %></div>
+
+    <%= link_to "Back", :back %>
+
+    <%= link_to "Выйти", destroy_user_session_path, method: :delete %>
   </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
-  </div>
-
-  <%= f.fields_for :profile do |profile_f| %>
-    <div>
-      <%#= profile_f.label :"Аватарка", style: "display: block" %>
-      <%#= profile_f.file_field :user_image%>
-    </div>
-
-    <div>
-      <%= profile_f.label :"@ пользователя", style: "display: block" %>
-      <%= profile_f.text_field :username %>
-    </div>
-
-    <div>
-      <%= profile_f.label :"Расскажите о себе", style: "display: block" %>
-      <%= profile_f.text_area :about %>
-    </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
-<% end %>
-
-<h3>Cancel my account</h3>
-
-<div>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete %></div>
-
-<%= link_to "Back", :back %>
-
-<br>
-<br>
-<br>
-
-<%= link_to "Выйти", destroy_user_session_path, method: :delete %>
 
 </div>

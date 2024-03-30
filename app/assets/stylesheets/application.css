@@ -16,9 +16,6 @@
  *= require main
  *= require about
  *= require create_post
- *= require posts
- *= require post_pages
- *= require comments
 
  *= require quarks
  *= require atoms

@@ -66,6 +66,21 @@
         }
     }
 
+    &.Filter {
+        width: 130px;
+        padding: 0;
+        height: 44px;
+        font-size: 13px;
+        
+        &.Light {
+            width: 128px;
+            height: 42px;
+            color: black;
+            background-color: var(--lightgray2);
+            border: 1px dashed black;
+        }
+    }
+
     &.Show {
         display: none;
     }
@@ -544,6 +559,67 @@
     font-weight: 500;
     line-height: 51px;
     text-align: center;
+}
+
+.A_ProfilePageNickName {
+    width: fit-content;
+    display: flex;
+    padding: 4px 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background: linear-gradient(180deg, rgba(31,31,31,1) 0%, rgba(0,0,0,1) 100%);
+    color: var(--lightgray);
+    
+    font-family: Suisse Intl;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 140%;
+    text-transform: uppercase;
+}
+
+.A_UserProfileName {
+    width: fit-content;
+    display: flex;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: var(--lightgray);
+    
+    font-family: Suisse Intl;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.A_UserProfileBio {
+    width: 274px;
+    padding: 10px 8px;
+    font-family: Suisse Intl;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 25.2px */
+    color: var(--black2);
+}
+
+.A_UserProfileContacts {
+    width: calc(100% - 16px);
+    display: flex;
+    padding: 8px;
+    align-items: center;
+    background-color: black;
+    color: var(--lightgray);
+    
+    font-family: Suisse Intl;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: normal;
 }
 
 @media only screen and (max-width: 1280px) {

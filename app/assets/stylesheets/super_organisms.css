@@ -116,6 +116,48 @@
     background-position: center;
 }
 
+.S_ProfilePage {
+    margin: 70px auto;
+
+    .W_ProfilePageTop {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 32px 0;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0.2) 100%);
+    }
+
+    .W_ProfilePageFilters {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        padding: 32px 0;
+        justify-content: center;
+        align-items: center;
+
+        .C_ProfileFilters {
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+        }
+    }
+
+    .C_IdeaCards {
+        display: flex;
+        /* margin: 50px auto; */
+        /* width: calc(100% - 52px); */
+        width: 100%;
+        max-width: 1868px;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: 20px 20px;
+        flex-wrap: wrap;
+    }
+}
+
 .S_SupportPage {
     margin: 100px auto 160px;
     display: flex;

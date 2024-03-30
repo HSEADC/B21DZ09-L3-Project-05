@@ -329,6 +329,12 @@
     }
 }
 
+.M_NavCreateNewPosts {
+    /* position: absolute; */
+    /* margin-top: 3px; */
+    right: 136px;
+}
+
 .M_PostOptions {
     position: absolute;
     margin-top: 98px;
@@ -359,6 +365,32 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 32px;
+}
+
+.M_ProfilePageCardLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.M_ProfilePageCardRight {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    .C_UserProfileFullName {
+        display: flex;
+        flex-direction: column;
+        gap: -7px;
+    }
+
+    .C_SocialNetworks {
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+    }
 }
 
 .M_MobileMenu {
