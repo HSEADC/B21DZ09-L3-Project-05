@@ -15,7 +15,6 @@
  *= require vars
  *= require main
  *= require about
- *= require profile
  *= require create_post
  *= require posts
  *= require post_pages

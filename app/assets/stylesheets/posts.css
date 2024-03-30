@@ -62,3 +62,11 @@
     overflow: hidden;
     white-space: nowrap;
 }
+
+.ProfilePage {
+    margin: 100px auto;
+}
+
+.UserEditEmail {
+    color: red;
+}
