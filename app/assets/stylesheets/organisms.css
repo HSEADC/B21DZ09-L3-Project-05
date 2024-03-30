@@ -101,6 +101,15 @@
             flex-direction: column;
             align-items: flex-start;
             gap: 8px;
+
+            .C_TagsGroup {
+                display: flex;
+                align-items: flex-start;
+                align-content: flex-start;
+                gap: 8px;
+                align-self: stretch;
+                flex-wrap: wrap;
+            }
         }
     }
 }
@@ -210,6 +219,18 @@
             width: 100%;
         }
     }
+}
+
+.O_SubscriptionCard {
+    display: block;
+    margin: 20px 0;
+    padding: 30px 20px 10px 20px;
+    width: 50%;
+    min-width: 600px;
+    background-color: white;
+    border: 1px solid black;
+    text-decoration: none;
+    /* color: black; */
 }
 
 @media only screen and (min-width: 1921px) {

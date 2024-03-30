@@ -23,8 +23,8 @@
             <div class="A_NavigationButton NewPost"><div class="Q_Icon s20 CreatePost"></div>Новый пост</div>
 
             <%= link_to "", root_url, class: "Q_Icon s32 Search NavDesk" %>
-            <%#= link_to "", root_url, class: "navUser" %>
-            <%= link_to "", edit_user_registration_path, class: "AvatarAdmin" %>
+            <%#= link_to "", root_url, class: "Q_NavUser" %>
+            <%= link_to "", edit_user_registration_path, class: "Q_AvatarAdmin" %>
 
             <%#= link_to "Выйти", destroy_user_session_path, method: :delete, class: "A_NavigationButton" %>
         </div>
@@ -64,7 +64,7 @@
             <%#= link_to "Новый пост", root_url, class: "A_NavigationButton NewPost" %>
 
             <%= link_to "", root_url, class: "Q_Icon s32 Search NavDesk" %>
-            <%= link_to "", edit_user_registration_path, class: "navUser" %>
+            <%= link_to "", edit_user_registration_path, class: "Q_NavUser" %>
             <%#= link_to current_user.email, edit_user_registration_path %>
 
             <%#= link_to "Выйти", destroy_user_session_path, method: :delete, class: "A_NavigationButton" %>
@@ -95,7 +95,7 @@
 
         <div class="C_HeaderSections">
             <%= link_to "", root_url, class: "Q_Icon s32 Search NavDesk" %>
-            <%#= link_to "", root_url, class: "navUser" %>
+            <%#= link_to "", root_url, class: "Q_NavUser" %>
 
             <%= link_to "Войти", new_user_session_path, class: "A_NavigationButton SignIn" %>
             <%#= link_to "Регистрация", new_user_registration_path, class: "A_NavigationButton"  %>

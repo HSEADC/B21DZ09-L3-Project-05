@@ -10,23 +10,6 @@
     /* color: black; */
 }
 
-.commentReplies {
-    display: flex;
-}
-
-.commentReplies > div {
-    padding: 20px 0;
-}
-
-.M_PostComment {
-    /* max-width: 464px; */
-    display: flex;
-    align-items: flex-start;
-    padding: 8px 0;
-    gap: 12px;
-    /* margin-bottom: 10px; */
-}
-
 .PostCommentUserAvatar {
     background-image: url("/assets/icons/IconUser.svg");
     background-repeat: no-repeat;

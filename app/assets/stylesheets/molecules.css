@@ -281,6 +281,15 @@
     }
 }
 
+.M_PostComment {
+    /* max-width: 464px; */
+    display: flex;
+    align-items: flex-start;
+    padding: 8px 0;
+    gap: 12px;
+    /* margin-bottom: 10px; */
+}
+
 .M_PostCommentReplies {
     display: flex;
     flex-direction: column;

@@ -13,18 +13,13 @@
  *= require basics
  *= require fonts
  *= require vars
- *= require menubar
  *= require main
  *= require about
  *= require profile
  *= require create_post
- *= require subscriptions
  *= require posts
- *= require post_cards
  *= require post_pages
  *= require comments
- *= require support
- *= require categories
 
  *= require quarks
  *= require atoms
