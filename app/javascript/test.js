@@ -52,7 +52,7 @@ function addLike() {
     const like = document.querySelector('.Q_Icon.Like')
   
     like.addEventListener('click', () => {
-        menu.classList.toggle('active')
+        like.classList.toggle('active')
     })
 }
 
@@ -131,6 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (document.body.classList.contains('post_page')) {
         postOptionVisibility()
+        addLike()
     }
 
     mobileMenuVisibility()

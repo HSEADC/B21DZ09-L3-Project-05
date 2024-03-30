@@ -91,7 +91,7 @@
 
   <div class="C_TutorialCards">
     <% @posts.each do |post| %>
-      <%= link_to admin_tutorial_post_path(post), class: "O_TutorialCard" do %>
+      <%= link_to tutorial_post_path(post), class: "O_TutorialCard" do %>
         <%= render post %>
       <% end %>
     <% end %>

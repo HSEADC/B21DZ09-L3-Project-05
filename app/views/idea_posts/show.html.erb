@@ -2,17 +2,14 @@
 
 <div class="S_IdeaPage">
 
-  <%= link_to :back do %>
-    <div class="A_NavigationButton Page Desk Back Fixed">
+  <%= link_to :idea_posts do %>
+    <div class="A_NavigationButton Page Back Fixed">
       <div class="Q_Icon s16 Back"></div>
       Назад
     </div>
-    <div class="A_NavigationButton Page Mob Back Fixed">
-      <div class="Q_Icon s16 Back"></div>
-    </div>
   <% end %>
 
-  <div class="M_PostOptions">
+  <div class="M_PostOptions Idea">
     <% if can? :manage, @post %>
       <%= link_to edit_idea_post_path(@post) do %>
           <div class="A_NavigationButton PostOption">
@@ -23,8 +20,6 @@
       <%= link_to "Пожаловаться", welcome_support_url, class: "A_NavigationButton PostOption" %>
     <% end %>
   </div>
-
-  <%#= render @post %>
 
   <%= render partial: "idea_posts/idea_post_page", locals: {post: @post} %>
   

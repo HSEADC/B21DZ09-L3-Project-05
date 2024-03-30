@@ -22,6 +22,55 @@
     }
 }
 
+.M_Form {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: center;
+    border-radius: 29px;
+    filter:drop-shadow(0px 6px 12px rgba(0,0,0,0.06));
+
+    &.SignIn,
+    &.SignUp {
+        /* width: 406px; */
+        padding: 19px 21px 21px;
+        gap: 21px
+    }
+
+    .C_FormInputs {
+        width: 100%;
+        margin-bottom: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        .W_FormInputText {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+    }
+
+    .C_FormButtons {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        input {
+            /* width: 100%; */
+            border: 0;
+        }
+    }
+}
+
+#user_email,
+#user_password,
+#user_password_confirmation {
+    width: 389px;
+}
+
 .M_FooterTop {
     display: flex;
     width: 100%;
@@ -178,14 +227,45 @@
     gap: 12px;
 }
 
+.M_CreateCommentBlock {
+    width: calc(100% - 24px);
+    margin-top: 14px;
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    filter:drop-shadow(0px 1px 2px rgba(0,0,0,0.08));
+
+    input {
+        border: 0;
+    }
+}
+
 .M_CommentsBlock {
     width: 100%;
-    min-height: 160px;
+    min-height: 120px;
     margin-top: 20px;
     display: flex;
     flex-direction: column;
+    /* justify-content: end; */
     overflow-y: scroll; 
     flex: 1 0 0;
+
+    .W_IdeaPageComment {
+        margin-bottom: 8px;
+    }
+
+    &.Tutorial {
+        min-height: fit-content;
+        overflow-y: visible; 
+    }
+
+    .W_TutorialPageComment {
+        margin-bottom: 8px;
+    }
 
     &::-webkit-scrollbar {
         -webkit-appearance: none;
@@ -204,7 +284,7 @@
 .M_PostCommentReplies {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     /* gap: 19px; */
     padding-left: 40px;
     /* margin-bottom: 20px; */
@@ -218,11 +298,19 @@
 .M_PostOptions {
     display: none;
     position: fixed;
-    right: 86px;
-    top: 70px;
     background-color: white;
     border: 1px dashed black;
     z-index: 200;
+
+    &.Idea {
+        right: 156px;
+        top: 70px; 
+    }
+
+    &.Tutorial {
+        right: 436px;
+        top: 56px; 
+    }
 
     &.show {
         display: flex;
@@ -245,6 +333,23 @@
         width: auto;
         height: auto;
     } */
+}
+
+.M_TutorialPageTitleDescription {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+}
+
+.M_TutorialPageTexts {
+    display: flex;
+    width: calc(100% - 16px);
+    padding: 10px 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
 }
 
 .M_MobileMenu {
@@ -339,7 +444,32 @@
         max-width: 378px;
     }
 
+    .M_CommentsBlock {
+        min-height: fit-content;
+        overflow-y: visible;
+        flex: 0 0 0;
+    }
+
     .M_MobileMenu {
         top: 48px;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    .M_Form,
+    #new_user {
+        width: calc(100% - 42px);
+    }
+
+    #user_email,
+    #user_password,
+    #user_password_confirmation {
+        width: calc(100% - 30px);
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .M_CreateCommentBlock {
+        flex-direction: column;
     }
 }

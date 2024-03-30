@@ -1,39 +1,40 @@
 <p style="color: green"><%= notice %></p>
 
-<div class="TutorialPostPage">
+<div class="S_TutorialPage">
 
-  <%= link_to :admin_tutorial_posts, class:"A_NavigationButton Page Back Fixed" do %>
-    <div class="Q_Icon s16 Back Back"></div>
+  <%= link_to :tutorial_posts, class:"A_NavigationButton Page Back Fixed" do %>
+    <div class="Q_Icon s16 Back"></div>
     Назад
   <% end %>
 
-  <% if can? :manage, @post %>
-    <%= link_to edit_admin_tutorial_post_path(@post) do %>
-        <div class="A_NavigationButton Page Edit Fixed">
-            <div class="Q_Icon Edit"></div>
-            Редактировать
-        </div>
+  <div class="M_PostOptions Tutorial">
+    <% if can? :manage, @post %>
+      <%= link_to edit_tutorial_post_path(@post) do %>
+          <div class="A_NavigationButton PostOption">
+              Редактировать
+          </div>
+      <% end %>
+      <%= button_to "Удалить пост", tutorial_post_path(@post), method: :delete, class: "A_NavigationButton PostOption" %>
+      <%= link_to "Пожаловаться", welcome_support_url, class: "A_NavigationButton PostOption" %>
     <% end %>
-    <%#= button_to "Удалить пост", admin_post_path(@post), method: :delete %>
-  <% end %>
+  </div>
 
-  <div class="TutorialPostPage Gride">
+  <div class="S_TutorialPage Gride">
 
-    <%#= render @post %>
+    <%= render partial: "tutorial_posts/tutorial_post_page", locals: {post: @post} %>
 
-    <%= render partial: "admin/tutorial_posts/tutorial_post_page", locals: {post: @post} %>
-
-    <div class="TutorialPostPageComments">
-      <p class="TutorialPostPageCommentTitle">Комментарии</p>
-      <div class="TutorialPostPageCommentBlock">
+    <div class="O_TutorialPageComments">
+      <p class="A_PageCommentsTitle">Комментарии</p>
+      <div class="M_CommentsBlock Tutorial">
         <div id="comments">
           <% @post.comments.each do |comment| %>
-            <div class="TutorialPagePostComment">
+            <div class="W_TutorialPageComment">
               <%= render comment, post: @post %>
             </div>
           <% end %>
         </div>
       </div>
+      <div class="W_CreateComment"> <%= render "comments/form", post: @post, comment: Comment.new %> </div>
     </div>
 
   </div>
@@ -41,16 +42,16 @@
   <div class="IdeaPostPageSeeAlso">
     <div class="IdeaPostPageSeeAlsoTitle">Смотрите также:</div>
     <div class="IdeaPostPageSeeAlsoCards">
-        <%= link_to admin_tutorial_post_path(22), class: "O_TutorialCard PP-1" do %>
+        <%= link_to tutorial_post_path(22), class: "O_TutorialCard PP-1" do %>
             <%= render @recom_post1 %>
         <% end %>
-        <%= link_to admin_tutorial_post_path(24), class: "O_TutorialCard PP-2" do %>
+        <%= link_to tutorial_post_path(24), class: "O_TutorialCard PP-2" do %>
             <%= render @recom_post2 %>
         <% end %>
-        <%= link_to admin_tutorial_post_path(23), class: "O_TutorialCard PP-3" do %>
+        <%= link_to tutorial_post_path(23), class: "O_TutorialCard PP-3" do %>
             <%= render @recom_post3 %>
         <% end %>
     </div>
   </div>
-  
+
 </div>

@@ -223,6 +223,30 @@
     category_id: 2,
     type: 'TutorialPost',
     tag_list: ['аксессуары']
+  },
+  {
+    title: 'Как расписать кеды',
+    description: 'Если вы начинающий кастомер, обычные кеды идеально подойдут для экспериментов. Можно превратить пару скучных белых кед во что-нибудь действительно впечатляющее. Однако для раскраски тканевой обуви необходимо приложить усилия, ведь вам придется проработать дизайн, подготовить необходимые материалы и расчистить рабочую поверхность перед началом работы. Чтобы добавить в ваш гардероб ярких цветов, возьмите в руки кеды и раскройте свой творческий потенциал.',
+    post_image: File.open(Rails.root.join('public', 'image_post', 'image_13.jpg')),
+    category_id: 2,
+    type: 'TutorialPost',
+    tag_list: ['обувь', 'роспись']
+  },
+  {
+    title: 'Первый опыт кастома',
+    description: 'Это было несколько лет назад, и вот где мы теперь...',
+    post_image: File.open(Rails.root.join('public', 'image_post', 'image_8.jpg')),
+    category_id: 1,
+    type: 'IdeaPost',
+    tag_list: ['одежда', 'роспись']
+  },
+  {
+    title: 'Обновлённая косуха',
+    description: 'немного красок + много труда = бесконечность стиля',
+    post_image: File.open(Rails.root.join('public', 'image_post', 'image_9.jpg')),
+    category_id: 1,
+    type: 'IdeaPost',
+    tag_list: ['одежда', 'роспись', 'кожа']
   }
 ]
 
@@ -233,7 +257,7 @@ def seed
   create_users
   create_categories(@categories_data)
   create_posts(@posts_data)
-  create_comments(3..8)
+  create_comments(5..10)
   create_comment_replies(30)
 end
 

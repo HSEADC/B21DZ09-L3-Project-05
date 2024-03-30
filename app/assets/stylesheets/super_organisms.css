@@ -20,8 +20,9 @@
     }
 }
 
-.S_IdeaPage {
-    margin: 40px auto 160px;
+.S_IdeaPage,
+.S_TutorialPage {
+    margin: 40px auto 90px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,6 +39,103 @@
     }
 }
 
+.S_TutorialPageContent {
+    margin-top: 14px;
+    margin-bottom: 36px;
+    grid-column: 7 / 19;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+
+    .W_PageInfoAbout {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &.Tutorial {
+            gap: 18px;
+        }
+
+        .W_UserInfoOptions {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            align-self: stretch;
+        }
+
+        .C_TagsGroup {
+            display: flex;
+            align-items: flex-start;
+            align-content: flex-start;
+            gap: 8px;
+            align-self: stretch;
+            flex-wrap: wrap;
+        }
+    }
+
+    .W_TutorialPageContacts {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        padding-bottom: 22px;
+        border-bottom: 1px solid #B8B8B8;
+
+        .W_UserInfoOptions {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            align-self: stretch;
+        }
+
+        .C_SocialNetworks {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+    }
+}
+
+.S_LoginPage {
+    margin: 50px auto 0px;
+    display: flex;
+    flex-direction: column;
+    padding: 76px 0 50px;
+    gap: 46px;
+    align-items: center;
+
+    background-image: url("/assets/SquareGrid.svg");
+    /* background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.00) 100%), #E6E6E6; */
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@media only screen and (max-width: 1280px) {
+    .S_TutorialPageContent {
+        gap: 26px;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+    .S_TutorialPageContent {
+        /* margin-bottom: 60px; */
+        grid-column: 6 / 20;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .S_TutorialPageContent {
+        /* margin-bottom: 40px; */
+        grid-column: 5 / 21;
+    }
+}
+
 @media only screen and (max-width: 767px) {
     .S_IdeaCardsPage,
     .S_TutorialCardsPage {
@@ -49,8 +147,9 @@
         }
     }
 
-    .S_IdeaPage{
-    margin: 40px auto 70px;
+    .S_IdeaPage,
+    .S_TutorialPage {
+    margin: 40px auto 30px;
     width: calc(100% - 32px);
 
     &.Gride {
@@ -62,5 +161,26 @@
         margin: 26px auto;
         /* background-color: aqua; */
         }
+    }
+
+    .S_TutorialPageContent {
+        margin-top: 26px;
+        margin-bottom: 20px;
+        /* margin-bottom: 40px; */
+        grid-column: 1 / 3;
+    }
+
+    .S_LoginPage {
+        margin: 48px auto 0px;
+        padding: 26px 0 30px;
+        gap: 28px;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    .S_LoginPage {
+        margin: 48px 16px 0px;
+        align-items: center;
     }
 }

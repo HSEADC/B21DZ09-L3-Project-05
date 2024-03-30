@@ -11,15 +11,11 @@
     <%= button_to "Удалить категорию", [:admin, @category], method: :delete %>
   </div>
 
-  <br>
-
   <div>
     <%# if can? :create, Post %>
       <%= link_to "Новый пост", new_admin_post_path %>
     <%# end %>
   </div>
-
-  <br>
 
   <div id="posts">
     <% @category.posts.each do |postcat| %>

@@ -89,10 +89,18 @@
 
     &.VK {
         background-image: url("/assets/VK.svg"); 
+
+        &.Black {
+            background-image: url("/assets/VK-Black.svg"); 
+        }
     }
 
     &.TG {
         background-image: url("/assets/TG.svg"); 
+
+        &.Black {
+            background-image: url("/assets/TG-Black.svg"); 
+        }
     }
 }
 
@@ -109,6 +117,11 @@
     &.s46 {
         width: 46px;
         height: 46px;
+    }
+
+    &.s68 {
+        width: 68px;
+        height: 68px;
     }
 }
 
@@ -154,10 +167,10 @@
 .Q_FooterTopR {
     color: var(--lightgray);
     font-family: Suisse Intl;
-    font-size: 64px;
+    font-size: 42px;
     font-style: normal;
     font-weight: 700;
-    line-height: 54px;
+    line-height: 90%;
 }
 
 .Q_IdeaCardImg {
@@ -220,6 +233,14 @@
 @media only screen and (min-width: 1441px) and (max-width: 1920px) {
     .Q_IdeaPageImg {
         grid-column: 3 / 14;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .Q_Avatar {
+        &.CreateComment {
+            display: none;
+        }
     }
 }
 
