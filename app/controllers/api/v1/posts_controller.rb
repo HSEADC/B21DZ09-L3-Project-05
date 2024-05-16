@@ -51,7 +51,7 @@ class Api::V1::PostsController < Api::V1::ApplicationController
         p = params.require(:tutorial_post)
       end
 
-      p.permit(:title, :type, :description, :post_image, :contetn_link, :tag_list, :category_id, :created_at)
+      p.permit(:title, :type, :description, :post_image, :contetn_link, :tag_list, :created_at)
     end
 
 end

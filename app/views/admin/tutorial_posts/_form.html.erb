@@ -52,10 +52,6 @@
     </div> --->
 
     <div>
-      <div>
-        <%= form.label :"Категория" %>
-        <%= form.select :category_id, options_for_select(Category.all.map { |category| [category.name, category.id]})%>
-      </div>
 
       <div>
         <%= form.label :"Тип" %>

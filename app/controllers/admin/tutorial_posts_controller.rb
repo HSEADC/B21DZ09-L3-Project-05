@@ -92,7 +92,7 @@ class Admin::TutorialPostsController < Admin::ApplicationController
 
     # Only allow a list of trusted parameters through.
     def tutorial_post_params
-      params.require(:tutorial_post).permit(:title, :type, :description, :post_image, :tag_list, :category_id).merge(user_id: current_user.id)
+      params.require(:tutorial_post).permit(:title, :type, :description, :post_image, :tag_list).merge(user_id: current_user.id)
     end
 end
   

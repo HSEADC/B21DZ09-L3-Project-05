@@ -92,6 +92,6 @@ class IdeaPostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def idea_post_params
-      params.require(:idea_post).permit(:title, :type, :description, :post_image, :tag_list, :category_id).merge(user_id: current_user.id)
+      params.require(:idea_post).permit(:title, :type, :description, :post_image, :tag_list).merge(user_id: current_user.id)
     end
 end
