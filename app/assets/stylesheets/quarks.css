@@ -219,7 +219,6 @@
     position: relative;
     grid-column: 3 / 14;
     padding-top: 100%;
-    /* background-color: var(--white); */
     
     img {
         position: absolute;
