@@ -19,6 +19,8 @@ class WelcomeController < ApplicationController
     @recom_post16 = Post.find_by(id: "9")
     @recom_post17 = Post.find_by(id: "14")
     @recom_post18 = Post.find_by(id: "16")
+
+    # ActionCable.server.broadcast("notifications_channel", { body: "LOOCHOK" })
   end
 
   def about

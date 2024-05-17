@@ -33,6 +33,8 @@ class Admin::CommentsController < Admin::ApplicationController
     @post = Post.find(params[:post_id])
     @comment = Comment.new(comment_params.merge(post_id: @post.id))
 
+    ActionCable.server.broadcast("notifications_#{@post.user.id}", { text: "New comment for your post", type: "Post", id: @post.id })
+
     respond_to do |format|
       if @comment.save
         format.html { redirect_to admin_post_url(@post), notice: "Комментарий успешно создан" }

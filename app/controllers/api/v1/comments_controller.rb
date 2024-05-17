@@ -15,6 +15,8 @@ class Api::V1::CommentsController < Api::V1::ApplicationController
     @user = User.find_by_jti(decrypt_payload[0]['jti'])
     @comment = @user.comments.new(comment_params)
 
+    ActionCable.server.broadcast("notifications_#{@post.user.id}", { text: "New comment for your post", type: "Post", id: @post.id })
+
     if @comment.save
       render json: @comment.as_json
     else
