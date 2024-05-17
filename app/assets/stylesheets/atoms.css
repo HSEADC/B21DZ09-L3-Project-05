@@ -109,6 +109,7 @@
     text-transform: uppercase;
     color: var(--lightgray);
 
+    /* background-color: red; */
     background-color: black;
 
     &:hover {

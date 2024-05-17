@@ -22,7 +22,8 @@
         <div class="C_HeaderSections">
             <div class="A_NavigationButton NewPost"><div class="Q_Icon s20 CreatePost"></div>Новый пост</div>
 
-            <%= link_to "", root_url, class: "Q_Icon s32 Search NavDesk" %>
+            <%#= link_to "", root_url, class: "Q_Icon s32 Search NavDesk" %>
+            <%= render 'search_form' %>
             <%#= link_to "", root_url, class: "Q_NavUser" %>
             <%= link_to "", edit_user_registration_path, class: "Q_AvatarAdmin" %>
 
@@ -63,7 +64,8 @@
         <div class="C_HeaderSections">
             <%#= link_to "Новый пост", root_url, class: "A_NavigationButton NewPost" %>
 
-            <%= link_to "", root_url, class: "Q_Icon s32 Search NavDesk" %>
+            <%#= link_to "", root_url, class: "Q_Icon s32 Search NavDesk" %>
+            <%= render 'search_form' %>
             <%= link_to "", edit_user_registration_path, class: "Q_NavUser" %>
             <%#= link_to current_user.email, edit_user_registration_path %>
 
@@ -94,7 +96,8 @@
         <%= link_to "ÒÒ", root_url, class: "A_Logo" %>
 
         <div class="C_HeaderSections">
-            <%= link_to "", root_url, class: "Q_Icon s32 Search NavDesk" %>
+            <%#= link_to "", root_url, class: "Q_Icon s32 Search NavDesk" %>
+            <%= render 'search_form' %>
             <%#= link_to "", root_url, class: "Q_NavUser" %>
 
             <%= link_to "Войти", new_user_session_path, class: "A_NavigationButton SignIn" %>

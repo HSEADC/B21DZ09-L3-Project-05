@@ -28,4 +28,8 @@ class WelcomeController < ApplicationController
     @title = "LÒÒCHOK | О нас"
     # end
   end
+
+  def search
+    @items = PgSearch.multisearch(params['search'])
+  end
 end

@@ -8,7 +8,7 @@
     justify-content: space-between;
     align-items: center;
 
-    background-color: black;
+    background-color: red;
     border-bottom: 1px solid black;
 
     z-index: 100;
@@ -28,6 +28,15 @@
     align-items: center;
 
     background: var(--black);
+}
+
+.O_HeaderSearchPreview {
+    position: absolute;
+    margin-top: 100px;
+    height: 400px;
+    background-color: white;
+    overflow: scroll;
+    z-index: 101;
 }
 
 .O_IdeaCard {

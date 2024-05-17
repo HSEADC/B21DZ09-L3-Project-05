@@ -1,0 +1,7 @@
+<div class="O_HeaderSearchPreview" id="search_preview" data-search-target="searchPreview">
+  <% items.each do |item| %>
+    <%#= item.to_json %>
+    
+    <%= render item.searchable %>
+  <% end %>
+</div>

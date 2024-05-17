@@ -27,17 +27,22 @@
   </div>
 
   <div class="RightContent">
-  <div class="TopContent">
+    <div class="TopContent">
 
-    <div class="BlockContent Title">
-      <%= form.label :"Название проекта", class:"TitleNewContent" %>
-      <%= form.text_field :title, placeholder:"Кастом", class:"FieldContent Title" %>
-    </div>
+      <div class="BlockContent Title">
+        <%= form.label :"Название проекта", class:"TitleNewContent" %>
+        <%= form.text_field :title, placeholder:"Кастом", class:"FieldContent Title" %>
+      </div>
 
-    <div class="BlockContent Tags">
-      <%= form.label :"Тэги", class:"TitleNewContent" %>
-      <%= form.text_field :tag_list, value: tutorial_post.tag_list.join(", "), class:"FieldContent Tags"  %>
-    </div>
+      <div class="BlockContent Tags">
+        <%= form.label :"Тэги", class:"TitleNewContent" %>
+        <%= form.text_field :tag_list, value: tutorial_post.tag_list.join(", "), class:"FieldContent Tags"  %>
+        <div>
+          <% ActsAsTaggableOn::Tag.for_context(:tags).each do |tag| %>
+            <%= tag %>
+          <% end %>
+        </div>
+      </div>
     </div>
 
     <div class="BottomContent">

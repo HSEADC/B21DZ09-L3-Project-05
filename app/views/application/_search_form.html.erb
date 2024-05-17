@@ -1,0 +1,9 @@
+<div class="S_HeaderSearch" data-controller="search">
+    <%= form_with url: welcome_search_path, method: :get, data: { search_target: "searchForm" } do |f| %>
+        <%= f.text_field :search, data: { search_target: "searchField", action: "input->search#GetData" } %>
+        <%= f.submit "Поиск" %>
+        <%= f.submit "Поиск", data: { search_target: "submitButton", turbo_stream: true }, hidden: true %>
+    <% end %>
+
+    <div class="O_HeaderSearchPreview" id="search_preview" data-search-target="searchPreview"></div>
+</div>
