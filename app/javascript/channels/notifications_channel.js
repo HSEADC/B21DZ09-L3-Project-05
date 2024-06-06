@@ -1,7 +1,7 @@
 import Cookies from 'js-cookie';
-import consumer from 'channels/consumer';
+import consumer from './consumer';
 
-if (Cookies.get('user_id') != undefined) {
+
   consumer.subscriptions.create('NotificationsChannel', {
     connected() {
       // Called when the subscription is ready for use on the server
@@ -18,4 +18,3 @@ if (Cookies.get('user_id') != undefined) {
       console.log('NotificationsChannel received', data);
     },
   });
-}
