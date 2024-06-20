@@ -4,7 +4,7 @@ class Api::V1::SessionsController < Devise::SessionsController
     skip_before_action :verify_authenticity_token, only: [:create, :destroy]
     skip_before_action :verify_signed_out_user, only: [:destroy]
 
-    def create
+    def create 
       if @user.valid_password?(sign_in_params[:password])
         sign_in "user", @user
 

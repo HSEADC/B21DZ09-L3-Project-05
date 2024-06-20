@@ -13,10 +13,8 @@
 
   <div class="M_CreateCommentBlock">
     <div class="Q_Avatar s68 CreateComment"></div>
-
     <%= form.label :"Комментарий", style: "display: none" %>
     <%= form.text_area :body, placeholder: "Ваш комментарий", class: "A_CreateCommentInput" %>
-  
     <%= form.submit :"Отправить", class: "A_NavigationButton CreateComment" %>
   </div>
 <% end %>

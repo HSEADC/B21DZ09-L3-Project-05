@@ -1,72 +1,76 @@
 <div class="S_IdeaPage Gride">
 
-    <div class="Q_IdeaPageImg">
-        <%= image_tag post.post_image.url if post.post_image.url %>
-    </div>
+  <div class="Q_IdeaPageImg">
+    <%= image_tag post.post_image.url if post.post_image.url %>
+  </div>
 
-    <div class="O_IdeaPageInfoBlock">
+  <div class="O_IdeaPageInfoBlock">
 
-        <div class="W_IdeaPageInfoTop">
-            <div class="W_PageInfoAbout Idea">
-                <p class="A_PostDate">
-                    <%#= post.created_at #%>
-                    сегодня в&nbsp;10:05
-                </p>
+    <div class="W_IdeaPageInfoTop">
+      <div class="W_PageInfoAbout Idea">
+        <p class="A_PostDate">
+          <%#= post.created_at #%>
+          сегодня в&nbsp;10:05
+        </p>
 
-                <div class="W_UserInfoOptions">
-                    <div class="M_UserInfo">
-                        <div class="Q_Avatar"></div>
-                        <div class="C_UserInfoNames">
-                            <p class="A_UserInfoName UN"><%= post.user.email.split("@")[0] %></p>
-                            <p class="A_UserInfoName NN">@<%= post.user.email.split("@")[0] %></p>
-                        </div>
-                    </div>
-                    <div class="Q_Icon s36 Options"></div>
-                </div>
-
-                <div class="C_TagsGroup">
-                    <% post.tag_list.each do |tag| %>
-                        <%= link_to tagged_admin_idea_posts_path(tag), class:"A_Tag Card" do %>
-                            <%= tag %>
-                        <% end %>
-                    <% end %>
-                </div>
+        <div class="W_UserInfoOptions">
+          <div class="M_UserInfo">
+            <div class="Q_Avatar"></div>
+            <div class="C_UserInfoNames">
+              <p class="A_UserInfoName UN"><%= post.user.email.split("@")[0] %></p>
+              <p class="A_UserInfoName NN">@<%= post.user.email.split("@")[0] %></p>
             </div>
-
-            <div class="M_IdeaPageIntoTexts">
-                <h3 class="A_IdeaPageInfoTitle"><%= post.title%></h3>
-                <p class="A_IdeaPageInfoDescription"><%= post.description %></p>
-            </div>
+          </div>
+          <div class="Q_Icon s36 Options"></div>
         </div>
 
-        <div class="W_IdeaPageInfoComments">
-            <p class="A_PageCommentsTitle">Комментарии</p>
-            <div class="M_CommentsBlock">
-                <div id="comments">
-                    <% @post.comments.each do |comment| %>
-                        <div class="W_IdeaPageComment">
-                            <%= render comment, post: @post %>
-                        </div>
-                    <% end %>
-                </div>
-            </div>
-            <div> <%= render "comments/form", post: @post %> </div>
+        <div class="W_UserInfoOptions">
+          <div class="C_TagsGroup">
+            <% post.tag_list.each do |tag| %>
+              <%= link_to tagged_idea_posts_path(tag), class:"A_Tag Card" do %>
+                <%= tag %>
+              <% end %>
+            <% end %>
+          </div>
+          <div class="Q_Icon s32 Like"></div>
         </div>
+      </div>
+
+      <div class="M_IdeaPageIntoTexts">
+        <h3 class="A_IdeaPageInfoTitle"><%= post.title%></h3>
+        <p class="A_IdeaPageInfoDescription"><%= post.description %></p>
+      </div>
     </div>
+
+    <div class="W_IdeaPageInfoComments">
+      <p class="A_PageCommentsTitle">Комментарии</p>
+      <div class="M_CommentsBlock">
+        <div id="comments">
+          <% @post.comments.each do |comment| %>
+            <div class="W_IdeaPageComment">
+              <%= render comment, post: @post %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="W_CreateComment"> <%= render "comments/form", post: @post, comment: Comment.new %> </div>
+    </div>
+
+  </div>
 
 </div>
 
 <div class="IdeaPostPageSeeAlso">
-    <div class="IdeaPostPageSeeAlsoTitle">Смотрите также:</div>
-    <div class="IdeaPostPageSeeAlsoCards">
-        <%= link_to admin_idea_post_path(13), class: "O_IdeaCard PP-1" do %>
-            <%= render @recom_post1 %>
-        <% end %>
-        <%= link_to admin_idea_post_path(16), class: "O_IdeaCard PP-2" do %>
-            <%= render @recom_post2 %>
-        <% end %>
-        <%= link_to admin_idea_post_path(11), class: "O_IdeaCard PP-3" do %>
-            <%= render @recom_post3 %>
-        <% end %>
-    </div>
+  <div class="IdeaPostPageSeeAlsoTitle">Смотрите также:</div>
+  <div class="IdeaPostPageSeeAlsoCards">
+    <%= link_to idea_post_path(13), class: "O_IdeaCard PP-1" do %>
+      <%= render @recom_post1 %>
+    <% end %>
+    <%= link_to idea_post_path(16), class: "O_IdeaCard PP-2" do %>
+      <%= render @recom_post2 %>
+    <% end %>
+    <%= link_to idea_post_path(11), class: "O_IdeaCard PP-3" do %>
+      <%= render @recom_post3 %>
+    <% end %>
+  </div>
 </div>

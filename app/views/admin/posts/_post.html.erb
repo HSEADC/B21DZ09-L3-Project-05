@@ -9,28 +9,28 @@
       <div class="tagChips">
         <%= tag %>
       </div>
+    </div>
+
+    <p class="postDate">
+      <%= post.created_at %>
+    </p>
+
+    <p>
+      <%= post.user.email %>
+    </p>
+
+    <h2>
+      <%= post.title%>
+    </h2>
+
+    <%= image_tag post.post_image.url, width: 300 if post.post_image.url %>
+
+    <p>
+      <%= post.description %>
+    </p>
+
+    <p>
+      Комментариев: <%= post.comments.count %>
+    </p>
+
   </div>
-
-  <p class="postDate">
-    <%= post.created_at %>
-  </p>
-
-  <p>
-    <%= post.user.email %>
-  </p>
-
-  <h2>
-    <%= post.title%>
-  </h2>
-
-  <%= image_tag post.post_image.url, width: 300 if post.post_image.url %>
-
-  <p>
-    <%= post.description %>
-  </p>
-
-  <p>
-    Комментариев: <%= post.comments.count %>
-  </p>
-
-</div>

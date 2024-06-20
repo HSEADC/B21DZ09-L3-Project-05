@@ -8,9 +8,9 @@
     <% @comments.each do |comment| %>
       <div class="commentCard">
         <%= render comment, post: comment.post %>
-          <p>
-            <%#= link_to "Показать этот комментарий", [:admin, comment] %>
-          </p>
+        <p>
+          <%#= link_to "Показать этот комментарий", [:admin, comment] %>
+        </p>
       </div>
     <% end %>
   </div>

@@ -2,33 +2,33 @@
 
   <div class="A_BannerSignIn"></div>
 
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-      <%= render "devise/shared/error_messages", resource: resource %>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
 
-      <div class="M_Form SignUp">
-        <h4 class="A_FormTitle">Регистрация</h4>
+    <div class="M_Form SignUp">
+      <h4 class="A_FormTitle">Регистрация</h4>
 
-        <div class="C_FormInputs">
-          <div class="W_FormInputText">
-            <%= f.label :email, class:"A_InputSubtitle" %>
-            <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"A_FormInput" %>
-          </div>
-
-          <div class="W_FormInputText">
-            <%= f.label :password, class:"A_InputSubtitle" %>
-            <%= f.password_field :password, autocomplete: "new-password", class:"A_FormInput" %>
-          </div>
-
-          <div class="W_FormInputText">
-            <%= f.label :password_confirmation, class:"A_InputSubtitle" %>
-            <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"A_FormInput" %>
-          </div>
+      <div class="C_FormInputs">
+        <div class="W_FormInputText">
+          <%= f.label :email, class:"A_InputSubtitle" %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"A_FormInput", placeholder:"Email" %>
         </div>
 
-        <div class="C_FormButtons">
-          <%= f.submit "Создать аккаунт", class:"A_Button SignIn" %>
-          <%= render "devise/shared/links" %>
+        <div class="W_FormInputText">
+          <%= f.label :password, class:"A_InputSubtitle" %>
+          <%= f.password_field :password, autocomplete: "new-password", class:"A_FormInput", placeholder:"Пароль" %>
         </div>
+
+        <div class="W_FormInputText">
+          <%= f.label :password_confirmation, class:"A_InputSubtitle" %>
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"A_FormInput", placeholder:"Подтверждение пароля" %>
+        </div>
+      </div>
+
+      <div class="C_FormButtons">
+        <%= f.submit "Создать аккаунт", class:"A_Button SignIn" %>
+        <%= render "devise/shared/links" %>
+      </div>
     <% end %>
 
   </div>

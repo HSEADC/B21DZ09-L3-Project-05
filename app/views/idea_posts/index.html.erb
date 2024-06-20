@@ -1,39 +1,35 @@
 <div class="S_IdeaCardsPage">
-
   <div class="M_Banner IdeaPosts">
     <h1 class="A_BannerTitle IP-1">Идеи</h1>
     <h1 class="A_BannerTitle IP-2">кастома</h1>
     <div class="Q_BannerZigZag IdeaPosts"></div>
   </div>
-
   <div class="M_IdeasPageFilters">
     <h6 class="A_FiltersSubtitle">Можете выбрать категорию</h6>
-
     <section class="W_FiltersScroll">
       <div class="C_IdeasFilters">
-        <%= link_to admin_idea_posts_path, class:"A_Tag IdeasFilter Active" do %>
+        <%= link_to idea_posts_path, class:"A_Tag IdeasFilter Active" do %>
           всё
         <% end %>
 
-        <%= link_to tagged_admin_idea_posts_path("одежда"), class:"A_Tag IdeasFilter" do %>
+        <%= link_to tagged_idea_posts_path("одежда"), class:"A_Tag IdeasFilter" do %>
           одежда
         <% end %>
 
-        <%= link_to tagged_admin_idea_posts_path("обувь"), class:"A_Tag IdeasFilter" do %>
+        <%= link_to tagged_idea_posts_path("обувь"), class:"A_Tag IdeasFilter" do %>
           обувь
         <% end %>
 
-        <%= link_to tagged_admin_idea_posts_path("аксессуары"), class:"A_Tag IdeasFilter" do %>
+        <%= link_to tagged_idea_posts_path("аксессуары"), class:"A_Tag IdeasFilter" do %>
           аксессуары
         <% end %>
 
-        <%= link_to tagged_admin_idea_posts_path("другое"), class:"A_Tag IdeasFilter" do %>
+        <%= link_to tagged_idea_posts_path("другое"), class:"A_Tag IdeasFilter" do %>
           другое
         <% end %>
       </div>
     </section>
   </div>
-  
   <div class="C_IdeaCards">
     <% @posts.each do |post| %>
       <%= link_to idea_post_path(post), class: "O_IdeaCard" do %>
@@ -41,5 +37,4 @@
       <% end %>
     <% end %>
   </div>
-
 </div>

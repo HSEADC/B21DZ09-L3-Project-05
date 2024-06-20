@@ -34,6 +34,7 @@
     line-height: 110%;
     text-transform: uppercase;
     color: var(--lightgray);
+    border-radius: 8px;
 
     background-color: black;
 
@@ -202,7 +203,7 @@
     text-transform: uppercase;
 
     &.Card {
-        padding: 7px 16px;
+        padding: 6px 16px;
         background: linear-gradient(180deg, rgba(31,31,31,1) 0%, rgba(0,0,0,1) 100%);
         color: var(--lightgray);
     }
@@ -350,14 +351,14 @@
 }
 
 .A_FormInput {
-    /* width: 406px; */
-    height: 42px;
+    height: 44px;
     display: flex;
-    width: 100%;
-    padding: 0 8px;
+    width: cacl(100% - 32px);
+    padding: 0 16px;
     gap: 4px;
     align-items: flex-start;
     border: 1px solid black;
+    border-radius: 8px;
     background-color: white;
 
     color: var(--black2);
@@ -373,6 +374,12 @@
         color: var(--gray2);
     }
 }
+
+/* #user_email,
+#user_password,
+#user_password_confirmation {
+    width: cacl(100% - 32px);
+} */
 
 .A_FiltersSubtitle {
     font-family: Suisse Intl;

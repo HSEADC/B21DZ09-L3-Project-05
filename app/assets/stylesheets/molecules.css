@@ -1,516 +1,511 @@
 .M_Banner {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-    width: 100vw;
-    height: 290px;
-    
-    background-image: url("/assets/banners/Banner1.png");
-    /* background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.00) 100%), #E6E6E6; */
-    
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  width: 100vw;
+  height: 290px;
 
-    &.IdeaPosts {
-        background-image: url("/assets/banners/BannerIP.png");
-    }
+  background-image: url('/assets/banners/Banner1.png');
+  /* background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.00) 100%), #E6E6E6; */
 
-    &.TutorialPosts {
-        background-image: url("/assets/banners/BannerTP.png");
-    }
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &.IdeaPosts {
+    background-image: url('/assets/banners/BannerIP.png');
+  }
+
+  &.TutorialPosts {
+    background-image: url('/assets/banners/BannerTP.png');
+  }
 }
 
 .M_Form {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  align-items: center;
+  border-radius: 29px;
+  filter: drop-shadow(0px 6px 12px rgba(0, 0, 0, 0.06));
+
+  &.SignIn,
+  &.SignUp {
+    width: 384px;
+    padding: 28px 32px 32px;
+    gap: 18px;
+  }
+
+  .C_FormInputs {
+    width: 100%;
+    margin-bottom: 14px;
     display: flex;
     flex-direction: column;
-    background-color: white;
-    align-items: center;
-    border-radius: 29px;
-    filter:drop-shadow(0px 6px 12px rgba(0,0,0,0.06));
+    gap: 12px;
 
-    &.SignIn,
-    &.SignUp {
-        /* width: 406px; */
-        padding: 19px 21px 21px;
-        gap: 21px
+    .W_FormInputText {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
     }
+  }
 
-    .C_FormInputs {
-        width: 100%;
-        margin-bottom: 12px;
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
+  .C_FormButtons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 
-        .W_FormInputText {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
+    input {
+      /* width: 100%; */
+      border: 0;
     }
-
-    .C_FormButtons {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-
-        input {
-            /* width: 100%; */
-            border: 0;
-        }
-    }
-}
-
-#user_email,
-#user_password,
-#user_password_confirmation {
-    width: 389px;
+  }
 }
 
 .M_FooterTop {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: flex-start;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .M_FooterInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  align-self: stretch;
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .C_FooterInfoPages {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    align-self: stretch;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
 
-    a:hover {
-        text-decoration: underline;
+    &.mobile {
+      display: none;
     }
+  }
 
-    .C_FooterInfoPages {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 18px;
-    
-        &.mobile {
-            display: none;
-        }
+  .W_FooterInfoTeam {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+
+    .C_FooterInfoTeamStudents,
+    .C_FooterInfoTeamProfs {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
     }
+  }
 
-    .W_FooterInfoTeam {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 24px;
+  .W_FooterInfoContacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
 
-        .C_FooterInfoTeamStudents,
-        .C_FooterInfoTeamProfs {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 12px;
-        }
+    .C_SocialNetworks {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
     }
-    
-    .W_FooterInfoContacts {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-
-        .C_SocialNetworks {
-            display: flex;
-            align-items: flex-start;
-            gap: 14px;
-        }
-    }
+  }
 }
 
 .M_IdeasPageFilters {
-    width: calc(100% - 52px);
-    display: flex;
-    flex-direction: column;
-    margin: 26px auto 52px;
-    align-items: center;
-    gap: 18px;
+  width: calc(100% - 52px);
+  display: flex;
+  flex-direction: column;
+  margin: 26px auto 52px;
+  align-items: center;
+  gap: 18px;
 
-    .W_FiltersScroll {
-        .C_IdeasFilters {
-        display: flex;
-        align-content: center;
-        gap: 12px;
-        /* align-self: stretch;
+  .W_FiltersScroll {
+    .C_IdeasFilters {
+      display: flex;
+      align-content: center;
+      gap: 12px;
+      /* align-self: stretch;
         flex-wrap: wrap; */
-        }
     }
+  }
 }
 
 .M_TutorialCardTitleLike {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    align-self: stretch;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
 }
 
 .M_FilterSelect {
-    /* width: 30%;
+  /* width: 30%;
     max-width: 328px; */
-    height: 44px;
-    display: flex;
-    padding: 0 6px 0 12px;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid black;
-    background-color: white;
+  height: 44px;
+  display: flex;
+  padding: 0 6px 0 12px;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 8px;
 
-    .W_FilterSelectTagsText {
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-        align-items: center;
-    }
+  .W_FilterSelectTagsText {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+  }
 }
 
 .M_FilterSelectDropdown {
-    position: absolute;
-    display: none;
-    width: calc(30% - 17px);
-    max-width: 326px;
-    /* height: 170px; */
-    flex-direction: column; 
-    padding: 4px 0;
-    border: 1px solid #D7D7D7;
-    background-color: white;
-    border-radius: 0px 0px 8px 8px;
-    filter: drop-shadow(0px 2px 2px rgba(0,0,0,0.06));
+  position: absolute;
+  display: none;
+  width: calc(30% - 17px);
+  max-width: 326px;
+  /* height: 170px; */
+  flex-direction: column;
+  padding: 4px 0;
+  border: 1px solid #d7d7d7;
+  background-color: white;
+  border-radius: 0px 0px 8px 8px;
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.06));
 
-    z-index: 100;
+  z-index: 100;
 
-    &.show {
-        display: flex;
-    }
+  &.show {
+    display: flex;
+  }
 
-    &.Items {
-        /* left: 100px; */
-    }
+  &.Items {
+    /* left: 100px; */
+  }
 
-    &.Tech {
-        /* left: 300px; */
-    }
+  &.Tech {
+    /* left: 300px; */
+  }
 
-    &.Mat {
-        /* left: 600px; */
-    }
+  &.Mat {
+    /* left: 600px; */
+  }
 }
 
 .M_UserInfo {
-    display: flex;
-    /* padding-left: 4px; */
-    align-items: center;
-    gap: 8px;
+  display: flex;
+  /* padding-left: 4px; */
+  align-items: center;
+  gap: 8px;
 
-    .C_UserInfoNames {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0px;
-    }
+  .C_UserInfoNames {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0px;
+  }
 }
 
 .M_IdeaPageIntoTexts {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px 8px;
-    gap: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px 8px;
+  gap: 12px;
 }
 
 .M_CreateCommentBlock {
-    width: calc(100% - 24px);
-    margin-top: 14px;
-    padding: 12px;
-    display: flex;
-    flex-direction: row;
-    gap: 14px;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    filter:drop-shadow(0px 1px 2px rgba(0,0,0,0.08));
+  width: calc(100% - 24px);
+  margin-top: 14px;
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.08));
 
-    input {
-        border: 0;
-    }
+  input {
+    border: 0;
+  }
 }
 
 .M_CommentsBlock {
-    width: 100%;
-    min-height: 120px;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: end; */
-    overflow-y: scroll; 
-    flex: 1 0 0;
+  width: 100%;
+  min-height: 120px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: end; */
+  overflow-y: scroll;
+  flex: 1 0 0;
 
-    .W_IdeaPageComment {
-        margin-bottom: 8px;
-    }
+  .W_IdeaPageComment {
+    margin-bottom: 8px;
+  }
 
-    &.Tutorial {
-        min-height: fit-content;
-        overflow-y: visible; 
-    }
+  &.Tutorial {
+    min-height: fit-content;
+    overflow-y: visible;
+  }
 
-    .W_TutorialPageComment {
-        margin-bottom: 8px;
-    }
+  .W_TutorialPageComment {
+    margin-bottom: 8px;
+  }
 
-    &::-webkit-scrollbar {
-        -webkit-appearance: none;
-        width: 8px;
-        border-radius: 5px;
-        background-color: #ececec;
-      }
-      
-    &::-webkit-scrollbar-thumb {
-        border-radius: 5px;
-        background-color: #BBB;;
-        box-shadow: 0 0 1px rgba(255, 255, 255, .5);
-    }
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 8px;
+    border-radius: 5px;
+    background-color: #ececec;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #bbb;
+    box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+  }
 }
 
 .M_PostComment {
-    /* max-width: 464px; */
-    display: flex;
-    align-items: flex-start;
-    padding: 8px 0;
-    gap: 12px;
-    /* margin-bottom: 10px; */
+  /* max-width: 464px; */
+  display: flex;
+  align-items: flex-start;
+  padding: 8px 0;
+  gap: 12px;
+  /* margin-bottom: 10px; */
 }
 
 .M_PostCommentReplies {
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    /* gap: 19px; */
-    padding-left: 40px;
-    /* margin-bottom: 20px; */
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* gap: 19px; */
+  padding-left: 40px;
+  /* margin-bottom: 20px; */
 }
 
 .M_PostCommentReplies > div {
-    /* padding: 16px 0; */
+  /* padding: 16px 0; */
 }
 
 .M_NavCreateNewPosts,
 .M_PostOptions {
-    display: none;
-    position: fixed;
-    background-color: white;
-    border: 1px dashed black;
-    z-index: 200;
+  display: none;
+  position: fixed;
+  background-color: white;
+  border: 1px dashed black;
+  z-index: 200;
 
-    &.Idea {
-        right: 156px;
-        top: 70px; 
-    }
+  &.Idea {
+    right: 156px;
+    top: 70px;
+  }
 
-    &.Tutorial {
-        right: 436px;
-        top: 56px; 
-    }
+  &.Tutorial {
+    right: 436px;
+    top: 56px;
+  }
 
-    &.show {
-        display: flex;
-        width: 190px;
-        flex-direction: column;
-        lign-items: flex-start;
-    }
+  &.show {
+    display: flex;
+    width: 190px;
+    flex-direction: column;
+    lign-items: flex-start;
+  }
 }
 
 .M_NavCreateNewPosts {
-    /* position: absolute; */
-    /* margin-top: 3px; */
-    right: 136px;
+  /* position: absolute; */
+  /* margin-top: 3px; */
+  right: 136px;
 }
 
 .M_PostOptions {
-    position: absolute;
-    margin-top: 98px;
-    right: 150px;
+  position: absolute;
+  margin-top: 98px;
+  right: 150px;
 
-    &.show {
-        width: 150px;
-    }
+  &.show {
+    width: 150px;
+  }
 
-    /* a {
+  /* a {
         width: auto;
         height: auto;
     } */
 }
 
 .M_TutorialPageTitleDescription {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 28px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
 }
 
 .M_TutorialPageTexts {
-    display: flex;
-    width: calc(100% - 16px);
-    padding: 10px 8px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 32px;
+  display: flex;
+  width: calc(100% - 16px);
+  padding: 10px 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
 }
 
 .M_ProfilePageCardLeft {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    /* justify-content: center; */
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  /* justify-content: center; */
+  align-items: center;
 }
 
 .M_ProfilePageCardRight {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  .C_UserProfileFullName {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: -7px;
+  }
 
-    .C_UserProfileFullName {
-        display: flex;
-        flex-direction: column;
-        gap: -7px;
-    }
-
-    .C_SocialNetworks {
-        display: flex;
-        align-items: flex-start;
-        gap: 14px;
-    }
+  .C_SocialNetworks {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
 }
 
 .M_MobileMenu {
-    position: fixed;
-    top: 70px;
-    left: 0px;
-    display: none;
-    width: 330px;
-    /* padding: 4px 0px; */
+  position: fixed;
+  top: 70px;
+  left: 0px;
+  display: none;
+  width: 330px;
+  /* padding: 4px 0px; */
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+
+  background-color: var(--black);
+
+  z-index: 200;
+
+  &.show {
+    display: flex;
+  }
+
+  .C_MobileMenuPages,
+  .C_MobileMenuCreate {
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
-
-    background-color: var(--black);
-
-    z-index: 200;
-
-    &.show {
-        display: flex;
-    }
-
-    .C_MobileMenuPages,
-    .C_MobileMenuCreate {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        align-self: stretch;
-    }
+    align-self: stretch;
+  }
 }
 
 @media only screen and (max-width: 1023px) {
-    .M_Banner {
-        height: 192px;
-    }
+  .M_Banner {
+    height: 192px;
+  }
 }
 
 @media only screen and (max-width: 767px) {
-    .M_FooterInfo {
+  .M_FooterInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+
+    .C_FooterInfoPages {
+      display: none;
+
+      &.mobile {
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 32px;
-
-        .C_FooterInfoPages {
-            display: none;
-        
-            &.mobile {
-                display: flex;
-                gap: 20px;
-            }
-        }
-    
-        .W_FooterInfoTeam {
-            /* margin: 10px 0 20px 0; */
-            gap: 20px;
-        }
-        
-        .W_FooterInfoContacts {
-            .C_SocialNetworks {
-                gap: 30px;
-            }
-        }
+        gap: 20px;
+      }
     }
 
-    .M_IdeasPageFilters {
-        width: calc(100% - 32px);
-
-        .W_FiltersScroll {
-            display: flex;
-            width: 100%;
-            overflow-x: hidden;
-    
-            .C_IdeasFilters {
-                margin: 0 auto;
-                display: flex;
-                align-content: center;
-                overflow-x: scroll;
-            }
-        }
+    .W_FooterInfoTeam {
+      /* margin: 10px 0 20px 0; */
+      gap: 20px;
     }
 
-    .M_FilterSelect {
-        /* width: calc(100% - 14px); */
-        max-width: 360px;
+    .W_FooterInfoContacts {
+      .C_SocialNetworks {
+        gap: 30px;
+      }
+    }
+  }
+
+  .M_IdeasPageFilters {
+    width: calc(100% - 32px);
+
+    .W_FiltersScroll {
+      display: flex;
+      width: 100%;
+      overflow-x: hidden;
+
+      .C_IdeasFilters {
         margin: 0 auto;
+        display: flex;
+        align-content: center;
+        overflow-x: scroll;
+      }
     }
+  }
 
-    .M_FilterSelectDropdown {
-        position: relative;
-        margin: 0 auto;
-        width: calc(100% - 2px);
-        max-width: 378px;
-    }
+  .M_FilterSelect {
+    /* width: calc(100% - 14px); */
+    max-width: 360px;
+    margin: 0 auto;
+  }
 
-    .M_CommentsBlock {
-        min-height: fit-content;
-        overflow-y: visible;
-        flex: 0 0 0;
-    }
+  .M_FilterSelectDropdown {
+    position: relative;
+    margin: 0 auto;
+    width: calc(100% - 2px);
+    max-width: 378px;
+  }
 
-    .M_MobileMenu {
-        top: 48px;
-    }
+  .M_CommentsBlock {
+    min-height: fit-content;
+    overflow-y: visible;
+    flex: 0 0 0;
+  }
+
+  .M_MobileMenu {
+    top: 48px;
+  }
 }
 
 @media only screen and (max-width: 490px) {
-    .M_Form,
-    #new_user {
-        width: calc(100% - 42px);
-    }
+  .M_Form,
+  #new_user {
+    width: calc(100% - 42px);
+  }
 
-    #user_email,
-    #user_password,
-    #user_password_confirmation {
-        width: calc(100% - 30px);
-    }
+  #user_email,
+  #user_password,
+  #user_password_confirmation {
+    width: calc(100% - 30px);
+  }
 }
 
 @media only screen and (max-width: 450px) {
-    .M_CreateCommentBlock {
-        flex-direction: column;
-    }
+  .M_CreateCommentBlock {
+    flex-direction: column;
+  }
 }

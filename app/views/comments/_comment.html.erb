@@ -6,7 +6,8 @@
 
     <div class="A_PostCommentTexts">
       <div class="PostCommentInfo">
-        <p class="A_UserInfoName UN"><%= post.user.email.split("@")[0] %></p>        <!--- <p class="A_PostCommentDate">
+        <p class="A_UserInfoName UN"><%= post.user.email.split("@")[0] %></p>
+        <!--- <p class="A_PostCommentDate">
         <%#= comment.created_at %>
             сегодня в&nbsp;10:05
         </p> --->
@@ -19,9 +20,7 @@
       </div>
       <p class="A_PostCommentBody"><%= comment.body %></p>
     </div>
-
   </div>
-
 
   <div class="M_PostCommentReplies">
     <% comment.replies.each do |reply| %>

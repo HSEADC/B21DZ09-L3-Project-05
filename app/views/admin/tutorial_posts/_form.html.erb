@@ -13,66 +13,62 @@
 
   <div class="IdeaFormPage Gride">
 
-  <div class="LeftContent">
-    <div class="BlockContent Img">
-      <%= form.label :"Загрузить изображение", class:"TitleNewContent Img" %>
-      <%= form.file_field :post_image, class:"FieldImg" %>
-    </div>
-
-    <!--- <div class="WrapperFakeImg">
-      <div class="FieldImg Fake"></div>
-      <div class="FieldImg Fake"></div>
-      <div class="FieldImg Fake"></div>
-    </div> --->
-  </div>
-
-  <div class="RightContent">
-    <div class="TopContent">
-
-      <div class="BlockContent Title">
-        <%= form.label :"Название проекта", class:"TitleNewContent" %>
-        <%= form.text_field :title, placeholder:"Кастом", class:"FieldContent Title" %>
+    <div class="LeftContent">
+      <div class="BlockContent Img">
+        <%= form.label :"Загрузить изображение", class:"TitleNewContent Img" %>
+        <%= form.file_field :post_image, class:"FieldImg" %>
       </div>
 
-      <div class="BlockContent Tags">
-        <%= form.label :"Тэги", class:"TitleNewContent" %>
-        <%= form.text_field :tag_list, value: tutorial_post.tag_list.join(", "), class:"FieldContent Tags"  %>
-        <div>
-          <% ActsAsTaggableOn::Tag.for_context(:tags).each do |tag| %>
-            <%= tag %>
-          <% end %>
+      <!--- <div class="WrapperFakeImg">
+        <div class="FieldImg Fake"></div>
+        <div class="FieldImg Fake"></div>
+        <div class="FieldImg Fake"></div>
+      </div> --->
+    </div>
+
+    <div class="RightContent">
+      <div class="TopContent">
+
+        <div class="BlockContent Title">
+          <%= form.label :"Название проекта", class:"TitleNewContent" %>
+          <%= form.text_field :title, placeholder:"Кастом", class:"FieldContent Title" %>
+        </div>
+
+        <div class="BlockContent Tags">
+          <%= form.label :"Тэги", class:"TitleNewContent" %>
+          <%= form.text_field :tag_list, value: tutorial_post.tag_list.join(", "), class:"FieldContent Tags"  %>
+          <div>
+            <% ActsAsTaggableOn::Tag.for_context(:tags).each do |tag| %>
+              <%= tag %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+      <div class="BottomContent">
+        <div class="BlockContent Description">
+          <%= form.label :"Описание проекта", class:"TitleNewContent" %>
+          <%= form.text_area :description, placeholder:"Расскажите про ваш кастом", class:"FieldContent Description" %>
+        </div>
+
+        <!--- <div>
+          <%#= form.label :"Добавить ссылку", style: "display: block" %>
+          <%#= form.text_field :content_link %>
+        </div> --->
+
+        <div style="display:none;">
+          <%= form.label :"Тип" %>
+          <%= form.select :type, ["TutorialPost"] %>
+        </div>
+
+        <div class="FormButtons">
+          <%= form.submit :"Опубликовать", class:"FormButton Post" %>
+
+          <div class="FormButton Back">
+            <%= link_to "Отменить", :back %>
+          </div>
         </div>
       </div>
     </div>
-
-    <div class="BottomContent">
-    <div class="BlockContent Description">
-      <%= form.label :"Описание проекта", class:"TitleNewContent" %>
-      <%= form.text_area :description, placeholder:"Расскажите про ваш кастом", class:"FieldContent Description" %>
-    </div>
-
-    <!--- <div>
-      <%#= form.label :"Добавить ссылку", style: "display: block" %>
-      <%#= form.text_field :content_link %>
-    </div> --->
-
-    <div>
-
-      <div>
-        <%= form.label :"Тип" %>
-        <%= form.select :type, [["Пост-идея", "IdeaPost"], ["Туториал", "TutorialPost"]] %>
-        <%#= form.select :type, ["IdeaPost", "TutorialPost"]%>
-      </div>
-    </div>
-
-    <div class="FormButtons">
-    <%= form.submit :"Опубликовать", class:"FormButton Post" %>
-
-    <div class="FormButton Back">
-      <%= link_to "Отменить", :back %>
-    </div>
-    </div>
-  </div>
-  </div>
   </div>
 <% end %>

@@ -38,3 +38,8 @@ Thumbs.db
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 .DS_Store
+.vscode
+node_modules
+package.json
+package-lock.json
+.prettierrc.yml

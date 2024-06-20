@@ -11,7 +11,7 @@ class Admin::IdeaPostsController < Admin::ApplicationController
   end
 
   def by_tag
-    @posts = IdeaPost.tagged_with(params[:tag])
+          @posts = IdeaPost.tagged_with(params[:tag])
     render :index
 
     # Meta

@@ -28,16 +28,15 @@
   <br>
   <%#= render @post.comments, post: @post %>
 
-  
   <div id="comments">
     <% @post.comments.each do |comment| %>
       <div class="commentCard"%>
         <%= render comment, post: @post %>
-          <p>
-            <%#= link_to "Показать этот комментарий", [:admin, comment] %>
-          </p>
+        <p>
+          <%#= link_to "Показать этот комментарий", [:admin, comment] %>
+        </p>
       </div>
     <% end %>
   </div>
-  
+
 </div>
