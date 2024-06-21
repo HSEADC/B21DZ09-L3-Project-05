@@ -1,378 +1,386 @@
 .A_Logo {
-    position: absolute;
-    left: calc(50% - 40px);
-    width: fit-content;
-    padding: 4px 10px 0;
+  position: absolute;
+  left: calc(50% - 40px);
+  width: fit-content;
+  padding: 4px 10px 0;
 
-    font-family: Suisse Intl;
-    font-size: 38px;
-    font-style: normal;
-    font-weight: 500;
-    /* line-height: 44px; */
-    text-transform: uppercase;
-    color: var(--lightgray);
+  font-family: Suisse Intl;
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 500;
+  /* line-height: 44px; */
+  text-transform: uppercase;
+  color: var(--lightgray);
 
-    background-color: black;
+  background-color: black;
 
-    /* &:hover {
+  /* &:hover {
         text-decoration: underline;
     } */
 }
 
 .A_Button {
+  height: 46px;
+  padding: 0px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  font-family: Suisse Intl;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 110%;
+  text-transform: uppercase;
+  color: var(--lightgray);
+  border-radius: 8px;
+
+  background-color: black;
+
+  cursor: pointer;
+
+  &:hover {
+    color: var(--yellow);
+  }
+
+  &.SignIn {
+    width: 100%;
     height: 46px;
-    padding: 0px 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
+    font-size: 13px;
 
-    font-family: Suisse Intl;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 450;
-    line-height: 110%;
-    text-transform: uppercase;
-    color: var(--lightgray);
-    border-radius: 8px;
-
-    background-color: black;
-
-    cursor: pointer;
-
-    &:hover {
-        color: var(--yellow);
-    } 
-
-    &.SignIn {
-        width: 100%;
-        height: 46px;
-        font-size: 13px;
-        
-        &.Light {
-            height: 42px;
-            color: black;
-            background-color: var(--lightgray2);
-            border: 1px dashed black;
-        }
+    &.Light {
+      height: 42px;
+      color: black;
+      background-color: var(--lightgray2);
+      border: 1px dashed black;
     }
+  }
 
-    &.SignUp {
-        width: calc(100% - 39px);
-        height: 44px;
-        font-size: 13px;
-        
-        &.Light {
-            height: 42px;
-            color: black;
-            background-color: var(--lightgray2);
-            border: 1px dashed black;
-        }
-    }
+  &.SignUp {
+    width: calc(100% - 39px);
+    height: 44px;
+    font-size: 13px;
 
-    &.Filter {
-        width: 130px;
-        padding: 0;
-        height: 44px;
-        font-size: 13px;
-        
-        &.Light {
-            width: 128px;
-            height: 42px;
-            color: black;
-            background-color: var(--lightgray2);
-            border: 1px dashed black;
-        }
+    &.Light {
+      height: 42px;
+      color: black;
+      background-color: var(--lightgray2);
+      border: 1px dashed black;
     }
+  }
 
-    &.Show {
-        display: none;
-    }
+  &.Filter {
+    width: 130px;
+    padding: 0;
+    height: 44px;
+    font-size: 13px;
 
-    &.Setting {
-        height: 36px;
-        padding: 0 14px 0 12px;
-        font-size: 13px;
-        position: absolute;
-        top: 106px;
-        right: 26px;
+    &.Light {
+      width: 128px;
+      height: 42px;
+      color: black;
+      background-color: var(--lightgray2);
+      border: 1px dashed black;
     }
+  }
+
+  &.Show {
+    display: none;
+  }
+
+  &.Setting {
+    height: 36px;
+    padding: 0 14px 0 12px;
+    font-size: 13px;
+    position: absolute;
+    top: 106px;
+    right: 26px;
+  }
 }
 
 .A_NavigationButton {
-    padding: 8px 18px;
+  padding: 8px 18px;
 
-    font-family: Suisse Intl;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 450;
-    line-height: 140%;
-    text-transform: uppercase;
+  font-family: Suisse Intl;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: var(--lightgray);
+
+  /* background-color: red; */
+  background-color: black;
+
+  &:hover {
+    color: var(--yellow);
+  }
+
+  &.NewPost {
+    display: flex;
+    gap: 8px;
+    padding: 8px 18px 8px 12px;
     color: var(--lightgray);
-
-    /* background-color: red; */
     background-color: black;
 
     &:hover {
-        color: var(--yellow);
+      color: var(--yellow);
+      cursor: pointer;
+    }
+  }
+
+  &.createNewPost {
+    /* width: calc(100% - 24px); */
+    color: black;
+    /* border: 1px dashed black; */
+    background-color: white;
+
+    &:hover {
+      background-color: var(--yellow);
+    }
+  }
+
+  &.PostOption {
+    /* width: calc(100% - 36px); */
+    color: black;
+    background-color: white;
+
+    &:hover {
+      background-color: var(--lightgray2);
+    }
+  }
+
+  &.Page {
+    position: absolute;
+    margin-top: 48px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    background-color: rgba(255, 255, 255, 0);
+    color: black;
+
+    z-index: 2;
+
+    &.Back {
+      left: 26px;
+      padding: 8px 18px 8px 12px;
+      gap: 8px;
     }
 
-    &.NewPost {
-        display: flex;
-        gap: 8px;
-        padding: 8px 18px 8px 12px;
-        color: var(--lightgray);
-        background-color: black;
+    &.Edit {
+      /* right: 26px; */
+      width: 100%;
+      margin-top: 0;
+      /* padding: 0px 8px; */
+      background-color: white;
 
-        &:hover {
-            color: var(--yellow);
-            cursor: pointer;
-        }
+      z-index: 0;
     }
 
-    &.createNewPost {
-        /* width: calc(100% - 24px); */
-        color: black;
-        /* border: 1px dashed black; */
-        background-color: white;
-
-        &:hover {
-            background-color: var(--yellow);
-        }
+    &.Mob {
+      display: none;
     }
 
-    &.PostOption {
-        /* width: calc(100% - 36px); */
-        color: black;
-        background-color: white;
-
-        &:hover {
-            background-color: var(--lightgray2);
-        }
+    &.Fixed {
+      position: fixed;
     }
-
-    &.Page {
-        position: absolute;
-        margin-top: 48px;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        gap: 6px;
-        background-color: rgba(255, 255, 255, 0);
-        color: black;
-
-        z-index: 2;
-
-        &.Back {
-            left: 26px;
-            padding: 8px 18px 8px 12px;
-            gap: 8px;
-        }
-
-        &.Edit {
-            /* right: 26px; */
-            width: 100%;
-            margin-top: 0;
-            /* padding: 0px 8px; */
-            background-color: white;
-
-            z-index: 0;
-        }
-
-        &.Mob {
-            display: none;
-        }
-
-        &.Fixed {
-            position: fixed;
-        }
-    }
+  }
 }
 
 .A_Tag {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
 
-    font-family: Suisse Intl;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 450;
-    line-height: 140%;
-    text-transform: uppercase;
+  font-family: Suisse Intl;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 140%;
+  text-transform: uppercase;
 
-    &.Card {
-        padding: 6px 16px;
-        background: linear-gradient(180deg, rgba(31,31,31,1) 0%, rgba(0,0,0,1) 100%);
-        color: var(--lightgray);
+  &.Card {
+    padding: 6px 16px;
+    background: linear-gradient(
+      180deg,
+      rgba(31, 31, 31, 1) 0%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    color: var(--lightgray);
+  }
+
+  &.IdeasFilter {
+    padding: 10px 24px;
+    background-color: #ededef;
+    color: var(--gray2);
+    border: 1px dashed #b8b8b8;
+
+    &.Active {
+      background: linear-gradient(
+        180deg,
+        rgba(31, 31, 31, 1) 0%,
+        rgba(0, 0, 0, 1) 100%
+      );
+      color: var(--lightgray);
+      border: none;
     }
-
-    &.IdeasFilter {
-        padding: 10px 24px;
-        background-color: #EDEDEF;
-        color: var(--gray2);
-        border: 1px dashed #B8B8B8;
-
-        &.Active {
-            background: linear-gradient(180deg, rgba(31,31,31,1) 0%, rgba(0,0,0,1) 100%);
-            color: var(--lightgray);
-            border: none;
-        }
-    }
+  }
 }
 
 .A_FooterLogoText {
-    color: var(--lightgray);
-    font-family: Suisse Intl;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 100%; /* 40px */
-    text-transform: uppercase;
-    margin: 0;
+  color: var(--lightgray);
+  font-family: Suisse Intl;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 40px */
+  text-transform: uppercase;
+  margin: 0;
 
-    a:hover {
-        text-decoration: none;
-    }
+  a:hover {
+    text-decoration: none;
+  }
 }
 
 .A_FooterInfoText {
-    color: var(--lightgray);
-    font-family: Suisse Intl;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 450;
-    line-height: 124%;
-    text-transform: uppercase;
+  color: var(--lightgray);
+  font-family: Suisse Intl;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 124%;
+  text-transform: uppercase;
 }
 
 .A_MobileMenuSection {
-    display: flex;
-    height: 44px;
-    padding-left: 26px;
-    flex-direction: column;
-    justify-content: center;
-    /* align-items: center; */
-    align-self: stretch;
+  display: flex;
+  height: 44px;
+  padding-left: 26px;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  align-self: stretch;
 
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 110%; /* 17.6px */
-    text-transform: uppercase;
-    color: var(--lightgray);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%; /* 17.6px */
+  text-transform: uppercase;
+  color: var(--lightgray);
 
+  border: 1px solid var(--black);
+
+  &:hover {
+    background-color: #c3c3c3;
+    color: black;
     border: 1px solid var(--black);
+  }
 
+  &.MobileMenuCreate {
     &:hover {
-        background-color: #c3c3c3;
-        color: black;
-        border: 1px solid var(--black);
+      background-color: var(--yellow);
+      color: black;
+      border: 1px solid var(--black);
     }
-
-    &.MobileMenuCreate {
-        &:hover {
-            background-color: var(--yellow);
-            color: black;
-            border: 1px solid var(--black);
-        }
-    }
+  }
 }
 
 .A_BannerTitle {
-    position: absolute;
-    width: fit-content;
-    padding: 17px 20px;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
+  position: absolute;
+  width: fit-content;
+  padding: 17px 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
 
-    font-family: Suisse Intl;
-    font-size: 96px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 100%; /* 96px */
-    text-transform: uppercase;
-    color: var(--lightgray);
+  font-family: Suisse Intl;
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%; /* 96px */
+  text-transform: uppercase;
+  color: var(--lightgray);
 
-    &.IP-1 {
-        margin-top: 63px;
-        margin-right: 510px;
-        transform: rotate(-0.1deg);
-    }
+  &.IP-1 {
+    margin-top: 63px;
+    margin-right: 510px;
+    transform: rotate(-0.1deg);
+  }
 
-    &.IP-2 {
-        margin-top: 93px;
-        margin-left: 310px;
-        transform: rotate(-2.3deg);
-    }
+  &.IP-2 {
+    margin-top: 93px;
+    margin-left: 310px;
+    transform: rotate(-2.3deg);
+  }
 
-    &.TP {
-        margin-top: 80px;
-        margin-right: 8px;
-        transform: rotate(-3.5deg);
-    }
+  &.TP {
+    margin-top: 80px;
+    margin-right: 8px;
+    transform: rotate(-3.5deg);
+  }
 }
 
 .A_BannerSignIn {
-    background-image: url("/assets/banners/BannerSignIn.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+  background-image: url('/assets/banners/BannerSignIn.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 
-    max-width: 526px;
-    width: calc(100% - 52px);
-    height: 230px;
+  max-width: 526px;
+  width: calc(100% - 52px);
+  height: 230px;
 }
 
 .A_FormTitle {
-    font-family: Suisse Intl;
-    font-size: 42px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    letter-spacing: -0.5%;
-    text-transform: uppercase;
-    color: var(--lightgray);
+  font-family: Suisse Intl;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.05px;
+  text-transform: uppercase;
+  color: var(--lightgray);
 
-    padding: 8px 12px;
-    background-color: black;
+  padding: 4px 8px;
+  background-color: black;
 }
 
 .A_InputSubtitle {
-    font-family: Suisse Intl;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    line-height: 140%;
-    color: var(--black2);
+  font-family: Suisse Intl;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  line-height: 140%;
+  color: var(--black2);
 }
 
 .A_FormInput {
-    height: 44px;
-    display: flex;
-    width: cacl(100% - 32px);
-    padding: 0 16px;
-    gap: 4px;
-    align-items: flex-start;
-    border: 1px solid black;
-    border-radius: 8px;
-    background-color: white;
+  height: 44px;
+  display: flex;
+  width: cacl(100% - 32px);
+  padding: 0 16px;
+  gap: 4px;
+  align-items: flex-start;
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: white;
 
-    color: var(--black2);
-    font-family: Suisse Intl;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+  color: var(--black2);
+  font-family: Suisse Intl;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 
-    outline: none;
+  outline: none;
 
-    &::placeholder {
-        color: var(--gray2);
-    }
+  &::placeholder {
+    color: var(--gray2);
+  }
 }
 
 /* #user_email,
@@ -382,357 +390,361 @@
 } */
 
 .A_FiltersSubtitle {
-    font-family: Suisse Intl;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 450;
-    line-height: 140%;
-    text-transform: uppercase;
-    color: var(--gray2);
+  font-family: Suisse Intl;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: var(--gray2);
 }
 
 .A_TutorialCardTitle {
-    max-width: calc(100% - 52px);
-    min-height: 44px;
-    padding: 10px 0;
+  max-width: calc(100% - 52px);
+  min-height: 44px;
+  padding: 10px 0;
 
-    font-family: Suisse Intl;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 550;
-    /* line-height: 90%; */
-    color: var(--black);
+  font-family: Suisse Intl;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 550;
+  /* line-height: 90%; */
+  color: var(--black);
 }
 
 .A_FilterSelectText {
-    font-family: Suisse Intl;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%;
-    color: var(--gray2);
+  font-family: Suisse Intl;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  color: var(--gray2);
 }
 
 .A_SelectDropdownItem {
-    display: flex;
-    width: calc(100% - 24px);
-    height: 36px;
-    padding: 0 12px;
-    background-color: white;
-    align-items: center;
+  display: flex;
+  width: calc(100% - 24px);
+  height: 36px;
+  padding: 0 12px;
+  background-color: white;
+  align-items: center;
 
-    font-family: Suisse Intl;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%;
-    color: var(--black2);
+  font-family: Suisse Intl;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  color: var(--black2);
 
-    &:hover {
-        background-color: var(--lightgray2);
-    }
+  &:hover {
+    background-color: var(--lightgray2);
+  }
 }
 
 .A_UserInfoName {
-    font-family: Suisse Intl;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%;
+  font-family: Suisse Intl;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
 
-    &.UN {
-        color: var(--black2);
-    }
+  &.UN {
+    color: var(--black2);
+  }
 
-    &.NN {
-        color: var(--gray2);
-    }
+  &.NN {
+    color: var(--gray2);
+  }
 }
 
 .A_PostDate {
-    font-family: Suisse Intl;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 450;
-    /* line-height: 124%; */
-    text-transform: uppercase;
-    color: var(--gray2);
+  font-family: Suisse Intl;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 450;
+  /* line-height: 124%; */
+  text-transform: uppercase;
+  color: var(--gray2);
 }
 
 .A_IdeaPageInfoTitle,
 .A_PageCommentsTitle {
-    font-family: Suisse Intl;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    color: black;
+  font-family: Suisse Intl;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: black;
 }
 
 .A_PageCommentsTitle {
-    margin-top: 14px;
-    padding: 10px 0 10px 8px;
+  margin-top: 14px;
+  padding: 10px 0 10px 8px;
 }
 
 .A_IdeaPageInfoDescription {
-    font-family: Suisse Intl;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%;
-    color: black;
+  font-family: Suisse Intl;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  color: black;
 }
 
 .A_TutorialPageTitle {
-    padding: 8px 12px;
-    font-family: Suisse Intl;
-    font-size: 42px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    letter-spacing: -0.5%;
-    
-    text-transform: uppercase;
-    color: var(--lightgray);
+  padding: 8px 12px;
+  font-family: Suisse Intl;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.5%;
 
-    background-color: black;
+  text-transform: uppercase;
+  color: var(--lightgray);
+
+  background-color: black;
 }
 
 .A_TutorialPageDescription {
-    display: flex;
-    width: calc(100% - 48px);
-    padding: 24px 24px;
-    align-items: flex-start;
+  display: flex;
+  width: calc(100% - 48px);
+  padding: 24px 24px;
+  align-items: flex-start;
 
-    flex: 1 0 0;
+  flex: 1 0 0;
 
-    border-radius: 20px;
-    border: 1px dashed black;
-    background: white;
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, .25);
+  border-radius: 20px;
+  border: 1px dashed black;
+  background: white;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-    font-family: Suisse Intl;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%; /* 22.4px */
-    color: black;
+  font-family: Suisse Intl;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+  color: black;
 }
 
 .A_TutorialPageSubtitle {
-    font-family: Suisse Intl;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 90%;
-    color: black;
+  font-family: Suisse Intl;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 90%;
+  color: black;
 }
 
 .A_TutorialPageText {
-    font-family: Suisse Intl;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%; /* 25.2px */
-    color: var(--black2);
+  font-family: Suisse Intl;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 25.2px */
+  color: var(--black2);
 }
 
 .A_PostCommentBody {
-    width: fit-content;
-    /* max-width: 410px; */
-    font-family: Suisse Intl;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    color: var(--gray2);
+  width: fit-content;
+  /* max-width: 410px; */
+  font-family: Suisse Intl;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--gray2);
 }
 
 .A_CreateCommentInput {
-    height: 20px;
-    display: flex;
-    width: 100%;
-    padding: 12px;
-    align-items: flex-start;
-    border: 1px solid black;
-    background-color: white;
+  height: 20px;
+  display: flex;
+  width: 100%;
+  padding: 12px;
+  align-items: flex-start;
+  border: 1px solid black;
+  background-color: white;
 
-    color: var(--black2);
-    font-family: Suisse Intl;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+  color: var(--black2);
+  font-family: Suisse Intl;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 
-    outline: none;
+  outline: none;
 
-    &::placeholder {
-        /* color: #B2B2B2; */
-    }
+  &::placeholder {
+    /* color: #B2B2B2; */
+  }
 }
 
 .A_SubSuccess {
-    color: black;
-    font-family: Suisse Intl;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 51px;
-    text-align: center;
+  color: black;
+  font-family: Suisse Intl;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 51px;
+  text-align: center;
 }
 
 .A_ProfilePageNickName {
-    width: fit-content;
-    display: flex;
-    padding: 4px 10px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    background: linear-gradient(180deg, rgba(31,31,31,1) 0%, rgba(0,0,0,1) 100%);
-    color: var(--lightgray);
-    
-    font-family: Suisse Intl;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 450;
-    line-height: 140%;
-    text-transform: uppercase;
+  width: fit-content;
+  display: flex;
+  padding: 4px 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background: linear-gradient(
+    180deg,
+    rgba(31, 31, 31, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  color: var(--lightgray);
+
+  font-family: Suisse Intl;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 140%;
+  text-transform: uppercase;
 }
 
 .A_UserProfileName {
-    width: fit-content;
-    display: flex;
-    padding: 8px;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    color: var(--lightgray);
-    
-    font-family: Suisse Intl;
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 450;
-    line-height: normal;
-    text-transform: uppercase;
+  width: fit-content;
+  display: flex;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: var(--lightgray);
+
+  font-family: Suisse Intl;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: normal;
+  text-transform: uppercase;
 }
 
 .A_UserProfileBio {
-    width: 274px;
-    padding: 10px 8px;
-    font-family: Suisse Intl;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%; /* 25.2px */
-    color: var(--black2);
+  width: 274px;
+  padding: 10px 8px;
+  font-family: Suisse Intl;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 25.2px */
+  color: var(--black2);
 }
 
 .A_UserProfileContacts {
-    width: calc(100% - 16px);
-    display: flex;
-    padding: 8px;
-    align-items: center;
-    background-color: black;
-    color: var(--lightgray);
-    
-    font-family: Suisse Intl;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 450;
-    line-height: normal;
+  width: calc(100% - 16px);
+  display: flex;
+  padding: 8px;
+  align-items: center;
+  background-color: black;
+  color: var(--lightgray);
+
+  font-family: Suisse Intl;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: normal;
 }
 
 @media only screen and (max-width: 1280px) {
-    .A_NavigationButton {
-        &.Back {
-            display: none;
-        }
-
-        &.Edit {
-            display: none;
-        }
+  .A_NavigationButton {
+    &.Back {
+      display: none;
     }
+
+    &.Edit {
+      display: none;
+    }
+  }
 }
 
 @media only screen and (max-width: 1023px) {
-    .A_FooterInfoText {
-        &.Contacts {
-            max-width: 232px;
-        }
+  .A_FooterInfoText {
+    &.Contacts {
+      max-width: 232px;
+    }
+  }
+
+  .A_BannerTitle {
+    padding: 7px 8px;
+    font-size: 38px;
+
+    &.IP-1 {
+      margin-top: 63px;
+      margin-right: 187px;
     }
 
-    .A_BannerTitle {
-        padding: 7px 8px;
-        font-size: 38px;
-    
-        &.IP-1 {
-            margin-top: 63px;
-            margin-right: 187px;
-        }
-    
-        &.IP-2 {
-            margin-top: 79px;
-            margin-left: 141px;
-        }
-
-        &.TP {
-            margin-top: 70px;
-            margin-right: 8px;
-            padding: 9px 10px;
-            font-size: 49px;
-        }
+    &.IP-2 {
+      margin-top: 79px;
+      margin-left: 141px;
     }
+
+    &.TP {
+      margin-top: 70px;
+      margin-right: 8px;
+      padding: 9px 10px;
+      font-size: 49px;
+    }
+  }
 }
 
 @media only screen and (max-width: 767px) {
-    .A_NavigationButton {
-        display: none;
+  .A_NavigationButton {
+    display: none;
 
-        &.SignIn {
-            display: block;
-        }
-
-        &.NewPost {
-            display: none;
-        }
+    &.SignIn {
+      display: block;
     }
 
-    .A_FooterInfoText {
-        &.Contacts {
-            max-width: 700px;
-        }
+    &.NewPost {
+      display: none;
+    }
+  }
 
-        &.About {
-            margin-top: 40px;
-            margin-bottom: 20px;
-        }
+  .A_FooterInfoText {
+    &.Contacts {
+      max-width: 700px;
     }
 
-    .A_BannerSignIn {
-        width: 300px;
-        height: 131px;
+    &.About {
+      margin-top: 40px;
+      margin-bottom: 20px;
     }
+  }
 
-    .A_TutorialPageTitle {
-        font-size: 40px;
-    }
+  .A_BannerSignIn {
+    width: 300px;
+    height: 131px;
+  }
+
+  .A_TutorialPageTitle {
+    font-size: 40px;
+  }
 }
 
 @media only screen and (max-width: 490px) {
-    .A_FormTitle {
-        font-size: 28px;
-        padding: 8px;
-    }
+  .A_FormTitle {
+    font-size: 28px;
+    padding: 8px;
+  }
 }
 
 @media only screen and (max-width: 450px) {
-    .A_CreateCommentInput {
-        width: calc(100% - 24px);
-    }
+  .A_CreateCommentInput {
+    width: calc(100% - 24px);
+  }
 
-    .A_Button {
-        &.CreateComment {
-            width: 100%;
-        }
+  .A_Button {
+    &.CreateComment {
+      width: 100%;
     }
+  }
 }

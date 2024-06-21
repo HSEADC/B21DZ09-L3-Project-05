@@ -15,6 +15,11 @@
         </div>
 
         <div class="W_FormInputText">
+          <%= f.label :"Придумайте имя пользователя", class:"A_InputSubtitle" %>
+          <%= f.text_field :name, autofocus: true, autocomplete: "name", class:"A_FormInput", placeholder:"Имя пользователя" %>
+        </div>
+
+        <div class="W_FormInputText">
           <%= f.label :password, class:"A_InputSubtitle" %>
           <%= f.password_field :password, autocomplete: "new-password", class:"A_FormInput", placeholder:"Пароль" %>
         </div>

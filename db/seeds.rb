@@ -232,6 +232,7 @@ def create_admin
   user_data = {
     email: "admin@email.com",
     password: "testtest",
+    name: "Админ LÒÒCHOK",
     admin: true
   }
 
@@ -240,11 +241,12 @@ def create_admin
 end
 
 def create_users
-  i = 0
+  i = 1
 
   5.times do
     user_data = {
       email: "user_#{i}@email.com",
+      name: "Кастомович #{i}",
       password: 'testtest'
     }
 

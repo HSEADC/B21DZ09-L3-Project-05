@@ -8,13 +8,12 @@
     <div class="O_ProfilePageCard">
       <div class="M_ProfilePageCardLeft">
         <div class="Q_ProfilePageCardImg"></div>
-        <div class="A_ProfilePageNickName">@chiveskella</div>
+        <div class="A_ProfilePageNickName">@<%= current_user.email.split("@")[0] %></div>
       </div>
 
       <div class="M_ProfilePageCardRight">
         <div class="C_UserProfileFullName">
-          <p class="A_UserProfileName">Николай</p>
-          <p class="A_UserProfileName">Вознесенский</p>
+          <p class="A_UserProfileName"><%= current_user.name %></p>
         </div>
 
         <p class="A_UserProfileBio">Люблю переделывать винтажные вещи</p>
@@ -127,6 +126,11 @@
         <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
       </div>
 
+      <div class="UserEditName">
+        <%= f.label :UserName %>
+        <%= f.email_field :name, autofocus: true, autocomplete: "name" %>
+      </div>
+
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
         <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
       <% end %>
@@ -165,8 +169,6 @@
         <%= f.submit "Update" %>
       </div>
     <% end %>
-
-    <h3>Cancel my account</h3>
 
     <div>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete %></div>
 

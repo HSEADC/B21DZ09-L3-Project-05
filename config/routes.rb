@@ -66,7 +66,9 @@ Rails.application.routes.draw do
 
   resources :subscriptions, only: [:create, :show]
 
-  devise_for :users
+  devise_for :users, controllers: {
+        sessions: 'users/sessions'
+      }
 
 
   get 'welcome/index'
