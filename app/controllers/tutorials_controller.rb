@@ -93,6 +93,6 @@ class TutorialsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def tutorial_params
-      params.require(:tutorial).permit(:title, :description, :image, :content, :tag_list)
+      params.require(:tutorial).permit(:title, :description, :image, :content, :tag_list, :idea_id)
     end
 end

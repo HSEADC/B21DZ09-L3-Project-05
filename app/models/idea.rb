@@ -12,4 +12,6 @@ class Idea < ApplicationRecord
     acts_as_taggable_on :tags
 
     has_many :poly_comments, as: :commentable, dependent: :destroy
+
+    has_and_belongs_to_many :tutorials
 end

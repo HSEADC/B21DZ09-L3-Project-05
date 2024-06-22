@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_06_22_073828) do
+ActiveRecord::Schema[7.0].define(version: 2024_06_22_113538) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -44,6 +44,11 @@ ActiveRecord::Schema[7.0].define(version: 2024_06_22_073828) do
     t.integer "user_id"
     t.string "slug"
     t.index ["slug"], name: "index_ideas_on_slug", unique: true
+  end
+
+  create_table "ideas_tutorials", id: false, force: :cascade do |t|
+    t.bigint "idea_id", null: false
+    t.bigint "tutorial_id", null: false
   end
 
   create_table "pg_search_documents", force: :cascade do |t|
