@@ -33,6 +33,7 @@ Rails.application.routes.draw do
   end
   
   resources :comments, only: [:create]
+  resources :poly_comments, only: [:create]
 
   namespace :api do
     namespace :v1 do
@@ -72,6 +73,8 @@ Rails.application.routes.draw do
     end
 
     resources :comments
+    resources :poly_comments
+    
     resources :subscriptions
 
     root to: "admin/posts#index"

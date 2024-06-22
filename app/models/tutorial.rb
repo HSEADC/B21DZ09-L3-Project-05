@@ -12,4 +12,6 @@ class Tutorial < ApplicationRecord
     # validates :content, presence: true
     
     acts_as_taggable_on :tags
+
+    has_many :poly_comments, as: :commentable, dependent: :destroy
 end
