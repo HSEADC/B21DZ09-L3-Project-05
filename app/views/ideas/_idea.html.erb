@@ -1,0 +1,29 @@
+<div class="W_IdeaCardContent">
+
+  <div class="Q_IdeaCardImg">
+    <%= image_tag idea.image.url if idea.image.url %>
+  </div>
+
+  <div class="W_IdeaCardInfo">
+    <div class="W_IdeaCardInfoUserLike">
+      <div class="M_UserInfo">
+        <div class="Q_Avatar"></div>
+        <div class="C_UserInfoNames">
+          <p class="A_UserInfoName UN"><%= idea.user.name %></p>
+          <p class="A_UserInfoName NN">@<%= idea.user.email.split("@")[0] %></p>
+        </div>
+      </div>
+      <div class="Q_Icon s38 Like"></div>
+    </div>
+
+    <div class="C_TagsGroup">
+      <% idea.tag_list.each do |tag| %>
+        <div class="A_Tag Card">
+          <%= tag %>
+        </div>
+      <% end %>
+    </div>
+
+  </div>
+
+</div>

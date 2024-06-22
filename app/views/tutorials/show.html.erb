@@ -1,0 +1,43 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="S_TutorialPage">
+
+  <%= link_to :tutorials, class:"A_NavigationButton Page Back Fixed" do %>
+    <div class="Q_Icon s16 Back"></div>
+    Назад
+  <% end %>
+
+  <div class="M_PostOptions Tutorial">
+    <%= link_to "Пожаловаться", welcome_support_url, class: "A_NavigationButton PostOption" %>
+    <% if can? :manage, @tutorial %>
+      <%= link_to edit_tutorial_path(@tutorial) do %>
+        <div class="A_NavigationButton PostOption">
+          Редактировать
+        </div>
+      <% end %>
+      <%= button_to "Удалить пост", tutorial_path(@tutorial), method: :delete, class: "A_NavigationButton PostOption" %>
+    <% end %>
+  </div>
+
+  <div class="S_TutorialPage Gride">
+
+    <%= render partial: "tutorials/tutorial_page", locals: {tutorial: @tutorial} %>
+
+  </div>
+
+  <div class="IdeaPostPageSeeAlso">
+    <div class="IdeaPostPageSeeAlsoTitle">Смотрите также:</div>
+    <div class="IdeaPostPageSeeAlsoCards">
+      <%= link_to tutorial_path(1), class: "O_TutorialCard PP-1" do %>
+        <%= render @recom_post1 %>
+      <% end %>
+      <%= link_to tutorial_path(2), class: "O_TutorialCard PP-2" do %>
+        <%= render @recom_post2 %>
+      <% end %>
+      <%= link_to tutorial_path(3), class: "O_TutorialCard PP-3" do %>
+        <%= render @recom_post3 %>
+      <% end %>
+    </div>
+  </div>
+
+</div>

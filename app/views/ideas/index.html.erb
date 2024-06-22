@@ -1,0 +1,40 @@
+<div class="S_IdeaCardsPage">
+  <div class="M_Banner IdeaPosts">
+    <h1 class="A_BannerTitle IP-1">Идеи</h1>
+    <h1 class="A_BannerTitle IP-2">кастома</h1>
+    <div class="Q_BannerZigZag IdeaPosts"></div>
+  </div>
+  <div class="M_IdeasPageFilters">
+    <h6 class="A_FiltersSubtitle">Можете выбрать категорию</h6>
+    <section class="W_FiltersScroll">
+      <div class="C_IdeasFilters">
+        <%= link_to ideas_path, class:"A_Tag IdeasFilter Active" do %>
+          всё
+        <% end %>
+
+        <%= link_to tagged_ideas_path("одежда"), class:"A_Tag IdeasFilter" do %>
+          одежда
+        <% end %>
+
+        <%= link_to tagged_ideas_path("обувь"), class:"A_Tag IdeasFilter" do %>
+          обувь
+        <% end %>
+
+        <%= link_to tagged_ideas_path("аксессуары"), class:"A_Tag IdeasFilter" do %>
+          аксессуары
+        <% end %>
+
+        <%= link_to tagged_ideas_path("другое"), class:"A_Tag IdeasFilter" do %>
+          другое
+        <% end %>
+      </div>
+    </section>
+  </div>
+  <div class="C_IdeaCards">
+    <% @ideas.each do |idea| %>
+      <%= link_to idea_path(idea), class: "O_IdeaCard" do %>
+        <%= render idea %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

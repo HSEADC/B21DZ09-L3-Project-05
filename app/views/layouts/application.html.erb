@@ -1,13 +1,13 @@
 <%
-  if (controller_name == 'tutorial_posts') && (action_name == 'index' || action_name == 'by_tag')
+  if (controller_name == 'tutorial_posts' || controller_name == 'tutorials') && (action_name == 'index' || action_name == 'by_tag')
     body_class_name = 'tutorials_page'
   end
 
-  if (controller_name == 'idea_posts') && (action_name == 'index' || action_name == 'by_tag')
+  if (controller_name == 'idea_posts' || controller_name == 'ideas') && (action_name == 'index' || action_name == 'by_tag')
     body_class_name = 'ideas_page'
   end
 
-  if (controller_name == 'idea_posts' || controller_name == 'tutorial_posts') && (action_name == 'show')
+  if (controller_name == 'idea_posts' || controller_name == 'tutorial_posts' || controller_name == 'ideas' || controller_name == 'tutorials' ) && (action_name == 'show')
     body_class_name = 'post_page'
   end
 %>

@@ -2,7 +2,7 @@
 
 <div class="S_IdeaPage">
 
-  <%= link_to :idea_posts do %>
+  <%= link_to :ideas do %>
     <div class="A_NavigationButton Page Back Fixed">
       <div class="Q_Icon s16 Back"></div>
       Назад
@@ -11,16 +11,16 @@
 
   <div class="M_PostOptions Idea">
     <%= link_to "Пожаловаться", welcome_support_url, class: "A_NavigationButton PostOption" %>
-    <% if can? :manage, @post %>
-      <%= link_to edit_idea_post_path(@post) do %>
+    <% if can? :manage, @idea %>
+      <%= link_to edit_idea_path(@idea) do %>
         <div class="A_NavigationButton PostOption">
           Редактировать
         </div>
       <% end %>
-      <%= button_to "Удалить пост", idea_post_path(@post), method: :delete, class: "A_NavigationButton PostOption" %>
+      <%= button_to "Удалить пост", idea_path(@idea), method: :delete, class: "A_NavigationButton PostOption" %>
     <% end %>
   </div>
 
-  <%= render partial: "idea_posts/idea_post_page", locals: {post: @post} %>
+  <%= render partial: "ideas/idea_page", locals: {idea: @idea} %>
 
 </div>

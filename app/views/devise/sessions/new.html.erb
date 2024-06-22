@@ -11,11 +11,11 @@
       <div class="C_FormInputs">
         <div class="W_FormInputText">
           <%= f.label :email, class:"A_InputSubtitle" %>
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"A_FormInput" %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"A_FormInput", placeholder:"Email" %>
         </div>
         <div class="W_FormInputText">
-          <%= f.label :password, class:"A_InputSubtitle"  %>
-          <%= f.password_field :password, autocomplete: "current-password", class:"A_FormInput" %>
+          <%= f.label :"Введите пароль", class:"A_InputSubtitle"  %>
+          <%= f.password_field :password, autocomplete: "current-password", class:"A_FormInput", placeholder:"Пароль" %>
         </div>
       </div>
 

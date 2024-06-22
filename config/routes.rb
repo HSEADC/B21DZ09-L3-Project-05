@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
+
+  resources :ideas do
+    collection do
+      get "by_tag/:tag", to: "ideas#by_tag", as: "tagged"
+    end
+  end
+
+  resources :tutorials do
+    collection do
+      get "by_tag/:tag", to: "tutorials#by_tag", as: "tagged"
+    end
+  end
+
   post 'support/request_support'
 
   resources :posts do
@@ -67,8 +80,9 @@ Rails.application.routes.draw do
   resources :subscriptions, only: [:create, :show]
 
   devise_for :users, controllers: {
-        sessions: 'users/sessions'
-      }
+    # sessions: 'users/sessions',
+    registrations: 'users/registrations'
+  }
 
 
   get 'welcome/index'

@@ -8,6 +8,7 @@
   <% end %>
 
   <div class="M_PostOptions Tutorial">
+    <%= link_to "Пожаловаться", welcome_support_url, class: "A_NavigationButton PostOption" %>
     <% if can? :manage, @post %>
       <%= link_to edit_tutorial_post_path(@post) do %>
         <div class="A_NavigationButton PostOption">
@@ -15,7 +16,6 @@
         </div>
       <% end %>
       <%= button_to "Удалить пост", tutorial_post_path(@post), method: :delete, class: "A_NavigationButton PostOption" %>
-      <%= link_to "Пожаловаться", welcome_support_url, class: "A_NavigationButton PostOption" %>
     <% end %>
   </div>
 

@@ -1,0 +1,100 @@
+<div class="S_TutorialCardsPage">
+
+  <div class="M_Banner TutorialPosts">
+    <h1 class="A_BannerTitle TP">Туториалы</h1>
+    <div class="Q_BannerZigZag TutorialPosts"></div>
+  </div>
+
+  <div class="O_TutorialsPageFilters">
+    <h6 class="A_FiltersSubtitle">Выберите, что будем искать</h6>
+
+    <div class="C_TutorialsFilters">
+
+      <div class="W_TutorialsFilter">
+        <div class="M_FilterSelect Items">
+          <div class="W_FilterSelectTagsText">
+            <div class="A_Tag Card">Всё</div>
+            <p class="A_FilterSelectText">Предметы</p>
+          </div>
+          <div class="Q_Icon s26 Cross Items"></div>
+        </div>
+
+        <div class="M_FilterSelectDropdown Items">
+          <%= link_to tagged_tutorials_path("одежда"), class:"A_SelectDropdownItem" do %>
+            Одежда
+          <% end %>
+          <%= link_to tagged_tutorials_path("обувь"), class:"A_SelectDropdownItem" do %>
+            Обувь
+          <% end %>
+          <%= link_to tagged_tutorials_path("аксессуары"), class:"A_SelectDropdownItem" do %>
+            Аксессуары
+          <% end %>
+          <%= link_to tagged_tutorials_path("другое"), class:"A_SelectDropdownItem" do %>
+            Другое
+          <% end %>
+        </div>
+      </div>
+
+      <div class="W_TutorialsFilter">
+        <div class="M_FilterSelect Tech">
+          <div class="W_FilterSelectTagsText">
+            <div class="A_Tag Card">Все</div>
+            <p class="A_FilterSelectText">Техники</p>
+          </div>
+          <div class="Q_Icon s26 Cross Tech"></div>
+        </div>
+
+        <div class="M_FilterSelectDropdown Tech">
+          <%= link_to tagged_tutorials_path("роспись"), class:"A_SelectDropdownItem" do %>
+            Роспись
+          <% end %>
+          <%= link_to tagged_tutorials_path("шитье"), class:"A_SelectDropdownItem" do %>
+            Шитьё
+          <% end %>
+          <%= link_to tagged_tutorials_path("апсайклинг"), class:"A_SelectDropdownItem" do %>
+            Апсайклинг
+          <% end %>
+          <%= link_to tagged_tutorials_path("вязание"), class:"A_SelectDropdownItem" do %>
+            Вязание
+          <% end %>
+        </div>
+      </div>
+
+      <div class="W_TutorialsFilter">
+        <div class="M_FilterSelect Mat">
+          <div class="W_FilterSelectTagsText">
+            <div class="A_Tag Card">Всё</div>
+            <p class="A_FilterSelectText">Материалы</p>
+          </div>
+          <div class="Q_Icon s26 Cross Mat"></div>
+        </div>
+
+        <div class="M_FilterSelectDropdown Mat">
+          <%= link_to tagged_tutorials_path("краски"), class:"A_SelectDropdownItem" do %>
+            Краски
+          <% end %>
+          <%= link_to tagged_tutorials_path("кожа"), class:"A_SelectDropdownItem" do %>
+            Кожа
+          <% end %>
+          <%= link_to tagged_tutorials_path("текстиль"), class:"A_SelectDropdownItem" do %>
+            Текстиль
+          <% end %>
+          <%= link_to tagged_tutorials_path("бисер"), class:"A_SelectDropdownItem" do %>
+            Бисер
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%#= render @tutorial %>
+
+  <div class="C_TutorialCards">
+    <% @tutorials.each do |tutorial| %>
+      <%= link_to tutorial_path(tutorial), class: "O_TutorialCard" do %>
+        <%= render tutorial %>
+      <% end %>
+    <% end %>
+  </div>
+
+</div>

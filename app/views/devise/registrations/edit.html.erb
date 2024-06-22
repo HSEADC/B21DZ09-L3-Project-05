@@ -128,7 +128,7 @@
 
       <div class="UserEditName">
         <%= f.label :UserName %>
-        <%= f.email_field :name, autofocus: true, autocomplete: "name" %>
+        <%= f.email_field :name %>
       </div>
 
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>

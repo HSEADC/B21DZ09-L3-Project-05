@@ -6,8 +6,8 @@
       <div class="M_UserInfo">
         <div class="Q_Avatar"></div>
         <div class="C_UserInfoNames">
-          <p class="A_UserInfoName UN"><%= post.user.name %></p>
-          <p class="A_UserInfoName NN">@<%= post.user.email.split("@")[0] %></p>
+          <p class="A_UserInfoName UN"><%= tutorial.user.name %></p>
+          <p class="A_UserInfoName NN">@<%= tutorial.user.email.split("@")[0] %></p>
         </div>
       </div>
       <div class="Q_Icon s36 Options"></div>
@@ -15,14 +15,14 @@
 
     <div class="W_UserInfoOptions">
       <div class="C_TagsGroup">
-        <% post.tag_list.each do |tag| %>
-          <%= link_to tagged_tutorial_posts_path(tag), class:"A_Tag Card" do %>
+        <% tutorial.tag_list.each do |tag| %>
+          <%= link_to tagged_tutorials_path(tag), class:"A_Tag Card" do %>
             <%= tag %>
           <% end %>
         <% end %>
       </div>
       <p class="A_PostDate">
-        <%#= post.created_at #%>
+        <%#= tutorial.created_at #%>
         сегодня в&nbsp;10:05
       </p>
     </div>
@@ -30,12 +30,12 @@
   </div>
 
   <div class="M_TutorialPageTitleDescription">
-    <h3 class="A_TutorialPageTitle"><%= post.title%></h3>
-    <p class="A_TutorialPageDescription"><%= post.description %></p>
+    <h3 class="A_TutorialPageTitle"><%= tutorial.title%></h3>
+    <p class="A_TutorialPageDescription"><%= tutorial.description %></p>
   </div>
 
   <div class="Q_TutorialPageImg">
-    <%= image_tag post.post_image.url %>
+    <%= image_tag tutorial.image.url %>
   </div>
 
   <!--- --->
@@ -76,8 +76,8 @@
       <div class="M_UserInfo">
         <div class="Q_Avatar"></div>
         <div class="C_UserInfoNames">
-          <p class="A_UserInfoName UN"><%= post.user.name %></p>
-          <p class="A_UserInfoName NN">@<%= post.user.email.split("@")[0] %></p>
+          <p class="A_UserInfoName UN"><%= tutorial.user.name %></p>
+          <p class="A_UserInfoName NN">@<%= tutorial.user.email.split("@")[0] %></p>
         </div>
       </div>
       <div class="C_SocialNetworks">

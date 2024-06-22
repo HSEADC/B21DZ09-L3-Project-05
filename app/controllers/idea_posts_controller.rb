@@ -21,9 +21,9 @@ class IdeaPostsController < ApplicationController
 
   # GET /posts/1 or /posts/1.json
   def show
-    @recom_post1 = Post.find_by(id: "13")
-    @recom_post2 = Post.find_by(id: "16")
-    @recom_post3 = Post.find_by(id: "11")
+    @recom_post1 = Post.find_by(id: "1")
+    @recom_post2 = Post.find_by(id: "2")
+    @recom_post3 = Post.find_by(id: "3")
 
     # Meta
     @title = "LÒÒCHOK | #{@post.title}"

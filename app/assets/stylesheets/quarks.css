@@ -1,361 +1,362 @@
 .Q_Icon {
-    background-repeat: no-repeat;
-    background-size: contain;
-    cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
 
-    &.s42 {
-        width: 42px;
-        height: 42px;
-    }
-    
-    &.s38 {
-        width: 38px;
-        height: 38px;
-    }
+  &.s42 {
+    width: 42px;
+    height: 42px;
+  }
 
-    &.s36 {
-        width: 36px;
-        height: 36px;
-    }
+  &.s38 {
+    width: 38px;
+    height: 38px;
+  }
 
-    &.s32 {
-        width: 32px;
-        height: 32px;
-    }
+  &.s36 {
+    width: 36px;
+    height: 36px;
+  }
 
-    &.s26 {
-        width: 26px;
-        height: 26px;
-    }
+  &.s32 {
+    width: 32px;
+    height: 32px;
+  }
 
-    &.s20 {
-        width: 20px;
-        height: 20px;
-    }
+  &.s26 {
+    width: 26px;
+    height: 26px;
+  }
 
-    &.s16 {
-        width: 16px;
-        height: 16px;
-    }
+  &.s20 {
+    width: 20px;
+    height: 20px;
+  }
 
-    &.Search {
-        background-image: url("/assets/icons/IconSearch.svg");
-    }
+  &.s16 {
+    width: 16px;
+    height: 16px;
+  }
 
-    &.Cross {
-        background-image: url("/assets/icons/IconCross.svg");
-    }
+  &.Search {
+    background-image: url('/assets/icons/IconSearch.svg');
+  }
 
-    &.Back {
-        background-image: url("/assets/icons/IconBack.svg");
-    }
+  &.Cross {
+    background-image: url('/assets/icons/IconCross.svg');
+  }
 
-    &.Setting {
-        background-image: url("/assets/icons/IconSetting.svg");
-    }
+  &.Back {
+    background-image: url('/assets/icons/IconBack.svg');
+  }
 
-    &.Options {
-        background-image: url("/assets/icons/IconOptions.svg");
-    }
+  &.Setting {
+    background-image: url('/assets/icons/IconSetting.svg');
+  }
 
-    &.CreatePost {
-        background-image: url("/assets/icons/IconCreatePostYellow.svg");
-    }
+  &.Options {
+    background-image: url('/assets/icons/IconOptions.svg');
+  }
 
-    &.Edit {
-        background-image: url("/assets/icons/IconEdit.svg");
-    }
+  &.CreatePost {
+    background-image: url('/assets/icons/IconCreatePostYellow.svg');
+  }
 
-    &.MenuMob {
-        display: none;
-        background-image: url("/assets/icons/IconMenuMob.svg");
-    
-        &:hover {
-            cursor: pointer;
-        }
-    }
+  &.Edit {
+    background-image: url('/assets/icons/IconEdit.svg');
+  }
 
-    &.Like {
-        background-image: url("/assets/icons/IconLike.svg");
-    
-        &.active {
-            background-image: url("/assets/icons/IconLikeActive.svg");
-        }
+  &.MenuMob {
+    display: none;
+    background-image: url('/assets/icons/IconMenuMob.svg');
+
+    &:hover {
+      cursor: pointer;
     }
+  }
+
+  &.Like {
+    z-index: 90;
+    background-image: url('/assets/icons/IconLike.svg');
+
+    &.active {
+      background-image: url('/assets/icons/IconLikeActive.svg');
+    }
+  }
 }
 
 .Q_SocialNetwork {
-    width: 36px;
-    height: 36px;
+  width: 36px;
+  height: 36px;
 
-    background-repeat: no-repeat;
-    background-size: contain;
+  background-repeat: no-repeat;
+  background-size: contain;
 
-    &.VK {
-        background-image: url("/assets/VK.svg"); 
+  &.VK {
+    background-image: url('/assets/VK.svg');
 
-        &.Black {
-            background-image: url("/assets/VK-Black.svg"); 
-        }
+    &.Black {
+      background-image: url('/assets/VK-Black.svg');
+    }
+  }
+
+  &.TG {
+    background-image: url('/assets/TG.svg');
+
+    &.Black {
+      background-image: url('/assets/TG-Black.svg');
     }
 
-    &.TG {
-        background-image: url("/assets/TG.svg"); 
-
-        &.Black {
-            background-image: url("/assets/TG-Black.svg"); 
-        }
-
-        &.Black2 {
-            background-image: url("/assets/TG-Black2.svg"); 
-        }
+    &.Black2 {
+      background-image: url('/assets/TG-Black2.svg');
     }
+  }
 }
 
 .Q_Avatar {
-    background-image: url("/assets/avatars/AvatarUserTest.png");
-    background-repeat: no-repeat;
-    background-size: contain;
+  background-image: url('/assets/avatars/AvatarUserTest.png');
+  background-repeat: no-repeat;
+  background-size: contain;
 
-    width: 32px;
-    height: 32px;
+  width: 32px;
+  height: 32px;
 
-    flex: 0 0 auto;
+  flex: 0 0 auto;
 
-    &.s46 {
-        width: 46px;
-        height: 46px;
-    }
+  &.s46 {
+    width: 46px;
+    height: 46px;
+  }
 
-    &.s68 {
-        width: 68px;
-        height: 68px;
-    }
+  &.s68 {
+    width: 68px;
+    height: 68px;
+  }
 }
 
 .Q_BannerZigZag {
-    position: absolute;
-    background-image: url("/assets/LogoZigzag.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
+  position: absolute;
+  background-image: url('/assets/LogoZigzag.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
 
-    &.IdeaPosts {
-        margin-top: 110px;
-        margin-right: 198px;
+  &.IdeaPosts {
+    margin-top: 110px;
+    margin-right: 198px;
 
-        width: 160px;
-        height: 39px;
-        transform: rotate(-87deg);
-    }
+    width: 160px;
+    height: 39px;
+    transform: rotate(-87deg);
+  }
 
-    &.TutorialPosts {
-        margin-top: 160px;
-        margin-left: 410px;
+  &.TutorialPosts {
+    margin-top: 160px;
+    margin-left: 410px;
 
-        width: 262px;
-        height: 67px;
-        transform: rotate(-87deg);
-        transform: scale(-1, 1);
-    }
+    width: 262px;
+    height: 67px;
+    transform: rotate(-87deg);
+    transform: scale(-1, 1);
+  }
 }
 
 .Q_FooterLogoLine {
-    background-image: url("/assets/LogoZigzag.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
+  background-image: url('/assets/LogoZigzag.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
 
-    margin-top: -16px;
-    margin-left: 72px;
+  margin-top: -16px;
+  margin-left: 72px;
 
-    width: 144px;
-    height: 37px;
-    transform: rotate(2deg);
+  width: 144px;
+  height: 37px;
+  transform: rotate(2deg);
 }
 
 .Q_FooterTopR {
-    color: var(--lightgray);
-    font-family: Suisse Intl;
-    font-size: 42px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 90%;
+  color: var(--lightgray);
+  font-family: Suisse Intl;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 90%;
 }
 
 .Q_IdeaCardImg {
-    position: relative;
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  /* background-color: var(--white); */
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding-top: 100%;
-    /* background-color: var(--white); */
-    
-    img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 20px;
-    }
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
 }
 
 .Q_TutorialCardImg {
-    position: relative;
+  position: relative;
+  width: 100%;
+  padding-top: 59.7%;
+  /* background-color: var(--white); */
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding-top: 59.7%;
-    /* background-color: var(--white); */
-    
-    img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 20px;
-    }
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
 }
 
 .Q_IdeaPageImg {
-    position: relative;
-    grid-column: 3 / 14;
-    padding-top: 100%;
-    
-    img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 28px;
-    }
+  position: relative;
+  grid-column: 3 / 14;
+  padding-top: 100%;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 28px;
+  }
 }
 
 .Q_TutorialPageImg {
-    position: relative;
+  position: relative;
+  width: 100%;
+  padding-top: 55%;
+  /* background-color: var(--white); */
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding-top: 55%;
-    /* background-color: var(--white); */
-    
-    img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 28px;
-    }
+    height: 100%;
+    object-fit: cover;
+    border-radius: 28px;
+  }
 }
 
 .Q_NavUser {
-    background-image: url("/assets/icons/IconUser.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
+  background-image: url('/assets/icons/IconUser.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
 
-    width: 40px;
-    height: 40px;
+  width: 40px;
+  height: 40px;
 }
 
 .Q_AvatarAdmin {
-    background-image: url("/assets/icons/IconAvatarAdmin.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
+  background-image: url('/assets/icons/IconAvatarAdmin.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
 
-    width: 40px;
-    height: 40px;
+  width: 40px;
+  height: 40px;
 }
 
 .Q_ProfilePageCardImg {
-    background-image: url("/assets/profile/AvatarPhoto.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    border-radius: 35px;
+  background-image: url('/assets/profile/AvatarPhoto.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 35px;
 
-    width: 201px;
-    height: 201px;
+  width: 201px;
+  height: 201px;
 }
 
 @media only screen and (min-width: 1921px) {
-    .Q_IdeaPageImg {
-        grid-column: 5 / 14;
-    }
+  .Q_IdeaPageImg {
+    grid-column: 5 / 14;
+  }
 }
 
 @media only screen and (min-width: 1441px) and (max-width: 1920px) {
-    .Q_IdeaPageImg {
-        grid-column: 3 / 14;
-    }
+  .Q_IdeaPageImg {
+    grid-column: 3 / 14;
+  }
 }
 
 @media only screen and (max-width: 1280px) {
-    .Q_Avatar {
-        &.CreateComment {
-            display: none;
-        }
+  .Q_Avatar {
+    &.CreateComment {
+      display: none;
     }
+  }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1280px) {
-    .Q_IdeaPageImg {
-        grid-column: 2 / 14;
-    }
+  .Q_IdeaPageImg {
+    grid-column: 2 / 14;
+  }
 }
 
 @media only screen and (max-width: 1023px) {
-    .Q_BannerZigZag {
-        &.IdeaPosts {
-            margin-top: 81px;
-            margin-right: 60px;
-    
-            width: 57px;
-            height: 14px;
-        }
+  .Q_BannerZigZag {
+    &.IdeaPosts {
+      margin-top: 81px;
+      margin-right: 60px;
 
-        &.TutorialPosts {
-            margin-top: 110px;
-            margin-left: 202px;
-    
-            width: 134px;
-            height: 34px;
-        }
+      width: 57px;
+      height: 14px;
     }
+
+    &.TutorialPosts {
+      margin-top: 110px;
+      margin-left: 202px;
+
+      width: 134px;
+      height: 34px;
+    }
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    .Q_IdeaPageImg {
-        grid-column: 1 / 13;
-    }
+  .Q_IdeaPageImg {
+    grid-column: 1 / 13;
+  }
 }
 
 @media only screen and (max-width: 767px) {
-    .Q_Icon {
-        &.MenuMob {
-            display: block; 
-        }
+  .Q_Icon {
+    &.MenuMob {
+      display: block;
     }
+  }
 
-    .Q_SocialNetwork {
-        width: 44px;
-        height: 44px;
-    }
+  .Q_SocialNetwork {
+    width: 44px;
+    height: 44px;
+  }
 
-    .Q_IdeaPageImg {
-        width: 100%;
-        height: auto;
-    }
+  .Q_IdeaPageImg {
+    width: 100%;
+    height: auto;
+  }
 
-    .NavDesk {
-        display: none;
-    }
+  .NavDesk {
+    display: none;
+  }
 
-    .Q_NavUser {
-        width: 32px;
-        height: 32px;
-    }
+  .Q_NavUser {
+    width: 32px;
+    height: 32px;
+  }
 
-    .Q_AvatarAdmin {
-        width: 32px;
-        height: 32px;
-    }
+  .Q_AvatarAdmin {
+    width: 32px;
+    height: 32px;
+  }
 }

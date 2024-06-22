@@ -1,0 +1,22 @@
+<div class="W_TutorialCardContent">
+
+  <div class="Q_TutorialCardImg">
+    <%= image_tag tutorial.image.url %>
+  </div>
+
+  <div class="W_TutorialCardInfo">
+    <div class="M_TutorialCardTitleLike">
+      <h2 class="A_TutorialCardTitle"><%= tutorial.title%></h2>
+      <div class="Q_Icon s42 Like"></div>
+    </div>
+
+    <div class="C_TagsGroup">
+      <% tutorial.tag_list.each do |tag| %>
+        <div class="A_Tag Card">
+          <%= tag %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+</div>

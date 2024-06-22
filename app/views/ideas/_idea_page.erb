@@ -1,0 +1,51 @@
+<div class="S_IdeaPage Gride">
+
+  <div class="Q_IdeaPageImg">
+    <%= image_tag idea.image.url if idea.image.url %>
+  </div>
+
+  <div class="O_IdeaPageInfoBlock">
+
+    <div class="W_IdeaPageInfoTop">
+      <div class="W_PageInfoAbout Idea">
+        <p class="A_PostDate">
+          <%#= idea.created_at #%>
+          сегодня в&nbsp;10:05
+        </p>
+
+        <div class="W_UserInfoOptions">
+          <div class="M_UserInfo">
+            <div class="Q_Avatar"></div>
+            <div class="C_UserInfoNames">
+              <p class="A_UserInfoName UN"><%= idea.user.name %></p>
+              <p class="A_UserInfoName NN">@<%= idea.user.email.split("@")[0] %></p>
+            </div>
+          </div>
+          <div class="Q_Icon s36 Options"></div>
+        </div>
+
+        <div class="W_UserInfoOptions">
+          <div class="C_TagsGroup">
+            <% idea.tag_list.each do |tag| %>
+              <%= link_to tagged_ideas_path(tag), class:"A_Tag Card" do %>
+                <%= tag %>
+              <% end %>
+            <% end %>
+          </div>
+          <div class="Q_Icon s32 Like"></div>
+        </div>
+      </div>
+
+      <div class="M_IdeaPageIntoTexts">
+        <h3 class="A_IdeaPageInfoTitle"><%= idea.title%></h3>
+        <p class="A_IdeaPageInfoDescription"><%= idea.description %></p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="IdeaPostPageSeeAlso">
+  <div class="IdeaPostPageSeeAlsoTitle">Смотрите также:</div>
+
+</div>

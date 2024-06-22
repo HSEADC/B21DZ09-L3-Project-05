@@ -11,11 +11,11 @@
 
 @posts_data = [
   {
-    title: 'Как расписать кеды',
-    description: 'Если вы начинающий кастомер, обычные кеды идеально подойдут для экспериментов. Можно превратить пару скучных белых кед во что-нибудь действительно впечатляющее. Однако для раскраски тканевой обуви необходимо приложить усилия, ведь вам придется проработать дизайн, подготовить необходимые материалы и расчистить рабочую поверхность перед началом работы. Чтобы добавить в ваш гардероб ярких цветов, возьмите в руки кеды и раскройте свой творческий потенциал.',
-    post_image: File.open(Rails.root.join('public', 'image_post', 'image_13.jpg')),
-    type: 'TutorialPost',
-    tag_list: ['обувь', 'роспись']
+    title: 'Роспись сумки',
+    description: 'Работать по гладкой коже всегда приятно) Опробовала новые краски))',
+    post_image: File.open(Rails.root.join('public', 'image_post', 'image_19.jpg')),
+    type: 'IdeaPost',
+    tag_list: ['аксессуары', 'роспись', 'кожа']
   },
   {
     title: 'Первый опыт кастома',
@@ -30,146 +30,6 @@
     post_image: File.open(Rails.root.join('public', 'image_post', 'image_9.jpg')),
     type: 'IdeaPost',
     tag_list: ['одежда', 'роспись', 'кожа']
-  },
-  {
-    title: 'Кастом и апсайклинг',
-    description: 'Модняво и травматично (Ася нам жаль)',
-    post_image: File.open(Rails.root.join('public', 'image_post', 'image_1.jpg')),
-    type: 'IdeaPost',
-    tag_list: ['одежда', 'апсайклинг']
-  },
-  {
-    title: 'смотрят множеством глаз',
-    description: 'использовать фотографии в кастоме — всегда сильный приём',
-    post_image: File.open(Rails.root.join('public', 'image_post', 'image_3.jpg')),
-    type: 'IdeaPost',
-    tag_list: ['одежда', 'шитьё']
-  },
-  {
-    title: 'Расписал новые кросы',
-    description: 'Люблю комиксы и люблю кроссовки. А ещё занимаюсь кастомом!',
-    post_image: File.open(Rails.root.join('public', 'image_post', 'image_12.jpg')),
-    type: 'IdeaPost',
-    tag_list: ['обувь', 'роспись']
-  },
-  {
-    title: 'магически красиво',
-    description: 'дуальность природы и урбанизации',
-    post_image: File.open(Rails.root.join('public', 'image_post', 'image_5.jpg')),
-    type: 'IdeaPost',
-    tag_list: ['одежда', 'апсайклинг', 'шитьё']
-  },
-  {
-    title: 'Мам прости теперь я панк рок мальчик',
-    description: 'Лайк на кастом, если не любишь расстраивать маму',
-    post_image: File.open(Rails.root.join('public', 'image_post', 'image_17.jpg')),
-    type: 'IdeaPost',
-    tag_list: ['обувь', 'роспись', 'кожа']
-  },
-  {
-    title: 'покажи мне свой чехол телефона, и я скажу тебе, кто ты',
-    description: 'важный элемент образа',
-    post_image: File.open(Rails.root.join('public', 'image_post', 'image_14.jpg')),
-    type: 'IdeaPost',
-    tag_list: ['аксессуары', 'роспись', 'краски']
-  },
-  {
-    title: 'магически красиво',
-    description: 'дуальность природы и урбанизации',
-    post_image: File.open(Rails.root.join('public', 'image_post', 'image_6.jpg')),
-    type: 'IdeaPost',
-    tag_list: ['шитьё']
-  },
-  {
-    title: 'Морской свитерок',
-    description: 'для зимы очень нужно',
-    post_image: File.open(Rails.root.join('public', 'image_post', 'image_11.jpg')),
-    type: 'IdeaPost',
-    tag_list: ['одежда', 'вязание']
-  },
-  {
-    title: 'Кастом + собачки',
-    description: 'Ну что может быть лучше <3',
-    post_image: File.open(Rails.root.join('public', 'image_post', 'image_16.jpg')),
-    type: 'IdeaPost',
-    tag_list: ['аксессуары', 'шитьё']
-  },
-  {
-    title: 'джинсы-не-с-помойки',
-    description: 'сеттинг съёмки имеет значение!! а вообще: зацените новые штанишки',
-    post_image: File.open(Rails.root.join('public', 'image_post', 'image_10.jpg')),
-    type: 'IdeaPost',
-    tag_list: ['одежда', 'шитьё', 'апсайклинг']
-  },
-  {
-    title: 'главное, чтобы костюмчик сидел',
-    description: 'главное, чтобы костюмчик сидел. главное, чтобы костюмчик сидел!',
-    post_image: File.open(Rails.root.join('public', 'image_post', 'image_2.jpg')),
-    type: 'IdeaPost',
-    tag_list: ['одежда', 'роспись']
-  },
-  {
-    title: 'магически красиво',
-    description: 'дуальность природы и урбанизации',
-    post_image: File.open(Rails.root.join('public', 'image_post', 'image_4.jpg')),
-    type: 'IdeaPost',
-    tag_list: ['одежда', 'апсайклинг', 'шитьё']
-  },
-  {
-    title: 'мам да это кастом а не дырки',
-    description: 'да правда мам(((',
-    post_image: File.open(Rails.root.join('public', 'image_post', 'image_7.jpg')),
-    type: 'IdeaPost',
-    tag_list: ['одежда', 'вязание', 'шитьё']
-  },
-  {
-    title: 'Обновка с Дэдпулом',
-    description: 'Люблю комиксы и люблю кроссовки. А ещё занимаюсь кастомом!',
-    post_image: File.open(Rails.root.join('public', 'image_post', 'image_13.jpg')),
-    type: 'IdeaPost',
-    tag_list: ['обувь', 'роспись']
-  },
-  {
-    title: 'Обновлённая куртка №2',
-    description: 'немного красок + много труда = бесконечность стиля',
-    post_image: File.open(Rails.root.join('public', 'image_post', 'image_20.jpg')),
-    type: 'IdeaPost',
-    tag_list: ['одежда', 'роспись', 'кожа']
-  },
-  {
-    title: 'Лайк э рокстар',
-    description: 'Ставь лайк на мой кастом, если пропел. Если не пропел — иди и просвещайся',
-    post_image: File.open(Rails.root.join('public', 'image_post', 'image_15.jpg')),
-    type: 'IdeaPost',
-    tag_list: ['одежда', 'шитьё']
-  },
-  {
-    title: 'Графити-пиджак получается',
-    description: 'Получается так',
-    post_image: File.open(Rails.root.join('public', 'image_post', 'image_18.jpg')),
-    type: 'IdeaPost',
-    tag_list: ['одежда', 'роспись', 'кожа']
-  },
-  {
-    title: 'Роспись сумки',
-    description: 'Работать по гладкой коже всегда приятно) Опробовала новые краски))',
-    post_image: File.open(Rails.root.join('public', 'image_post', 'image_19.jpg')),
-    type: 'IdeaPost',
-    tag_list: ['аксессуары', 'роспись', 'кожа']
-  },
-  {
-    title: 'Кожаный пиджак как холст для граффити',
-    description: 'Это вообще возможно???? Да!!1!',
-    post_image: File.open(Rails.root.join('public', 'image_post', 'image_18.jpg')),
-    type: 'TutorialPost',
-    tag_list: ['кожа', 'роспись']
-  },
-  {
-    title: 'Введение в апсайклинг',
-    description: 'Статья об этом всём сложном и непонятном',
-    post_image: File.open(Rails.root.join('public', 'image_post', 'image_7.jpg')),
-    type: 'TutorialPost',
-    tag_list: ['одежда', 'апсайклинг', 'шитьё']
   },
   {
     title: 'Пару слов о швах',
@@ -191,20 +51,168 @@
     post_image: File.open(Rails.root.join('public', 'image_post', 'image_14.jpg')),
     type: 'TutorialPost',
     tag_list: ['аксессуары']
-  },
+  }
+]
+
+@ideas_data = [
   {
     title: 'Первый опыт кастома',
     description: 'Это было несколько лет назад, и вот где мы теперь...',
-    post_image: File.open(Rails.root.join('public', 'image_post', 'image_8.jpg')),
-    type: 'IdeaPost',
-    tag_list: ['одежда', 'роспись']
+    image: File.open(Rails.root.join('public', 'image_post', 'image_8.jpg')),
+    tag_list: ['одежда', 'шитье']
   },
   {
     title: 'Обновлённая косуха',
     description: 'немного красок + много труда = бесконечность стиля',
-    post_image: File.open(Rails.root.join('public', 'image_post', 'image_9.jpg')),
-    type: 'IdeaPost',
+    image: File.open(Rails.root.join('public', 'image_post', 'image_9.jpg')),
     tag_list: ['одежда', 'роспись', 'кожа']
+  },
+  {
+    title: 'Кастом и апсайклинг',
+    description: 'Модняво и травматично (Ася нам жаль)',
+    image: File.open(Rails.root.join('public', 'image_post', 'image_1.jpg')),
+    tag_list: ['одежда', 'шитье']
+  },
+  {
+    title: 'смотрят множеством глаз',
+    description: 'использовать фотографии в кастоме — всегда сильный приём',
+    image: File.open(Rails.root.join('public', 'image_post', 'image_3.jpg')),
+    tag_list: ['одежда', 'роспись']
+  },
+  {
+    title: 'Расписал новые кросы',
+    description: 'Люблю комиксы и люблю кроссовки. А ещё занимаюсь кастомом!',
+    image: File.open(Rails.root.join('public', 'image_post', 'image_12.jpg')),
+    tag_list: ['обувь', 'роспись', 'кожа']
+  },
+  {
+    title: 'магически красиво',
+    description: 'дуальность природы и урбанизации',
+    image: File.open(Rails.root.join('public', 'image_post', 'image_5.jpg')),
+    tag_list: ['одежда', 'шитье', 'апсайклинг']
+  },
+  {
+    title: 'Мам прости теперь я панк рок мальчик',
+    description: 'Лайк на кастом, если не любишь расстраивать маму',
+    image: File.open(Rails.root.join('public', 'image_post', 'image_17.jpg')),
+    tag_list: ['одежда', 'роспись', 'кожа']
+  },
+  {
+    title: 'покажи мне свой чехол телефона, и я скажу тебе, кто ты',
+    description: 'важный элемент образа',
+    image: File.open(Rails.root.join('public', 'image_post', 'image_14.jpg')),
+    tag_list: ['аксессуары']
+  },
+  {
+    title: 'магически красиво',
+    description: 'дуальность природы и урбанизации',
+    image: File.open(Rails.root.join('public', 'image_post', 'image_6.jpg')),
+    tag_list: ['одежда', 'шитье', 'апсайклинг']
+  },
+  {
+    title: 'Морской свитерок',
+    description: 'для зимы очень нужно',
+    image: File.open(Rails.root.join('public', 'image_post', 'image_11.jpg')),
+    tag_list: ['одежда', 'шитье']
+  },
+  {
+    title: 'Кастом + собачки',
+    description: 'Ну что может быть лучше <3',
+    image: File.open(Rails.root.join('public', 'image_post', 'image_16.jpg')),
+    tag_list: ['другое', 'шитье', 'апсайклинг']
+  },
+  {
+    title: 'джинсы-не-с-помойки',
+    description: 'сеттинг съёмки имеет значение!! а вообще: зацените новые штанишки',
+    image: File.open(Rails.root.join('public', 'image_post', 'image_10.jpg')),
+    tag_list: ['одежда', 'шитье', 'апсайклинг']
+  },
+  {
+    title: 'главное, чтобы костюмчик сидел',
+    description: 'главное, чтобы костюмчик сидел. главное, чтобы костюмчик сидел!',
+    image: File.open(Rails.root.join('public', 'image_post', 'image_2.jpg')),
+    tag_list: ['одежда', 'роспись']
+  },
+  {
+    title: 'магически красиво',
+    description: 'дуальность природы и урбанизации',
+    image: File.open(Rails.root.join('public', 'image_post', 'image_4.jpg')),
+    tag_list: ['одежда', 'шитье', 'апсайклинг']
+  },
+  {
+    title: 'мам да это кастом а не дырки',
+    description: 'да правда мам(((',
+    image: File.open(Rails.root.join('public', 'image_post', 'image_7.jpg')),
+    tag_list: ['одежда', 'шитье']
+  },
+  {
+    title: 'Обновка с Дэдпулом',
+    description: 'Люблю комиксы и люблю кроссовки. А ещё занимаюсь кастомом!',
+    image: File.open(Rails.root.join('public', 'image_post', 'image_13.jpg')),
+    tag_list: ['обувь', 'роспись', 'кожа']
+  },
+  {
+    title: 'Обновлённая куртка №2',
+    description: 'немного красок + много труда = бесконечность стиля',
+    image: File.open(Rails.root.join('public', 'image_post', 'image_20.jpg')),
+    tag_list: ['одежда', 'роспись']
+  },
+  {
+    title: 'Лайк э рокстар',
+    description: 'Ставь лайк на мой кастом, если пропел. Если не пропел — иди и просвещайся',
+    image: File.open(Rails.root.join('public', 'image_post', 'image_15.jpg')),
+    tag_list: ['одежда', 'шитье']
+  },
+  {
+    title: 'Графити-пиджак получается',
+    description: 'Получается так',
+    image: File.open(Rails.root.join('public', 'image_post', 'image_18.jpg')),
+    tag_list: ['одежда', 'роспись']
+  }
+]
+
+@tutorials_data = [
+  {
+    title: 'Как расписать кеды',
+    description: 'Если вы начинающий кастомер, обычные кеды идеально подойдут для экспериментов. Можно превратить пару скучных белых кед во что-нибудь действительно впечатляющее. Однако для раскраски тканевой обуви необходимо приложить усилия, ведь вам придется проработать дизайн, подготовить необходимые материалы и расчистить рабочую поверхность перед началом работы. Чтобы добавить в ваш гардероб ярких цветов, возьмите в руки кеды и раскройте свой творческий потенциал.',
+    image: File.open(Rails.root.join('public', 'image_post', 'image_13.jpg')),
+    content: 'Рыбный контент-текст для конструктора',
+    tag_list: ['обувь', 'роспись', 'кожа']
+  },
+  {
+    title: 'Кожаный пиджак как холст для граффити',
+    description: 'Это вообще возможно???? Да!!1!',
+    image: File.open(Rails.root.join('public', 'image_post', 'image_18.jpg')),
+    content: 'Рыбный контент-текст для конструктора',
+    tag_list: ['одежда', 'роспись']
+  },
+  {
+    title: 'Введение в апсайклинг',
+    description: 'Статья об этом всём сложном и непонятном',
+    image: File.open(Rails.root.join('public', 'image_post', 'image_7.jpg')),
+    content: 'Рыбный контент-текст для конструктора',
+    tag_list: ['одежда', 'апсайклинг']
+  },
+  {
+    title: 'Пару слов о швах',
+    description: 'Разбираемся, как не заколоться насмерть, если вы никогда не держали иголку в руках. Полное и наглядное руководство для начинающих кастомеров и кощеев бессмертных',
+    image: File.open(Rails.root.join('public', 'image_post', 'image_6.jpg')),
+    content: 'Рыбный контент-текст для конструктора',
+    tag_list: ['шитье']
+  },
+  {
+    title: 'Особенности костюмной ткани: кастом',
+    description: 'Костюмы (пиджаки, брюки, жилетки и прочие предметы одежды, которые носят взросылые люди) делают из особой ткани, и надо знать её особенности, чтобы удачно кастомизировать шмоточки костюма',
+    image: File.open(Rails.root.join('public', 'image_post', 'image_2.jpg')),
+    content: 'Рыбный контент-текст для конструктора',
+    tag_list: ['одежда', 'шитье']
+  },
+  {
+    title: 'Как наклеить что угодно куда угодно',
+    description: 'И оно не оторвётся. Дело не только в клее момент! Тут нужно мастерство',
+    image: File.open(Rails.root.join('public', 'image_post', 'image_14.jpg')),
+    content: 'Рыбный контент-текст для конструктора',
+    tag_list: ['другое']
   }
 ]
 
@@ -214,6 +222,8 @@ def seed
   create_admin
   create_users
   create_posts(@posts_data)
+  create_ideas(@ideas_data)
+  create_tutorials(@tutorials_data)
   create_comments(5..10)
   create_comment_replies(30)
 end
@@ -243,7 +253,7 @@ end
 def create_users
   i = 1
 
-  5.times do
+  10.times do
     user_data = {
       email: "user_#{i}@email.com",
       name: "Кастомович #{i}",
@@ -272,6 +282,22 @@ def create_posts(data)
     user = User.all.sample
     post = Post.create(type: posts_data[:type], tag_list: posts_data[:tag_list], title: posts_data[:title], description: posts_data[:description], post_image: posts_data[:post_image], user_id: user.id)
     puts "Post with id #{post.id} with type #{post.type} just created"
+  end
+end
+
+def create_ideas(data)
+  data.each do |ideas_data|
+    user = User.all.sample
+    idea = Idea.create(title: ideas_data[:title], description: ideas_data[:description], image: ideas_data[:image], user_id: user.id, tag_list: ideas_data[:tag_list])
+    puts "Idea with id #{idea.id} just created"
+  end
+end
+
+def create_tutorials(data)
+  data.each do |tutorials_data|
+    user = User.all.sample
+    tutorial = Tutorial.create(title: tutorials_data[:title], description: tutorials_data[:description], image: tutorials_data[:image], content: tutorials_data[:content], user_id: user.id, tag_list: tutorials_data[:tag_list])
+    puts "Tutorial with id #{tutorial.id} just created"
   end
 end
 
