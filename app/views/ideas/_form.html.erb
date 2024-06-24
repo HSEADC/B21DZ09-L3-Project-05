@@ -46,6 +46,10 @@
         </div>
       </div>
 
+      <% if @tutorial %>
+        <%= form.hidden_field :tutorial_ids, value: @tutorial.id %>
+      <% end %>
+
       <div class="BottomContent">
         <div class="BlockContent Description">
           <%= form.label :"Описание проекта", class:"TitleNewContent" %>

@@ -60,7 +60,7 @@
 </div>
 
 <% if @idea.tutorials != [] %>
-  <div class="IdeaPostPageSeeAlso">
+  <div class="IdeaPostPageSeeAlsoShow">
     <div class="IdeaPostPageSeeAlsoTitle">Научиться так же:</div>
     <div class="IdeaPostPageSeeAlsoCards">
       <% @idea.tutorials.each do |tutorial| %>
@@ -73,7 +73,7 @@
 <% end %>
 
 <% if @idea.tutorials == [] %>
-  <div class="IdeaPostPageSeeAlso">
+  <div class="IdeaPostPageSeeAlsoShow">
     <div class="IdeaPostPageSeeAlsoTitle">Другие идеи:</div>
     <div class="IdeaPostPageSeeAlsoCards">
       <%= link_to idea_path(1), class: "O_IdeaCard PP-1" do %>

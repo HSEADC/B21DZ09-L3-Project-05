@@ -10,6 +10,8 @@ Rails.application.routes.draw do
     collection do
       get "by_tag/:tag", to: "tutorials#by_tag", as: "tagged"
     end
+
+    resources :ideas, only: [:new, :create]
   end
 
   post 'support/request_support'

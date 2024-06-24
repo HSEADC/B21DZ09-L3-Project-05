@@ -33,6 +33,7 @@ class IdeasController < ApplicationController
 
   # GET /ideas/new
   def new
+    @tutorial = Tutorial.friendly.find(params[:tutorial_id]) if params[:tutorial_id]
     @idea = Idea.new
 
     # Meta
@@ -51,13 +52,15 @@ class IdeasController < ApplicationController
   def create
     @idea = Idea.new(idea_params)
 
-    respond_to do |format|
+    if params[:tutorial_id]
+      @tutorial = Tutorial.friendly.find(params[:tutorial_id])
+      @tutorial.ideas << @idea if @idea.save
+      redirect_to @tutorial, notice: "Idea was successfully created and linked to the Tutorial."
+    else
       if @idea.save
-        format.html { redirect_to idea_url(@idea), notice: "Пост успешно создан" }
-        format.json { render :show, status: :created, location: @idea }
+        redirect_to @idea, notice: "Idea was successfully created."
       else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @idea.errors, status: :unprocessable_entity }
+        render :new
       end
     end
   end
@@ -93,6 +96,6 @@ class IdeasController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def idea_params
-      params.require(:idea).permit(:title, :description, :image, :tag_list).merge(user_id: current_user.id)
+      params.require(:idea).permit(:title, :description, :image, :tag_list, :tutorial_ids).merge(user_id: current_user.id)
     end
 end

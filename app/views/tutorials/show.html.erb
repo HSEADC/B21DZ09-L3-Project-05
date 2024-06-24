@@ -39,6 +39,8 @@
 
   </div>
 
+  <%= link_to 'Create a new idea for this tutorial', new_tutorial_idea_path(@tutorial), class: 'button' %>
+
   <% if @tutorial.ideas != [] %>
     <div class="IdeaPostPageSeeAlso rowWhisAbsl">
       <div class="IdeaPostPageSeeAlsoTitle">Идеи по этому туториалу:</div>
