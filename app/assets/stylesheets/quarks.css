@@ -195,7 +195,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 20px;
+    border-radius: 16px;
   }
 }
 
@@ -249,6 +249,64 @@
   }
 }
 
+.Q_UnderlayScroll {
+  width: 100%;
+  height: 70px;
+
+  &.black {
+    background-color: black;
+  }
+}
+
+.Q_MainPageSectionTitle {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &.Logo {
+    margin-top: -48%;
+    height: 100%;
+    width: 68%;
+    background-image: url('/assets/main/Q_MainPageTitleLogo.svg');
+  }
+
+  &.Tutorials {
+    margin-top: -48%;
+    height: 50%;
+    width: 58%;
+    transform: rotate(-2deg);
+    background-image: url('/assets/main/Q_MainPageTitleTutorials2.svg');
+  }
+}
+
+.Q_MainPageSectionBackground {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 101%;
+  height: 101%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &.Eco {
+    background-image: url('/assets/main/Eco.svg');
+  }
+
+  &.Sew {
+    background-image: url('/assets/main/Sew.svg');
+  }
+
+  &.Profi {
+    background-image: url('/assets/main/Profi.svg');
+  }
+
+  &.Easy {
+    background-image: url('/assets/main/Easy.svg');
+  }
+}
+
 .Q_NavUser {
   background-image: url('/assets/icons/IconUser.svg');
   background-repeat: no-repeat;
@@ -293,6 +351,15 @@
   background-position: center;
 }
 
+.Q_MainArrow {
+  width: 66px;
+  height: 66px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  background-image: url('/assets/main/MainArrow.svg');
+}
+
 @media only screen and (min-width: 1921px) {
   .Q_IdeaPageImg {
     grid-column: 5 / 14;
@@ -302,6 +369,13 @@
 @media only screen and (min-width: 1441px) and (max-width: 1920px) {
   .Q_IdeaPageImg {
     grid-column: 3 / 14;
+  }
+}
+
+@media only screen and (min-width: 1281px) and (max-width: 1440px) {
+  .Q_MainArrow {
+    width: 60px;
+    height: 60px;
   }
 }
 
@@ -317,9 +391,18 @@
   .Q_IdeaPageImg {
     grid-column: 2 / 14;
   }
+
+  .Q_MainArrow {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 @media only screen and (max-width: 1023px) {
+  .Q_MainArrow {
+    display: none;
+  }
+
   .Q_BannerZigZag {
     &.IdeaPosts {
       margin-top: 81px;
@@ -337,6 +420,14 @@
       height: 34px;
     }
   }
+
+  .Q_MainPageSectionTitle {
+    &.Logo {
+      margin-top: -48%;
+      height: 97%;
+      width: 66%;
+    }
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
@@ -346,6 +437,10 @@
 }
 
 @media only screen and (max-width: 767px) {
+  .Q_UnderlayScroll {
+    height: 48px;
+  }
+
   .Q_Icon {
     &.MenuMob {
       display: block;

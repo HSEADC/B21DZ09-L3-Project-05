@@ -1,38 +1,86 @@
 <div class="MainPage">
   <div class="MainPageCards">
-    <%= link_to "", welcome_about_url, class: "MainLook main" %>
 
-    <a href="/idea_posts/2" class="MainPageSelection Profi">
+    <a href="/welcome/about" class="M_MainPageBigSection main">
+      <div class="Q_MainPageSectionTitle Logo"></div>
     </a>
 
-    <a href="/tutorial_posts/1" class="MainPageSelection Easy">
+    <h3 class="A_MainPageTitle collections">Подборки</h3>
+
+    <div class="C_MainPageSectionsRow">
+      <a href="/ideas/2" class="M_MainPageSection">
+        <div class="Q_MainPageSectionBackground Profi">
+          <p class="A_MainPageSectionText">Профи</p>
+        </div>
+      </a>
+
+      <a href="/tutorials/1" class="M_MainPageSection">
+        <div class="Q_MainPageSectionBackground Easy">
+          <p class="A_MainPageSectionText">Легкие</p>
+        </div>
+      </a>
+
+      <a href="/ideas/by_tag/апсайклинг" class="M_MainPageSection">
+        <div class="Q_MainPageSectionBackground Eco">
+          <p class="A_MainPageSectionText">Эко</p>
+        </div>
+      </a>
+
+      <a href="/tutorials/by_tag/шитье" class="M_MainPageSection">
+        <div class="Q_MainPageSectionBackground Sew">
+          <p class="A_MainPageSectionText">Шитье</p>
+        </div>
+      </a>
+    </div>
+
+    <a href="/ideas/2" class="M_MainPageSection tile">
+      <div class="Q_MainPageSectionBackground Profi">
+        <p class="A_MainPageSectionText">Профи</p>
+      </div>
     </a>
 
-    <a href="/tutorial_posts/апсайклинг" class="MainPageSelection Eco">
+    <a href="/tutorials/1" class="M_MainPageSection tile">
+      <div class="Q_MainPageSectionBackground Easy">
+        <p class="A_MainPageSectionText">Легкие</p>
+      </div>
     </a>
 
-    <a href="/idea_posts/by_tag/шитье" class="MainPageSelection Sew">
+    <a href="/ideas/by_tag/апсайклинг" class="M_MainPageSection tile">
+      <div class="Q_MainPageSectionBackground Eco">
+        <p class="A_MainPageSectionText">Эко</p>
+      </div>
     </a>
 
-    <%= link_to "", tutorial_posts_url, class: "MainLook tutorials" %>
+    <a href="/tutorials/by_tag/шитье" class="M_MainPageSection tile">
+      <div class="Q_MainPageSectionBackground Sew">
+        <p class="A_MainPageSectionText">Шитье</p>
+      </div>
+    </a>
+
+    <a href="/tutorials" class="M_MainPageBigSection tutorials">
+      <div class="Q_MainPageSectionTitle Tutorials"></div>
+    </a>
   </div>
 
-  <h3 class="MainPageTitle">Лучшее за&nbsp;месяц</h3>
+  <div class="M_MainTitleArrow">
+    <h3 class="A_MainPageTitle">Лучшее&nbsp;за&nbsp;месяц</h3>
+    <%= link_to "", ideas_url, class: "Q_MainArrow" %>
+  </div>
 
   <div class="C_IdeaCards">
-    <%= link_to idea_post_path(3), class: "O_IdeaCard" do %>
+    <%= link_to idea_path(3), class: "O_IdeaCard" do %>
       <%= render @recom_post5 %>
     <% end %>
 
-    <%= link_to idea_post_path(4), class: "O_IdeaCard" do %>
+    <%= link_to idea_path(4), class: "O_IdeaCard" do %>
       <%= render @recom_post4 %>
     <% end %>
 
-    <%= link_to idea_post_path(5), class: "O_IdeaCard" do %>
+    <%= link_to idea_path(5), class: "O_IdeaCard" do %>
       <%= render @recom_post6 %>
     <% end %>
 
-    <%= link_to idea_post_path(11), class: "O_IdeaCard" do %>
+    <%= link_to idea_path(11), class: "O_IdeaCard" do %>
       <%= render @recom_post7 %>
     <% end %>
 

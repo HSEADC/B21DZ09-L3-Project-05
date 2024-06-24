@@ -7,7 +7,7 @@
   font-family: Suisse Intl;
   font-size: 38px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 450;
   /* line-height: 44px; */
   text-transform: uppercase;
   color: var(--lightgray);
@@ -409,7 +409,7 @@
   font-style: normal;
   font-weight: 500;
   /* line-height: 90%; */
-  color: var(--black);
+  color: black;
 }
 
 .A_FilterSelectText {
@@ -657,8 +657,6 @@
 .A_CardAddContentText {
   width: fit-content;
   padding: 8px 12px;
-  justify-content: center;
-  align-items: center;
   background-color: black;
 
   font-family: Suisse Intl;
@@ -668,6 +666,82 @@
   line-height: 120%; /* 96px */
   text-transform: uppercase;
   color: var(--lightgray);
+}
+
+.A_MainPageSectionText {
+  position: absolute;
+  bottom: 0;
+  width: fit-content;
+  padding: 12px 12px;
+  background-color: black;
+
+  font-family: Suisse Intl;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 96px */
+  text-transform: uppercase;
+  color: var(--lightgray);
+}
+
+.A_MainPageTitle {
+  margin-top: 46px;
+  margin-bottom: 46px;
+  /* width: calc(100% - 52px); */
+  padding: 8px 12px;
+  background: black;
+
+  /* text-align: center; */
+  font-family: Suisse Intl;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: var(--lightgray);
+
+  &.collections {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1281px) and (max-width: 1440px) {
+  .A_MainPageSectionText,
+  .A_MainPageTitle {
+    padding: 8px 10px;
+    font-size: 36px;
+  }
+
+  .A_MainPageTitle {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (min-width: 1023px) and (max-width: 1280px) {
+  .A_MainPageSectionText,
+  .A_MainPageTitle {
+    padding: 6px 10px;
+    font-size: 32px;
+  }
+
+  .A_MainPageTitle {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .A_MainPageSectionText,
+  .A_MainPageTitle {
+    padding: 12px 12px;
+    font-size: 42px;
+  }
+
+  .A_MainPageTitle {
+    margin-top: 34px;
+    margin-bottom: 34px;
+  }
 }
 
 @media only screen and (max-width: 1280px) {
@@ -686,6 +760,16 @@
   .A_FooterInfoText {
     &.Contacts {
       max-width: 232px;
+    }
+  }
+
+  .A_MainPageTitle {
+    width: -webkit-fill-available;
+
+    &.collections {
+      margin-top: 14px;
+      margin-bottom: 14px;
+      display: flex;
     }
   }
 
@@ -744,12 +828,44 @@
   .A_TutorialPageTitle {
     font-size: 40px;
   }
+
+  .A_MainPageSectionText,
+  .A_MainPageTitle {
+    padding: 6px 12px;
+    font-size: 36px;
+  }
+
+  .A_MainPageTitle {
+    margin-top: 22px;
+    margin-bottom: 22px;
+
+    &.collections {
+      margin-top: 2px;
+      margin-bottom: 2px;
+    }
+  }
 }
 
 @media only screen and (max-width: 490px) {
   .A_FormTitle {
     font-size: 28px;
     padding: 8px;
+  }
+
+  .A_MainPageSectionText,
+  .A_MainPageTitle {
+    padding: 6px 8px;
+    font-size: 28px;
+  }
+
+  .A_MainPageTitle {
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+    &.collections {
+      margin-top: -4px;
+      margin-bottom: -4px;
+    }
   }
 }
 
