@@ -22,10 +22,10 @@ class TutorialsController < ApplicationController
 
   # GET /tutorials/1 or /tutorials/1.json
   def show
-    @recom_post1 = Tutorial.find_by(id: "1")
-    @recom_post2 = Tutorial.find_by(id: "2")
-    @recom_post3 = Tutorial.find_by(id: "3")
-
+    @recommended_post1 = Tutorial.find_by(id: "1")
+    @recommended_post2 = Tutorial.find_by(id: "2")
+    @recommended_post3 = Tutorial.find_by(id: "3")
+    
     # Meta
     @title = "LÒÒCHOK | #{@tutorial.title}"
     # end
@@ -93,6 +93,6 @@ class TutorialsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def tutorial_params
-      params.require(:tutorial).permit(:title, :description, :image, :content, :tag_list, :idea_id)
+      params.require(:tutorial).permit(:title, :description, :image, :content, :tag_list).merge(user_id: user.id)
     end
 end

@@ -1,248 +1,248 @@
 .IdeaNewForm {
-    width: 100%;
-    margin: 0 auto 90px;
+  width: 100%;
+  margin: 0 auto 90px;
 }
 
 .FormBackground {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* padding-top: 20px; */
-    padding-bottom: 100px;
-    
-    background-image: url("/assets/SquareGrid.svg");
-    /* background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.00) 100%), #E6E6E6; */
-    
-    background-repeat: no-repeat;
-    background-size: cover;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding-top: 20px; */
+  padding-bottom: 100px;
+
+  background-image: url('/assets/SquareGrid.svg');
+  /* background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.00) 100%), #E6E6E6; */
+
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .TutorialFormPage,
 .IdeaFormPage {
-    margin: 90px auto 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: calc(100% - 52px);
-    max-width: 1868px;
+  margin: 90px auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100% - 52px);
+  max-width: 1868px;
 
-    &.Gride {
-        display: grid;
-        grid-template-columns: repeat(24, 1fr);
-        column-gap: 20px;
-        width: 100%;
-        margin: 20px auto;
-        /* background-color: aqua; */
-    }
+  &.Gride {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    column-gap: 20px;
+    width: 100%;
+    margin: 20px auto;
+    /* background-color: aqua; */
+  }
 }
 
 .FormIdea {
-    margin: 100px auto 100px;
+  margin: 100px auto 100px;
 }
 
 .IdeaNewBanner {
-    margin-top: 100px;
-    width: 487px;
-    height: 120px;
+  margin-top: 100px;
+  width: 487px;
+  height: 120px;
 
-    background-image: url("/assets/banners/NewIdeaBanner.png");
-    
-    background-repeat: no-repeat;
-    background-size: contain;
+  background-image: url('/assets/banners/NewIdeaBanner.png');
+
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .TutorialNewBanner {
-    margin-top: 100px;
-    width: 502px;
-    height: 197px;
+  margin-top: 100px;
+  width: 502px;
+  height: 197px;
 
-    background-image: url("/assets/banners/NewTutorialBanner.png");
-    
-    background-repeat: no-repeat;
-    background-size: contain;
+  background-image: url('/assets/banners/NewTutorialBanner.png');
+
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .RightContent {
-    grid-column: 13 / 23;
-    display: inline-flex;
-    height: calc(100% - 30px);
-    margin-top: 20px;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-shrink: 0;
+  grid-column: 13 / 23;
+  display: inline-flex;
+  height: calc(100% - 30px);
+  margin-top: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-shrink: 0;
 
-    input {
-        width: 400px;
-    }
+  input {
+    width: 400px;
+  }
 
-    textarea {
-        width: 638px;
-    }
+  textarea {
+    width: 638px;
+  }
 }
 
 .LeftContent {
-    grid-column: 3 / 13;
-    width: 100%;
+  grid-column: 3 / 13;
+  width: 100%;
 }
 
 .TopContent {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 30px;
 }
 
 .BottomContent {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 36px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
 }
 
 .BlockContent {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
 
-    &.Title {
-        /* grid-column: 13 / 21; */
-    }
+  &.Title {
+    /* grid-column: 13 / 21; */
+  }
 
-    &.Description {
-        /* grid-column: 13 / 23; */
-    }
+  &.Description {
+    /* grid-column: 13 / 23; */
+  }
 
-    &.Img {
-        /* grid-column: 3 / 13; */
-        gap: 16px;
-        width: 100%;
-    }
+  &.Img {
+    /* grid-column: 3 / 13; */
+    gap: 16px;
+    width: 100%;
+  }
 
-    &.Tags {
-        /* grid-column: 13 / 19; */
-    }
+  &.Tags {
+    /* grid-column: 13 / 19; */
+  }
 }
 
 .TitleNewContent {
+  font-family: Suisse Intl;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: black;
+
+  &.Img {
     font-family: Suisse Intl;
-    font-size: 20px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    color: black;
-
-    &.Img {
-        font-family: Suisse Intl;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-        color: #938F8F;
-    }
+    color: #938f8f;
+  }
 }
 
 .FieldContent {
+  /* grid-column: 13 / 21; */
+  display: flex;
+  padding: 14px 10px;
+  align-items: center;
+
+  border-radius: 4px;
+  border: 1px solid black;
+  background: white;
+
+  font-family: Suisse Intl;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: black;
+
+  &::placeholder {
+    color: var(--gray);
+  }
+
+  &.Title {
+    width: 400px;
     /* grid-column: 13 / 21; */
-    display: flex;
-    padding: 14px 10px;
-    align-items: center;
+  }
 
-    border-radius: 4px;
-    border: 1px solid black;
-    background: white;
+  &.Description {
+    /* width: 200px; */
+    height: 98px;
+  }
 
-    font-family: Suisse Intl;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    color: black;
-
-    &::placeholder {
-        color: var(--gray);
-    }
-
-    &.Title {
-        width: 400px;
-        /* grid-column: 13 / 21; */
-    }
-
-    &.Description {
-        /* width: 200px; */
-        height: 98px;
-    }
-
-    &.Tags {
-        /* width: 200px; */
-    }
+  &.Tags {
+    /* width: 200px; */
+  }
 }
 
 .FieldImg {
-    display: flex;
-    margin-bottom: 4px;
-    /* position: relative; */
-    width: 100%;
+  display: flex;
+  margin-bottom: 4px;
+  /* position: relative; */
+  width: 100%;
+  /* grid-column: 3 / 13; */
+  height: 32vw;
+
+  border-radius: 20px;
+  border: 1px dashed #5f5f5f;
+
+  background: #d9d9d9;
+
+  &.Fake {
     /* grid-column: 3 / 13; */
-    height: 32vw;
-
-    border-radius: 20px;
-    border: 1px dashed #5F5F5F;
-
-    background: #D9D9D9;
-
-    &.Fake {
-        /* grid-column: 3 / 13; */
-        height: 157px;
-    }
+    height: 157px;
+  }
 }
 
 .WrapperFakeImg {
-    /* grid-column: 3 / 13; */
-    display: flex;
-    align-items: flex-start;
-    gap: 18px;
+  /* grid-column: 3 / 13; */
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
 }
 
 .FormButtons {
-    width: 100%;
-    display: inline-flex;
-    align-items: flex-start;
-    gap: 20px;
+  width: 100%;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 20px;
 }
 
 .FormButton {
-    display: flex;
-    width: 50%;
-    height: 50px;
-    /* padding: 12px 22px; */
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  width: 50%;
+  height: 50px;
+  /* padding: 12px 22px; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    font-family: Suisse Intl;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 110%; /* 17.6px */
-    text-transform: uppercase;
+  font-family: Suisse Intl;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%; /* 17.6px */
+  text-transform: uppercase;
 
-    outline: none;
+  outline: none;
 
-    &.Post {
-        /* grid-column: 13 / 18; */
-        background-color: var(--black);
-        color: var(--lightgray);
-    }
+  &.Post {
+    /* grid-column: 13 / 18; */
+    background-color: var(--black);
+    color: var(--lightgray);
+  }
 
-    &.Back {
-        /* grid-column: 18 / 23; */
-        border: 1px dashed #938F8F;
-        background-color: white;
-        color: black;
-    }
+  &.Back {
+    /* grid-column: 18 / 23; */
+    border: 1px dashed #938f8f;
+    background-color: white;
+    color: black;
+  }
 }
 
 /*  */
@@ -250,87 +250,87 @@
 /*  */
 
 .commentCard {
-    display: block;
-    margin: 20px 0;
-    padding: 10px 20px 10px 20px;
-    width: 50%;
-    min-width: 600px;
-    background-color: white;
-    border: 1px solid black;
-    text-decoration: none;
-    /* color: black; */
+  display: block;
+  margin: 20px 0;
+  padding: 10px 20px 10px 20px;
+  width: 50%;
+  min-width: 600px;
+  background-color: white;
+  border: 1px solid black;
+  text-decoration: none;
+  /* color: black; */
 }
 
 .PostCommentUserAvatar {
-    background-image: url("/assets/icons/IconUser.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
+  background-image: url('/assets/icons/IconUser.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
 
-    width: 68px;
-    height: 68px;
+  width: 68px;
+  height: 68px;
 
-    flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .A_PostCommentTexts {
-    /* padding-top: 4px; */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 2px;
+  /* padding-top: 4px; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
 }
 
 .PostCommentInfo {
-    display: flex;
-    align-items: center;
-    gap: 25px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
 }
 
 .PostCommentUserName {
-    font-family: Suisse Intl;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    color: black;
+  font-family: Suisse Intl;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: black;
 }
 
 .PostCommentDate {
-    font-family: Suisse Intl;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    color: #5F5F5F;
+  font-family: Suisse Intl;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #5f5f5f;
 }
 
 .PostCommentIcons {
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
-    opacity: 0.1;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  opacity: 0.1;
 
-    &:hover {
-        opacity: 1;
-    }
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .PostCommentIcon {
-    width: 28px;
-    height: 28px;
+  width: 28px;
+  height: 28px;
 
-    background-repeat: no-repeat;
-    background-size: contain;
+  background-repeat: no-repeat;
+  background-size: contain;
 
-    flex: 0 0 auto;
+  flex: 0 0 auto;
 
-    &.Edit {
-        background-image: url("/assets/icons/IconEditBlack.svg");
-    }
+  &.Edit {
+    background-image: url('/assets/icons/IconEditBlack.svg');
+  }
 
-    &.Trash {
-        background-image: url("/assets/icons/IconTrash.svg");
-    }
+  &.Trash {
+    background-image: url('/assets/icons/IconTrash.svg');
+  }
 }
 
 /*  */
@@ -338,48 +338,63 @@
 /*  */
 
 .IdeaPostPageSeeAlso {
-    width: 100%;
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+
+  &.show {
     display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+  }
+}
+
+.IdeaPostPageSeeAlsoShow {
+  display: inline-flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.IdeaPostPageSeeAlsoCardsOthers {
+  position: relative;
+  display: -webkit-inline-box;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1868px;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 20px 20px;
 }
 
 .IdeaPostPageSeeAlsoTitle {
-    display: flex;
-    padding: 7px 0px;
-    justify-content: space-between;
-    align-items: center;
-    align-self: stretch;
-
-    /* border-bottom: 1px solid #938F8F; */
-
-    text-align: center;
-    font-family: Suisse Intl;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 100%; /* 24px */
-    text-transform: uppercase;
-    color: black;
+  display: flex;
+  padding: 7px 0px;
+  justify-content: space-between;
+  /* align-items: center; */
+  align-self: stretch;
+  /* border-bottom: 1px solid #938F8F; */
+  /* text-align: center; */
+  font-family: Suisse Intl;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 24px */
+  text-transform: uppercase;
+  color: black;
 }
 
-.IdeaPostPageSeeAlsoCards {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    max-width: 1868px;
-    align-items: flex-start;
-    align-content: flex-start;
-    gap: 20px 20px;
-    /* overflow: scroll; */
-    /* flex-wrap: wrap; */
+.W_SeeAlsoAddContent {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 @media only screen and (max-width: 767px) {
-    .IdeaPostPageSeeAlso {
-        display: none;
-    }
+  /* .IdeaPostPageSeeAlso {
+    display: none;
+  } */
 }
 
 /*  */
@@ -387,64 +402,63 @@
 /*  */
 
 .postCard {
-    display: flex;
-    flex-direction: column;
-    margin: 20px 0;
-    padding: 20px 30px;
-    /* width: 60%; */
-    background-color: white;
-    border: 1px solid black;
-    text-decoration: none;
-    color: black;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  padding: 20px 30px;
+  /* width: 60%; */
+  background-color: white;
+  border: 1px solid black;
+  text-decoration: none;
+  color: black;
 }
 
 .postCard:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .typeChips {
-    width: fit-content;
-    margin: 10px 0 0 0;
-    padding: 7px 16px;
+  width: fit-content;
+  margin: 10px 0 0 0;
+  padding: 7px 16px;
 
-    &.idea {
-        background-color: lightpink;
-    }
+  &.idea {
+    background-color: lightpink;
+  }
 
-    &.tutorial {
-        background-color: lightblue;
-    }
-
+  &.tutorial {
+    background-color: lightblue;
+  }
 }
 
 .tagChipsRow {
-    display: flex;
-    max-width: 60%;
-    align-items: flex-start;
-    align-content: flex-start;
-    gap: 18px;
-    flex-wrap: wrap;
+  display: flex;
+  max-width: 60%;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 18px;
+  flex-wrap: wrap;
 }
 
 .tagChips {
-    font-size: 14px;
-    width: fit-content;
-    margin: 10px 0 0 0;
-    padding: 6px 12px;
-    background-color: lightgrey;
-    border-radius: 12px;
+  font-size: 14px;
+  width: fit-content;
+  margin: 10px 0 0 0;
+  padding: 6px 12px;
+  background-color: lightgrey;
+  border-radius: 12px;
 }
 
 .postDate {
-    font-family: monospace;
-    display: block;
-    width: 127px;
-    overflow: hidden;
-    white-space: nowrap;
+  font-family: monospace;
+  display: block;
+  width: 127px;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .UserEditEmail {
-    color: red;
+  color: red;
 }
 
 /*  */

@@ -1,4 +1,4 @@
-class PoltCommentsController < ApplicationController
+class PolyCommentsController < ApplicationController
   load_and_authorize_resource
 
   def create

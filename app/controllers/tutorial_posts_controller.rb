@@ -93,7 +93,7 @@ class TutorialPostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def tutorial_post_params
-      params.require(:tutorial_post).permit(:title, :type, :description, :post_image, :tag_list)
+      params.require(:tutorial_post).permit(:title, :type, :description, :post_image, :tag_list).merge(user_id: user.id)
     end
 end
   

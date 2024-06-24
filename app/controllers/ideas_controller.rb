@@ -22,6 +22,10 @@ class IdeasController < ApplicationController
 
   # GET /ideas/1 or /ideas/1.json
   def show
+    @recommended_post1 = Idea.find_by(id: "1")
+    @recommended_post2 = Idea.find_by(id: "2")
+    @recommended_post3 = Idea.find_by(id: "3")
+    
     # Meta
     @title = "LÒÒCHOK | #{@idea.title}"
     # end
@@ -89,6 +93,6 @@ class IdeasController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def idea_params
-      params.require(:idea).permit(:title, :description, :image, :tag_list, :tutorial_id).merge(user_id: current_user.id)
+      params.require(:idea).permit(:title, :description, :image, :tag_list).merge(user_id: current_user.id)
     end
 end

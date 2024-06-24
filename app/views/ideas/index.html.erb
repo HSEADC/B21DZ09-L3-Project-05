@@ -30,6 +30,7 @@
       </div>
     </section>
   </div>
+
   <div class="C_IdeaCards">
     <% @ideas.each do |idea| %>
       <%= link_to idea_path(idea), class: "O_IdeaCard" do %>
@@ -37,4 +38,5 @@
       <% end %>
     <% end %>
   </div>
+
 </div>

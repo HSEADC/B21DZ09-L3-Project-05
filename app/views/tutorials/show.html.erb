@@ -23,21 +23,78 @@
 
     <%= render partial: "tutorials/tutorial_page", locals: {tutorial: @tutorial} %>
 
-  </div>
-
-  <div class="IdeaPostPageSeeAlso">
-    <div class="IdeaPostPageSeeAlsoTitle">Смотрите также:</div>
-    <div class="IdeaPostPageSeeAlsoCards">
-      <%= link_to tutorial_path(1), class: "O_TutorialCard PP-1" do %>
-        <%= render @recom_post1 %>
-      <% end %>
-      <%= link_to tutorial_path(2), class: "O_TutorialCard PP-2" do %>
-        <%= render @recom_post2 %>
-      <% end %>
-      <%= link_to tutorial_path(3), class: "O_TutorialCard PP-3" do %>
-        <%= render @recom_post3 %>
-      <% end %>
+    <div class="O_TutorialPageComments">
+      <p class="A_PageCommentsTitle">Комментарии</p>
+      <div class="M_CommentsBlock Tutorial">
+        <div id="poly_comments">
+          <% @tutorial.poly_comments.each do | poly_comment| %>
+            <div class="W_TutorialPageComment">
+              <%= render poly_comment, tutorial: @tutorial %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="W_CreateComment"> <%= render "poly_comments/form", commentable: @tutorial, poly_comment: PolyComment.new %> </div>
     </div>
+
   </div>
 
+  <% if @tutorial.ideas != [] %>
+    <div class="IdeaPostPageSeeAlso rowWhisAbsl">
+      <div class="IdeaPostPageSeeAlsoTitle">Идеи по этому туториалу:</div>
+      <div class="W_SeeAlsoAddContent">
+        <div class="CardAddContentAbsolute show">
+          <div class="M_CardAddContent absolute">
+            <div class="Q_CardAddContentBackGround"></div>
+            <div class="C_CardAddContentText">
+              <p class="A_CardAddContentText">добавить</p>
+              <p class="A_CardAddContentText">идею</p>
+            </div>
+          </div>
+        </div>
+        <div class="IdeaPostPageSeeAlsoCards rowWhisAbsl">
+          <% @tutorial.ideas.each do |idea| %>
+            <%= link_to idea_path(idea), class: "O_IdeaCard forTutorial rowWhisAbsl" do %>
+              <%= render idea %>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="IdeaPostPageSeeAlso inRow">
+      <div class="IdeaPostPageSeeAlsoTitle">Идеи по этому туториалу:</div>
+      <div class="IdeaPostPageSeeAlsoCards">
+        <% @tutorial.ideas.each do |idea| %>
+          <%= link_to idea_path(idea), class: "O_IdeaCard" do %>
+            <%= render idea %>
+          <% end %>
+        <% end %>
+        <div class="M_CardAddContent inRow show">
+          <div class="Q_CardAddContentBackGround"></div>
+          <div class="C_CardAddContentText">
+            <p class="A_CardAddContentText">добавить</p>
+            <p class="A_CardAddContentText">идею</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+  <% if @tutorial.ideas == [] %>
+    <div class="IdeaPostPageSeeAlsoShow">
+      <div class="IdeaPostPageSeeAlsoTitle">Другие туториалы:</div>
+      <div class="IdeaPostPageSeeAlsoCardsOthers">
+        <%= link_to tutorial_path(1), class: "O_TutorialCard PP-1" do %>
+          <%= render @recommended_post1 %>
+        <% end %>
+        <%= link_to tutorial_path(2), class: "O_TutorialCard PP-2" do %>
+          <%= render @recommended_post2 %>
+        <% end %>
+        <%= link_to tutorial_path(3), class: "O_TutorialCard PP-3" do %>
+          <%= render @recommended_post3 %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
 </div>
