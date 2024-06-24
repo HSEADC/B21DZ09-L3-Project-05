@@ -1,157 +1,159 @@
 .MainPage {
-    margin: 60px auto 160px;
+  margin: 60px auto 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: calc(100% - 52px);
+  max-width: 1868px;
+
+  &.Gride {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    column-gap: 20px;
+    width: 100%;
+    margin: 20px auto 0;
+    /* background-color: aqua; */
+  }
+
+  .MainPageCards {
+    margin: 40px auto 160px;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: start;
-    width: calc(100% - 52px);
+    width: 100%;
     max-width: 1868px;
+    gap: 20px;
+  }
 
-    &.Gride {
-        display: grid;
-        grid-template-columns: repeat(24, 1fr);
-        column-gap: 20px;
-        width: 100%;
-        margin: 20px auto 0;
-        /* background-color: aqua; */
-    }
-
-    .C_IdeaCards,
-    .C_TutorialCards {
-        display: flex;
-        /* margin: 50px auto; */
-        /* width: calc(100% - 52px); */
-        width: 100%;
-        max-width: 1868px;
-        align-items: flex-start;
-        align-content: flex-start;
-        gap: 20px 20px;
-        flex-wrap: wrap;
-    }
+  .C_IdeaCards,
+  .C_TutorialCards {
+    display: flex;
+    /* margin: 50px auto; */
+    /* width: calc(100% - 52px); */
+    width: 100%;
+    max-width: 1868px;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 20px 20px;
+    flex-wrap: wrap;
+  }
 }
 
 .MainLook {
-    grid-column: 1 / 13;
-    padding-top: 48.6%;
-    background-repeat: no-repeat;
-    background-size: cover; 
-    background-position: center;
-    background-image: url("/assets/main/MainLook.jpg");
-    border-radius: 31px;
-}
+  width: calc(50% - 10px);
+  padding-top: 20%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: 6px solid black;
+  border-radius: 20px;
+  box-sizing: border-box;
 
-.MainTut {
-    grid-column: 13 / 25;
-    padding-top: 48.6%;
-    background-repeat: no-repeat;
-    background-size: cover; 
-    background-position: center;
-    background-image: url("/assets/main/MainTut.jpg");
-    border-radius: 31px;
-    margin-top: 20px;
+  &.main {
+    background-image: url('/assets/main/loochok2.gif');
+  }
+
+  &.tutorials {
+    background-image: url('/assets/main/MainTut.jpg');
+  }
 }
 
 .MainPageSelectionText {
-    position: absolute;
-    left: 34px;
-    top: 34px;
-    max-width: calc(100% - 68px);
-    font-family: Suisse Intl;
-    font-size: 34px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: -0.24px;
-    text-transform: uppercase;
-    color: black;
+  position: absolute;
+  left: 34px;
+  top: 34px;
+  max-width: calc(100% - 68px);
+  font-family: Suisse Intl;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.24px;
+  text-transform: uppercase;
+  color: black;
 }
 
 .MainPageSelection {
-    position: relative;
-    padding-top: 100%;
-    background-repeat: no-repeat;
-    background-size: cover; 
-    background-position: center;
-    
-    &.Eco {
-        grid-column: 1 / 7;
-        background-image: url("/assets/main/Eco.svg");
-        margin-top: 20px;
-    }
+  position: relative;
+  width: calc(25% - 15px);
+  padding-top: 24%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
-    &.Sew {
-        grid-column: 7 / 13;
-        background-image: url("/assets/main/Sew.svg");
-        margin-top: 20px;
-    }
+  &.Eco {
+    background-image: url('/assets/main/Eco.svg');
+  }
 
-    &.Profi {
-        grid-column: 13 / 19;
-        background-image: url("/assets/main/Profi.svg");
-    }
+  &.Sew {
+    background-image: url('/assets/main/Sew.svg');
+  }
 
-    &.Easy {
-        grid-column: 19 / 25;
-        background-image: url("/assets/main/Easy.svg");
-    }    
+  &.Profi {
+    background-image: url('/assets/main/Profi.svg');
+  }
+
+  &.Easy {
+    background-image: url('/assets/main/Easy.svg');
+  }
 }
 
 .MainPageTitle {
-    margin-top: 46px;
-    margin-bottom: 26px;
-    /* width: calc(100% - 52px); */
-    padding: 17px 20px;
-    background: black;
+  margin-top: 46px;
+  margin-bottom: 26px;
+  /* width: calc(100% - 52px); */
+  padding: 17px 20px;
+  background: black;
 
-    /* text-align: center; */
-    font-family: Suisse Intl;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 100%; /* 40px */
-    text-transform: uppercase;
-    color: var(--lightgray);
+  /* text-align: center; */
+  font-family: Suisse Intl;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%; /* 40px */
+  text-transform: uppercase;
+  color: var(--lightgray);
 }
 
 @media only screen and (max-width: 1024px) {
-    .MainLook {
-        grid-column: 1 / 25;
+  .MainLook {
+    grid-column: 1 / 25;
+  }
+
+  .MainTut {
+    grid-column: 1 / 25;
+  }
+
+  .MainPageSelection {
+    &.Eco {
+      display: none;
+      /* grid-column: 1 / 7; */
     }
 
-    .MainTut {
-        grid-column: 1 / 25;
+    &.Sew {
+      display: none;
+      /* grid-column: 7 / 13; */
     }
 
-    .MainPageSelection {
-        &.Eco {
-            display: none;
-            /* grid-column: 1 / 7; */
-        }
-    
-        &.Sew {
-            display: none;
-            /* grid-column: 7 / 13; */
-        }
-    
-        &.Profi {
-            margin-top: 20px;
-            grid-column: 1 / 13;
-        }
-    
-        &.Easy {
-            margin-top: 20px;
-            grid-column: 13 / 25;
-        }    
+    &.Profi {
+      margin-top: 20px;
+      grid-column: 1 / 13;
     }
+
+    &.Easy {
+      margin-top: 20px;
+      grid-column: 13 / 25;
+    }
+  }
 }
 
 @media only screen and (max-width: 767px) {
-    .S_IdeaCardsPage,
-    .S_TutorialCardsPage {
-
-        .C_IdeaCards,
-        .C_TutorialCards {
-            /* width: calc(100% - 32px); */
-            width: 100%;
-        }
+  .S_IdeaCardsPage,
+  .S_TutorialCardsPage {
+    .C_IdeaCards,
+    .C_TutorialCards {
+      /* width: calc(100% - 32px); */
+      width: 100%;
     }
+  }
 }
