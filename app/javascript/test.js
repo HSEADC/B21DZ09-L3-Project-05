@@ -115,6 +115,29 @@ function createNewPostVisibility() {
   }
 }
 
+function addIdeasVisibility() {
+  const button = document.querySelector('.Q_CardAddContentBackGround')
+  const menu = document.querySelector('.M_NavCreateNewPostsIdea')
+
+  if (button) {
+    button.addEventListener('click', () => {
+      menu.classList.toggle('show')
+    })
+
+    document.addEventListener('click', (e) => {
+      const target = e.target
+
+      const menuA = target == menu || menu.contains(target)
+      const buttonA = target == button
+      const menuShow = menu.classList.contains('show')
+
+      if (!menuA && !buttonA && menuShow) {
+        menu.classList.remove('show')
+      }
+    })
+  }
+}
+
 function mobileMenuVisibility() {
   const button = document.querySelector('.Q_Icon.MenuMob')
   const menu = document.querySelector('.M_MobileMenu')
@@ -196,6 +219,7 @@ document.addEventListener('turbo:load', () => {
     postOptionVisibility()
     addLike()
     addIdeaToTutorial()
+    addIdeasVisibility()
   }
 
   mobileMenuVisibility()

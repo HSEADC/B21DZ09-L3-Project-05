@@ -11,12 +11,12 @@
         <%#= poly_comment.created_at %>
             сегодня в&nbsp;10:05
         </p> --->
-        <% if can? :manage, poly_comment %>
-          <div class="PostCommentIcons">
-            <%#= link_to "", edit_poly_comment_path(poly_comment), class:"PostCommentIcon Edit" %>
-            <%#= link_to "", poly_comment, method: :delete, class:"PostCommentIcon Trash" %>
-          </div>
-        <% end %>
+        <%# if can? :manage, poly_comment %>
+        <div class="PostCommentIcons">
+          <%#= link_to "", edit_poly_comment_path(poly_comment), class:"PostCommentIcon Edit" %>
+          <%#= link_to "", poly_comment, method: :delete, class:"PostCommentIcon Trash" %>
+        </div>
+        <%# end %>
       </div>
       <p class="A_PostCommentBody"><%= poly_comment.body %></p>
     </div>

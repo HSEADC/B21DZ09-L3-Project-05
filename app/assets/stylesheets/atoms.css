@@ -715,6 +715,7 @@
 }
 
 .A_SearchField {
+  display: none;
   height: 30px;
   /* width: 0px; */
   padding: 0px 8px;

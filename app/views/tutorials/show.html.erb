@@ -27,6 +27,7 @@
       <p class="A_PageCommentsTitle">Комментарии</p>
       <div class="W_CreateComment"> <%= render "poly_comments/form", commentable: @tutorial, poly_comment: PolyComment.new %> </div>
       <div class="M_CommentsBlockTutorial">
+
         <div id="poly_comments">
           <% @tutorial.poly_comments.each do | poly_comment| %>
             <div class="W_TutorialPageComment">
@@ -39,12 +40,13 @@
 
   </div>
 
-  <%= link_to 'Create a new idea for this tutorial', new_tutorial_idea_path(@tutorial), class: 'button' %>
-  <%= link_to 'Link an existing idea', link_existing_idea_tutorial_path(@tutorial), class: 'button' %>
-
   <% if @tutorial.ideas != [] %>
     <div class="IdeaPostPageSeeAlso rowWhisAbsl">
       <div class="IdeaPostPageSeeAlsoTitle">Идеи по этому туториалу:</div>
+      <div class="M_NavCreateNewPostsIdea">
+        <%= link_to 'Создать новую идею', new_tutorial_idea_path(@tutorial), class: 'A_NavigationButton createNewPost' %>
+        <%= link_to 'Добавить идею', link_existing_idea_tutorial_path(@tutorial), class: 'A_NavigationButton createNewPost' %>
+      </div>
       <div class="W_SeeAlsoAddContent">
         <div class="CardAddContentAbsolute show">
           <div class="M_CardAddContent absolute">

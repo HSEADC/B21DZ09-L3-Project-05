@@ -325,7 +325,7 @@
 }
 
 .O_ProfilePageModal {
-  /* display: none; */
+  display: none;
 
   &.Show {
     display: flex;

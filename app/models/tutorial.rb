@@ -1,4 +1,6 @@
 class Tutorial < ApplicationRecord
+    include PgSearch::Model
+    multisearchable against: [:title, :description, :content]
     
     extend FriendlyId
     friendly_id :title, use: :slugged

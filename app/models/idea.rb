@@ -1,4 +1,6 @@
 class Idea < ApplicationRecord
+    include PgSearch::Model
+    multisearchable against: [:title, :description]
     
     extend FriendlyId
     friendly_id :title, use: :slugged

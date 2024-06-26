@@ -179,6 +179,10 @@ h1 {
   /* font-weight: bold; */
 }
 
+#poly_comment_form {
+  width: 100%;
+}
+
 /* textarea {
     width: 500px;
     height: 150px;
