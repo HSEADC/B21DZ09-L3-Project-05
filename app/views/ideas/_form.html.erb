@@ -1,7 +1,7 @@
 <%= form_with(model: idea) do |form| %>
   <% if idea.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(idea.errors.count, "error") %>. Идея не может быть сохранена:</h2>
+      <h2><%= pluralize(idea.errors.count, "error") %>. Пост не может быть сохранён:</h2>
 
       <ul>
         <% idea.errors.each do |error| %>
@@ -11,59 +11,101 @@
     </div>
   <% end %>
 
-  <div class="IdeaFormPage Gride">
+  <div class="FormBackground">
+    <div class="TutorialNewBanner"></div>
+    <div class="IdeaNewForm">
 
-    <div class="LeftContent">
-      <div class="BlockContent Img">
-        <%= form.label :"Загрузить изображение", class:"TitleNewContent Img" %>
-        <%= form.file_field :image, class:"FieldImg" %>
-      </div>
+      <div class="TutorialNewFormBlocks">
 
-      <!--- <div class="WrapperFakeImg">
-      <div class="FieldImg Fake"></div>
-      <div class="FieldImg Fake"></div>
-      <div class="FieldImg Fake"></div>
-    </div> --->
-    </div>
+        <div class="TutorialNewFormLeftBlock">
+          <div class="NewFormChooseTypes">
 
-    <div class="RightContent">
-      <div class="TopContent">
+            <a href="/tutorials/new" class="NewFormChooseType Tutorial">
+              <div class="ChooseTypeIconTitle">
+                <div class="Q_Icon s32 ChooseTypeTutorial"></div>
+                <h5 class="A_ChooseTypeTitle">Туториалы</h5>
+              </div>
+              <p class="A_ChooseTypeText">Поделитесь своим опытом кастома</p>
+            </a>
 
-        <div class="BlockContent Title">
-          <%= form.label :"Название проекта", class:"TitleNewContent" %>
-          <%= form.text_field :title, placeholder:"Кастом", class:"FieldContent Title" %>
+            <a href="/ideas/new" class="NewFormChooseType Idea active">
+              <div class="ChooseTypeIconTitle">
+                <div class="Q_Icon s32 ChooseTypeIdea"></div>
+                <h5 class="A_ChooseTypeTitle">Идея</h5>
+              </div>
+              <p class="A_ChooseTypeText">Поделитесь идеей кастома</p>
+            </a>
+          </div>
+
+          <div class="TutorialNewFormRightBlock mobile">
+            <div class="NewFormRightBlockAttrs">
+              <div class="NewFormAttrsTexts">
+                <%= form.label :"Название идеи", class:"TutorialNewFormText" %>
+                <p class="NewFormAttrsDescr">Что и как закастомили</p>
+              </div>
+              <%= form.text_field :title, placeholder:"Например: Рваный свитер на вечечринку", class:"NewFormField" %>
+            </div>
+
+            <div class="NewFormRightBlockAttrs">
+              <div class="NewFormAttrsTexts">
+                <%= form.label :"Теги", class:"TutorialNewFormText" %>
+                <p class="NewFormAttrsDescr">Выберите из доступных</p>
+              </div>
+              <%= form.text_field :tag_list, value: idea.tag_list.join(", "), placeholder:"Например: обувь, роспись, кожа", class:"NewFormField"  %>
+            </div>
+
+            <div class="NewFormRightBlockAttrs">
+              <div class="NewFormAttrsTexts">
+                <%= form.label :"Описание идеи", class:"TutorialNewFormText" %>
+                <p class="NewFormAttrsDescr">Кратко расскажите об этой идее</p>
+              </div>
+              <%= form.text_area :description, placeholder:"Расскажите про ваш кастом", class:"NewFormField bigtext" %>
+            </div>
+
+            <div class="FormButtons">
+              <%= link_to "Отменить", :back, class:"FormButton Back" %>
+              <%= form.submit :"Опубликовать", class:"FormButton Post" %>
+            </div>
+          </div>
+
+          <div class="NewTutorialImg idea">
+            <%= form.label :"Добавьте изображение", class:"TutorialNewFormText" %>
+            <%= form.file_field :image %>
+          </div>
         </div>
 
-        <div class="BlockContent Tags">
-          <%= form.label :"Тэги", class:"TitleNewContent" %>
-          <%= form.text_field :tag_list, value: idea.tag_list.join(", "), class:"FieldContent Tags"  %>
+        <div class="TutorialNewFormRightBlock desk">
+          <div class="NewFormRightBlockAttrs">
+            <div class="NewFormAttrsTexts">
+              <%= form.label :"Название идеи", class:"TutorialNewFormText" %>
+              <p class="NewFormAttrsDescr">Что и как закастомили</p>
+            </div>
+            <%= form.text_field :title, placeholder:"Например: Как расписать кеды", class:"NewFormField" %>
+          </div>
 
-          <div>
-            <% ActsAsTaggableOn::Tag.for_context(:tags).each do |tag| %>
-              <%= tag %>
-            <% end %>
+          <div class="NewFormRightBlockAttrs">
+            <div class="NewFormAttrsTexts">
+              <%= form.label :"Теги", class:"TutorialNewFormText" %>
+              <p class="NewFormAttrsDescr">Выберите из доступных</p>
+            </div>
+            <%= form.text_field :tag_list, value: idea.tag_list.join(", "), placeholder:"Например: обувь, роспись, кожа", class:"NewFormField"  %>
+          </div>
+
+          <div class="NewFormRightBlockAttrs">
+            <div class="NewFormAttrsTexts">
+              <%= form.label :"Описание идеи", class:"TutorialNewFormText" %>
+              <p class="NewFormAttrsDescr">Кратко расскажите об этой идее</p>
+            </div>
+            <%= form.text_area :description, placeholder:"Расскажите про ваш кастом", class:"NewFormField bigtext" %>
+          </div>
+
+          <div class="FormButtons">
+            <%= link_to "Отменить", :back, class:"FormButton Back" %>
+            <%= form.submit :"Опубликовать", class:"FormButton Post" %>
           </div>
         </div>
       </div>
 
-      <% if @tutorial %>
-        <%= form.hidden_field :tutorial_ids, value: @tutorial.id %>
-      <% end %>
-
-      <div class="BottomContent">
-        <div class="BlockContent Description">
-          <%= form.label :"Описание проекта", class:"TitleNewContent" %>
-          <%= form.text_area :description, placeholder:"Расскажите про ваш кастом", class:"FieldContent Description" %>
-        </div>
-
-        <div class="FormButtons">
-          <%= form.submit :"Опубликовать", class:"FormButton Post" %>
-
-          <div class="FormButton Back">
-            <%= link_to "Отменить", :back %>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 <% end %>

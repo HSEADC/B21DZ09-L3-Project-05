@@ -1,16 +1,20 @@
-<h1>Link an Existing Idea to "<%= @tutorial.title %>"</h1>
+<div class="S_IdeaCardsPageLink">
 
-<% if @ideas.any? %>
-  <ul>
-    <% @ideas.each do |idea| %>
-      <li>
-        <%= idea.title %>
-        <%= button_to 'Link this idea', link_idea_tutorial_path(@tutorial, idea_id: idea.id), method: :post %>
-      </li>
+  <h5 class="LinkContentTitle">Выберите, какую идею привязать к туториалу "<%= @tutorial.title %>"</h5>
+  <div class="C_IdeaCards">
+    <% if @ideas.any? %>
+      <% @ideas.each do |idea| %>
+        <div class="O_IdeaCard">
+          <%= button_to link_idea_tutorial_path(@tutorial, idea_id: idea.id), method: :post do %>
+            <%= render idea %>
+          <% end %>
+        </div>
+      <% end %>
+
+    <% else %>
+      <p>Нет доступных для привязки идей</p>
     <% end %>
-  </ul>
-<% else %>
-  <p>No available ideas to link.</p>
-<% end %>
+  </div>
 
-<%= link_to 'Back', @tutorial %>
+  <%#= link_to 'Back', @tutorial %>
+</div>

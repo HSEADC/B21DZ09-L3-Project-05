@@ -237,6 +237,20 @@
   }
 }
 
+.M_CommentsBlockTutorial {
+  width: calc(100% - 44px);
+  padding: 0 22px;
+  min-height: 120px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: end; */
+  overflow-y: scroll;
+  flex: 1 0 0;
+  min-height: fit-content;
+  overflow-y: visible;
+}
+
 .M_CommentsBlock {
   width: 100%;
   min-height: 120px;
@@ -249,11 +263,6 @@
 
   .W_IdeaPageComment {
     margin-bottom: 8px;
-  }
-
-  &.Tutorial {
-    min-height: fit-content;
-    overflow-y: visible;
   }
 
   .W_TutorialPageComment {
@@ -722,6 +731,10 @@
 
   .M_MobileMenu {
     top: 48px;
+  }
+
+  .M_HeaderSearch {
+    display: none;
   }
 }
 

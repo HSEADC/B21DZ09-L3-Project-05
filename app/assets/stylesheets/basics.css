@@ -148,8 +148,10 @@ button {
   cursor: pointer;
 }
 
-input {
+input,
+textarea {
   border: none;
+  outline: none;
 }
 
 trix-editor {

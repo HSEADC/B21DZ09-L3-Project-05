@@ -26,7 +26,7 @@
     <div class="O_TutorialPageComments">
       <p class="A_PageCommentsTitle">Комментарии</p>
       <div class="W_CreateComment"> <%= render "poly_comments/form", commentable: @tutorial, poly_comment: PolyComment.new %> </div>
-      <div class="M_CommentsBlock Tutorial">
+      <div class="M_CommentsBlockTutorial">
         <div id="poly_comments">
           <% @tutorial.poly_comments.each do | poly_comment| %>
             <div class="W_TutorialPageComment">

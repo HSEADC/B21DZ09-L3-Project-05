@@ -22,7 +22,7 @@
 
 .S_IdeaPage,
 .S_TutorialPage {
-  /* margin: 40px auto 90px; */
+  margin: 0px auto 90px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,7 +41,7 @@
 }
 
 .S_IdeaPageGride {
-  margin: 126px auto 60px;
+  margin: 100px auto 60px;
   display: grid;
   grid-template-columns: repeat(24, 1fr);
   column-gap: 20px;
@@ -133,19 +133,19 @@
 }
 
 .S_LoginPage {
-  margin: 50px auto 0px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  padding: 76px 0 50px;
+  padding: 160px 0 140px;
   gap: 46px;
   align-items: center;
 
-  background-image: url('/assets/SquareGrid.svg');
+  background-image: url('/assets/LogiInBack.jpg');
   /* background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.00) 100%), #E6E6E6; */
 
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  /* background-position: center; */
 }
 
 .S_ProfilePage {
@@ -201,6 +201,37 @@
   align-items: center;
   width: calc(100% - 52px);
   max-width: 1868px;
+}
+
+.S_IdeaCardsPageLink {
+  width: 100%;
+  margin-top: 116px;
+  margin-bottom: 82px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+
+  .C_IdeaCards {
+    display: flex;
+    /* margin: 50px auto; */
+    width: calc(100% - 52px);
+    max-width: 1868px;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 20px 20px;
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (min-width: 1441px) {
+  .S_LoginPage {
+    &.SignUp {
+      flex-direction: row;
+      gap: 260px;
+      justify-content: center;
+    }
+  }
 }
 
 @media only screen and (max-width: 1280px) {
@@ -290,7 +321,13 @@
 
 @media only screen and (max-width: 490px) {
   .S_LoginPage {
-    margin: 48px 16px 0px;
     align-items: center;
+  }
+
+  .M_Form {
+    &.SignIn,
+    &.SignUp {
+      width: calc(100% - 64px);
+    }
   }
 }
