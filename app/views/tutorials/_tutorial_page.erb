@@ -2,9 +2,9 @@
 
   <div class="W_PageInfoAbout Tutorial">
 
-    <div class="W_UserInfoOptions">
+    <div class="W_UserInfoOptions tutorial1">
       <div class="M_UserInfo">
-        <div class="Q_Avatar"></div>
+        <div class="Q_Avatar s62"></div>
         <div class="C_UserInfoNames">
           <p class="A_UserInfoName UN"><%= tutorial.user.name %></p>
           <p class="A_UserInfoName NN">@<%= tutorial.user.email.split("@")[0] %></p>
@@ -13,19 +13,20 @@
       <div class="Q_Icon s36 Options"></div>
     </div>
 
-    <div class="W_UserInfoOptions">
-      <div class="C_TagsGroup">
-        <% tutorial.tag_list.each do |tag| %>
-          <%= link_to tagged_tutorials_path(tag), class:"A_Tag Card" do %>
-            <%= tag %>
-          <% end %>
-        <% end %>
-      </div>
+    <div class="W_UserInfoOptions timeLike">
       <div class="Q_Icon s32 Like"></div>
       <p class="A_PostDate">
         <%#= tutorial.created_at #%>
         сегодня в&nbsp;10:05
       </p>
+    </div>
+
+    <div class="C_TagsGroup">
+      <% tutorial.tag_list.each do |tag| %>
+        <%= link_to tagged_tutorials_path(tag), class:"A_Tag Card" do %>
+          <%= tag %>
+        <% end %>
+      <% end %>
     </div>
 
   </div>
@@ -39,31 +40,11 @@
     <%= image_tag tutorial.image.url %>
   </div>
 
+  <div class="M_TutorialPageContent">
+    <%= tutorial.content %>
+  </div>
+
   <!--- --->
-
-  <div class="M_TutorialPageTexts">
-    <h4 class="A_TutorialPageSubtitle">Подготовка материалов</h4>
-    <p class="A_TutorialPageText">
-      Снимите все украшения с кед и расшнуруйте их. Расшнуруйте обувь, если на ваших кедах есть шнурки. Краска обычно плохо держится на шнурках, поэтому любое окрашивание впоследствии приведет к ее отслоению.
-      Если кеды сделаны из мягкой ткани, перед окрашиванием набейте их бумагой, чтобы сохранить форму. Вы рискуете испортить рисунок, если выбранные вами кеды быстро теряют форму. 
-      Приклейте малярный скотч к подошве обуви, чтобы защитить ее от краски. Пятна краски через некоторое время начнут отслаиваться, и вам будет неловко носить такую обувь. Как вариант, для этой цели можно использовать маскировочную ленту.</p>
-  </div>
-
-  <div class="Q_TutorialPageImg">
-    <img src="/fake_content/image_13.jpg" alt="кастом" />
-  </div>
-
-  <div class="M_TutorialPageTexts">
-    <h4 class="A_TutorialPageSubtitle">Техника росписи</h4>
-    <p class="A_TutorialPageText">
-      Разукрасьте кеды в соответствии с вашей кастом-задумкой. Хотя вам наверняка захочется сделать все очень быстро, медленное и последовательное нанесение краски позволит получить гораздо лучший результат. Если вы забыли, каким цветом нужно покрасить определенный участок, обратитесь к окончательному варианту вашего эскиза на бумаге.
-      Используйте кисточки разной формы и размеров. Для тонких линий возьмите тонкую кисточку. Чтобы закрасить обширную область, используйте толстую кисточку или спонж.
-      Чтобы создать узор в горошек, окунайте кончик ватной палочки прямо в краску и ставьте точки на обуви.</p>
-  </div>
-
-  <div class="Q_TutorialPageImg">
-    <img src="/fake_content/image_12.jpg" alt="кастом" />
-  </div>
 
   <!--- --->
 
@@ -75,7 +56,7 @@
 
     <div class="W_UserInfoOptions">
       <div class="M_UserInfo">
-        <div class="Q_Avatar"></div>
+        <div class="Q_Avatar s62"></div>
         <div class="C_UserInfoNames">
           <p class="A_UserInfoName UN"><%= tutorial.user.name %></p>
           <p class="A_UserInfoName NN">@<%= tutorial.user.email.split("@")[0] %></p>

@@ -9,9 +9,11 @@ class Tutorial < ApplicationRecord
     validates :title, presence: true
     validates :description, presence: true
     validates :image, presence: true
-    # validates :content, presence: true
+    validates :content, presence: true
     
     acts_as_taggable_on :tags
+
+    has_rich_text :content
 
     has_many :poly_comments, as: :commentable, dependent: :destroy
 

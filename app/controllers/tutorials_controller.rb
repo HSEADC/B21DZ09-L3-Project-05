@@ -85,6 +85,23 @@ class TutorialsController < ApplicationController
     end
   end
 
+  def link_existing_idea
+    @tutorial = Tutorial.friendly.find(params[:id])
+    @ideas = current_user.ideas - @tutorial.ideas # убрать уже привязанные к этому туториалу идеи
+  end
+  
+  def link_idea
+    @tutorial = Tutorial.friendly.find(params[:id])
+    @idea = current_user.ideas.friendly.find(params[:idea_id])
+  
+    if @tutorial.ideas << @idea
+      redirect_to @tutorial, notice: "Идея успешно привязана к Туториалу"
+    else
+      redirect_to link_existing_idea_tutorial_path(@tutorial), alert: "Ошибка привязки Идеи к Туториалу"
+    end
+  end
+  
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_tutorial
@@ -93,6 +110,6 @@ class TutorialsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def tutorial_params
-      params.require(:tutorial).permit(:title, :description, :image, :content, :tag_list).merge(user_id: user.id)
+      params.require(:tutorial).permit(:title, :description, :image, :content, :tag_list).merge(user_id: current_user.id)
     end
 end

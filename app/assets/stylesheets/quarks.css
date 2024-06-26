@@ -39,11 +39,30 @@
   }
 
   &.Search {
+    background-color: black;
     background-image: url('/assets/icons/IconSearch.svg');
+
+    &.Fake {
+      display: none;
+      &.hidden {
+        display: none;
+      }
+    }
+
+    &.Real {
+      display: block;
+      &.show {
+        display: block;
+      }
+    }
   }
 
   &.Cross {
     background-image: url('/assets/icons/IconCross.svg');
+
+    &.onsearch {
+      display: none;
+    }
   }
 
   &.Back {
@@ -59,7 +78,15 @@
   }
 
   &.CreatePost {
-    background-image: url('/assets/icons/IconCreatePostYellow.svg');
+    background-image: url('/assets/icons/IconPlusPost.svg');
+  }
+
+  &.ChooseTypeTutorial {
+    background-image: url('/assets/icons/IconChooseTypeTutorial.svg');
+  }
+
+  &.ChooseTypeIdea {
+    background-image: url('/assets/icons/IconChooseTypeIdea.svg');
   }
 
   &.Edit {
@@ -126,6 +153,11 @@
   &.s46 {
     width: 46px;
     height: 46px;
+  }
+
+  &.s62 {
+    width: 62px;
+    height: 62px;
   }
 
   &.s68 {

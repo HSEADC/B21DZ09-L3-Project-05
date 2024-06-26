@@ -13,6 +13,7 @@
  *= require basics
  *= require fonts
  *= require vars
+ *= require actiontext
  *= require main
  *= require about
  *= require create_post

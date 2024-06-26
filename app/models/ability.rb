@@ -20,6 +20,14 @@ class Ability
 
     can :create, Tutorial
     can :manage, Tutorial, user_id: user.id
+
+    can :link_existing_idea, Tutorial do |tutorial|
+      tutorial.user_id == user.id || Idea.exists?(user_id: user.id)
+    end
+
+    can :link_idea, Tutorial do |tutorial|
+      tutorial.user_id == user.id || Idea.exists?(user_id: user.id)
+    end
     
     can :create, Post
     can :manage, Post, user_id: user.id

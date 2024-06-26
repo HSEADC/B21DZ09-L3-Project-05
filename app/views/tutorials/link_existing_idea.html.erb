@@ -1,0 +1,16 @@
+<h1>Link an Existing Idea to "<%= @tutorial.title %>"</h1>
+
+<% if @ideas.any? %>
+  <ul>
+    <% @ideas.each do |idea| %>
+      <li>
+        <%= idea.title %>
+        <%= button_to 'Link this idea', link_idea_tutorial_path(@tutorial, idea_id: idea.id), method: :post %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No available ideas to link.</p>
+<% end %>
+
+<%= link_to 'Back', @tutorial %>

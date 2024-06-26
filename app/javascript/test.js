@@ -1,3 +1,15 @@
+function searchVisibility() {
+  const searchFakeBtn = document.querySelector('.Q_Icon.Search.NavDesk.Fake')
+  const searchRealBtn = document.querySelector('.Q_Icon.Search.NavDesk.Real')
+  const serachInput = document.querySelector('.W_SearchHidden')
+
+  searchFakeBtn.addEventListener('click', () => {
+    serachInput.classList.add('active')
+    searchRealBtn.classList.add('show')
+    searchFakeBtn.classList.remove('show')
+  })
+}
+
 function tagsVisibility() {
   const buttonItems = document.querySelector('.M_FilterSelect.Items')
   const tagListItems = document.querySelector('.M_FilterSelectDropdown.Items')
@@ -84,21 +96,23 @@ function createNewPostVisibility() {
   const button = document.querySelector('.A_NavigationButton.NewPost')
   const menu = document.querySelector('.M_NavCreateNewPosts')
 
-  button.addEventListener('click', () => {
-    menu.classList.toggle('show')
-  })
+  if (button) {
+    button.addEventListener('click', () => {
+      menu.classList.toggle('show')
+    })
 
-  document.addEventListener('click', (e) => {
-    const target = e.target
+    document.addEventListener('click', (e) => {
+      const target = e.target
 
-    const menuA = target == menu || menu.contains(target)
-    const buttonA = target == button
-    const menuShow = menu.classList.contains('show')
+      const menuA = target == menu || menu.contains(target)
+      const buttonA = target == button
+      const menuShow = menu.classList.contains('show')
 
-    if (!menuA && !buttonA && menuShow) {
-      menu.classList.remove('show')
-    }
-  })
+      if (!menuA && !buttonA && menuShow) {
+        menu.classList.remove('show')
+      }
+    })
+  }
 }
 
 function mobileMenuVisibility() {
@@ -133,38 +147,42 @@ function addIdeaToTutorial() {
   // const mobIdeaCard = document.querySelector('.W_CardAddContentAbsolute')
   console.log(numberOfExistingIdeas)
 
-  document
-    .querySelector('.IdeaPostPageSeeAlsoCards.rowWhisAbsl')
-    .lastElementChild.classList.add('addMargin')
+  if (document.querySelector('.IdeaPostPageSeeAlsoCards.rowWhisAbsl')) {
+    document
+      .querySelector('.IdeaPostPageSeeAlsoCards.rowWhisAbsl')
+      .lastElementChild.classList.add('addMargin')
+  }
 
-  if (window.innerWidth >= 1441) {
-    console.log('экран >=  1441')
-    if (numberOfExistingIdeas >= 4) {
+  if (document.querySelector('.IdeaPostPageSeeAlso')) {
+    if (window.innerWidth >= 1441) {
+      console.log('экран >=  1441')
+      if (numberOfExistingIdeas >= 4) {
+        ideasAndAbsoluteCard.classList.add('show')
+      } else {
+        ideasAndCardInRow.classList.add('show')
+      }
+    } else if (window.innerWidth >= 1281 && window.innerWidth <= 1440) {
+      console.log('экран 1281-1440')
+      if (numberOfExistingIdeas >= 3) {
+        ideasAndAbsoluteCard.classList.add('show')
+      } else {
+        ideasAndCardInRow.classList.add('show')
+      }
+    } else if (window.innerWidth >= 768 && window.innerWidth <= 1280) {
+      console.log('экран 768-1280')
+      if (numberOfExistingIdeas >= 2) {
+        ideasAndAbsoluteCard.classList.add('show')
+      } else {
+        ideasAndCardInRow.classList.add('show')
+      }
+    } else if (window.innerWidth <= 767) {
+      console.log('экран <= 767')
       ideasAndAbsoluteCard.classList.add('show')
-    } else {
-      ideasAndCardInRow.classList.add('show')
     }
-  } else if (window.innerWidth >= 1281 && window.innerWidth <= 1440) {
-    console.log('экран 1281-1440')
-    if (numberOfExistingIdeas >= 3) {
-      ideasAndAbsoluteCard.classList.add('show')
-    } else {
-      ideasAndCardInRow.classList.add('show')
-    }
-  } else if (window.innerWidth >= 768 && window.innerWidth <= 1280) {
-    console.log('экран 768-1280')
-    if (numberOfExistingIdeas >= 2) {
-      ideasAndAbsoluteCard.classList.add('show')
-    } else {
-      ideasAndCardInRow.classList.add('show')
-    }
-  } else if (window.innerWidth <= 767) {
-    console.log('экран <= 767')
-    ideasAndAbsoluteCard.classList.add('show')
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('turbo:load', () => {
   if (document.body.classList.contains('tutorials_page')) {
     tagsVisibility()
     addLike()
@@ -182,4 +200,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
   mobileMenuVisibility()
   createNewPostVisibility()
+  searchVisibility()
 })

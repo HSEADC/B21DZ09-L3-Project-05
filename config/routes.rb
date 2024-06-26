@@ -12,6 +12,11 @@ Rails.application.routes.draw do
     end
 
     resources :ideas, only: [:new, :create]
+
+    member do
+      get :link_existing_idea  # Display the form for linking
+      post :link_idea           # Handle the form submission
+    end
   end
 
   post 'support/request_support'

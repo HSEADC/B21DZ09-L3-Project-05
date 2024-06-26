@@ -19,12 +19,13 @@
     <% end %>
   </div>
 
-  <div class="S_TutorialPage Gride">
+  <div class="S_TutorialPageGride">
 
     <%= render partial: "tutorials/tutorial_page", locals: {tutorial: @tutorial} %>
 
     <div class="O_TutorialPageComments">
       <p class="A_PageCommentsTitle">Комментарии</p>
+      <div class="W_CreateComment"> <%= render "poly_comments/form", commentable: @tutorial, poly_comment: PolyComment.new %> </div>
       <div class="M_CommentsBlock Tutorial">
         <div id="poly_comments">
           <% @tutorial.poly_comments.each do | poly_comment| %>
@@ -34,12 +35,12 @@
           <% end %>
         </div>
       </div>
-      <div class="W_CreateComment"> <%= render "poly_comments/form", commentable: @tutorial, poly_comment: PolyComment.new %> </div>
     </div>
 
   </div>
 
   <%= link_to 'Create a new idea for this tutorial', new_tutorial_idea_path(@tutorial), class: 'button' %>
+  <%= link_to 'Link an existing idea', link_existing_idea_tutorial_path(@tutorial), class: 'button' %>
 
   <% if @tutorial.ideas != [] %>
     <div class="IdeaPostPageSeeAlso rowWhisAbsl">

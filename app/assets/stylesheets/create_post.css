@@ -1,6 +1,6 @@
 .IdeaNewForm {
   width: 100%;
-  margin: 0 auto 90px;
+  margin: 0 auto 30px;
 }
 
 .FormBackground {
@@ -35,6 +35,106 @@
     margin: 20px auto;
     /* background-color: aqua; */
   }
+}
+
+.TutorialNewFormBlocks {
+  margin: 42px auto 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 58.4375%;
+}
+
+.TutorialNewFormLeftBlock {
+  width: 63.1%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.TutorialNewFormRightBlock {
+  width: calc(35.12% - 48px);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: white;
+  border-radius: 24px;
+}
+
+.NewFormChooseTypes {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.NewFormChooseType {
+  width: calc(50% - 46px);
+  padding: 16px 20px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background-color: white;
+  border-radius: 18px;
+
+  &.active {
+    background-color: var(--lightgray2);
+    border: 1px solid black;
+  }
+}
+
+.ChooseTypeIconTitle {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+}
+
+.A_ChooseTypeTitle {
+  font-family: Suisse Intl;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  /* line-height: 140%; */
+  color: var(--black2);
+}
+
+.A_ChooseTypeText {
+  font-family: Suisse Intl;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 140%;
+  color: var(--gray2);
+}
+
+.NewTutorialContent {
+  width: calc(100% - 42px);
+  height: 100%;
+  padding: 12px 21px;
+  background-color: white;
+  border-radius: 24px;
+}
+
+.NewTutorialImg {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  width: calc(100% - 48px);
+  /* height: 100%; */
+  padding: 28px 24px;
+  background-color: white;
+  border-radius: 24px;
+}
+
+.NewTutorialContentEditor {
+  border: none;
+
+  /* div {
+    font-size: 18px;
+  } */
 }
 
 .FormIdea {
@@ -126,6 +226,22 @@
   }
 }
 
+.NewFormRightBlockAttrs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.NewFormAttrsTexts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.NewFormAttrsDescr {
+}
+
 .TitleNewContent {
   font-family: Suisse Intl;
   font-size: 20px;
@@ -144,11 +260,29 @@
   }
 }
 
+.TutorialNewFormText {
+  font-family: Suisse Intl;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 90%;
+  color: var(--black2);
+}
+
+.NewFormAttrsDescr {
+  font-family: Suisse Intl;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 140%;
+  color: var(--gray2);
+}
+
 .FieldContent {
   /* grid-column: 13 / 21; */
   display: flex;
   padding: 14px 10px;
-  align-items: center;
+  /* align-items: center; */
 
   border-radius: 4px;
   border: 1px solid black;
@@ -177,6 +311,33 @@
 
   &.Tags {
     /* width: 200px; */
+  }
+}
+
+.NewFormField {
+  width: calc(100% - 32px);
+  display: flex;
+  /* height: 44px; */
+  padding: 12px 16px;
+  align-items: center;
+
+  border-radius: 8px;
+  border: 1px solid black;
+  background: white;
+
+  font-family: Suisse Intl;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 126%;
+  color: black;
+
+  &::placeholder {
+    color: var(--gray2);
+  }
+
+  &.bigtext {
+    height: 200px;
   }
 }
 
@@ -210,38 +371,36 @@
   width: 100%;
   display: inline-flex;
   align-items: flex-start;
-  gap: 20px;
+  gap: 12px;
 }
 
 .FormButton {
   display: flex;
   width: 50%;
-  height: 50px;
-  /* padding: 12px 22px; */
+  height: 46px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   font-family: Suisse Intl;
-  font-size: 16px;
+  font-size: 13px;
   font-style: normal;
-  font-weight: 600;
-  line-height: 110%; /* 17.6px */
+  font-weight: 500;
   text-transform: uppercase;
+  border-radius: 8px;
 
   outline: none;
 
   &.Post {
-    /* grid-column: 13 / 18; */
     background-color: var(--black);
-    color: var(--lightgray);
+    color: white;
   }
 
   &.Back {
-    /* grid-column: 18 / 23; */
-    border: 1px dashed #938f8f;
-    background-color: white;
+    border: 1px dashed black;
+    background-color: var(--lightgray2);
     color: black;
+    box-sizing: border-box;
   }
 }
 
@@ -342,7 +501,7 @@
   width: 100%;
   flex-direction: column;
   align-items: flex-start;
-  gap: 10px;
+  gap: 21px;
 
   &.show {
     display: inline-flex;
@@ -354,7 +513,7 @@
   width: 100%;
   flex-direction: column;
   align-items: flex-start;
-  gap: 10px;
+  gap: 21px;
 }
 
 .IdeaPostPageSeeAlsoCardsOthers {
@@ -370,16 +529,16 @@
 
 .IdeaPostPageSeeAlsoTitle {
   display: flex;
-  padding: 7px 0px;
+  /* padding: 7px 0px; */
   justify-content: space-between;
   /* align-items: center; */
   align-self: stretch;
   /* border-bottom: 1px solid #938F8F; */
   /* text-align: center; */
   font-family: Suisse Intl;
-  font-size: 24px;
+  font-size: 30px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 100%; /* 24px */
   text-transform: uppercase;
   color: black;
