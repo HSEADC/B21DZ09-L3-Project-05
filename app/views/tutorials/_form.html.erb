@@ -12,24 +12,24 @@
   <% end %>
 
   <div class="FormBackground">
-    <div class="TutorialNewBanner"></div>
+    <div class="A_TutorialNewBanner"></div>
     <div class="IdeaNewForm">
 
       <div class="TutorialNewFormBlocks">
 
-        <div class="TutorialNewFormLeftBlock">
-          <div class="NewFormChooseTypes">
+        <div class="O_TutorialNewFormLeftBlock">
+          <div class="C_NewFormChooseTypes">
 
-            <a href="/tutorials/new" class="NewFormChooseType Tutorial active">
-              <div class="ChooseTypeIconTitle">
+            <a href="/tutorials/new" class="M_NewFormChooseType Tutorial active">
+              <div class="W_ChooseTypeIconTitle">
                 <div class="Q_Icon s32 ChooseTypeTutorial"></div>
                 <h5 class="A_ChooseTypeTitle">Туториалы</h5>
               </div>
               <p class="A_ChooseTypeText">Поделитесь своим опытом кастома</p>
             </a>
 
-            <a href="/ideas/new" class="NewFormChooseType Idea">
-              <div class="ChooseTypeIconTitle">
+            <a href="/ideas/new" class="M_NewFormChooseType Idea">
+              <div class="W_ChooseTypeIconTitle">
                 <div class="Q_Icon s32 ChooseTypeIdea"></div>
                 <h5 class="A_ChooseTypeTitle">Идея</h5>
               </div>
@@ -37,75 +37,75 @@
             </a>
           </div>
 
-          <div class="TutorialNewFormRightBlock mobile">
-            <div class="NewFormRightBlockAttrs">
-              <div class="NewFormAttrsTexts">
-                <%= form.label :"Название туториала", class:"TutorialNewFormText" %>
-                <p class="NewFormAttrsDescr">Укажите, чему обучает туториал</p>
+          <div class="O_TutorialNewFormRightBlock mobile">
+            <div class="M_NewFormRightBlockAttrs">
+              <div class="W_NewFormAttrsTexts">
+                <%= form.label :"Название туториала", class:"A_TutorialNewFormText" %>
+                <p class="A_NewFormAttrsDescr">Укажите, чему обучает туториал</p>
               </div>
-              <%= form.text_field :title, placeholder:"Например: Как расписать кеды", class:"NewFormField" %>
+              <%= form.text_field :title, placeholder:"Например: Как расписать кеды", class:"A_NewFormField" %>
             </div>
 
-            <div class="NewFormRightBlockAttrs">
-              <div class="NewFormAttrsTexts">
-                <%= form.label :"Теги", class:"TutorialNewFormText" %>
-                <p class="NewFormAttrsDescr">Выберите из доступных</p>
+            <div class="M_NewFormRightBlockAttrs">
+              <div class="W_NewFormAttrsTexts">
+                <%= form.label :"Теги", class:"A_TutorialNewFormText" %>
+                <p class="A_NewFormAttrsDescr">Выберите из доступных</p>
               </div>
-              <%= form.text_field :tag_list, value: tutorial.tag_list.join(", "), placeholder:"Например: обувь, роспись, кожа", class:"NewFormField"  %>
+              <%= form.text_field :tag_list, value: tutorial.tag_list.join(", "), placeholder:"Например: обувь, роспись, кожа", class:"A_NewFormField"  %>
             </div>
 
-            <div class="NewFormRightBlockAttrs">
-              <div class="NewFormAttrsTexts">
-                <%= form.label :"Описание туториала", class:"TutorialNewFormText" %>
-                <p class="NewFormAttrsDescr">Кратко расскажите, о чем туториал</p>
+            <div class="M_NewFormRightBlockAttrs">
+              <div class="W_NewFormAttrsTexts">
+                <%= form.label :"Описание туториала", class:"A_TutorialNewFormText" %>
+                <p class="A_NewFormAttrsDescr">Кратко расскажите, о чем туториал</p>
               </div>
-              <%= form.text_area :description, placeholder:"Расскажите про ваш кастом", class:"NewFormField bigtext" %>
+              <%= form.text_area :description, placeholder:"Расскажите про ваш кастом", class:"A_NewFormField bigtext" %>
             </div>
 
-            <div class="FormButtons">
-              <%= link_to "Отменить", :back, class:"FormButton Back" %>
-              <%= form.submit :"Опубликовать", class:"FormButton Post" %>
+            <div class="C_FormButtons">
+              <%= link_to "Отменить", :back, class:"A_FormButton Back" %>
+              <%= form.submit :"Опубликовать", class:"A_FormButton Post" %>
             </div>
           </div>
 
-          <div class="NewTutorialImg">
-            <%= form.label :"Добавьте обложку туториала", class:"TutorialNewFormText" %>
+          <div class="M_NewTutorialImg">
+            <%= form.label :"Добавьте обложку туториала", class:"A_TutorialNewFormText" %>
             <%= form.file_field :image %>
           </div>
 
-          <div class="NewTutorialContent">
+          <div class="M_NewTutorialContent">
             <%= form.rich_text_area :content, class:"NewTutorialContentEditor" %>
           </div>
         </div>
 
-        <div class="TutorialNewFormRightBlock desk">
-          <div class="NewFormRightBlockAttrs">
-            <div class="NewFormAttrsTexts">
-              <%= form.label :"Название туториала", class:"TutorialNewFormText" %>
-              <p class="NewFormAttrsDescr">Укажите, чему обучает туториал</p>
+        <div class="O_TutorialNewFormRightBlock desk">
+          <div class="M_NewFormRightBlockAttrs">
+            <div class="W_NewFormAttrsTexts">
+              <%= form.label :"Название туториала", class:"A_TutorialNewFormText" %>
+              <p class="A_NewFormAttrsDescr">Укажите, чему обучает туториал</p>
             </div>
-            <%= form.text_field :title, placeholder:"Например: Как расписать кеды", class:"NewFormField" %>
+            <%= form.text_field :title, placeholder:"Например: Как расписать кеды", class:"A_NewFormField" %>
           </div>
 
-          <div class="NewFormRightBlockAttrs">
-            <div class="NewFormAttrsTexts">
-              <%= form.label :"Теги", class:"TutorialNewFormText" %>
-              <p class="NewFormAttrsDescr">Выберите из доступных</p>
+          <div class="M_NewFormRightBlockAttrs">
+            <div class="W_NewFormAttrsTexts">
+              <%= form.label :"Теги", class:"A_TutorialNewFormText" %>
+              <p class="A_NewFormAttrsDescr">Выберите из доступных</p>
             </div>
-            <%= form.text_field :tag_list, value: tutorial.tag_list.join(", "), placeholder:"Например: обувь, роспись, кожа", class:"NewFormField"  %>
+            <%= form.text_field :tag_list, value: tutorial.tag_list.join(", "), placeholder:"Например: обувь, роспись, кожа", class:"A_NewFormField"  %>
           </div>
 
-          <div class="NewFormRightBlockAttrs">
-            <div class="NewFormAttrsTexts">
-              <%= form.label :"Описание туториала", class:"TutorialNewFormText" %>
-              <p class="NewFormAttrsDescr">Кратко расскажите, о чем туториал</p>
+          <div class="M_NewFormRightBlockAttrs">
+            <div class="W_NewFormAttrsTexts">
+              <%= form.label :"Описание туториала", class:"A_TutorialNewFormText" %>
+              <p class="A_NewFormAttrsDescr">Кратко расскажите, о чем туториал</p>
             </div>
-            <%= form.text_area :description, placeholder:"Расскажите про ваш кастом", class:"NewFormField bigtext" %>
+            <%= form.text_area :description, placeholder:"Расскажите про ваш кастом", class:"A_NewFormField bigtext" %>
           </div>
 
-          <div class="FormButtons">
-            <%= link_to "Отменить", :back, class:"FormButton Back" %>
-            <%= form.submit :"Опубликовать", class:"FormButton Post" %>
+          <div class="C_FormButtons">
+            <%= link_to "Отменить", :back, class:"A_FormButton Back" %>
+            <%= form.submit :"Опубликовать", class:"A_FormButton Post" %>
           </div>
         </div>
       </div>

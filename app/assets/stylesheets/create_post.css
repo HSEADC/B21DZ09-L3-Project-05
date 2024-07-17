@@ -45,14 +45,14 @@
   width: 1100px;
 }
 
-.TutorialNewFormLeftBlock {
+.O_TutorialNewFormLeftBlock {
   width: 63.1%;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.TutorialNewFormRightBlock {
+.O_TutorialNewFormRightBlock {
   width: calc(35.12% - 48px);
   padding: 28px 24px;
   display: flex;
@@ -66,29 +66,32 @@
   }
 }
 
-.NewFormChooseTypes {
+.C_NewFormChooseTypes {
   width: 100%;
   display: flex;
   flex-direction: row;
   gap: 12px;
 }
 
-.NewFormChooseType {
-  width: calc(50% - 46px);
-  padding: 16px 20px 14px;
+.M_NewFormChooseType {
+  width: calc(50% - 48px);
+  padding: 15px 19px 13px;
   display: flex;
   flex-direction: column;
   gap: 6px;
   background-color: white;
   border-radius: 18px;
+  border: 1px solid white;
 
   &.active {
     background-color: var(--lightgray2);
     border: 1px solid black;
+    width: calc(50% - 48px);
+    padding: 15px 19px 13px;
   }
 }
 
-.ChooseTypeIconTitle {
+.W_ChooseTypeIconTitle {
   display: flex;
   flex-direction: row;
   gap: 8px;
@@ -113,7 +116,7 @@
   color: var(--gray2);
 }
 
-.NewTutorialContent {
+.M_NewTutorialContent {
   width: calc(100% - 42px);
   height: 100%;
   padding: 12px 21px;
@@ -121,7 +124,7 @@
   border-radius: 24px;
 }
 
-.NewTutorialImg {
+.M_NewTutorialImg {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -169,7 +172,7 @@
   background-size: contain;
 }
 
-.TutorialNewBanner {
+.A_TutorialNewBanner {
   margin-top: 100px;
   width: 502px;
   height: 197px;
@@ -243,20 +246,20 @@
   }
 }
 
-.NewFormRightBlockAttrs {
+.M_NewFormRightBlockAttrs {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 4px;
 }
 
-.NewFormAttrsTexts {
+.W_NewFormAttrsTexts {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.NewFormAttrsDescr {
+.A_NewFormAttrsDescr {
 }
 
 .TitleNewContent {
@@ -277,7 +280,7 @@
   }
 }
 
-.TutorialNewFormText {
+.A_TutorialNewFormText {
   font-family: Suisse Intl;
   font-size: 24px;
   font-style: normal;
@@ -286,7 +289,7 @@
   color: var(--black2);
 }
 
-.NewFormAttrsDescr {
+.A_NewFormAttrsDescr {
   font-family: Suisse Intl;
   font-size: 14px;
   font-style: normal;
@@ -331,7 +334,7 @@
   }
 }
 
-.NewFormField {
+.A_NewFormField {
   width: calc(100% - 32px);
   display: flex;
   /* height: 44px; */
@@ -384,14 +387,14 @@
   gap: 18px;
 }
 
-.FormButtons {
+.C_FormButtons {
   width: 100%;
   display: inline-flex;
   align-items: flex-start;
   gap: 12px;
 }
 
-.FormButton {
+.A_FormButton {
   display: flex;
   width: 50%;
   height: 46px;
@@ -664,7 +667,7 @@
     justify-content: center;
   }
 
-  .TutorialNewFormRightBlock {
+  .O_TutorialNewFormRightBlock {
     &.mobile {
       width: calc(100% - 48px);
       display: flex;
@@ -675,7 +678,7 @@
     }
   }
 
-  .NewFormField {
+  .A_NewFormField {
     &.bigtext {
       height: 50px;
     }
@@ -687,17 +690,17 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .TutorialNewFormLeftBlock {
+  .O_TutorialNewFormLeftBlock {
     width: 76%;
   }
 }
 
 @media only screen and (max-width: 767px) {
-  .TutorialNewFormLeftBlock {
+  .O_TutorialNewFormLeftBlock {
     width: calc(100% - 32px);
   }
 
-  .TutorialNewBanner {
+  .A_TutorialNewBanner {
     display: none;
     margin-top: 80px;
     width: 70%;
